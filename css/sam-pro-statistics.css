@@ -1,0 +1,59 @@
+.stats-item {
+  width: 14.7%;
+  display: inline-block;
+  border: 1px solid #d0d0d1;
+  padding: 6px 8px;
+  line-height: 16px;
+  background-color: white;
+}
+
+.stats-title {
+  margin: 5px 0;
+}
+
+.stats-val {
+  font-size: 21px;
+  font-weight: bold;
+  padding: 5px 8px 5px 5px;
+  text-align: right;
+}
+
+.stats-tools {
+  margin: 20px 0;
+}
+
+#grid-container {
+  margin: 10px 0 30px;
+}
+
+.pieItem {
+  display: inline-block;
+  width: 49%;
+}
+
+.icon-leaf:before {
+  color: #00ba00;
+}
+
+.icon-credit-card:before {
+  color: darkorange;
+}
+
+.e-grid .e-table {
+  margin-bottom: 0 !important;
+}
+
+.Ad_Chart:before {
+  font-family: "sam-pro";
+  content: "\e838";
+}
+
+.sam-centered {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.e-grid [class*="span"] {
+  float: none;
+  margin-left: 0;
+}

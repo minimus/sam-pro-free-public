@@ -1,0 +1,4 @@
+.e-deleteitem:before {
+  font-family: "sam-pro";
+  content: "\e809" !important;
+}

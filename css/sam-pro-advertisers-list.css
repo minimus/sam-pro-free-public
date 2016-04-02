@@ -1,0 +1,78 @@
+#grid {
+  margin-top: 20px;
+}
+
+.Expand:before {
+  font-family: "sam-pro";
+  content: "\e872";
+}
+
+.Collapse:before {
+  font-family: "sam-pro";
+  content: "\e873";
+}
+
+.Refresh:before {
+  font-family: "sam-pro";
+  content: "\e86d";
+}
+
+.Stats:before {
+  font-family: "sam-pro";
+  content: "\e838";
+}
+
+.SendMail:before {
+  font-family: "sam-pro";
+  content: "\e810";
+}
+
+.icon-trash:before, .icon-attention:before, .icon-warning-empty:before {
+  color: #d41605;
+}
+
+.icon-leaf:before {
+  color: #00ba00;
+}
+
+.icon-traffic-cone:before, .icon-shield:before {
+  color: #ef9006;
+}
+
+.icon-eye:before {
+  color: #088aba;
+}
+
+.icon-eye-off:before {
+  color: #d41605;
+}
+
+.icon-ok:before {
+  color: #00a300;
+}
+
+/*Changes the add button icons*/
+.e-addnew:before {
+  font-family: "sam-pro";
+  content: "\e870";
+}
+/*Changes the edit button icons*/
+.e-edit:before {
+  font-family: "sam-pro";
+  content: "\e82c";
+}
+/*Changes the delete button icons*/
+.e-delete:before {
+  font-family: "sam-pro";
+  content: "\e81b" !important;
+}
+/*Changes the save button icons*/
+.e-save:before {
+  font-family: "sam-pro";
+  content: "\e83d";
+}
+/*Change the cancel icons*/
+/*.e-gcancel:before {
+  font-family: "sam-pro";
+  content: "\e60a";
+}*/

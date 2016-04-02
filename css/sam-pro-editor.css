@@ -1,0 +1,150 @@
+.e-tab .e-active-content {
+  text-align: inherit !important;
+}
+
+.clear-line {
+  border-bottom: 1px solid #DFDFDF;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.clear-div {
+  margin-bottom: 20px;
+}
+
+#grid {
+  margin-bottom: 10px;
+}
+
+#dialog {
+  padding-bottom: 20px;
+}
+
+.sam-centered {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.sub-content {
+  padding-left: 15px !important;
+  padding-right: 5px !important;
+  line-height: 140% !important;
+}
+
+.Expand:before {
+  font-family: "sam-pro";
+  content: "\e872";
+}
+
+.Collapse:before {
+  font-family: "sam-pro";
+  content: "\e873";
+}
+
+.Refresh:before {
+  font-family: "sam-pro";
+  content: "\e86d";
+}
+
+.Add:before {
+  font-family: "sam-pro";
+  content: "\e870";
+}
+
+.new-ad:before {
+  font-family: "sam-pro";
+  content: "\e870";
+}
+
+.place-to-trash:before {
+  font-family: "sam-pro";
+  content: "\e809";
+}
+
+.to-trash:before {
+  font-family: "sam-pro";
+  content: "\e809" !important;
+}
+
+.place-from-trash:before {
+  font-family: "sam-pro";
+  content: "\e852";
+}
+
+.Edit:before {
+  font-family: "sam-pro";
+  content: "\e82c";
+}
+
+.Edit_Ad:before {
+  font-family: 'sam-pro';
+  content: '\e822';
+}
+
+.Link:before {
+  font-family: "sam-pro";
+  content: "\e808";
+}
+
+.icon-trash:before {
+  color: #d41605;
+}
+
+.icon-leaf:before {
+  color: #00ba00;
+}
+
+.icon-traffic-cone:before {
+  color: #ef9006;
+}
+
+.icon-eye:before {
+  color: #088aba;
+}
+
+.icon-eye-off:before {
+  color: #d41605;
+}
+
+.icon-ok:before {
+  color: #00a300;
+}
+
+.block-editor-line {
+  padding: 0px;
+  margin: 0px;
+}
+
+.block-editor-item {
+  padding: 5px;
+  margin: 5px;
+  width: 175px;
+  display: inline-block;
+}
+
+/*Changes the add button icons*/
+.e-addnew:before {
+  font-family: "sam-pro";
+  content: "\e870";
+}
+/*Changes the edit button icons*/
+.e-edit:before {
+  font-family: "sam-pro";
+  content: "\e82c";
+}
+/*Changes the delete button icons*/
+.e-delete:before {
+  font-family: "sam-pro";
+  content: "\e81b" !important;
+}
+/*Changes the save button icons*/
+.e-save:before {
+  font-family: "sam-pro";
+  content: "\e83d";
+}
+/*Change the cancel icons*/
+/*.e-gcancel:before {
+  font-family: "sam-pro";
+  content: "\e60a";
+}*/

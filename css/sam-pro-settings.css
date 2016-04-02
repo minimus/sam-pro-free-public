@@ -1,0 +1,93 @@
+.cascade-item {
+  float: left;
+  margin: 3px 10px 3px 0;
+}
+
+.cascade-body {height: 35px;}
+
+.sam-pro-warning {
+  display: block;
+  margin: 5px 0 15px;
+  padding: 1px 10px;
+  background-color: #FFFFFF;
+  border-left: 4px solid #ffba00;
+  -webkit-box-shadow:0 1px 1px 0 rgba(0,0,0,.1);
+  box-shadow:1px 1px 1px 1px rgba(0,0,0,.1);
+}
+
+.sam-pro-info {
+  display: block;
+  margin: 5px 0 15px;
+  padding: 1px 10px;
+  background-color: #FFFFFF;
+  border-left: 4px solid #7AD03A;
+  -webkit-box-shadow:0 0 1px 1px rgba(0,0,0,.1);
+  box-shadow:0 0 1px 1px rgba(0,0,0,.1);
+}
+
+.graph-container {
+  box-sizing: border-box;
+  /*width: 850px;
+  height: 450px;*/
+  padding: 20px 15px 15px 15px;
+  margin: 15px auto 30px auto;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background: #fff;
+  background-image: linear-gradient(#f6f6f6 0, #fff 50px);
+  background-image: -o-linear-gradient(#f6f6f6 0, #fff 50px);
+  background-image: -ms-linear-gradient(#f6f6f6 0, #fff 50px);
+  background-image: -moz-linear-gradient(#f6f6f6 0, #fff 50px);
+  background-image: -webkit-linear-gradient(#f6f6f6 0, #fff 50px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  -o-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  -ms-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.sam-table {
+  border-collapse: separate;
+  border-spacing: 1px;
+  background-color: #CDCDCD;
+  margin: 10px 0 15px 0;
+  font-size: 9pt;
+  font-family: Arial,sans-serif;
+  width: 100%;
+  text-align: left;
+  line-height: 20px;
+}
+.sam-table th {
+  background-color: #E6EEEE;
+  border: 1px solid #FFFFFF;
+  padding: 4px;
+  color: #3D3D3D!important;
+}
+.sam-table td {
+  color: #3D3D3D;
+  padding: 4px;
+  background-color: #FFFFFF;
+  vertical-align: top;
+}
+.even {border: 1px solid #ddd;}
+.even td {background-color: #FFFFFF;}
+.odd td {background-color: #FFFFE8;}
+.w25 {
+  width: 25%;
+}
+.w10 {
+  width: 10%;
+}
+.td-num {
+  text-align: right;
+}
+.mess {
+  font-family: Arial, Helvetica, Tahoma, sans-serif;
+  font-size: 11px;
+}
+.total {font-size: 13px}
+
+.sub-content {
+  padding-left: 15px !important;
+  padding-right: 5px !important;
+  line-height: 140% !important;
+}

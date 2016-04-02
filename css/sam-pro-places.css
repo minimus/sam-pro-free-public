@@ -1,0 +1,150 @@
+#grid {
+  margin-top: 20px;
+}
+
+#adsDialog {
+  padding-bottom: 20px;
+}
+
+.sam-centered {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.e-toolbaricons {
+  font-size: 16px !important;
+}
+
+.e-headercelldiv {
+  white-space: inherit !important;
+}
+
+/*Changes the add button icons*/
+.e-addnew:before {
+  font-family: "sam-pro";
+  content: "\e870";
+}
+/*Changes the edit button icons*/
+.e-edit:before {
+  font-family: "sam-pro";
+  content: "\e82c";
+}
+/*Changes the delete button icons*/
+.e-delete:before {
+  font-family: "sam-pro";
+  content: "\e81b" !important;
+}
+/*Changes the save button icons*/
+.e-save:before {
+  font-family: "sam-pro";
+  content: "\e83d";
+}
+/*Change the cancel icons*/
+/*.e-gcancel:before {
+  font-family: "sam-pro";
+  content: "\e60a";
+}*/
+
+.Expand:before {
+  font-family: "sam-pro";
+  content: "\e872";
+}
+
+.Collapse:before {
+  font-family: "sam-pro";
+  content: "\e873";
+}
+
+.Refresh:before {
+  font-family: "sam-pro";
+  content: "\e86d";
+}
+
+.Add:before {
+  font-family: "sam-pro";
+  content: "\e870";
+}
+
+.new-ad:before, .new-zone:before, .new-block:before {
+  font-family: "sam-pro";
+  content: "\e870";
+}
+
+.place-to-trash:before, .zone-to-trash:before, .block-to-trash:before {
+  font-family: "sam-pro";
+  content: "\e81a";
+}
+
+.to-trash:before {
+  font-family: "sam-pro";
+  content: "\e809";
+}
+
+.place-from-trash:before, .zone-from-trash:before, .block-from-trash:before {
+  font-family: "sam-pro";
+  content: "\e852";
+}
+
+.Edit:before {
+  font-family: "sam-pro";
+  content: "\e82c";
+}
+
+.Edit_Ad:before {
+  font-family: 'sam-pro';
+  content: '\e822';
+}
+
+.Link:before {
+  font-family: "sam-pro";
+  content: "\e808";
+}
+
+.ad-moderate:before {
+  font-family: 'sam-pro';
+  content: '\e804';
+}
+
+.ad-unmoderate:before {
+  font-family: 'sam-pro';
+  content: '\e851';
+}
+
+.more-info:before {
+  font-family: 'sam-pro';
+  content: '\e830';
+}
+
+.clear-errors:before {
+  font-family: sam-pro;
+  content: '\e81b';
+}
+
+.error-solved:before {
+  font-family: 'sam-pro';
+  content: '\e840';
+}
+
+.icon-trash:before, .icon-attention:before, .icon-warning-empty:before {
+  color: #d41605;
+}
+
+.icon-leaf:before {
+  color: #00ba00;
+}
+
+.icon-traffic-cone:before, .icon-shield:before {
+  color: #ef9006;
+}
+
+.icon-eye:before {
+  color: #088aba;
+}
+
+.icon-eye-off:before {
+  color: #d41605;
+}
+
+.icon-ok:before {
+  color: #00a300;
+}

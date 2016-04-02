@@ -1,0 +1,37 @@
+#sam_pro_request {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #dfdfdf;
+  background: white;
+  box-shadow: 0 0 5px 0 rgba(215, 215, 215, 0.8);
+  box-sizing: border-box;
+}
+#sam_pro_request input, #sam_pro_request select, #sam_pro_request textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.grc-container {
+  margin: 10px 0;
+}
+
+.est-imp {
+  display: block;
+  margin: 5px 0;
+  font-style: italic;
+  color: #002a80;
+}
+
+.e-grid table {
+  margin-bottom: 0 !important;
+}
+
+.e-grid table th {
+  vertical-align: middle;
+}
+
+#welcomeGrid {
+  margin: 20px 0;
+}
