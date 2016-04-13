@@ -162,18 +162,21 @@ if( ! class_exists( 'SamProBlockEditor' ) ) {
 			} else {
 				$header = __( 'ID:', SAM_PRO_DOMAIN ) . $this->item;
 			}
+			$this->action = $_SERVER['REQUEST_URI'];
 
 			if($this->update) {
 				$oldItem = $this->item;
 				$this->item = self::updateItemData($oldItem);
-				if($oldItem != $this->item) $this->action = esc_url(add_query_arg(array('item' => $this->item)));
+				$this->action = ($oldItem != $this->item) ?
+					esc_url(add_query_arg(array('item' => $this->item), $_SERVER['REQUEST_URI'])) :
+					$_SERVER['REQUEST_URI'];
 			}
 
 			$row = self::getItemData($this->item);
 			$data = self::getData($row['b_data']);
 			?>
 			<div class="wrap">
-				<form method="post" action="<?php echo $_SERVER["REQUEST_URI"]; ?>">
+				<form method="post" action="<?php echo $this->action; ?>">
 					<h1><?php echo __( 'Ads Block Editor', SAM_PRO_DOMAIN ) . ' (' . $header . ')' ?></h1>
 					<?php if(!empty($this->message)) echo $this->message; ?>
 					<div class="metabox-holder has-right-sidebar" id="poststuff">

@@ -836,8 +836,7 @@ ORDER BY uu.owner;";
 			$locale = array('changeLocale' => in_array($wpLocale, $locales), 'locale' => $wpLocale);
 
 			if( $hook == $this->settingsPage ) {
-				wp_enqueue_style('ej-widgets', SAM_PRO_URL . 'css/ej.widgets.core.min.css');
-				wp_enqueue_style('ej-theme', SAM_PRO_URL . 'css/ej.theme.min.css');
+				wp_enqueue_style('ej-css', SAM_PRO_URL . 'css/ej.web.all.min.css');
 				wp_enqueue_style('normalize', SAM_PRO_URL . 'css/normalize.css');
 				wp_enqueue_style('ion-slider', SAM_PRO_URL . 'css/ion.rangeSlider.css');
 				wp_enqueue_style('ion-slider-nice', SAM_PRO_URL . 'css/ion.rangeSlider.skinNice.css');
@@ -876,8 +875,7 @@ ORDER BY uu.owner;";
 				do_action('sam_pro_admin_settings_scripts');
 			}
 			elseif( $hook == $this->placesPage ) {
-				wp_enqueue_style('ej-widgets', SAM_PRO_URL . 'css/ej.widgets.core.min.css');
-				wp_enqueue_style('ej-theme', SAM_PRO_URL . 'css/ej.theme.min.css');
+				wp_enqueue_style('ej-css', SAM_PRO_URL . 'css/ej.web.all.min.css');
 
 				wp_enqueue_style('sam-pro-font', SAM_PRO_URL . 'css/sam-pro-embedded.css');
 				wp_enqueue_style('sam-pro-places', SAM_PRO_URL . 'css/sam-pro-places.css');
@@ -907,8 +905,7 @@ ORDER BY uu.owner;";
 				do_action('sam_pro_admin_places_scripts');
 			}
 			elseif( $hook == $this->adsPage ) {
-				wp_enqueue_style('ej-widgets', SAM_PRO_URL . 'css/ej.widgets.core.min.css');
-				wp_enqueue_style('ej-theme', SAM_PRO_URL . 'css/ej.theme.min.css');
+				wp_enqueue_style('ej-css', SAM_PRO_URL . 'css/ej.web.all.min.css');
 
 				wp_enqueue_style('sam-pro-font', SAM_PRO_URL . 'css/sam-pro-embedded.css');
 				wp_enqueue_style('sam-pro-places', SAM_PRO_URL . 'css/sam-pro-places.css');
@@ -935,8 +932,7 @@ ORDER BY uu.owner;";
 				do_action('sam_pro_admin_ads_scripts');
 			}
 			elseif( $hook == $this->zonesPage ) {
-				wp_enqueue_style('ej-widgets', SAM_PRO_URL . 'css/ej.widgets.core.min.css');
-				wp_enqueue_style('ej-theme', SAM_PRO_URL . 'css/ej.theme.min.css');
+				wp_enqueue_style('ej-css', SAM_PRO_URL . 'css/ej.web.all.min.css');
 
 				wp_enqueue_style('sam-pro-font', SAM_PRO_URL . 'css/sam-pro-embedded.css');
 				wp_enqueue_style('sam-pro-places', SAM_PRO_URL . 'css/sam-pro-places.css');
@@ -964,8 +960,7 @@ ORDER BY uu.owner;";
 				do_action('sam_pro_admin_zones_scripts');
 			}
 			elseif( $hook == $this->blocksPage ) {
-				wp_enqueue_style('ej-widgets', SAM_PRO_URL . 'css/ej.widgets.core.min.css');
-				wp_enqueue_style('ej-theme', SAM_PRO_URL . 'css/ej.theme.min.css');
+				wp_enqueue_style('ej-css', SAM_PRO_URL . 'css/ej.web.all.min.css');
 
 				wp_enqueue_style('sam-pro-font', SAM_PRO_URL . 'css/sam-pro-embedded.css');
 				wp_enqueue_style('sam-pro-places', SAM_PRO_URL . 'css/sam-pro-places.css');
@@ -993,8 +988,7 @@ ORDER BY uu.owner;";
 				do_action('sam_pro_admin_blocks_scripts');
 			}
 			elseif( $hook == $this->errorLogPage ) {
-				wp_enqueue_style('ej-widgets', SAM_PRO_URL . 'css/ej.widgets.core.min.css');
-				wp_enqueue_style('ej-theme', SAM_PRO_URL . 'css/ej.theme.min.css');
+				wp_enqueue_style('ej-css', SAM_PRO_URL . 'css/ej.web.all.min.css');
 
 				wp_enqueue_style('sam-pro-font', SAM_PRO_URL . 'css/sam-pro-embedded.css');
 				wp_enqueue_style('sam-pro-places', SAM_PRO_URL . 'css/sam-pro-places.css');
@@ -1039,8 +1033,7 @@ ORDER BY uu.owner;";
 				do_action('sam_pro_admin_error_log_scripts');
 			}
 			elseif( $hook == $this->adEditor ) {
-				wp_enqueue_style('ej-widgets', SAM_PRO_URL . 'css/ej.widgets.core.min.css');
-				wp_enqueue_style('ej-theme', SAM_PRO_URL . 'css/ej.theme.min.css');
+				wp_enqueue_style('ej-css', SAM_PRO_URL . 'css/ej.web.all.min.css');
 				wp_enqueue_style('sam-pro-font', SAM_PRO_URL . 'css/sam-pro-embedded.css');
 				wp_enqueue_style('sam-pro-editor', SAM_PRO_URL . 'css/sam-pro-editor.css');
 				do_action('sam_pro_admin_ad_editor_styles');
@@ -1083,8 +1076,7 @@ ORDER BY uu.owner;";
 				do_action('sam_pro_admin_ad_editor_scripts');
 			}
 			elseif( $hook == $this->placeEditor ) {
-				wp_enqueue_style('ej-widgets', SAM_PRO_URL . 'css/ej.widgets.core.min.css');
-				wp_enqueue_style('ej-theme', SAM_PRO_URL . 'css/ej.theme.min.css');
+				wp_enqueue_style('ej-css', SAM_PRO_URL . 'css/ej.web.all.min.css');
 				wp_enqueue_style('sam-pro-font', SAM_PRO_URL . 'css/sam-pro-embedded.css');
 				wp_enqueue_style('sam-pro-editor', SAM_PRO_URL . 'css/sam-pro-editor.css');
 				wp_enqueue_style('sam-pro-icons', SAM_PRO_URL . 'css/sam-pro-icons.css');
@@ -1127,8 +1119,7 @@ ORDER BY uu.owner;";
 				do_action('sam_pro_admin_place_editor_scripts');
 			}
 			elseif( $hook == $this->zoneEditor ) {
-				wp_enqueue_style('ej-widgets', SAM_PRO_URL . 'css/ej.widgets.core.min.css');
-				wp_enqueue_style('ej-theme', SAM_PRO_URL . 'css/ej.theme.min.css');
+				wp_enqueue_style('ej-css', SAM_PRO_URL . 'css/ej.web.all.min.css');
 				wp_enqueue_style('sam-pro-font', SAM_PRO_URL . 'css/sam-pro-embedded.css');
 				wp_enqueue_style('sam-pro-editor', SAM_PRO_URL . 'css/sam-pro-editor.css');
 				do_action('sam_pro_admin_zone_editor_styles');
@@ -1164,8 +1155,7 @@ ORDER BY uu.owner;";
 				do_action('sam_pro_admin_zone_editor_scripts');
 			}
 			elseif( $hook == $this->blockEditor ) {
-				wp_enqueue_style('ej-widgets', SAM_PRO_URL . 'css/ej.widgets.core.min.css');
-				wp_enqueue_style('ej-theme', SAM_PRO_URL . 'css/ej.theme.min.css');
+				wp_enqueue_style('ej-css', SAM_PRO_URL . 'css/ej.web.all.min.css');
 				wp_enqueue_style('sam-pro-font', SAM_PRO_URL . 'css/sam-pro-embedded.css');
 				wp_enqueue_style('sam-pro-editor', SAM_PRO_URL . 'css/sam-pro-editor.css');
 				do_action('sam_pro_admin_block_editor_styles');
@@ -1192,8 +1182,7 @@ ORDER BY uu.owner;";
 				do_action('sam_pro_admin_block_editor_scripts');
 			}
 			elseif( $hook == $this->advertisersList ) {
-				wp_enqueue_style('ej-widgets', SAM_PRO_URL . 'css/ej.widgets.core.min.css');
-				wp_enqueue_style('ej-theme', SAM_PRO_URL . 'css/ej.theme.min.css');
+				wp_enqueue_style('ej-css', SAM_PRO_URL . 'css/ej.web.all.min.css');
 				wp_enqueue_style('sam-pro-font', SAM_PRO_URL . 'css/sam-pro-embedded.css');
 				wp_enqueue_style('sam-pro-advertisers', SAM_PRO_URL . 'css/sam-pro-advertisers-list.css');
 				do_action('sam_pro_admin_advertisers_styles');
@@ -1224,8 +1213,7 @@ ORDER BY uu.owner;";
 				do_action('sam_pro_admin_advertisers_scripts');
 			}
 			elseif( $hook == $this->statsPage ) {
-				wp_enqueue_style('ej-widgets', SAM_PRO_URL . 'css/ej.widgets.core.min.css');
-				wp_enqueue_style('ej-theme', SAM_PRO_URL . 'css/ej.theme.min.css');
+				wp_enqueue_style('ej-css', SAM_PRO_URL . 'css/ej.web.all.min.css');
 				wp_enqueue_style('sam-pro-font', SAM_PRO_URL . 'css/sam-pro-embedded.css');
 				wp_enqueue_style('sam-pro-stats', SAM_PRO_URL . 'css/sam-pro-statistics.css');
 				do_action('sam_pro_admin_stats_styles');
