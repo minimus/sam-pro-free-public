@@ -1411,6 +1411,30 @@ ORDER BY uu.owner;";
 			register_setting('sam-pro-settings', SAM_PRO_OPTIONS_NAME, array(&$this, 'sanitizeSettings'));
 		}
 
+		public function checkMaintenanceDate( $period ) {
+			$mDate = get_transient( 'sam_pro_maintenance_date' );
+			$force = (false === $mDate);
+			$trDate = (false !== $mDate) ? new DateTime($mDate) : false;
+			$date = new DateTime('now');
+			if($period == 'monthly') {
+				$date->modify('+1 month');
+				$nextDate = new DateTime($date->format('Y-m-01 02:00'));
+				$diff = $nextDate->format('U') - $_SERVER['REQUEST_TIME'];
+			}
+			else {
+				$dd = 8 - ((integer) $date->format('N'));
+				$date->modify("+{$dd} day");
+				$nextDate = new DateTime($date->format('Y-m-d 02:00'));
+				$diff = (8 - ((integer) $date->format('N'))) * DAY_IN_SECONDS;
+			}
+			$format = get_option('date_format').' '.get_option('time_format');
+			if(false !== $trDate) {
+				$trDiff = $nextDate->diff($trDate);
+				$force = ((int)$trDiff->days <> 0);
+			}
+			if ($force) set_transient( 'sam_pro_maintenance_date', $nextDate->format($format), $diff );
+		}
+
 		public function sanitizeSettings( $input ) {
 			global $wpdb;
 
@@ -1587,6 +1611,7 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 			$options = parent::getSettings();
 
 			if((int)$options['mailer']) {
+				self::checkMaintenanceDate($options['mail_period']);
 				$time = get_transient( 'sam_pro_maintenance_date' );
 				if($time !== false)
 					echo "<p>".__("Next mailing is scheduled on", SAM_PRO_DOMAIN)." <code>{$time}</code>... "."</p>";

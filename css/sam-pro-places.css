@@ -23,21 +23,25 @@
 .e-addnew:before {
   font-family: "sam-pro";
   content: "\e870";
+  color: #088aba;
 }
 /*Changes the edit button icons*/
 .e-edit:before {
   font-family: "sam-pro";
   content: "\e82c";
+  color: #088aba;
 }
 /*Changes the delete button icons*/
 .e-delete:before {
   font-family: "sam-pro";
   content: "\e81b" !important;
+  color: #d41605;
 }
 /*Changes the save button icons*/
 .e-save:before {
   font-family: "sam-pro";
   content: "\e83d";
+  color: #00ba00;
 }
 /*Change the cancel icons*/
 /*.e-gcancel:before {
@@ -63,66 +67,79 @@
 .Add:before {
   font-family: "sam-pro";
   content: "\e870";
+  color: #088aba;
 }
 
 .new-ad:before, .new-zone:before, .new-block:before {
   font-family: "sam-pro";
   content: "\e870";
+  color: #088aba;
 }
 
 .place-to-trash:before, .zone-to-trash:before, .block-to-trash:before {
   font-family: "sam-pro";
   content: "\e81a";
+  color: #ef9006;
 }
 
 .to-trash:before {
   font-family: "sam-pro";
   content: "\e809";
+  color: #ef9006;
 }
 
 .place-from-trash:before, .zone-from-trash:before, .block-from-trash:before {
   font-family: "sam-pro";
   content: "\e852";
+  color: #00ba00;
 }
 
 .Edit:before {
   font-family: "sam-pro";
   content: "\e82c";
+  color: #088aba;
 }
 
 .Edit_Ad:before {
   font-family: 'sam-pro';
   content: '\e822';
+  color: #088aba;
 }
 
 .Link:before {
   font-family: "sam-pro";
   content: "\e808";
+  color: #088aba;
 }
 
 .ad-moderate:before {
   font-family: 'sam-pro';
   content: '\e804';
+  color: #00ba00;
 }
 
 .ad-unmoderate:before {
   font-family: 'sam-pro';
   content: '\e851';
+  color: #ef9006;
 }
 
 .more-info:before {
   font-family: 'sam-pro';
   content: '\e830';
+  color: #088aba;
 }
 
 .clear-errors:before {
   font-family: sam-pro;
   content: '\e81b';
+  color: #d41605;
 }
 
 .error-solved:before {
   font-family: 'sam-pro';
   content: '\e840';
+  color: #00ba00;
 }
 
 .icon-trash:before, .icon-attention:before, .icon-warning-empty:before {

@@ -20,11 +20,13 @@
 .Stats:before {
   font-family: "sam-pro";
   content: "\e838";
+  color: #088aba;
 }
 
 .SendMail:before {
   font-family: "sam-pro";
   content: "\e810";
+  color: #088aba;
 }
 
 .icon-trash:before, .icon-attention:before, .icon-warning-empty:before {
@@ -55,21 +57,25 @@
 .e-addnew:before {
   font-family: "sam-pro";
   content: "\e870";
+  color: #088aba;
 }
 /*Changes the edit button icons*/
 .e-edit:before {
   font-family: "sam-pro";
   content: "\e82c";
+  color: #088aba;
 }
 /*Changes the delete button icons*/
 .e-delete:before {
   font-family: "sam-pro";
   content: "\e81b" !important;
+  color: #d41605;
 }
 /*Changes the save button icons*/
 .e-save:before {
   font-family: "sam-pro";
   content: "\e83d";
+  color: #00a300;
 }
 /*Change the cancel icons*/
 /*.e-gcancel:before {

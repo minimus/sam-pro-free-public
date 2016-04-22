@@ -50,41 +50,49 @@
 .Add:before {
   font-family: "sam-pro";
   content: "\e870";
+  color: #088aba;
 }
 
 .new-ad:before {
   font-family: "sam-pro";
   content: "\e870";
+  color: #088aba;
 }
 
 .place-to-trash:before {
   font-family: "sam-pro";
   content: "\e809";
+  color: #ef9006;
 }
 
 .to-trash:before {
   font-family: "sam-pro";
   content: "\e809" !important;
+  color: #ef9006;
 }
 
 .place-from-trash:before {
   font-family: "sam-pro";
   content: "\e852";
+  color: #00a300;
 }
 
 .Edit:before {
   font-family: "sam-pro";
   content: "\e82c";
+  color: #088aba;
 }
 
 .Edit_Ad:before {
   font-family: 'sam-pro';
   content: '\e822';
+  color: #088aba;
 }
 
 .Link:before {
   font-family: "sam-pro";
   content: "\e808";
+  color: #088aba;
 }
 
 .icon-trash:before {
@@ -127,21 +135,25 @@
 .e-addnew:before {
   font-family: "sam-pro";
   content: "\e870";
+  color: #088aba;
 }
 /*Changes the edit button icons*/
 .e-edit:before {
   font-family: "sam-pro";
   content: "\e82c";
+  color: #088aba;
 }
 /*Changes the delete button icons*/
 .e-delete:before {
   font-family: "sam-pro";
   content: "\e81b" !important;
+  color: #d41605;
 }
 /*Changes the save button icons*/
 .e-save:before {
   font-family: "sam-pro";
   content: "\e83d";
+  color: #00a300;
 }
 /*Change the cancel icons*/
 /*.e-gcancel:before {
