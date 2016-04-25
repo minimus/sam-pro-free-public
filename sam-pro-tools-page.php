@@ -73,7 +73,8 @@ if( ! class_exists( 'SamProToolsPage' ) ) {
 							$strAddons = __('Addons', SAM_PRO_DOMAIN) . ':';
 							echo "<p><strong>{$strAddons}</strong><ul style='list-style: inherit !important;margin-left: 20px;'>";
 							foreach($samProAddonsList as $addon) {
-								echo "<li>{$addon['name']}</li>";
+								$aVersion = (isset($addon['version'])) ? "({$addon['version']})" : '';
+								echo "<li>{$addon['name']} {$aVersion}</li>";
 							}
 							echo "</ul></p>";
 						}
