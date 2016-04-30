@@ -104,6 +104,22 @@ GA_googleFetchAds();
 			return $out;
 		}
 
+		public function getAdSenseCodes() {
+			$settings = parent::getSettings();
+			$out = '';
+			if($settings['enablePageLevelAds'] && !empty($settings['adsensePub'])) {
+				$out = "<script async src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: '{$settings['adsensePub']}',
+    enable_page_level_ads: true
+  });
+</script>";
+			}
+
+			return $out;
+		}
+
 		public function setSamQuery() {
 			global $SAM_PRO_Query, $post;
 			if(empty($this->clause)) $this->clause = self::buildWhereClause();
@@ -186,6 +202,7 @@ GA_googleFetchAds();
 
 			if((int)$this->settings['useSWF']) wp_enqueue_script('swfobject');
 			if((int)$this->settings['useDFP']) echo self::getDfpCodes($this->settings['dfpMode']);
+			if((int)$this->settings['enablePageLevelAds']) echo self::getAdSenseCodes();
 
 			wp_enqueue_script('jquery');
 			$jsOptions = array(

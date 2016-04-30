@@ -156,11 +156,14 @@ if( ! class_exists("SamProCore") ) {
 			'table_est' => '',
 			'table_est_view' => 0,
 			// Other
-			'site_admin_url' => ''
+			'site_admin_url' => '',
+			// Google AdSense
+			'adsensePub' => '',
+			'enablePageLevelAds' => 0
 		);
 
 		public function __construct() {
-			define('SAM_PRO_VERSION', '1.6.3.43');
+			define('SAM_PRO_VERSION', '1.7.0.44');
 			define('SAM_PRO_DB_VERSION', '1.0');
 			define('SAM_PRO_PATH', dirname( __FILE__ ));
 			define('SAM_PRO_URL', plugins_url( '/',  __FILE__  ) );

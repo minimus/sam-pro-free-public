@@ -1295,7 +1295,8 @@ ORDER BY uu.owner;";
 				array("sam_single_section", __("Content", SAM_PRO_DOMAIN), array(&$this, "drawSingleSection"), 'sam-pro-settings')
 			), 'tabs-2', __('Embedding', SAM_PRO_DOMAIN), 'icon-magic');
 			self::addSettingsTab('google_tab', array(
-				array("sam_dfp_section", __("Google DFP Settings", SAM_PRO_DOMAIN), array(&$this, "drawDFPSection"), 'sam-pro-settings')
+				array("sam_dfp_section", __("Google DFP Settings", SAM_PRO_DOMAIN), array(&$this, "drawDFPSection"), 'sam-pro-settings'),
+				array('sam_adsense_section', __('Google AdSense', SAM_PRO_DOMAIN), array(&$this, 'drawAdsenseSection'), 'sam-pro-settings')
 			), 'tabs-3', __('Google', SAM_PRO_DOMAIN), 'icon-globe');
 			self::addSettingsTab('mailer_tab', array(
 				array('sam_mailer_section', __('Mailing System', SAM_PRO_DOMAIN), array(&$this, 'drawMailerSection'), 'sam-pro-settings'),
@@ -1349,6 +1350,9 @@ ORDER BY uu.owner;";
 			add_settings_field('dfpPub', __("Google DFP Pub Code (GAM)", SAM_PRO_DOMAIN), array(&$this, 'drawTextOption'), 'sam-pro-settings', 'sam_dfp_section', array('description' => __('Your Google DFP Pub code. i.e:', SAM_PRO_DOMAIN).' ca-pub-0000000000000000. '.__('Only for GAM mode.', SAM_PRO_DOMAIN), 'width' => '200px'));
 			add_settings_field('dfpNetworkCode', __('Google DFP Network Code (GPT)', SAM_PRO_DOMAIN), array(&$this, 'drawTextOption'), 'sam-pro-settings', 'sam_dfp_section', array('description' => __('Network Code of Your DFP Ad Network. Only for GPT mode.', SAM_PRO_DOMAIN), 'width' => '200px'));
 			do_action('sam_pro_settings_fields_dfp_section');
+			
+			add_settings_field('adsensePub', __('Google AdSense Pub Code', SAM_PRO_DOMAIN), array(&$this, 'drawTextOption'), 'sam-pro-settings', 'sam_adsense_section', array('description' => __('Your Google AdSense Pub Code.'), 'placeholder' => 'ca-pub-0000000000000000', 'width' => '100%'));
+			add_settings_field('enablePageLevelAds', __("Allow using Google AdSense page-level (<span id='anchor-help'>anchor/overlay</span> or/and <span id='vignette-help'>vignette</span>) ads on mobile devices", SAM_PRO_DOMAIN), array(&$this, 'drawCheckboxOption'), 'sam-pro-settings', 'sam_adsense_section', array('label_for' => 'enablePageLevelAds', 'checkbox' => true, 'description' => __('Do not forget to adjust your Google AdSense settings on settings page (My Ads -> Page-level ads).', SAM_PRO_DOMAIN)));
 
 			add_settings_field('detectBots', __("Allow Bots and Crawlers detection", SAM_PRO_DOMAIN), array(&$this, 'drawCheckboxOption'), 'sam-pro-settings', 'sam_statistic_section', array('label_for' => 'detectBots', 'checkbox' => true));
 			add_settings_field('detectingMode', __("Accuracy of Bots and Crawlers Detection", SAM_PRO_DOMAIN), array(&$this, 'drawRadioOption'), 'sam-pro-settings', 'sam_statistic_section', array('description' => __("If bot is detected hits of ads won't be counted. Use with caution! More exact detection requires more server resources.", SAM_PRO_DOMAIN), 'options' => array( 'inexact' => __('Inexact detection', SAM_PRO_DOMAIN), 'exact' => __('Exact detection', SAM_PRO_DOMAIN), 'more' => __('More exact detection', SAM_PRO_DOMAIN), 'js' => 'JS')));
@@ -1531,7 +1535,8 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 				'rule_clicks',
 				'rule_geo',
 				'moveExpired',
-				'table_est_view'
+				'table_est_view',
+				'enablePageLevelAds'
 			);
 			foreach($boolNames as $name) {
 				$output[$name] = ((isset($input[$name])) ? $input[$name] : 0);
@@ -1575,6 +1580,10 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 
 		public function drawDFPSection() {
 			echo '<p>'.__('Adjust parameters of your Google DFP account.', SAM_PRO_DOMAIN).'</p>';
+		}
+		
+		public function drawAdsenseSection() {
+			echo "<p></p>";
 		}
 
 		public function drawStatisticsSection() {
@@ -1668,12 +1677,13 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 			$type = (isset($args['type'])) ? $args['type'] : 'text';
 			$min = (isset($args['min'])) ? " min='{$args['min']}'" : '';
 			$max = (isset($args['max'])) ? " max='{$args['max']}'" : '';
+			$placeholder = ( isset( $args['placeholder'] ) ) ? $args['placeholder'] : '';
 			?>
 			<input id="<?php echo $id; ?>"
 			       name="<?php echo SAM_PRO_OPTIONS_NAME.'['.$id.']'; ?>"
 			       type="<?php echo $type; ?>"<?php echo $min . $max; ?>
 			       value="<?php echo $settings[$id]; ?>"
-			       style="<?php echo "width: {$width};" ?>" />
+			       style="<?php echo "width: {$width};" ?>" <?php if(!empty($placeholder)) echo "placeholder='{$placeholder}'"?> />
 		<?php
 		}
 
