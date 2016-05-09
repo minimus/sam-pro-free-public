@@ -56,6 +56,7 @@ if( ! class_exists( 'SamProPlaceEditor' ) ) {
 					'link' => '',
 					'alt' => '',
 					'acode' => '',
+					'inline' => 0,
 					'php' => 0,
 					'ad_server' => 0,
 					'dfp' => '',
@@ -97,6 +98,7 @@ if( ! class_exists( 'SamProPlaceEditor' ) ) {
 				'link' => stripslashes($_POST['link']),
 				'alt' => stripslashes($_POST['alt']),
 				'acode' => stripslashes($_POST['acode']),
+				'inline' => ((isset($_POST['inline'])) ? 1 : 0),
 				'php' => ((isset($_POST['php'])) ? 1 : 0),
 				'ad_server' => ((isset($_POST['ad_server'])) ? 1 : 0),
 				'dfp' => stripslashes($_POST['dfp']),
@@ -108,7 +110,7 @@ if( ! class_exists( 'SamProPlaceEditor' ) ) {
 
 			$formatRow = apply_filters('sam_pro_admin_place_save_format', array(
 				'%d', '%s', '%s', '%d', '%d', '%d', '%s', '%s', '%s', '%s', '%s', '%d', '%d', // aid - height
-				'%s', '%s', '%s', '%s', '%d', '%d', '%s', '%d', '%d', '%d', '%d'  // img - trash
+				'%s', '%s', '%s', '%s', '%d', '%d', '%d', '%s', '%d', '%d', '%d', '%d'  // img - trash
 			));
 
 			if($id == 0) {
@@ -329,6 +331,8 @@ if( ! class_exists( 'SamProPlaceEditor' ) ) {
 														<p>
 															<label for="acode"><?php echo __('Default Ad Code', SAM_PRO_DOMAIN).':'; ?></label>
 															<textarea id="acode" class="code" rows='10' name="acode" style="width:100%" ><?php echo htmlspecialchars(stripslashes($row['acode'])); ?></textarea>
+															<input type='checkbox' name='inline' id='inline' value='1' <?php checked( 1, $row['inline'] ); ?>>
+															<label for='inline' style='vertical-align: middle;'> <?php _e( 'This is the set of inline ads', 'sam-pro' ); ?></label><br>
 															<input type='checkbox' name='php' id='php' value='1' <?php checked( 1, $row['php'] ); ?>>
 															<label for='php' style='vertical-align: middle;'> <?php _e( 'This code of ad contains PHP script', SAM_PRO_DOMAIN ); ?></label><br>
 															<input type='checkbox' name='ad_server' id='ad_server' value='1' <?php checked(1, $row['ad_server']); ?>>

@@ -64,6 +64,7 @@ GROUP BY wss.pid, wss.aid;";
 					'swf_fallback'=> '',
 					'acode'       => '',
 					'php'         => 0,
+					'inline'      => 0,
 					'amode'       => 0,
 					'hits'        => 0,
 					'clicks'      => 0,
@@ -150,6 +151,7 @@ GROUP BY wss.pid, wss.aid;";
 				'swf_fallback'=> stripslashes($_POST['swf_fallback']),
 				'acode'       => stripslashes($_POST['acode']),
 				'php'         => ( ( isset( $_POST['php'] ) ) ? 1 : 0 ),
+				'inline'      => ( ( isset( $_POST['inline'] ) ) ? 1 : 0 ),
 				'amode'       => ( ( isset( $_POST['amode'] ) ) ? $_POST['amode'] : 0 ),
 				'hits'        => 0,
 				'clicks'      => ( ( isset( $_POST['clicks'] ) ) ? 1 : 0 ),
@@ -207,7 +209,7 @@ GROUP BY wss.pid, wss.aid;";
 
 			$formatRow = apply_filters('sam_pro_admin_ad_save_format', array(
 				'%s', '%s', '%d', '%s', '%s', '%s', '%d', '%s', '%s', '%s', '%s', '%s',                   // title - acode
-				'%d', '%d', '%d', '%d', '%d', '%s', '%s', '%d', '%d',                                     // php - price
+				'%d', '%d', '%d', '%d', '%d', '%d', '%s', '%s', '%d', '%d',                               // php - price
 				'%d', '%d', '%d', '%d', '%s', '%d', '%d', '%s', '%d', '%d', '%s', '%d', '%d', '%s',       // ptype - authors
 				'%d', '%d', '%s', '%d', '%d', '%s', '%d', '%s', '%s', '%d', '%d', '%d', '%d',             // etax - clicks_limit
 				'%d', '%d', '%d', '%d', '%s', '%d', '%d', '%d', '%s', '%s', '%s', '%s', '%s', '%s',       // users - owner_mail
@@ -474,6 +476,8 @@ GROUP BY wss.pid, wss.aid;";
 														<p>
 															<label for="acode"><strong><?php echo __( 'Ad Code', SAM_PRO_DOMAIN ) . ':'; ?></strong></label>
 															<textarea name='acode' id='acode' rows='10' title='Ad Code' style='width: 100%;'><?php echo $row['acode'] ?></textarea>
+															<input type='checkbox' name='inline' id='inline' value='1' <?php checked( 1, $row['inline'] ); ?>>
+															<label for='inline' style='vertical-align: middle;'> <?php _e( 'This is inline ad', 'sam-pro' ); ?></label><br>
 															<input type='checkbox' name='php' id='php' value='1' <?php checked( 1, $row['php'] ); ?>>
 															<label for='php' style='vertical-align: middle;'> <?php _e( 'This code of ad contains PHP script', SAM_PRO_DOMAIN ); ?></label>
 														</p>

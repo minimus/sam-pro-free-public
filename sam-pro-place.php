@@ -108,7 +108,7 @@ if( ! class_exists( 'SamProPlace' ) ) {
   ua.code_after,
   ua.asize, ua.width, ua.height,
   ua.img, ua.link, ua.alt, ua.acode, ua.rel,
-  ua.php, ua.ad_server, ua.dfp, ua.amode, ua.clicks,
+  ua.php, ua.inline, ua.ad_server, ua.dfp, ua.amode, ua.clicks,
   ua.adCycle, 0 AS block_children,
   ua.limit_hits, ua.hits_limit, ua.hits_period,
   ua.limit_clicks, ua.clicks_limit, ua.clicks_period,
@@ -120,7 +120,7 @@ if( ! class_exists( 'SamProPlace' ) ) {
     sp.code_after,
     sa.asize, sa.width, sa.height,
     sa.img, sa.link, sa.alt, sa.acode, sa.rel,
-    sa.php, 0 AS ad_server, 0 AS dfp, sa.amode, sa.clicks,
+    sa.php, sa.inline, 0 AS ad_server, 0 AS dfp, sa.amode, sa.clicks,
     IF(spa.weight, spa.hits*10/(spa.weight*{$adCycle}), 0) AS adCycle,
     sa.limit_hits, sa.hits_limit, sa.hits_period,
     sa.limit_clicks, sa.clicks_limit, sa.clicks_period,
@@ -153,7 +153,7 @@ SELECT
   ua.code_after,
   ua.asize, ua.width, ua.height,
   ua.img, ua.link, ua.alt, ua.acode, ua.rel,
-  ua.php, ua.ad_server, ua.dfp, ua.amode, ua.clicks,
+  ua.php, ua.inline, ua.ad_server, ua.dfp, ua.amode, ua.clicks,
   ua.adCycle, ua.block_children,
   ua.limit_hits, ua.hits_limit, ua.hits_period,
   ua.limit_clicks, ua.clicks_limit, ua.clicks_period,
@@ -165,7 +165,7 @@ SELECT
     @code_after := sp.code_after AS code_after,
     sp.asize, sp.width, sp.height,
     sp.img, sp.link, sp.alt, sp.acode, sp.rel,
-    sp.php, sp.ad_server, sp.dfp, sp.amode, 0 AS clicks,
+    sp.php, sp.inline, sp.ad_server, sp.dfp, sp.amode, 0 AS clicks,
     IF(sp.ad_server OR (sp.sale AND sp.sale_mode = 0 AND NOT (NOW() BETWEEN sp.sdate AND sp.fdate)), -1.0, 2.0) AS adCycle,
     (sp.sale AND sp.sale_mode = 0 AND NOT (NOW() BETWEEN sp.sdate AND sp.fdate)) AS block_children,
     0 AS limit_hits, 0 AS hits_limit, 0 AS hits_period,
@@ -180,7 +180,7 @@ SELECT
     @code_after AS code_after,
     sa.asize, sa.width, sa.height,
     sa.img, sa.link, sa.alt, sa.acode, sa.rel,
-    sa.php, 0 AS ad_server, 0 AS dfp, sa.amode, sa.clicks,
+    sa.php, sa.inline, 0 AS ad_server, 0 AS dfp, sa.amode, sa.clicks,
     IF(spa.weight, spa.hits*10/(spa.weight*{$adCycle}), 0) AS adCycle,
     0 AS block_children,
     sa.limit_hits, sa.hits_limit, sa.hits_period,
@@ -207,7 +207,7 @@ ORDER BY ua.adCycle{$this->limit};";
   sp.code_before, sp.code_after,
   sp.asize, sp.width, sp.height,
   sp.img, sp.link, sp.alt, sp.acode, sp.rel,
-  sp.php, sp.ad_server, sp.dfp, sp.amode, 0 AS clicks,
+  sp.php, sp.inline, sp.ad_server, sp.dfp, sp.amode, 0 AS clicks,
   (sp.sale AND sp.sale_mode = 0 AND NOT (NOW() BETWEEN sp.sdate AND sp.fdate)) AS block_children,
   (SELECT COUNT(*) FROM {$paTable} spa WHERE spa.pid = sp.pid) AS children,
   (SELECT COUNT(*) FROM {$paTable} spa INNER JOIN {$aTable} sa ON spa.aid = sa.aid WHERE spa.pid = sp.pid {$clauses}) AS children_logic
@@ -261,6 +261,7 @@ ORDER BY ua.adCycle{$this->limit};";
 			$cid0 = "c{$rId}_0_{$this->pid}";
 			$mode = $data['amode'];
 			$swf = (isset($data['swf'])) ? (int)$data['swf'] : 0;
+			$cntTag = (1 === (int)$data['inline']) ? 'span' : 'div';
 
 			// Google DFP
 			if($mode == 2) {
@@ -320,7 +321,7 @@ ORDER BY ua.adCycle{$this->limit};";
 </script>";
 							$fallback = "<div id='{$id}'>{$text}</div>";
 							if(!empty($data['link'])) {
-								$id = "id='ad-{$this->aid}-{$rId}' class='{$this->adClass}'";
+								$id = "id='img-{$this->aid}-{$rId}' class='{$this->adClass}'";
 								$target = (!empty($this->settings['adDisplay'])) ? "_{$this->settings['adDisplay']}" : '_blank';
 								$robo = (integer)$data['rel'];
 								$rel = ((in_array($robo, array(1,2,4))) ? ((in_array($robo, array(1,4))) ? " rel='nofollow'" : " rel='dofollow'") : '');
@@ -341,7 +342,7 @@ ORDER BY ua.adCycle{$this->limit};";
 							$out .= $fallback;
 						}
 						else {
-							$id = "id='ad-{$this->aid}-{$rId}' class='{$this->adClass}'";
+							$id = "id='img-{$this->aid}-{$rId}' class='{$this->adClass}'";
 							$target = (!empty($this->settings['adDisplay'])) ? "_{$this->settings['adDisplay']}" : '_blank';
 							$robo = (integer)$data['rel'];
 							$rel = ((in_array($robo, array(1,2,4))) ? ((in_array($robo, array(1,4))) ? " rel='nofollow'" : " rel='dofollow'") : '');
@@ -361,15 +362,15 @@ ORDER BY ua.adCycle{$this->limit};";
 							eval( '?>' . $data['acode'] . '<?' );
 							$out = ob_get_contents();
 							ob_end_clean();
-							$out = (!empty($out)) ? "<div id='{$this->cid}' class='{$this->cntClass} {$this->placeClass}'>{$before}{$out}{$after}</div>" : '';
+							$out = (!empty($out)) ? "<{$cntTag} id='{$this->cid}' class='{$this->cntClass} {$this->placeClass}'>{$before}{$out}{$after}</{$cntTag}>" : '';
 						}
 						else
-							$out = (!empty($data['acode'])) ? "<div id='{$this->cid}' class='{$this->cntClass} {$this->placeClass}'>{$before}{$data['acode']}{$after}</div>" : '';
+							$out = (!empty($data['acode'])) ? "<{$cntTag} id='{$this->cid}' class='{$this->cntClass} {$this->placeClass}'>{$before}{$data['acode']}{$after}</{$cntTag}>" : '';
 						break;
 				}
 			}
 			else
-				$out = "<div id='{$cid0}' class='{$this->cntClass} {$this->adClass}' data-spc='{$useTags}'></div>";
+				$out = "<{$cntTag} id='{$cid0}' class='{$this->cntClass} {$this->adClass}' data-spc='{$useTags}'></{$cntTag}>";
 
 			return $out;
 		}

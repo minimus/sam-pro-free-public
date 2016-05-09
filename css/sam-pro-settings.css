@@ -91,3 +91,35 @@
   padding-right: 5px !important;
   line-height: 140% !important;
 }
+
+input:-moz-placeholder {
+  color: #b2b2b2;
+}
+
+input:-ms-input-placeholder {
+  color: #b2b2b2;
+}
+
+input::-moz-placeholder {
+  color: #b2b2b2;
+}
+
+input::-webkit-input-placeholder {
+  color: #b2b2b2;
+}
+
+textarea:-moz-placeholder {
+  color: #b2b2b2;
+}
+
+textarea:-ms-input-placeholder {
+  color: #b2b2b2;
+}
+
+textarea::-moz-placeholder {
+  color: #b2b2b2;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #b2b2b2;
+}

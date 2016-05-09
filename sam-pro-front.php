@@ -411,12 +411,34 @@ GA_googleFetchAds();
 						$postID = ((!empty($post->ID)) ? (integer)$post->ID : 0);
 						$singular .= (((!empty($singular)) ? ' AND ' : '') . "IF(sa.eposts, IF(sa.xposts, NOT FIND_IN_SET({$postID}, sa.posts), FIND_IN_SET({$postID}, sa.posts)), TRUE)");
 					}
+
+					// Authors
 					$pAuthor = get_userdata($post->post_author);
 					$zone .= ((!empty($zone)) ? ',' : '') . "author_all-authors,author_{$pAuthor->user_nicename}";
 					if($rules['authors']) {
 						$sAuthor = "IF(sa.eauthors, IF(sa.xauthors, NOT FIND_IN_SET(\"{$pAuthor->user_nicename}\", sa.authors), FIND_IN_SET(\"{$pAuthor->user_nicename}\", sa.authors)), TRUE)";
 					}
+
+					// Custom Taxonomies Terms
+					if(!empty($customTerms)) {
+						$zone .= ((!empty($zone)) ? ',' : '') . "ctt_all-ctt";
+						foreach($customTerms as $cTerm) $zone .= ((!empty($zone)) ? ',' : '') . "ctt_{$cTerm}";
+					}
+					if($rules['taxes']) {
+						if(!empty($customTerms)) {
+							$sTaxes0 = '';
+							$sTaxes1 = '';
+							foreach ( $customTerms as $cTerm ) {
+								$sTaxes0 .= ( ( ! empty( $sTaxes0 ) ) ? ' OR ' : '' ) . "FIND_IN_SET(\"{$cTerm}\", sa.taxes)";
+								$sTaxes1 .= ( ( ! empty( $sTaxes1 ) ) ? ' AND ' : '' ) . "NOT FIND_IN_SET(\"{$cTerm}\", sa.taxes)";
+							}
+							$sTaxes = "IF(sa.etax, IF(sa.xtax, {$sTaxes1}, {$sTaxes0}), TRUE)";
+						}
+						else $sTaxes = "IF(sa.etax, IF(sa.xtax, TRUE, FALSE), TRUE)";
+					}
+
 					if(!empty($sAuthor)) $singular .= (((!empty($singular)) ? ' AND ' : '') . $sAuthor);
+					if(!empty($sTaxes)) $singular .= (((!empty($singular)) ? ' AND ' : '') . $sTaxes);
 				}
 
 				// Attachment

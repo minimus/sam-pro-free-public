@@ -55,7 +55,7 @@ if( ! class_exists( 'SamProAd' ) ) {
 			$aTable = $wpdb->prefix . 'sampro_ads';
 
 			$sql = "SELECT
-  wsa.aid, wsa.img, wsa.link, wsa.alt, wsa.php, wsa.hits, wsa.clicks,
+  wsa.aid, wsa.img, wsa.link, wsa.alt, wsa.php, wsa.inline, wsa.hits, wsa.clicks,
   wsa.asize, wsa.width, wsa.height, wsa.acode, wsa.amode,wsa.rel,
   wsa.swf, wsa.swf_vars, wsa.swf_params, wsa.swf_attrs, wsa.swf_fallback
   FROM {$aTable} wsa
@@ -92,7 +92,7 @@ if( ! class_exists( 'SamProAd' ) ) {
 					</script>";
 					$fallback = "<div id='$id'>$text</div>";
 					if(!empty($data['link'])) {
-						$id = "id='ad-{$this->aid}-{$rId}' class='{$this->adClass}'";
+						$id = "id='img-{$this->aid}-{$rId}' class='{$this->adClass}'";
 						$target = (!empty($this->settings['adDisplay'])) ? "_{$this->settings['adDisplay']}" : '_blank';
 						$robo = (integer)$data['rel'];
 						$rel = ((in_array($robo, array(1,2,4))) ? ((in_array($robo, array(1,4))) ? " rel='nofollow'" : " rel='dofollow'") : '');
@@ -113,7 +113,7 @@ if( ! class_exists( 'SamProAd' ) ) {
 					$out .= $fallback;
 				}
 				else {
-					$id = "id='ad-{$this->aid}-{$rId}' class='{$this->adClass}'";
+					$id = "id='img-{$this->aid}-{$rId}' class='{$this->adClass}'";
 					$aStart ='';
 					$aEnd ='';
 					$robo = (integer)$data['rel'];
@@ -140,7 +140,11 @@ if( ! class_exists( 'SamProAd' ) ) {
 				}
 				else $out = $data['acode'];
 			}
-			$out = (!empty($out)) ? "<div id='c{$rId}_{$data['aid']}_na' class='{$this->cntClass}'>{$out}</div>" : '';
+
+			if(!empty($out)) {
+				$cntTag = (1 === (int)$data['inline']) ? 'span' : 'div';
+				$out =  "<{$cntTag} id='c{$rId}_{$data['aid']}_na' class='{$this->cntClass}'>{$out}</{$cntTag}>";
+			}
 
 			return $out;
 		}
