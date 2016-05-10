@@ -1420,7 +1420,16 @@ ORDER BY uu.owner;";
 		public function checkMaintenanceDate( $period ) {
 			$mDate = get_transient( 'sam_pro_maintenance_date' );
 			$force = (false === $mDate);
-			$trDate = (false !== $mDate) ? new DateTime($mDate) : false;
+			if( false !== $mDate ) {
+				try {
+					$trDate = new DateTime( $mDate );
+				}
+				catch ( Exception $e ) {
+					$trDate = false;
+					$force = true;
+				}
+			}
+			else $trDate = false;
 			$date = new DateTime('now');
 			if($period == 'monthly') {
 				$date->modify('+1 month');
@@ -1433,7 +1442,7 @@ ORDER BY uu.owner;";
 				$nextDate = new DateTime($date->format('Y-m-d 02:00'));
 				$diff = (8 - ((integer) $date->format('N'))) * DAY_IN_SECONDS;
 			}
-			$format = get_option('date_format').' '.get_option('time_format');
+			$format = 'Y-m-d 02:00';
 			if(false !== $trDate) {
 				$trDiff = $nextDate->diff($trDate);
 				$force = ((int)$trDiff->days <> 0);
@@ -1612,7 +1621,10 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 
 		public function drawScavengerSection() {
 			$time = get_transient( 'sam_pro_scavenge_time' );
-			$service = ($time === false) ? '' : __('Next cleaning is scheduled for', SAM_PRO_DOMAIN)." <code>{$time}</code>... ";
+			$format = get_option('date_format').' '.get_option('time_format');
+			$date = new DateTime($time);
+			$formattedTime = $date->format($format);
+			$service = ($time === false) ? '' : __('Next cleaning is scheduled for', SAM_PRO_DOMAIN)." <code>{$formattedTime}</code>... ";
 			echo '<p>'.__('Parameters of moving to the trash and removing of expired ads.', SAM_PRO_DOMAIN)." {$service}</p>";
 		}
 
@@ -1626,8 +1638,11 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 			if((int)$options['mailer']) {
 				self::checkMaintenanceDate($options['mail_period']);
 				$time = get_transient( 'sam_pro_maintenance_date' );
+				$date = new DateTime($time);
+				$format = get_option('date_format').' '.get_option('time_format');
+				$formattedTime = $date->format($format);
 				if($time !== false)
-					echo "<p>".__("Next mailing is scheduled on", SAM_PRO_DOMAIN)." <code>{$time}</code>... "."</p>";
+					echo "<p>".__("Next mailing is scheduled on", SAM_PRO_DOMAIN)." <code>{$formattedTime}</code>... "."</p>";
 			}
 			else echo "<p>".__("Adjust parameters of Mailing System.", SAM_PRO_DOMAIN)."</p>";
 		}

@@ -4,7 +4,7 @@ Donate link: http://uncle-sam.info
 Tags: ad, adbrite, adgridwork, adify, admin, adpinion, adroll, ads, adsense, adserver, advertisement, advertising, affiliate, banner, banners, chitika, cj, commercial, commission, crispads, dfp, google, income, junction, link, manager, media, money, plugin, random, referral, revenue, rotator, seo, server, shoppingads, widget, widgetbucks, yahoo, ypn
 Requires at least: 4.1
 Tested up to: 4.5
-Stable tag: 1.8.0.47
+Stable tag: 1.8.1.49
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -99,6 +99,9 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Changelog ==
 
+= 1.8.1.49 =
+* The bug of transient data with some date formats resolved
+* The bug of outputting ads resolved
 = 1.8.0.47 =
 * Inline ads added
 * Custom Taxonomies Terms Restrictions for pages added
@@ -141,6 +144,8 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Upgrade Notice ==
 
+= 1.8.1.49 =
+The bug of transient data with some date formats resolved. The bug of outputting ads resolved.
 = 1.8.0.47 =
 Inline ads added. Custom Taxonomies Terms Restrictions for pages added. Preventing ad blockers improved.
 = 1.7.0.44 =

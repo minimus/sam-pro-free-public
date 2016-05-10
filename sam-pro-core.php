@@ -163,7 +163,7 @@ if( ! class_exists("SamProCore") ) {
 		);
 
 		public function __construct() {
-			define('SAM_PRO_VERSION', '1.8.0.47');
+			define('SAM_PRO_VERSION', '1.8.1.49');
 			define('SAM_PRO_DB_VERSION', '1.1');
 			define('SAM_PRO_PATH', dirname( __FILE__ ));
 			define('SAM_PRO_URL', plugins_url( '/',  __FILE__  ) );
@@ -257,7 +257,7 @@ if( ! class_exists("SamProCore") ) {
 					$nextDate = new DateTime($date->format('Y-m-d 02:00'));
 					$diff = (8 - ((integer) $date->format('N'))) * DAY_IN_SECONDS;
 				}
-				$format = get_option('date_format').' '.get_option('time_format');
+				$format = 'Y-m-d 02:00';
 				set_transient( 'sam_pro_maintenance_date', $nextDate->format($format), $diff );
 
 				if($options['mailer'] || $options['keepStats'] > 0) {
@@ -283,7 +283,7 @@ if( ! class_exists("SamProCore") ) {
 				$date->modify('+1 day');
 				$nextDate = new DateTime($date->format('Y-m-d 02:00'));
 				$diff = $nextDate->format('U') - $_SERVER['REQUEST_TIME'];
-				$format = get_option('date_format').' '.get_option('time_format');
+				$format = 'Y-m-d 02:00';
 				set_transient( 'sam_pro_scavenge_time', $nextDate->format($format), $diff );
 
 				include_once('tools/sam-pro-scavenger.php');
