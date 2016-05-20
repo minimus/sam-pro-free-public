@@ -53,6 +53,10 @@ if ( class_exists( 'SamProCore' ) && ! class_exists( 'SamProAdmin' ) ) {
 			register_deactivation_hook( SAM_PRO_MAIN_FILE, array( &$this, 'onDeactivate' ) );
 			register_uninstall_hook( SAM_PRO_MAIN_FILE, array( __CLASS__, 'onUninstall' ) );
 
+			include_once('sam-pro-updater.php');
+			$updater = new SamProUpdater($this->samVersions['db'], $options);
+			$updater->check($sam_pro_tables_definition);
+
 			$ea_url = admin_url('admin.php') . '?page=sam-pro-ad-editor';
 			$ep_url = admin_url('admin.php') . '?page=sam-pro-place-editor';
 			if(isset($_SERVER['HTTP_REFERER'])) {
@@ -77,10 +81,6 @@ if ( class_exists( 'SamProCore' ) && ! class_exists( 'SamProAdmin' ) ) {
 
 			add_action('add_meta_boxes', array(&$this, 'addMetaBoxes'));
 			add_action('save_post', array(&$this, 'savePost'));
-
-			include_once('sam-pro-updater.php');
-			$updater = new SamProUpdater($this->samVersions['db'], $options);
-			$updater->check($sam_pro_tables_definition);
 		}
 
 		public function uploadDir( $param ) {
@@ -1352,7 +1352,7 @@ ORDER BY uu.owner;";
 			add_settings_field('dfpPub', __("Google DFP Pub Code (GAM)", SAM_PRO_DOMAIN), array(&$this, 'drawTextOption'), 'sam-pro-settings', 'sam_dfp_section', array('description' => __('Your Google DFP Pub code. i.e:', SAM_PRO_DOMAIN).' ca-pub-0000000000000000. '.__('Only for GAM mode.', SAM_PRO_DOMAIN), 'width' => '200px'));
 			add_settings_field('dfpNetworkCode', __('Google DFP Network Code (GPT)', SAM_PRO_DOMAIN), array(&$this, 'drawTextOption'), 'sam-pro-settings', 'sam_dfp_section', array('description' => __('Network Code of Your DFP Ad Network. Only for GPT mode.', SAM_PRO_DOMAIN), 'width' => '200px'));
 			do_action('sam_pro_settings_fields_dfp_section');
-			
+
 			add_settings_field('adsensePub', __('Google AdSense Pub Code', SAM_PRO_DOMAIN), array(&$this, 'drawTextOption'), 'sam-pro-settings', 'sam_adsense_section', array('description' => __('Your Google AdSense Pub Code.'), 'placeholder' => 'ca-pub-0000000000000000', 'width' => '100%'));
 			add_settings_field('enablePageLevelAds', __("Allow using Google AdSense page-level (<span id='anchor-help'>anchor/overlay</span> or/and <span id='vignette-help'>vignette</span>) ads on mobile devices", SAM_PRO_DOMAIN), array(&$this, 'drawCheckboxOption'), 'sam-pro-settings', 'sam_adsense_section', array('label_for' => 'enablePageLevelAds', 'checkbox' => true, 'description' => __('Do not forget to adjust your Google AdSense settings on settings page (My Ads -> Page-level ads).', SAM_PRO_DOMAIN)));
 
@@ -1592,7 +1592,7 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 		public function drawDFPSection() {
 			echo '<p>'.__('Adjust parameters of your Google DFP account.', SAM_PRO_DOMAIN).'</p>';
 		}
-		
+
 		public function drawAdsenseSection() {
 			echo "<p></p>";
 		}
