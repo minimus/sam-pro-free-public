@@ -471,6 +471,9 @@ GA_googleFetchAds();
 				elseif(is_category()) {
 					$viewPages |= SAM_PRO_IS_CATEGORY;
 					$cat = get_category( get_query_var( 'cat' ), false );
+					if (is_wp_error($cat)) {
+						return;
+					}
 					$zone .= ((!empty($zone)) ? ',' : '') . "category_all-cats,category_{$cat->category_nicename}";
 					if($rules['categories']) {
 						$arc = "IF(sa.ecats, IF(sa.xcats, NOT FIND_IN_SET(\"{$cat->category_nicename}\", sa.cats), FIND_IN_SET(\"{$cat->category_nicename}\", sa.cats)), TRUE)";
@@ -479,6 +482,9 @@ GA_googleFetchAds();
 				elseif(is_tag()) {
 					$viewPages |= SAM_PRO_IS_TAG;
 					$tag = get_tag( get_query_var( 'post_tag_id' ) );
+					if (is_wp_error($tag)) {
+						return;
+					}
 					$zone .= ((!empty($zone)) ? ',' : '') . "post_tag_all-tags,post_tag_{$tag->slug}";
 					if($rules['tags']) {
 						$arc = "IF(sa.etags, IF(sa.xtags, NOT FIND_IN_SET(\"{$tag->slug}\", sa.tags), FIND_IN_SET(\"{$tag->slug}\", sa.tags)), TRUE)";
