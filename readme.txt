@@ -4,7 +4,7 @@ Donate link: http://uncle-sam.info
 Tags: ad, adbrite, adgridwork, adify, admin, adpinion, adroll, ads, adsense, adserver, advertisement, advertising, affiliate, banner, banners, chitika, cj, commercial, commission, crispads, dfp, google, income, junction, link, manager, media, money, plugin, random, referral, revenue, rotator, seo, server, shoppingads, widget, widgetbucks, yahoo, ypn
 Requires at least: 4.1
 Tested up to: 4.5
-Stable tag: 1.8.1.49
+Stable tag: 1.8.2.51
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,6 +57,10 @@ The public version of SAM Pro (Free Edition) also available at [GitHub](https://
 * English
 * Russian
 
+= Available Addons =
+* [Advertising Request](http://uncle-sam.info/addons/advertising-request/) - This addon adds to Sam Pro plugin possibility of creating pages of requesting of advertising on the site from potential advertisers.
+* [Geo Targeting](http://uncle-sam.info/addons/geo-targeting/) - Using this addon you can restrict showing of your ads basing on global location of the visitor.
+
 == Installation ==
 
 **By FTP**
@@ -99,6 +103,9 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Changelog ==
 
+= 1.8.2.51 =
+* Ads request builder is improved
+* Checking of the plugin's DB tables is improved
 = 1.8.1.49 =
 * The bug of transient data with some date formats resolved
 * The bug of outputting ads resolved
