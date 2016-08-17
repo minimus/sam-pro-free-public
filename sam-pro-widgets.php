@@ -5,9 +5,12 @@
  * Date: 12.06.2015
  * Time: 15:26
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 if(!class_exists( 'sam_pro_place_widget' ) && class_exists('WP_Widget')) {
-	include_once('sam-pro-place.php');
+	include_once(apply_filters('sam_pro_place_module', 'sam-pro-place.php'));
 	class sam_pro_place_widget extends WP_Widget {
 		protected $crawler = false;
 		protected $aTitle = '';

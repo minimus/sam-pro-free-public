@@ -5,6 +5,9 @@
  * Date: 29.06.2015
  * Time: 10:06
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 if( ! class_exists( 'SamProZone' ) ) {
 	class SamProZone {
@@ -53,7 +56,7 @@ UNION
 ORDER BY priority) uzr LIMIT 1;";
 			$result = $wpdb->get_var($wpdb->prepare($sql, $this->zid, $this->zid));
 			if(!is_null($result)) {
-				include_once('sam-pro-place.php');
+				include_once(apply_filters('sam_pro_place_module', 'sam-pro-place.php'));
 				$ad = new SamProPlace((int)$result, $this->args, $this->tags, $this->crawler, $this->clauses, $this->ajax);
 				$out = $ad->ad;
 			}

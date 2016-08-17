@@ -5,6 +5,9 @@
  * Date: 27.07.2015
  * Time: 17:03
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 include_once('sam-pro-functions.php');
 if( ! class_exists( 'SamProMailer' ) ) {
 	class SamProMailer {

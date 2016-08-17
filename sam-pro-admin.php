@@ -5,6 +5,9 @@
  * Date: 21.12.2014
  * Time: 6:28
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 global $samProAddonsList;
 if ( class_exists( 'SamProCore' ) && ! class_exists( 'SamProAdmin' ) ) {
 	class SamProAdmin extends SamProCore {
@@ -27,6 +30,7 @@ if ( class_exists( 'SamProCore' ) && ! class_exists( 'SamProAdmin' ) ) {
 		public $currentPage;
 		public $adsObjects;
 		public $level;
+		public $pointer;
 
 		public function __construct() {
 			parent::__construct();
@@ -81,6 +85,9 @@ if ( class_exists( 'SamProCore' ) && ! class_exists( 'SamProAdmin' ) ) {
 
 			add_action('add_meta_boxes', array(&$this, 'addMetaBoxes'));
 			add_action('save_post', array(&$this, 'savePost'));
+
+			include_once 'tools/sam-pro-pointers.php';
+			$this->pointer = new SamProInfoPointers();
 		}
 
 		public function uploadDir( $param ) {
@@ -837,6 +844,19 @@ ORDER BY uu.owner;";
 			$locales = array('ru-RU');
 			$locale = array('changeLocale' => in_array($wpLocale, $locales), 'locale' => $wpLocale);
 
+			if ( ! is_null( $this->pointer->pointer ) ) {
+				wp_enqueue_style( 'wp-pointer' );
+
+				wp_enqueue_script( 'wp-pointer' );
+				wp_enqueue_script( 'sam-pro-admin-layout', SAM_PRO_URL . 'js/sam.pro.admin.layout.min.js', array('jquery', 'wp-pointer') );
+				wp_localize_script( 'sam-pro-admin-layout', 'samProPointerOptions', array(
+					'title' => $this->pointer->pointer['title'],
+					'content' => $this->pointer->pointer['content'],
+					'position' => ((is_rtl()) ? 'right' : 'left' ),
+					'key' => $this->pointer->pointer['key']
+				) );
+			}
+
 			if( $hook == $this->settingsPage ) {
 				wp_enqueue_style('ej-css', SAM_PRO_URL . 'css/ej.web.all.min.css');
 				wp_enqueue_style('normalize', SAM_PRO_URL . 'css/normalize.css');
@@ -1283,6 +1303,7 @@ ORDER BY uu.owner;";
 
 		public function initSettings() {
 			$current_user = wp_get_current_user();
+			parent::getSettings(true);
 
 			register_setting('samProOptions', SAM_PRO_OPTIONS_NAME);
 
@@ -1318,6 +1339,7 @@ ORDER BY uu.owner;";
 			add_settings_field('access', __('Minimum Level for the Menu Access', SAM_PRO_DOMAIN), array(&$this, 'drawJSliderOption'), 'sam-pro-settings', 'sam_general_section', array('description' => __('Who can use menu of plugin - Minimum User Level needed for access to menu of plugin. In any case only Super Admin and Administrator can use Settings Menu of SAM Plugin.', SAM_PRO_DOMAIN), 'options' => array('manage_network' => __('Super Admin', SAM_PRO_DOMAIN), 'manage_options' => __('Administrator', SAM_PRO_DOMAIN), 'edit_others_posts' => __('Editor', SAM_PRO_DOMAIN), 'publish_posts' => __('Author', SAM_PRO_DOMAIN), 'edit_posts' => __('Contributor', SAM_PRO_DOMAIN)), 'values' => array('manage_network', 'manage_options', 'edit_others_posts', 'publish_posts', 'edit_posts')));
 			add_settings_field('adShow', __("Ad Output Mode", SAM_PRO_DOMAIN), array(&$this, 'drawRadioOption'), 'sam-pro-settings', 'sam_general_section', array('description' => __('Standard (PHP) mode is more faster but is not compatible with caching plugins. If your blog use caching plugin (i.e WP Super Cache or W3 Total Cache) select "Caching Compatible (Javascript)" mode.', SAM_PRO_DOMAIN), 'options' => array('php' => __('Standard (PHP)', SAM_PRO_DOMAIN), 'js' => __('Caching Compatible (Javascript)', SAM_PRO_DOMAIN)), 'warning' => 'cache'));
 			add_settings_field('adDisplay', __("Display Ad Source in", SAM_PRO_DOMAIN), array(&$this, 'drawRadioOption'), 'sam-pro-settings', 'sam_general_section', array('description' => __('Target window (tab) for advertisement source.', SAM_PRO_DOMAIN), 'options' => array('blank' => __('New Window (Tab)', SAM_PRO_DOMAIN), 'self' => __('Current Window (Tab)', SAM_PRO_DOMAIN))));
+			do_action( 'sam_pro_settings_fields_general_section_before_plugins' );
 			add_settings_field('bbpEnabled', __('Allow displaying ads on bbPress forum pages', SAM_PRO_DOMAIN), array(&$this, 'drawCheckboxOption'), 'sam-pro-settings', 'sam_general_section', array('label_for' => 'bbpEnabled', 'checkbox' => true, 'warning' => 'forum', 'enabled' => ( (defined('SAM_PRO_BBP')) ? SAM_PRO_BBP  : false )));
 			add_settings_field('wptouchEnabled', __('Allow displaying ads in the header of WPtouch mobile theme', SAM_PRO_DOMAIN), array(&$this, 'drawCheckboxOption'), 'sam-pro-settings', 'sam_general_section', array('label_for' => 'wptouchEnabled', 'checkbox' => true, 'warning' => 'mobile', 'hide' => (defined('SAM_PRO_WPTOUCH')) ? !SAM_PRO_WPTOUCH : true));
 			add_settings_field('spkey', __('Key', SAM_PRO_DOMAIN), array(&$this, 'drawHiddenOption'), 'sam-pro-settings', 'sam_general_section', array('hidden' => true));
@@ -2077,6 +2099,11 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 					<h3 class="hndle"><?php _e('Available Addons', SAM_PRO_DOMAIN); ?></h3>
 					<div class="inside">
 						<ul>
+							<li>
+								<a href="http://uncle-sam.info/addons/ad-slider/" target="_blank">
+									<img src="<?php echo SAM_PRO_URL . 'images/ad-slider-addon-255.jpg'; ?>">
+								</a>
+							</li>
 							<li>
 								<a href="http://uncle-sam.info/addons/advertising-request/" target="_blank">
 									<img src="<?php echo SAM_PRO_URL . 'images/ad-request-plugin-ad.jpg'; ?>">

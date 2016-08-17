@@ -5,6 +5,9 @@
  * Date: 25.04.2015
  * Time: 5:42
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 if( ! class_exists( 'SamProUpdater' ) ) {
 	class SamProUpdater {

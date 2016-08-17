@@ -5,6 +5,9 @@
  * Date: 03.05.2015
  * Time: 10:39
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 if( class_exists( 'SamProCore' ) && ! class_exists( 'SamProFront' ) ) {
 	class SamProFront extends SamProCore {
@@ -219,8 +222,10 @@ GA_googleFetchAds();
 			);
 			$jsOptions = apply_filters('sam_pro_front_js_options', $jsOptions, $locale, $postId);
 
+			do_action('sam_pro_front_scripts_before_layout', $locale, $postId);
+
 			wp_enqueue_script('samProTracker', SAM_PRO_URL . 'js/jquery.iframetracker.js', array('jquery'));
-			wp_enqueue_script('samProLayout', SAM_PRO_URL . 'js/sam.pro.layout.min.js', array('jquery', 'samProTracker'), '1.0.0.10');
+			wp_enqueue_script('samProLayout', apply_filters('sam_pro_front_layout_script', SAM_PRO_URL . 'js/sam.pro.layout.min.js'), array('jquery', 'samProTracker'), '1.0.0.10');
 			wp_localize_script('samProLayout', 'samProOptions', $jsOptions);
 			do_action('sam_pro_front_scripts', $locale, $postId);
 		}
@@ -538,7 +543,7 @@ GA_googleFetchAds();
 		public function buildPlace( $id, $args = null, $useCodes = false, $clauses = null ) {
       if($this->disableAdServing) return '';
 
-      include_once('sam-pro-place.php');
+			include_once(apply_filters('sam_pro_place_module', 'sam-pro-place.php'));
 			if(is_null($clauses)) $clauses = self::buildWhereClause();
 
 			$ad = new SamProPlace($id, $args, $useCodes, $this->crawler, $clauses);

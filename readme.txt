@@ -1,10 +1,10 @@
 === SAM Pro (Free Edition) ===
 Contributors: minimus
 Donate link: http://uncle-sam.info
-Tags: ad, adbrite, adgridwork, adify, admin, adpinion, adroll, ads, adsense, adserver, advertisement, advertising, affiliate, banner, banners, chitika, cj, commercial, commission, crispads, dfp, google, income, junction, link, manager, media, money, plugin, random, referral, revenue, rotator, seo, server, shoppingads, widget, widgetbucks, yahoo, ypn
+Tags: ad, advertising, banner, rotator, simple ads manager
 Requires at least: 4.1
-Tested up to: 4.5
-Stable tag: 1.8.2.51
+Tested up to: 4.6
+Stable tag: 1.9.1.55
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,7 @@ The public version of SAM Pro (Free Edition) also available at [GitHub](https://
 * PHP 5.3+
 * MySQL 5.1+
 * 128 MB memory limit
+* 128 MB Wordpress memory limit
 
 **Admin Client Side**:
 
@@ -58,6 +59,7 @@ The public version of SAM Pro (Free Edition) also available at [GitHub](https://
 * Russian
 
 = Available Addons =
+* [Ad Slider](http://uncle-sam.info/addons/ad-slider/) - This addon adds to SAM Pro (Free Edition) possibility of rotating ads by the timer.
 * [Advertising Request](http://uncle-sam.info/addons/advertising-request/) - This addon adds to Sam Pro plugin possibility of creating pages of requesting of advertising on the site from potential advertisers.
 * [Geo Targeting](http://uncle-sam.info/addons/geo-targeting/) - Using this addon you can restrict showing of your ads basing on global location of the visitor.
 
@@ -103,6 +105,9 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Changelog ==
 
+= 1.9.1.55 =
+* Possible vulnerability was excluded
+* Addons API improved
 = 1.8.2.51 =
 * Ads request builder is improved
 * Checking of the plugin's DB tables is improved
@@ -151,6 +156,8 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Upgrade Notice ==
 
+= 1.9.1.55 =
+Possible vulnerability was excluded. Addons API improved.
 = 1.8.1.49 =
 The bug of transient data with some date formats resolved. The bug of outputting ads resolved.
 = 1.8.0.47 =

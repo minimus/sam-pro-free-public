@@ -5,6 +5,9 @@
  * Date: 01.08.2015
  * Time: 12:57
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 if( ! class_exists( 'SamProScavenger' ) ) {
 	class SamProScavenger {
 		private $settings;

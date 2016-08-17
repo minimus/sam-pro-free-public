@@ -5,6 +5,9 @@
  * Date: 10.05.2015
  * Time: 7:48
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 if( ! class_exists( 'SamProAd' ) ) {
 	class SamProAd {

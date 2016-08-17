@@ -5,6 +5,9 @@
  * Date: 24.02.2015
  * Time: 6:18
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 if( ! class_exists( 'SamProPlaceEditor' ) ) {
 	class SamProPlaceEditor {
@@ -75,37 +78,37 @@ if( ! class_exists( 'SamProPlaceEditor' ) ) {
 			$pTable = $wpdb->prefix . 'sampro_places';
 
 			include_once('sam-pro-sizes.php');
-			$width = ((isset($_POST['width'])) ? $_POST['width'] : 0);
-			$height = ((isset($_POST['height'])) ? $_POST['height'] : 0);
-			$aSize = new SamProSizes($_POST['asize'], $width, $height);
+			$width = ((isset($_POST['width'])) ? (int)$_POST['width'] : 0);
+			$height = ((isset($_POST['height'])) ? (int)$_POST['height'] : 0);
+			$aSize = new SamProSizes(sanitize_text_field($_POST['asize']), $width, $height);
 			$out = $id;
 
 			$updateRow = apply_filters('sam_pro_admin_place_save_data', array(
 				'aid' => 0,
-				'title' => stripslashes($_POST['item_name']),
-				'description' => stripslashes($_POST['item_description']),
+				'title' => stripslashes(sanitize_text_field($_POST['item_name'])),
+				'description' => stripslashes(sanitize_text_field($_POST['item_description'])),
 				'sale' => ((isset($_POST['sale'])) ? 1 : 0),
-				'sale_mode' => ((isset($_POST['sale_mode'])) ? $_POST['sale_mode'] : 0),
-				'price' => $_POST['price'],
-				'sdate' => $_POST['sdate'],
-				'fdate' => $_POST['fdate'],
+				'sale_mode' => ((isset($_POST['sale_mode'])) ? (int)$_POST['sale_mode'] : 0),
+				'price' => (float)$_POST['price'],
+				'sdate' => sanitize_text_field($_POST['sdate']),
+				'fdate' => sanitize_text_field($_POST['fdate']),
 				'code_before' => stripslashes($_POST['code_before']),
 				'code_after' => stripslashes($_POST['code_after']),
 				'asize' => $aSize->size,
 				'width' => $aSize->width,
 				'height' => $aSize->height,
-				'img' => stripslashes($_POST['img']),
-				'link' => stripslashes($_POST['link']),
-				'alt' => stripslashes($_POST['alt']),
+				'img' => stripslashes(esc_url($_POST['img'])),
+				'link' => stripslashes(esc_url($_POST['link'])),
+				'alt' => stripslashes(sanitize_text_field($_POST['alt'])),
 				'acode' => stripslashes($_POST['acode']),
 				'inline' => ((isset($_POST['inline'])) ? 1 : 0),
 				'php' => ((isset($_POST['php'])) ? 1 : 0),
 				'ad_server' => ((isset($_POST['ad_server'])) ? 1 : 0),
-				'dfp' => stripslashes($_POST['dfp']),
-				'amode' => ((isset($_POST['amode'])) ? $_POST['amode'] : 0),
+				'dfp' => stripslashes(sanitize_text_field($_POST['dfp'])),
+				'amode' => ((isset($_POST['amode'])) ? (int)$_POST['amode'] : 0),
 				'hits' => 0,
 				'clicks' => 0,
-				'trash' => ((isset($_POST['trash'])) ? $_POST['trash'] : 0)
+				'trash' => ((isset($_POST['trash'])) ? (int)$_POST['trash'] : 0)
 			));
 
 			$formatRow = apply_filters('sam_pro_admin_place_save_format', array(

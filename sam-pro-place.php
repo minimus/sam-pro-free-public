@@ -5,6 +5,9 @@
  * Date: 05.06.2015
  * Time: 8:15
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 include_once('tools/sam-pro-functions.php');
 if( ! class_exists( 'SamProPlace' ) ) {

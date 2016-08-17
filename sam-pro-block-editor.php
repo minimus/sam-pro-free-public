@@ -5,6 +5,9 @@
  * Date: 15.03.2015
  * Time: 7:06
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 if( ! class_exists( 'SamProBlockEditor' ) ) {
 	class SamProBlockEditor {
@@ -36,7 +39,7 @@ if( ! class_exists( 'SamProBlockEditor' ) ) {
 				for ( $line = 1; $line <= $lines; $line ++ ) {
 					for ( $column = 1; $column <= $columns; $column ++ ) {
 						if ( isset( $_POST[ 'item-' . $line . '-' . $column ] ) ) {
-							$out[ $line ][ $column ] = $_POST[ 'item-' . $line . '-' . $column ];
+							$out[ $line ][ $column ] = sanitize_text_field($_POST[ 'item-' . $line . '-' . $column ]);
 						}
 					}
 				}
@@ -132,14 +135,14 @@ if( ! class_exists( 'SamProBlockEditor' ) ) {
 			$out = $id;
 
 			$updateRow = apply_filters('sam_pro_admin_block_save_data', array(
-				'title' => stripslashes($_POST['item_name']),
-				'description' => stripslashes($_POST['item_description']),
-				'b_rows' => ((isset($_POST['b_rows'])) ? $_POST['b_rows'] : 0),
-				'b_columns' => ((isset($_POST['b_columns'])) ? $_POST['b_columns'] : 0),
-				'b_data' => self::setData((integer)((isset($_POST['b_rows'])) ? $_POST['b_rows'] : 0), (integer)((isset($_POST['b_columns'])) ? $_POST['b_columns'] : 0)),
-				'b_style' => stripslashes($_POST['b_style']),
-				'i_style' => stripslashes($_POST['i_style']),
-				'trash' => ((isset($_POST['trash'])) ? $_POST['trash'] : 0)
+				'title' => stripslashes(sanitize_text_field($_POST['item_name'])),
+				'description' => stripslashes(sanitize_text_field($_POST['item_description'])),
+				'b_rows' => ((isset($_POST['b_rows'])) ? (int)$_POST['b_rows'] : 0),
+				'b_columns' => ((isset($_POST['b_columns'])) ? (int)$_POST['b_columns'] : 0),
+				'b_data' => self::setData((integer)((isset($_POST['b_rows'])) ? (int)$_POST['b_rows'] : 0), ((isset($_POST['b_columns'])) ? (int)$_POST['b_columns'] : 0)),
+				'b_style' => stripslashes(sanitize_text_field($_POST['b_style'])),
+				'i_style' => stripslashes(sanitize_text_field($_POST['i_style'])),
+				'trash' => ((isset($_POST['trash'])) ? (int)$_POST['trash'] : 0)
 			));
 
 			$formatRow = apply_filters('sam_pro_admin_block_save_format', array('%s', '%s', '%d', '%d', '%s', '%s', '%s', '%d'));

@@ -5,6 +5,9 @@
  * Date: 24.12.2014
  * Time: 14:19
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 if ( ! class_exists( 'SamProPlacesList' ) ) {
 	class SamProPlacesList {

@@ -5,6 +5,9 @@
  * Date: 09.03.2015
  * Time: 8:10
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 if( ! class_exists( 'SamProZonesList' ) ) {
 	class SamProZonesList {

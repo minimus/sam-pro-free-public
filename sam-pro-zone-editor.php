@@ -5,6 +5,9 @@
  * Date: 09.03.2015
  * Time: 10:56
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 if( ! class_exists( 'SamProZoneEditor' ) ) {
 	class SamProZoneEditor {
@@ -49,11 +52,11 @@ if( ! class_exists( 'SamProZoneEditor' ) ) {
 			$out = $id;
 
 			$updateRow = apply_filters('sam_pro_admin_zone_save_data', array(
-				'title' => (isset($_POST['item_name'])) ? $_POST['item_name'] : '',
-				'description' => (isset($_POST['item_description'])) ? $_POST['item_description'] : '',
-				'single_id' => (isset($_POST['single_id'])) ? $_POST['single_id'] : 0,
-				'arc_id' => (isset($_POST['arc_id'])) ? $_POST['arc_id'] : 0,
-				'trash' => (isset($_POST['trash'])) ? $_POST['trash'] : 0
+				'title' => (isset($_POST['item_name'])) ? sanitize_text_field($_POST['item_name']) : '',
+				'description' => (isset($_POST['item_description'])) ? sanitize_text_field($_POST['item_description']) : '',
+				'single_id' => (isset($_POST['single_id'])) ? (int)$_POST['single_id'] : 0,
+				'arc_id' => (isset($_POST['arc_id'])) ? (int)$_POST['arc_id'] : 0,
+				'trash' => (isset($_POST['trash'])) ? (int)$_POST['trash'] : 0
 			));
 			$formatRow = apply_filters('sam_pro_admin_zone_save_format', array('%s', '%s', '%d', '%d', '%d'));
 			if($id == 0) {
@@ -86,7 +89,7 @@ if( ! class_exists( 'SamProZoneEditor' ) ) {
 			} else {
 				$header = __( 'ID:', SAM_PRO_DOMAIN ) . $this->item;
 			}
-			$this->action = $_SERVER['REQUEST_URI'];
+			$this->action = esc_url($_SERVER['REQUEST_URI']);
 
 			$places = self::getPlaces();
 

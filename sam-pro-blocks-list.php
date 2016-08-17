@@ -5,6 +5,9 @@
  * Date: 14.03.2015
  * Time: 6:13
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 if( ! class_exists( 'SamProBlocksList' ) ) {
 	class SamProBlocksList {

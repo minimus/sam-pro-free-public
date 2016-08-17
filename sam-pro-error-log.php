@@ -5,6 +5,9 @@
  * Date: 26.04.2015
  * Time: 10:44
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 if( ! class_exists( 'SamProErrorLog' ) ) {
 	class SamProErrorLog {

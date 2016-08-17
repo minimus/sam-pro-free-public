@@ -5,6 +5,9 @@
  * Date: 24.06.2015
  * Time: 5:07
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 if( ! class_exists( 'SamProBlock' ) ) {
 	class SamProBlock {
@@ -64,7 +67,7 @@ if( ! class_exists( 'SamProBlock' ) ) {
 						$id = self::getId($ads[$i][$j]);
 						switch(self::getType($ads[$i][$j])) {
 							case 'place':
-								include_once('sam-pro-place.php');
+								include_once(apply_filters('sam_pro_place_module', 'sam-pro-place.php'));
 								$ad = new SamProPlace($id, null, false, $this->crawler, $this->clauses, $this->ajax);
 								$item = $ad->ad;
 								break;

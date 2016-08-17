@@ -5,6 +5,9 @@
  * Date: 21.12.2014
  * Time: 4:52
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 if( ! class_exists("SamProCore") ) {
 	class SamProCore {
@@ -15,7 +18,7 @@ if( ! class_exists("SamProCore") ) {
 		private $prefix = 'wp-';
 		private $postfix = '.php';
 
-		private $defaultSettings = array(
+		protected $defaultSettings = array(
 			'edition' => 0,
 			'adCycle' => 1000,
 			'adShow' => 'php',                // php|js
@@ -163,7 +166,7 @@ if( ! class_exists("SamProCore") ) {
 		);
 
 		public function __construct() {
-			define('SAM_PRO_VERSION', '1.8.2.51');
+			define('SAM_PRO_VERSION', '1.9.1.55');
 			define('SAM_PRO_DB_VERSION', '1.1');
 			define('SAM_PRO_PATH', dirname( __FILE__ ));
 			define('SAM_PRO_URL', plugins_url( '/',  __FILE__  ) );

@@ -5,6 +5,9 @@
  * Date: 20.07.2015
  * Time: 13:23
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 if( ! class_exists( 'SamProStatistics' ) ) {
 	class SamProStatistics {
 		private $period;

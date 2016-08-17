@@ -5,6 +5,9 @@
  * Date: 28.07.2015
  * Time: 17:29
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 if( ! class_exists( 'SamProStatisticsCleaner' ) ) {
 	class SamProStatisticsCleaner {
 		private $settings;

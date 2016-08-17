@@ -5,6 +5,9 @@
  * Date: 26.07.2015
  * Time: 19:04
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 if( ! class_exists( 'SamProAdvertisersList' ) ) {
 	class SamProAdvertisersList {
 		private $settings;

@@ -5,6 +5,9 @@
  * Date: 05.07.2015
  * Time: 6:33
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 if( ! class_exists('SamProMigrate') ) {
 	class SamProMigrate {

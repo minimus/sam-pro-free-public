@@ -5,6 +5,9 @@
  * Date: 05.07.2015
  * Time: 8:45
  */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 if( ! class_exists( 'SamProToolsPage' ) ) {
 	class SamProToolsPage {
@@ -110,6 +113,11 @@ if( ! class_exists( 'SamProToolsPage' ) ) {
 					<h3 class="hndle"><?php _e('Available Addons', SAM_PRO_DOMAIN); ?></h3>
 					<div class="inside">
 						<ul>
+							<li>
+								<a href="http://uncle-sam.info/addons/ad-slider/" target="_blank">
+									<img src="<?php echo SAM_PRO_URL . 'images/ad-slider-addon-255.jpg'; ?>">
+								</a>
+							</li>
 							<li>
 								<a href="http://uncle-sam.info/addons/advertising-request/" target="_blank">
 									<img src="<?php echo SAM_PRO_URL . 'images/ad-request-plugin-ad.jpg'; ?>">
