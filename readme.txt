@@ -4,7 +4,7 @@ Donate link: http://uncle-sam.info
 Tags: ad, advertising, banner, rotator, simple ads manager
 Requires at least: 4.1
 Tested up to: 4.6
-Stable tag: 1.9.1.55
+Stable tag: 1.9.2.57
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -105,6 +105,9 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Changelog ==
 
+= 1.9.2.57 =
+* The bug on advertiser list is fixed
+* The bug on the statistics page is fixed
 = 1.9.1.55 =
 * Possible vulnerability was excluded
 * Addons API improved
@@ -156,6 +159,8 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Upgrade Notice ==
 
+= 1.9.2.57 =
+The bug on advertiser list is fixed. The bug on the statistics page is fixed.
 = 1.9.1.55 =
 Possible vulnerability was excluded. Addons API improved.
 = 1.8.1.49 =

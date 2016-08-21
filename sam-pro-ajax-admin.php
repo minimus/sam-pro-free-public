@@ -177,7 +177,7 @@ function samProGetWhere( $input, $prefix = '', $complex = false, $str = false ) 
 				break;
 		}
 		$res .= $op;
-		$res .= ( $str ) ? "'{$in['value']}'" : $in['value'];
+		$res .= ( $str ) ? "\"{$in['value']}\"" : $in['value'];
 		$res .= $postfix;
 	}
 
@@ -1272,7 +1272,7 @@ FROM {$zrTable} szr WHERE szr.single = 1 AND szr.zid = {$zid}{$sqlWhere}{$sort}{
 				$period = (int) $params['period'];
 
 				$sql  = "SELECT sp.title, IFNULL(SUM(ss.hits), 0) AS hits
-  FROM {$sTable} ss INNER JOIN {$pTable} sp ON ss.pid = sp.pid{$ownerData}
+  FROM {$sTable} ss INNER JOIN {$pTable} sp ON ss.pid = sp.pid
   WHERE ss.edate BETWEEN '{$start}' AND '{$end}'
   GROUP BY ss.pid";
 				$rows = $wpdb->get_results( $sql, ARRAY_A );
@@ -1311,7 +1311,7 @@ FROM {$zrTable} szr WHERE szr.single = 1 AND szr.zid = {$zid}{$sqlWhere}{$sort}{
 				$period = (int) $params['period'];
 
 				$sql  = "SELECT sp.title, IFNULL(SUM(ss.clicks), 0) AS clicks
-  FROM {$sTable} ss INNER JOIN {$pTable} sp ON ss.pid = sp.pid{$ownerData}
+  FROM {$sTable} ss INNER JOIN {$pTable} sp ON ss.pid = sp.pid
   WHERE ss.edate BETWEEN '{$start}' AND '{$end}' AND ss.clicks
   GROUP BY ss.pid";
 				$rows = $wpdb->get_results( $sql, ARRAY_A );
