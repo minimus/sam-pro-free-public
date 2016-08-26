@@ -136,8 +136,7 @@ if ( $action && in_array( $action, $allowed_actions ) ) {
 						'aid' => $ad->aid,
 						'pid' => $ad->pid,
 						'cid' => $ad->cid,
-						'eid' => $eid,
-						'sql' => $ad->sql
+						'eid' => $eid
 					) );
 				}
 				$out = $ads;
