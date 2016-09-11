@@ -3350,38 +3350,55 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 				<form action="options.php" method="post">
 					<div id="poststuff" class="metabox-holder has-right-sidebar">
 						<div id="side-info-column" class="inner-sidebar">
-							<div class='postbox opened'>
+							<div class="postbox opened">
 								<h3 class="hndle"><?php _e( 'System Info', SAM_PRO_DOMAIN ) ?></h3>
-								<div class="inside">
-									<p>
-										<?php
-										echo __( 'SAM Pro Edition', SAM_PRO_DOMAIN ) . ': <strong>' . $editions[ $edition ] . '</strong><br>';
-										echo __( 'SAM Pro Version', SAM_PRO_DOMAIN ) . ': <strong>' . SAM_PRO_VERSION . '</strong><br>';
-										echo __( 'SAM Pro DB Version', SAM_PRO_DOMAIN ) . ': <strong>' . SAM_PRO_DB_VERSION . '</strong><br>';
-										echo __( 'Wordpress Version', SAM_PRO_DOMAIN ) . ': <strong>' . $wp_version . '</strong><br>';
-										echo __( 'PHP Version', SAM_PRO_DOMAIN ) . ': <strong>' . PHP_VERSION . '</strong><br>';
-										echo __( 'MySQL Version', SAM_PRO_DOMAIN ) . ': <strong>' . $sqlVersion . '</strong><br>';
-										echo __( 'PHP Max Execution Time', SAM_PRO_DOMAIN ) . ": <strong style='color:{$timeStyle};'>{$exeTime}</strong><br>";
-										echo __( 'PHP Memory Limit', SAM_PRO_DOMAIN ) . ": <strong style='color:{$phpStyle};'>{$mem}</strong><br>";
-										echo __( 'WP Memory Limit', SAM_PRO_DOMAIN ) . ": <strong style='color:{$wpStyle};'>{$wpMem}</strong>";
-										?>
-									</p>
-									<?php
-									global $samProAddonsList;
+								<div class="inside" style="padding: 0 !important;">
+									<div id="submitpost" class="submitbox">
+										<div id="minor-publishing">
+											<div id="misc-publishing-actions" style="padding: 0;">
+												<div class="misc-pub-section" style="padding: 0 10px 8px;">
+													<p>
+														<?php
+														echo __( 'SAM Pro Edition', SAM_PRO_DOMAIN ) . ': <strong>' . $editions[ $edition ] . '</strong><br>';
+														echo __( 'SAM Pro Version', SAM_PRO_DOMAIN ) . ': <strong>' . SAM_PRO_VERSION . '</strong><br>';
+														echo __( 'SAM Pro DB Version', SAM_PRO_DOMAIN ) . ': <strong>' . SAM_PRO_DB_VERSION . '</strong><br>';
+														echo __( 'Wordpress Version', SAM_PRO_DOMAIN ) . ': <strong>' . $wp_version . '</strong><br>';
+														echo __( 'PHP Version', SAM_PRO_DOMAIN ) . ': <strong>' . PHP_VERSION . '</strong><br>';
+														echo __( 'MySQL Version', SAM_PRO_DOMAIN ) . ': <strong>' . $sqlVersion . '</strong><br>';
+														echo __( 'PHP Max Execution Time', SAM_PRO_DOMAIN ) . ": <strong style='color:{$timeStyle};'>{$exeTime}</strong><br>";
+														echo __( 'PHP Memory Limit', SAM_PRO_DOMAIN ) . ": <strong style='color:{$phpStyle};'>{$mem}</strong><br>";
+														echo __( 'WP Memory Limit', SAM_PRO_DOMAIN ) . ": <strong style='color:{$wpStyle};'>{$wpMem}</strong>";
+														?>
+													</p>
+													<?php
+													global $samProAddonsList;
 
-									if ( ! empty( $samProAddonsList ) ) {
-										$strAddons = __( 'Addons', SAM_PRO_DOMAIN ) . ':';
-										echo "<p><strong>{$strAddons}</strong><ul style='list-style: inherit !important;margin-left: 20px;'>";
-										foreach ( $samProAddonsList as $addon ) {
-											$aVersion = ( isset( $addon['version'] ) ) ? "({$addon['version']})" : '';
-											echo "<li>{$addon['name']} {$aVersion}</li>";
-										}
-										echo "</ul></p>";
-									}
-									?>
-									<p>
-										<?php _e( 'Note! If you have detected a bug, include this data to bug report.', SAM_PRO_DOMAIN ); ?>
-									</p>
+													if ( ! empty( $samProAddonsList ) ) {
+														$strAddons = __( 'Addons', SAM_PRO_DOMAIN ) . ':';
+														echo "<p><strong>{$strAddons}</strong><ul style='list-style: inherit !important;margin-left: 20px;'>";
+														foreach ( $samProAddonsList as $addon ) {
+															$aVersion = ( isset( $addon['version'] ) ) ? "({$addon['version']})" : '';
+															echo "<li>{$addon['name']} {$aVersion}</li>";
+														}
+														echo "</ul></p>";
+													}
+													?>
+													<p>
+														<?php _e( 'Note! If you have detected a bug, include this data to bug report.', SAM_PRO_DOMAIN ); ?>
+													</p>
+												</div>
+											</div>
+											<div class="clear"></div>
+										</div>
+										<div id="major-publishing-actions">
+											<div id="publishing-action">
+												<button id="submit-button" class="button-primary" name="Submit" type="submit">
+													<?php esc_attr_e( 'Save Changes' ) ?>
+												</button>
+											</div>
+											<div class="clear"></div>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class='postbox opened'>
@@ -3459,11 +3476,11 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 								settings_fields( 'samProOptions' );
 								$this->doSettingsSections( 'sam-pro-settings', $this->settingsTabs );
 								?>
-								<p class="submit">
+								<!--<p class="submit">
 									<button id="submit-button" class="button-primary" name="Submit" type="submit">
 										<?php esc_attr_e( 'Save Changes' ); ?>
 									</button>
-								</p>
+								</p>-->
 								<p style='color: #777777; font-size: 13px; font-style: italic;'><?php echo SAM_PRO_COPYRIGHT; ?></p>
 							</div>
 						</div>
