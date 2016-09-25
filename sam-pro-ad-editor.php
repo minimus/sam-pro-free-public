@@ -155,7 +155,7 @@ GROUP BY wss.pid, wss.aid;";
 				'swf_params'   => stripslashes( sanitize_text_field( $_POST['swf_params'] ) ),
 				'swf_attrs'    => stripslashes( sanitize_text_field( $_POST['swf_attrs'] ) ),
 				'swf_fallback' => stripslashes( sanitize_text_field( $_POST['swf_fallback'] ) ),
-				'acode'        => stripslashes(  $_POST['acode'] ),
+				'acode'        => stripslashes( $_POST['acode'] ),
 				'php'          => ( ( isset( $_POST['php'] ) ) ? 1 : 0 ),
 				'inline'       => ( ( isset( $_POST['inline'] ) ) ? 1 : 0 ),
 				'amode'        => ( ( isset( $_POST['amode'] ) ) ? (int) $_POST['amode'] : 0 ),
@@ -811,13 +811,13 @@ GROUP BY wss.pid, wss.aid;";
 															<label
 																for='startDate'><?php echo __( 'Campaign Start Date', SAM_PRO_DOMAIN ) . ':' ?></label>
 															<input type="text" id="startDate">
-															<input type='hidden' name='sdate' id='sdate' value='<?php echo $row['sdate']; ?>'>
+															<input type='hidden' name='sdate' id='sdate' value='<?php echo ((isset($row['sdate']) && $row['sdate'] != '0000-00-00 00:00:00') ? $row['sdate'] : date('Y-m-d H:i:s')); ?>'>
 														</p>
 														<p>
 															<label
 																for='finishDate'><?php echo __( 'Campaign End Date', SAM_PRO_DOMAIN ) . ':' ?></label>
 															<input id="finishDate" type="text">
-															<input type='hidden' name='fdate' id='fdate' value='<?php echo $row['fdate']; ?>'>
+															<input type='hidden' name='fdate' id='fdate' value='<?php echo ((isset($row['fdate']) && $row['fdate'] != '0000-00-00 00:00:00') ? $row['fdate'] : date('Y-m-d H:i:s')); ?>'>
 														</p>
 													</div>
 													<p><?php _e( 'Use these parameters for displaying ad during the certain period of time.', SAM_PRO_DOMAIN ); ?></p>

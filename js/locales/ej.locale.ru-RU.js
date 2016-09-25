@@ -1,7 +1,7 @@
 /**
  * Created by minimus on 02.07.2015.
  */
-ej.Grid.locale["ru-RU"] = {
+ej.Grid.Locale["ru-RU"] = {
   EmptyRecord: "Нет записей для показа",
   GroupDropArea: "Перетащите сюда заголовок колонки для группировки по этой колонке",
   DeleteOperationAlert: "Нет записей, выбранных для операции удаления",
@@ -49,7 +49,7 @@ ej.Grid.locale["ru-RU"] = {
   UnGroup: "Нажмите здесь, чтобы разгруппировать"
 };
 
-ej.Pager.locale["ru-RU"] = {
+ej.Pager.Locale["ru-RU"] = {
   pagerInfo: "{0} из {1} страниц ({2} элементов)",
   firstPageTooltip: "Первая страница",
   lastPageTooltip: "Последняя страница",

@@ -4,7 +4,7 @@ Donate link: http://uncle-sam.info
 Tags: ad, advertising, banner, rotator, simple ads manager
 Requires at least: 4.1
 Tested up to: 4.6
-Stable tag: 1.9.4.62
+Stable tag: 1.9.5.65
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -105,6 +105,10 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Changelog ==
 
+= 1.9.5.65 =
+* The problem with the empty dates has been solved
+* The minor bug of localization has been solved
+* The third-party library has been upgraded
 = 1.9.4.62 =
 * The Statistics Chart has been improved
 * The Settings Page has been improved
@@ -165,6 +169,8 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Upgrade Notice ==
 
+= 1.9.5.65 =
+The problem with the empty dates has been solved. The minor bug of localization has been solved. The third-party library has been upgraded
 = 1.9.4.62 =
 * The Statistics Chart has been improved. The Settings Page has been improved. The third-party software has been updated.
 = 1.9.3.59 =
