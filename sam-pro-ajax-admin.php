@@ -1022,12 +1022,12 @@ FROM {$zrTable} szr WHERE szr.single = 1 AND szr.zid = {$zid}{$sqlWhere}{$sort}{
 			}
 			break;
 		case 'sam_pro_ajax_load_ad_chart_data':
-			if ( isset( $params['start'] ) && isset( $params['end'] ) && isset( $params['aid'] ) && isset( $params['pid'] ) && isset( $params['period'] ) ) {
-				$start  = $params['start'];
-				$end    = $params['end'];
-				$aid    = (int) $params['aid'];
-				$pid    = (int) $params['pid'];
-				$period = (int) $params['period'];
+			if ( isset( $_REQUEST['start'] ) && isset( $_REQUEST['end'] ) && isset( $_REQUEST['aid'] ) && isset( $_REQUEST['pid'] ) && isset( $_REQUEST['period'] ) ) {
+				$start  = $_REQUEST['start'];
+				$end    = $_REQUEST['end'];
+				$aid    = (int) $_REQUEST['aid'];
+				$pid    = (int) $_REQUEST['pid'];
+				$period = (int) $_REQUEST['period'];
 
 				if ( $period < 20 && $period >= 0 ) {
 					$sql = "SELECT DATE_FORMAT(ss.edate, '%Y-%m-%dT00:00:01') AS mdate, SUM(ss.hits) AS hits, SUM(ss.clicks) AS clicks
@@ -1243,12 +1243,12 @@ FROM {$zrTable} szr WHERE szr.single = 1 AND szr.zid = {$zid}{$sqlWhere}{$sort}{
 			}
 			break;
 		case 'sam_pro_ajax_load_pie_data':
-			if ( isset( $params['start'] ) && isset( $params['end'] ) && isset( $params['owner'] ) && isset( $params['item'] ) && isset( $params['period'] ) ) {
-				$start  = $params['start'];
-				$end    = $params['end'];
-				$owner  = $params['owner'];
-				$item   = (int) $params['item'];
-				$period = (int) $params['period'];
+			if ( isset( $_REQUEST['start'] ) && isset( $_REQUEST['end'] ) && isset( $_REQUEST['owner'] ) && isset( $_REQUEST['item'] ) && isset( $_REQUEST['period'] ) ) {
+				$start  = $_REQUEST['start'];
+				$end    = $_REQUEST['end'];
+				$owner  = $_REQUEST['owner'];
+				$item   = (int) $_REQUEST['item'];
+				$period = (int) $_REQUEST['period'];
 
 				$ownerData   = ( $owner === 'all' ) ? '' : " INNER JOIN {$aTable} sa ON ss.aid = sa.aid";
 				$ownerClause = ( $owner === 'all' ) ? '' : " AND sa.owner = '{$owner}'";
@@ -1264,12 +1264,12 @@ FROM {$zrTable} szr WHERE szr.single = 1 AND szr.zid = {$zid}{$sqlWhere}{$sort}{
 			}
 			break;
 		case 'sam_pro_ajax_load_pie_data_all':
-			if ( isset( $params['start'] ) && isset( $params['end'] ) && isset( $params['owner'] ) && isset( $params['item'] ) && isset( $params['period'] ) ) {
-				$start  = $params['start'];
-				$end    = $params['end'];
-				$owner  = $params['owner'];
-				$item   = (int) $params['item'];
-				$period = (int) $params['period'];
+			if ( isset( $_REQUEST['start'] ) && isset( $_REQUEST['end'] ) && isset( $_REQUEST['owner'] ) && isset( $_REQUEST['item'] ) && isset( $_REQUEST['period'] ) ) {
+				$start  = $_REQUEST['start'];
+				$end    = $_REQUEST['end'];
+				$owner  = $_REQUEST['owner'];
+				$item   = (int) $_REQUEST['item'];
+				$period = (int) $_REQUEST['period'];
 
 				$sql  = "SELECT sp.title, IFNULL(SUM(ss.hits), 0) AS hits
   FROM {$sTable} ss INNER JOIN {$pTable} sp ON ss.pid = sp.pid
@@ -1282,12 +1282,12 @@ FROM {$zrTable} szr WHERE szr.single = 1 AND szr.zid = {$zid}{$sqlWhere}{$sort}{
 			}
 			break;
 		case 'sam_pro_ajax_load_pie_data_2':
-			if ( isset( $params['start'] ) && isset( $params['end'] ) && isset( $params['owner'] ) && isset( $params['item'] ) && isset( $params['period'] ) ) {
-				$start  = $params['start'];
-				$end    = $params['end'];
-				$owner  = $params['owner'];
-				$item   = (int) $params['item'];
-				$period = (int) $params['period'];
+			if ( isset( $_REQUEST['start'] ) && isset( $_REQUEST['end'] ) && isset( $_REQUEST['owner'] ) && isset( $_REQUEST['item'] ) && isset( $_REQUEST['period'] ) ) {
+				$start  = $_REQUEST['start'];
+				$end    = $_REQUEST['end'];
+				$owner  = $_REQUEST['owner'];
+				$item   = (int) $_REQUEST['item'];
+				$period = (int) $_REQUEST['period'];
 
 				$ownerData   = ( $owner === 'all' ) ? '' : " INNER JOIN {$aTable} sa ON ss.aid = sa.aid";
 				$ownerClause = ( $owner === 'all' ) ? '' : " AND sa.owner = '{$owner}'";
@@ -1303,12 +1303,12 @@ FROM {$zrTable} szr WHERE szr.single = 1 AND szr.zid = {$zid}{$sqlWhere}{$sort}{
 			}
 			break;
 		case 'sam_pro_ajax_load_pie_data_2_all':
-			if ( isset( $params['start'] ) && isset( $params['end'] ) && isset( $params['owner'] ) && isset( $params['item'] ) && isset( $params['period'] ) ) {
-				$start  = $params['start'];
-				$end    = $params['end'];
-				$owner  = $params['owner'];
-				$item   = (int) $params['item'];
-				$period = (int) $params['period'];
+			if ( isset( $_REQUEST['start'] ) && isset( $_REQUEST['end'] ) && isset( $_REQUEST['owner'] ) && isset( $_REQUEST['item'] ) && isset( $_REQUEST['period'] ) ) {
+				$start  = $_REQUEST['start'];
+				$end    = $_REQUEST['end'];
+				$owner  = $_REQUEST['owner'];
+				$item   = (int) $_REQUEST['item'];
+				$period = (int) $_REQUEST['period'];
 
 				$sql  = "SELECT sp.title, IFNULL(SUM(ss.clicks), 0) AS clicks
   FROM {$sTable} ss INNER JOIN {$pTable} sp ON ss.pid = sp.pid

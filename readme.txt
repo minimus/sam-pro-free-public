@@ -4,7 +4,7 @@ Donate link: http://uncle-sam.info
 Tags: ad, advertising, banner, rotator, simple ads manager
 Requires at least: 4.1
 Tested up to: 4.6
-Stable tag: 1.9.5.65
+Stable tag: 1.9.6.67
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -92,19 +92,22 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 == Screenshots ==
 
 1. Settings. Tab "General"
-2. Settings. Tab "Embedding"
-3. Settings. Tab "Mailer"
-4. Settings. Tab "Tools"
-5. Ads List
-6. Ad Editor
-7. Place Editor
-8. Zone Editor
-9. Block Editor
-10. Statistics
-11. Tools
+1. Settings. Tab "Embedding"
+1. Settings. Tab "Mailer"
+1. Settings. Tab "Tools"
+1. Ads List
+1. Ad Editor
+1. Place Editor
+1. Zone Editor
+1. Block Editor
+1. Statistics
+1. Tools
 
 == Changelog ==
 
+= 1.9.6.67 =
+* Bugs of the rules for the tags and the homepage have been fixed
+* The bug of the interface on the statistics page in Google Chrome has been fixed
 = 1.9.5.65 =
 * The problem with the empty dates has been solved
 * The minor bug of localization has been solved
@@ -169,6 +172,8 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Upgrade Notice ==
 
+= 1.9.6.67 =
+Bugs of the rules for the tags and the homepage have been fixed. The bug of the interface on the statistics page in Google Chrome has been fixed.
 = 1.9.5.65 =
 The problem with the empty dates has been solved. The minor bug of localization has been solved. The third-party library has been upgraded
 = 1.9.4.62 =
