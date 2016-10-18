@@ -213,7 +213,7 @@ ORDER BY ua.adCycle{$this->limit};";
   sp.php, sp.inline, sp.ad_server, sp.dfp, sp.amode, 0 AS clicks,
   (sp.sale AND sp.sale_mode = 0 AND NOT (NOW() BETWEEN sp.sdate AND sp.fdate)) AS block_children,
   (SELECT COUNT(*) FROM {$paTable} spa WHERE spa.pid = sp.pid) AS children,
-  (SELECT COUNT(*) FROM {$paTable} spa INNER JOIN {$aTable} sa ON spa.aid = sa.aid WHERE spa.pid = sp.pid {$clauses}) AS children_logic
+  (SELECT COUNT(*) FROM {$paTable} spa INNER JOIN {$aTable} sa ON spa.aid = sa.aid WHERE spa.pid = sp.pid AND spa.trash < 1 AND sa.trash < 1 AND sa.moderated > 0 AND spa.weight > 0 {$clauses}) AS children_logic
   FROM {$pTable} sp
   WHERE sp.pid = {$this->pid}";
 				$data = array($wpdb->get_row($sql, ARRAY_A));
