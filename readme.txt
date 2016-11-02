@@ -4,7 +4,7 @@ Donate link: http://uncle-sam.info
 Tags: ad, advertising, banner, rotator, simple ads manager
 Requires at least: 4.1
 Tested up to: 4.6
-Stable tag: 1.9.6.67
+Stable tag: 1.9.7.68
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -105,6 +105,8 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Changelog ==
 
+= 1.9.7.68 =
+* Some changes for preventing **Local File Inclusion (LFI)** vulnerability have been made
 = 1.9.6.67 =
 * Bugs of the rules for the tags and the homepage have been fixed
 * The bug of the interface on the statistics page in Google Chrome has been fixed
@@ -172,6 +174,8 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Upgrade Notice ==
 
+= 1.9.7.68 =
+Some changes for preventing Local File Inclusion (LFI) vulnerability have been made.
 = 1.9.6.67 =
 Bugs of the rules for the tags and the homepage have been fixed. The bug of the interface on the statistics page in Google Chrome has been fixed.
 = 1.9.5.65 =

@@ -31,9 +31,28 @@ $body = 'load';
 ini_set( 'html_errors', 0 );
 define( 'SHORTINIT', true );
 
+function is_valid_file( $file, $prefix, $suffix, $body ) {
+	$out     = false;
+	$pattern = "/.+{$prefix}-{$body}\.{$suffix}\b/";
+	$mlf     = "{$prefix}-{$body}.{$suffix}";
+	$matches = array();
+	preg_match( $pattern, $file, $matches );
+	if ( isset( $matches[0] ) ) {
+		if ( strpos( $file, $mlf ) ) {
+			try {
+				$out = ( false !== is_file( $matches[0] ) );
+			} catch ( Exception $e ) {
+				$out = false;
+			}
+		}
+	}
+
+	return $out;
+}
+
 $wap      = ( isset( $_REQUEST['wap'] ) ) ? base64_decode( $_REQUEST['wap'] ) : null;
-$mlf = "{$prefix}-{$body}.{$suffix}";
-$rightWap = ( is_null( $wap ) ) ? false : strpos( $wap, $mlf );
+//$mlf = "{$prefix}-{$body}.{$suffix}";
+$rightWap = ( is_null( $wap ) ) ? false : is_valid_file($wap, $prefix, $suffix, $body);//strpos( $wap, $mlf );
 if ( $rightWap === false ) {
 	exit;
 }

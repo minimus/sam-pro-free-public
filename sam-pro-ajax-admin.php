@@ -16,9 +16,27 @@ if ( ! isset( $_REQUEST['action'] ) ) {
 
 $body = 'load';
 
+function is_valid_file( $file, $prefix, $suffix, $body ) {
+	$out     = false;
+	$pattern = "/.+{$prefix}-{$body}\.{$suffix}\b/";
+	$mlf     = "{$prefix}-{$body}.{$suffix}";
+	$matches = array();
+	preg_match( $pattern, $file, $matches );
+	if ( isset( $matches[0] ) ) {
+		if ( strpos( $file, $mlf ) ) {
+			try {
+				$out = ( false !== is_file( $matches[0] ) );
+			} catch ( Exception $e ) {
+				$out = false;
+			}
+		}
+	}
+
+	return $out;
+}
+
 $wap      = ( isset( $_REQUEST['wap'] ) ) ? base64_decode( $_REQUEST['wap'] ) : null;
-$mlf = "{$prefix}-{$body}.{$suffix}";
-$rightWap = ( is_null( $wap ) ) ? false : strpos( $wap, $mlf );
+$rightWap = ( is_null( $wap ) ) ? false : is_valid_file($wap, $prefix, $suffix, $body);
 if ( $rightWap === false ) {
 	exit;
 }

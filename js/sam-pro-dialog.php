@@ -5,8 +5,35 @@
  * Date: 10.07.2015
  * Time: 14:09
  */
+$prefix = 'wp';
+$suffix = 'php';
+
+function is_valid_file( $file, $prefix, $suffix, $body ) {
+	$out     = false;
+	$pattern = "/.+{$prefix}-{$body}\.{$suffix}\b/";
+	$mlf     = "{$prefix}-{$body}.{$suffix}";
+	$matches = array();
+	preg_match( $pattern, $file, $matches );
+	if ( isset( $matches[0] ) ) {
+		if ( strpos( $file, $mlf ) ) {
+			try {
+				$out = ( false !== is_file( $matches[0] ) );
+			} catch ( Exception $e ) {
+				$out = false;
+			}
+		}
+	}
+
+	return $out;
+}
+
+$body = 'load';
 
 $wap = (isset($_REQUEST['wap'])) ? base64_decode($_REQUEST['wap']) : null;
+$rightWap = ( is_null( $wap ) ) ? false : is_valid_file($wap, $prefix, $suffix, $body);
+if ( $rightWap === false ) {
+	exit;
+}
 $wpLoadPath = (is_null($wap)) ? false : $wap;
 if(!$wpLoadPath) die('-1');
 require_once($wpLoadPath);
