@@ -1664,6 +1664,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_script( 'sam-pro-places-list', SAM_PRO_URL . 'js/sam.pro.places.list.min.js', array( 'jquery' ), SAM_PRO_VERSION );
 				wp_localize_script( 'sam-pro-places-list', 'options', array(
 					'samProAjax'   => SAM_PRO_URL,
+					'samProNonce'  => $this->nonce,
 					'editorUrl'    => admin_url( 'admin.php' ) . '?page=sam-pro-place-editor&item=',
 					'adEditorUrl'  => admin_url( 'admin.php' ) . '?page=sam-pro-ad-editor&item=',
 					'itemsPerPage' => $settings['itemsPerPage'],
@@ -1697,7 +1698,8 @@ ORDER BY uu.owner;";
 				) );
 				wp_localize_script( 'sam-pro-ads-list', 'options', array(
 					'samProAjax'         => SAM_PRO_URL,
-					'samProAjaxModerate' => apply_filters( 'sam_pro_front_ajax_moderate', SAM_PRO_URL . 'sam-pro-ajax-admin.php' ),
+					'samProNonce'        => $this->nonce,
+					'samProAjaxModerate' => apply_filters( 'sam_pro_front_ajax_moderate', admin_url( 'admin-ajax.php' )/*SAM_PRO_URL . 'sam-pro-ajax-admin.php'*/ ),
 					'editorUrl'          => admin_url( 'admin.php' ) . '?page=sam-pro-ad-editor&item=',
 					'itemsPerPage'       => $settings['itemsPerPage'],
 					'locale'             => $locale,
@@ -1734,6 +1736,7 @@ ORDER BY uu.owner;";
 				) );
 				wp_localize_script( 'sam-pro-zones-list', 'options', array(
 					'samProAjax'   => SAM_PRO_URL,
+					'samProNonce'  => $this->nonce,
 					'editorUrl'    => admin_url( 'admin.php' ) . '?page=sam-pro-zone-editor&item=',
 					'itemsPerPage' => $settings['itemsPerPage'],
 					'locale'       => $locale,
@@ -1770,6 +1773,7 @@ ORDER BY uu.owner;";
 				) );
 				wp_localize_script( 'sam-pro-blocks-list', 'options', array(
 					'samProAjax'   => SAM_PRO_URL,
+					'samProNonce'  => $this->nonce,
 					'editorUrl'    => admin_url( 'admin.php' ) . '?page=sam-pro-block-editor&item=',
 					'itemsPerPage' => $settings['itemsPerPage'],
 					'locale'       => $locale,
@@ -1806,6 +1810,7 @@ ORDER BY uu.owner;";
 				) );
 				wp_localize_script( 'sam-pro-error-log', 'options', array(
 					'samProAjax'     => SAM_PRO_URL,
+					'samProNonce'    => $this->nonce,
 					'itemsPerPage'   => $settings['itemsPerPage'],
 					'locale'         => $locale,
 					'id'             => __( 'ID', SAM_PRO_DOMAIN ),
@@ -1867,6 +1872,7 @@ ORDER BY uu.owner;";
 				) );
 				wp_localize_script( 'sam-pro-ad-editor', 'options', array(
 					'samProAjax'   => SAM_PRO_URL,
+					'samProNonce'  => $this->nonce,
 					'media'        => array(
 						'title'  => __( 'Select Banner Image', SAM_PRO_DOMAIN ),
 						'button' => __( 'Select', SAM_PRO_DOMAIN )
@@ -1922,6 +1928,7 @@ ORDER BY uu.owner;";
 				), SAM_PRO_VERSION );
 				wp_localize_script( 'sam-pro-place-editor', 'options', array(
 					'samProAjax'   => SAM_PRO_URL,
+					'samProNonce'  => $this->nonce,
 					'media'        => array(
 						'title'  => __( 'Select Banner Image', SAM_PRO_DOMAIN ),
 						'button' => __( 'Select', SAM_PRO_DOMAIN )
@@ -1975,6 +1982,7 @@ ORDER BY uu.owner;";
 				), SAM_PRO_VERSION );
 				wp_localize_script( 'sam-pro-zone-editor', 'options', array(
 					'samProAjax'   => SAM_PRO_URL,
+					'samProNonce'  => $this->nonce,
 					'item'         => ( ( isset( $_GET['item'] ) ) ? $_GET['item'] : 0 ),
 					'itemsPerPage' => $settings['itemsPerPage'],
 					'rules'        => self::getRulesList(),
@@ -2007,13 +2015,14 @@ ORDER BY uu.owner;";
 					'ej-all'
 				), SAM_PRO_VERSION );
 				wp_localize_script( 'sam-pro-block-editor', 'options', array(
-					'samProAjax' => SAM_PRO_URL,
-					'strings'    => array(
+					'samProAjax'  => SAM_PRO_URL,
+					'samProNonce' => $this->nonce,
+					'strings'     => array(
 						'places' => __( 'Places', SAM_PRO_DOMAIN ),
 						'ads'    => __( 'Single Ads', SAM_PRO_DOMAIN )
 					),
-					'item'       => ( ( isset( $_GET['item'] ) ) ? $_GET['item'] : 0 ),
-					'wap'        => $this->wap
+					'item'        => ( ( isset( $_GET['item'] ) ) ? $_GET['item'] : 0 ),
+					'wap'         => $this->wap
 				) );
 				do_action( 'sam_pro_admin_block_editor_scripts' );
 			} elseif ( $hook == $this->advertisersList ) {
@@ -2049,6 +2058,7 @@ ORDER BY uu.owner;";
 				), SAM_PRO_VERSION );
 				wp_localize_script( 'sam-pro-adverts', 'options', array(
 					'samProAjax'   => SAM_PRO_URL,
+					'samProNonce'  => $this->nonce,
 					'locale'       => $locale,
 					'strings'      => self::getJsStrings( 'editor' ),
 					'itemsPerPage' => $settings['itemsPerPage'],
@@ -2088,6 +2098,7 @@ ORDER BY uu.owner;";
 				), SAM_PRO_VERSION );
 				wp_localize_script( 'sam-pro-statistics', 'options', array(
 					'samProAjax'   => SAM_PRO_URL,
+					'samProNonce'  => $this->nonce,
 					'locale'       => $locale,
 					'strings'      => self::getJsStrings( 'editor' ),
 					'itemsPerPage' => $settings['itemsPerPage'],
@@ -2109,7 +2120,21 @@ ORDER BY uu.owner;";
 				wp_enqueue_script( 'jquery-effects-blind' );
 				do_action( 'sam_pro_admin_tools_scripts' );
 			} elseif ( $hook == 'post.php' || $hook == 'post-new.php' ) {
-				echo "<script type='text/javascript'>var samProOptions = {wap: '{$this->wap}'}</script>";
+				$data = array(
+					'wap'     => $this->wap,
+					'data'    => self::getAdsData(),
+					'url'     => get_option( 'siteurl' ) . '/wp-includes/js/tinymce/',
+					'jqUrl'   => get_option( 'siteurl' ) . '/wp-includes/js/jquery/',
+					'strings' => array(
+						'title'    => __( 'Insert Ad Object', SAM_PRO_DOMAIN ),
+						'selector' => __( 'Ad Object', SAM_PRO_DOMAIN ),
+						'hint'     => __( 'Allow predefined tags', SAM_PRO_DOMAIN ),
+						'insert'   => __( "Insert", SAM_PRO_DOMAIN ),
+						'cancel'   => __( "Cancel", SAM_PRO_DOMAIN )
+					)
+				);
+				$json = wp_json_encode( (object) $data );
+				echo "<script type='text/javascript'>var samProOptions = {$json}</script>";
 			}
 		}
 

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Insert Ad Object (SAM Pro)</title>
+  <script type="text/javascript">
+    var
+      data = top.tinymce.activeEditor.windowManager.getParams(),
+      ads = data.data,
+      url = data.url,
+      jqUrl = data.jqUrl,
+      samUrl = data.plugin_url,
+      strings = data.strings;
+    document.write('<script language="JavaScript" type="text/javascript" src="' + url + 'tiny_mce_popup.js"></scr' + 'ipt>');
+    document.write('<script language="JavaScript" type="text/javascript" src="' + url + 'utils/form_utils.js"></scr' + 'ipt>');
+    document.write('<script language="JavaScript" type="text/javascript" src="' + url + 'utils/mctabs.js"></scr' + 'ipt>');
+    document.write('<script language="JavaScript" type="text/javascript" src="' + url + 'utils/editable_selects.js"></scr' + 'ipt>');
+    document.write('<script language="JavaScript" type="text/javascript" src="' + jqUrl + 'jquery.js"></scr' + 'ipt>');
+    document.write('<script language="JavaScript" type="text/javascript" src="' + samUrl + '/sam.pro.dialog.js"></scr' + 'ipt>');
+  </script>
+</head>
+<body id="link" onload="tinyMCEPopup.executeOnLoad('init();');document.body.style.display='';" style="display: none">
+<form name="spb" onsubmit="insertSamProCode(jQuery);return false;" action="#">
+  <div style="height: 220px;">
+    <div>
+      <div style="margin: 10px;">
+        <label for="sam_id" id="sam_id_label">Ad Object</label>
+        <select name='sam_id' id='sam_id' style="font-size: 12px">
+        </select>
+      </div>
+      <div style="margin: 10px;">
+        <input type='checkbox' name='sam_codes' id='sam_codes' checked='checked'>
+        <label for="sam_codes" id="sam_codes_label">Allow predefined tags</label>
+      </div>
+    </div>
+  </div>
+  <div class="mceActionPanel" style="border-top: 1px solid #dfdfdf; padding: 8px 16px;">
+    <div style="float: left">
+      <input type="button" id="cancel" name="cancel" value="Cancel" onclick="tinyMCEPopup.close();"/>
+    </div>
+    <div style="float: right">
+      <input type="submit" id="insert" name="insert" value="Insert" onclick="insertSamProCode(jQuery);"/>
+    </div>
+  </div>
+</form>
+<script language="JavaScript" type="text/javascript">
+  (function ($) {
+    $(document).ready(function () {
+      document.title = strings.title;
+      $('#cancel').val(strings.cancel);
+      $('#insert').val(strings.insert);
+      $('#sam_id_label').text(strings.selector);
+      $('#sam_codes_label').text(strings.hint);
+      var
+        selector = "<select name='sam_id' id='sam_id' style='font-size: 12px'>",
+        i;
+      // Places
+      selector += '<optgroup label="' + ads.places.title + '">';
+      for (i = 0; i < ads.places.data.length; i++) {
+        selector += ('<option value="' + ads.places.data[i].ival + '">' + ads.places.data[i].title + '</option>');
+      }
+      selector += '</optgroup>';
+
+      // Ads
+      selector += '<optgroup label="' + ads.ads.title + '">';
+      for (i = 0; i < ads.ads.data.length; i++) {
+        selector += ('<option value="' + ads.ads.data[i].ival + '">' + ads.ads.data[i].title + '</option>');
+      }
+      selector += '</optgroup>';
+
+      // Zones
+      selector += '<optgroup label="' + ads.zones.title + '">';
+      for (i = 0; i < ads.zones.data.length; i++) {
+        selector += ('<option value="' + ads.zones.data[i].ival + '">' + ads.zones.data[i].title + '</option>');
+      }
+      selector += '</optgroup>';
+
+      // Blocks
+      selector += '<optgroup label="' + ads.blocks.title + '">';
+      for (i = 0; i < ads.blocks.data.length; i++) {
+        selector += ('<option value="' + ads.blocks.data[i].ival + '">' + ads.blocks.data[i].title + '</option>');
+      }
+      selector += '</optgroup>';
+      selector += '</select>';
+      $('#sam_id').replaceWith(selector);
+    });
+  })(jQuery);
+</script>
+</body>
+</html>

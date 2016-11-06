@@ -225,16 +225,18 @@ GA_googleFetchAds();
 
 			wp_enqueue_script( 'jquery' );
 			$jsOptions = array(
-				'au'        => SAM_PRO_URL . 'sam-pro-layout.php',
-				'load'      => ( $options['adShow'] == 'js' ) ? '1' : '0',
-				'mailer'    => $options['mailer'],
-				'clauses'   => $clauses64,
-				'doStats'   => $options['stats'],
-				'jsStats'   => ( (int) $options['detectBots'] && ( $options['detectingMode'] === 'js' ) ),
-				'container' => $container,
-				'place'     => $samPlace,
-				'ad'        => $samAd,
-				'wap'       => $this->wap
+				'au'          => SAM_PRO_URL . 'sam-pro-layout.php',
+				'load'        => ( $options['adShow'] == 'js' ) ? '1' : '0',
+				'mailer'      => $options['mailer'],
+				'clauses'     => $clauses64,
+				'doStats'     => $options['stats'],
+				'jsStats'     => ( (int) $options['detectBots'] && ( $options['detectingMode'] === 'js' ) ),
+				'container'   => $container,
+				'place'       => $samPlace,
+				'ad'          => $samAd,
+				'samProNonce' => $this->nonce,
+				'ajaxUrl'     => admin_url( 'admin-ajax.php' ),
+				'wap'         => $this->wap
 			);
 			$jsOptions = apply_filters( 'sam_pro_front_js_options', $jsOptions, $locale, $postId );
 
