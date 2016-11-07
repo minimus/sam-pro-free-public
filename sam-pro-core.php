@@ -13,11 +13,7 @@ if ( ! class_exists( "SamProCore" ) ) {
 	class SamProCore {
 		protected $samOptions;
 		protected $samVersions = array( 'sam' => null, 'db' => null );
-		protected $wap;
 		protected $nonce;
-
-		private $prefix = 'wp-';
-		private $postfix = '.php';
 
 		protected $defaultSettings = array(
 			'edition'          => 0,
@@ -197,7 +193,6 @@ if ( ! class_exists( "SamProCore" ) ) {
 
 			$this->getSettings( true );
 			$this->getVersions( true );
-			$this->wap = base64_encode( ABSPATH . $this->prefix . 'load' . $this->postfix );
 
 			add_action( 'plugins_loaded', array( &$this, 'maintenance' ) );
 			add_action( 'plugins_loaded', array( &$this, 'scavenge' ) );

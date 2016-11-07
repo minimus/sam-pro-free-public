@@ -235,8 +235,7 @@ GA_googleFetchAds();
 				'place'       => $samPlace,
 				'ad'          => $samAd,
 				'samProNonce' => $this->nonce,
-				'ajaxUrl'     => admin_url( 'admin-ajax.php' ),
-				'wap'         => $this->wap
+				'ajaxUrl'     => admin_url( 'admin-ajax.php' )
 			);
 			$jsOptions = apply_filters( 'sam_pro_front_js_options', $jsOptions, $locale, $postId );
 

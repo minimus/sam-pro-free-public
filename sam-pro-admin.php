@@ -1669,8 +1669,7 @@ ORDER BY uu.owner;";
 					'adEditorUrl'  => admin_url( 'admin.php' ) . '?page=sam-pro-ad-editor&item=',
 					'itemsPerPage' => $settings['itemsPerPage'],
 					'locale'       => $locale,
-					'strings'      => self::getJsStrings(),
-					'wap'          => $this->wap
+					'strings'      => self::getJsStrings()
 				) );
 				do_action( 'sam_pro_admin_places_scripts' );
 			} elseif ( $hook == $this->adsPage ) {
@@ -1703,8 +1702,7 @@ ORDER BY uu.owner;";
 					'editorUrl'          => admin_url( 'admin.php' ) . '?page=sam-pro-ad-editor&item=',
 					'itemsPerPage'       => $settings['itemsPerPage'],
 					'locale'             => $locale,
-					'strings'            => self::getJsStrings(),
-					'wap'                => $this->wap
+					'strings'            => self::getJsStrings()
 				) );
 				do_action( 'sam_pro_admin_ads_scripts' );
 			} elseif ( $hook == $this->zonesPage ) {
@@ -1740,8 +1738,7 @@ ORDER BY uu.owner;";
 					'editorUrl'    => admin_url( 'admin.php' ) . '?page=sam-pro-zone-editor&item=',
 					'itemsPerPage' => $settings['itemsPerPage'],
 					'locale'       => $locale,
-					'strings'      => self::getJsStrings(),
-					'wap'          => $this->wap
+					'strings'      => self::getJsStrings()
 				) );
 				do_action( 'sam_pro_admin_zones_scripts' );
 			} elseif ( $hook == $this->blocksPage ) {
@@ -1777,8 +1774,7 @@ ORDER BY uu.owner;";
 					'editorUrl'    => admin_url( 'admin.php' ) . '?page=sam-pro-block-editor&item=',
 					'itemsPerPage' => $settings['itemsPerPage'],
 					'locale'       => $locale,
-					'strings'      => self::getJsStrings(),
-					'wap'          => $this->wap
+					'strings'      => self::getJsStrings()
 				) );
 				do_action( 'sam_pro_admin_blocks_scripts' );
 			} elseif ( $hook == $this->errorLogPage ) {
@@ -1831,8 +1827,7 @@ ORDER BY uu.owner;";
 					'clearLog'       => __( 'Clear Error Log', SAM_PRO_DOMAIN ),
 					'cancelApproval' => __( 'Cancel Approval', SAM_PRO_DOMAIN ),
 					'viewMode'       => __( 'View Mode', SAM_PRO_DOMAIN ),
-					'refresh'        => __( 'Refresh', SAM_PRO_DOMAIN ),
-					'wap'            => $this->wap
+					'refresh'        => __( 'Refresh', SAM_PRO_DOMAIN )
 				) );
 				do_action( 'sam_pro_admin_error_log_scripts' );
 			} elseif ( $hook == $this->adEditor ) {
@@ -1888,8 +1883,7 @@ ORDER BY uu.owner;";
 						'now'       => __( 'Now', SAM_PRO_DOMAIN ),
 						'timeTitle' => __( 'Time', SAM_PRO_DOMAIN ),
 						'today'     => __( 'Today', SAM_PRO_DOMAIN )
-					),
-					'wap'          => $this->wap
+					)
 				) );
 				do_action( 'sam_pro_admin_ad_editor_scripts' );
 			} elseif ( $hook == $this->placeEditor ) {
@@ -1943,8 +1937,7 @@ ORDER BY uu.owner;";
 						'now'       => __( 'Now', SAM_PRO_DOMAIN ),
 						'timeTitle' => __( 'Time', SAM_PRO_DOMAIN ),
 						'today'     => __( 'Today', SAM_PRO_DOMAIN )
-					),
-					'wap'          => $this->wap
+					)
 				) );
 				do_action( 'sam_pro_admin_place_editor_scripts' );
 			} elseif ( $hook == $this->zoneEditor ) {
@@ -1988,8 +1981,7 @@ ORDER BY uu.owner;";
 					'rules'        => self::getRulesList(),
 					'places'       => self::getPlaces(),
 					'locale'       => $locale,
-					'strings'      => self::getJsStrings( 'editor' ),
-					'wap'          => $this->wap
+					'strings'      => self::getJsStrings( 'editor' )
 				) );
 				do_action( 'sam_pro_admin_zone_editor_scripts' );
 			} elseif ( $hook == $this->blockEditor ) {
@@ -2021,8 +2013,7 @@ ORDER BY uu.owner;";
 						'places' => __( 'Places', SAM_PRO_DOMAIN ),
 						'ads'    => __( 'Single Ads', SAM_PRO_DOMAIN )
 					),
-					'item'        => ( ( isset( $_GET['item'] ) ) ? $_GET['item'] : 0 ),
-					'wap'         => $this->wap
+					'item'        => ( ( isset( $_GET['item'] ) ) ? $_GET['item'] : 0 )
 				) );
 				do_action( 'sam_pro_admin_block_editor_scripts' );
 			} elseif ( $hook == $this->advertisersList ) {
@@ -2061,8 +2052,7 @@ ORDER BY uu.owner;";
 					'samProNonce'  => $this->nonce,
 					'locale'       => $locale,
 					'strings'      => self::getJsStrings( 'editor' ),
-					'itemsPerPage' => $settings['itemsPerPage'],
-					'wap'          => $this->wap
+					'itemsPerPage' => $settings['itemsPerPage']
 				) );
 				do_action( 'sam_pro_admin_advertisers_scripts' );
 			} elseif ( $hook == $this->statsPage ) {
@@ -2106,8 +2096,7 @@ ORDER BY uu.owner;";
 					'period'       => ( ( isset( $_POST['period'] ) ) ? $_POST['period'] : 0 ),
 					'owner'        => ( ( isset( $_POST['owner'] ) ) ? $_POST['owner'] : 'all' ),
 					'item'         => ( ( isset( $_POST['item'] ) ) ? $_POST['item'] : 0 ),
-					'view'         => ( ( isset( $_POST['view'] ) ) ? $_POST['view'] : 'sold' ),
-					'wap'          => $this->wap
+					'view'         => ( ( isset( $_POST['view'] ) ) ? $_POST['view'] : 'sold' )
 				) );
 				do_action( 'sam_pro_admin_stats_scripts' );
 			} elseif ( $hook == $this->toolsPage ) {
@@ -2121,7 +2110,6 @@ ORDER BY uu.owner;";
 				do_action( 'sam_pro_admin_tools_scripts' );
 			} elseif ( $hook == 'post.php' || $hook == 'post-new.php' ) {
 				$data = array(
-					'wap'     => $this->wap,
 					'data'    => self::getAdsData(),
 					'url'     => get_option( 'siteurl' ) . '/wp-includes/js/tinymce/',
 					'jqUrl'   => get_option( 'siteurl' ) . '/wp-includes/js/jquery/',
