@@ -109,7 +109,7 @@ if ( ! class_exists( 'SamProInfoPointers' ) ) {
 			$charset  = get_bloginfo( 'charset' );
 			@header( "Content-Type: application/json; charset={$charset}" );
 			if ( isset( $_REQUEST['pointerKey'] ) ) {
-				$pointer              = $_REQUEST['pointerKey'];
+				$pointer              = sanitize_text_field( $_REQUEST['pointerKey'] );
 				$settings[ $pointer ] = false;
 				update_option( 'sam_pro_pointers', $settings );
 				wp_send_json_success( array( 'pointer' => $pointer, 'options' => $settings ) );
