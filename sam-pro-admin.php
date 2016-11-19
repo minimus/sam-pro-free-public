@@ -1600,6 +1600,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'normalize', SAM_PRO_URL . 'css/normalize.css' );
 				wp_enqueue_style( 'ion-slider', SAM_PRO_URL . 'css/ion.rangeSlider.css' );
 				wp_enqueue_style( 'ion-slider-nice', SAM_PRO_URL . 'css/ion.rangeSlider.skinNice.css' );
+				wp_enqueue_style( 'skitter', SAM_PRO_URL . 'css/skitter.css' );
 
 				wp_enqueue_style( 'sam-pro-font', SAM_PRO_URL . 'css/sam-pro-embedded.css' );
 				wp_enqueue_style( 'sam-pro-settings', SAM_PRO_URL . 'css/sam-pro-settings.css' );
@@ -1614,6 +1615,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_script( 'jsrender', SAM_PRO_URL . 'js/jsrender.js', array( 'jquery' ) );
 				wp_enqueue_script( 'ej-all', SAM_PRO_URL . 'js/ej.editors.all.min.js', array( 'jquery' ), '13.1.0.21' );
 				wp_enqueue_script( 'ion-slider', SAM_PRO_URL . 'js/ion.rangeSlider.min.js', array( 'jquery' ), '2.0.2' );
+				wp_enqueue_script( 'skitter', SAM_PRO_URL . 'js/jquery.skitter.min.js', array( 'jquery' ), '5.0.0' );
 
 				wp_enqueue_script( 'sam-pro-settings', SAM_PRO_URL . 'js/sam.pro.settings.min.js', array(
 					'jquery',
@@ -3443,23 +3445,11 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 							<div class="postbox opened">
 								<h3 class="hndle"><?php _e( 'Available Addons', SAM_PRO_DOMAIN ); ?></h3>
 								<div class="inside">
-									<ul>
-										<li>
-											<a href="http://uncle-sam.info/addons/ad-slider/" target="_blank">
-												<img src="<?php echo SAM_PRO_URL . 'images/ad-slider-addon-255.jpg'; ?>">
-											</a>
-										</li>
-										<li>
-											<a href="http://uncle-sam.info/addons/advertising-request/" target="_blank">
-												<img src="<?php echo SAM_PRO_URL . 'images/ad-request-plugin-ad.jpg'; ?>">
-											</a>
-										</li>
-										<li>
-											<a href="http://uncle-sam.info/addons/geo-targeting/" target="_blank">
-												<img src="<?php echo SAM_PRO_URL . 'images/geo-targeting-plugin-ad.jpg'; ?>">
-											</a>
-										</li>
-									</ul>
+									<?php
+									include_once 'tools/sam-pro-addons-list.php';
+									$availableAddons = new SamProAddonsList();
+									echo $availableAddons->draw();
+									?>
 								</div>
 							</div>
 							<div class='postbox opened'>

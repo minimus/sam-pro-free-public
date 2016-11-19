@@ -123,3 +123,39 @@ textarea::-moz-placeholder {
 textarea::-webkit-input-placeholder {
   color: #b2b2b2;
 }
+
+.e-tab.e-js.e-widget{
+  font-family: Segoe UI, sans-serif !important;
+}
+
+/* Skitter */
+.btn {
+  transition: background 300ms;
+  border-radius: 2px;
+  padding: 10px 20px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 1;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -3px inset;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.btn.btn-green {
+  color: white;
+  background: #035d96;
+}
+.btn.btn-green:hover {
+  background: #013869;
+}
+.btn.btn-yellow {
+  color: black;
+  background: #fdd835;
+}
+.btn.btn-yellow:hover {
+  background: #fbc02d;
+}
+.btn.btn-small {
+  padding: 3px 7px;
+  font-size: 11px;
+}

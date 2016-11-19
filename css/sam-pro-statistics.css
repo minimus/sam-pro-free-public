@@ -57,3 +57,7 @@
   float: none;
   margin-left: 0;
 }
+
+.e-tab.e-js.e-widget{
+  font-family: Segoe UI, sans-serif !important;
+}

@@ -165,3 +165,7 @@
 .icon-ok:before {
   color: #00a300;
 }
+
+.e-tab.e-js.e-widget{
+  font-family: Segoe UI, sans-serif !important;
+}

@@ -77,6 +77,10 @@
   content: "\e83d";
   color: #00a300;
 }
+
+.e-tab.e-js.e-widget{
+  font-family: Segoe UI, sans-serif !important;
+}
 /*Change the cancel icons*/
 /*.e-gcancel:before {
   font-family: "sam-pro";

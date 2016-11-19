@@ -2,6 +2,10 @@
   text-align: inherit !important;
 }
 
+.e-tab.e-js.e-widget{
+  font-family: Segoe UI, sans-serif !important;
+}
+
 .clear-line {
   border-bottom: 1px solid #DFDFDF;
   margin-left: 5px;

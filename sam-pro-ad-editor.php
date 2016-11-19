@@ -148,7 +148,7 @@ GROUP BY wss.pid, wss.aid;";
 				'description'  => stripslashes( sanitize_text_field( $_POST['item_description'] ) ),
 				'moderated'    => ( ( isset( $_POST['moderated'] ) ) ? 1 : 0 ),
 				'img'          => stripslashes( esc_url( $_POST['img'] ) ),
-				'link'         => stripslashes( esc_url( $_POST['link'] ) ),
+				'link'         => stripslashes( esc_url_raw( $_POST['link'] ) ),
 				'alt'          => stripslashes( sanitize_text_field( $_POST['alt'] ) ),
 				'swf'          => ( ( isset( $_POST['swf'] ) ) ? 1 : 0 ),
 				'swf_vars'     => stripslashes( sanitize_text_field( $_POST['swf_vars'] ) ),

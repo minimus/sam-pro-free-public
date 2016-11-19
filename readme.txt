@@ -3,8 +3,8 @@ Contributors: minimus
 Donate link: http://uncle-sam.info
 Tags: ad, advertising, banner, rotator, simple ads manager
 Requires at least: 4.1
-Tested up to: 4.6
-Stable tag: 1.9.7.69
+Tested up to: 4.7
+Stable tag: 1.9.8.70
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -67,7 +67,7 @@ The public version of SAM Pro (Free Edition) also available at [GitHub](https://
 
 **By FTP**
 
-1. Unzip the downloaded `sam-pro-free.zip` file in the suitable folder.
+1. Unzip the downloaded `sam-pro-free.zip` file into the suitable folder.
 1. Log into your hosting space via an FTP software.
 1. Upload the extracted SAM Pro Free plugin folder (sam-pro-free) into `wp-content/plugins` folder on hosting. Correct path after upload will be `wp-content/plugins/sam-pro-free`
 1. Activate the installed plugin.
@@ -105,6 +105,8 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Changelog ==
 
+= 1.9.8.70 =
+* Some improvements on admin side
 = 1.9.7.69 =
 * Some changes for preventing **Local File Inclusion (LFI)** vulnerability have been made
 = 1.9.6.67 =
@@ -174,6 +176,8 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Upgrade Notice ==
 
+= 1.9.8.70 =
+Some improvements on admin side.
 = 1.9.7.69 =
 Some changes for preventing Local File Inclusion (LFI) vulnerability have been made.
 = 1.9.6.67 =
