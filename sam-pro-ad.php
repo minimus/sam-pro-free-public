@@ -26,6 +26,10 @@ if( ! class_exists( 'SamProAd' ) ) {
 		public $pid = null;
 		public $cid = null;
 		public $ad = '';
+		public $img = null;
+		public $link = null;
+		public $width = 0;
+		public $height = 0;
 
 		public function __construct( $aid, $args = null, $tags = false, $crawler = false ) {
 			$this->aid = $aid;
@@ -78,6 +82,12 @@ if( ! class_exists( 'SamProAd' ) ) {
 			$this->pid = 0;
 			$this->cid = "c{$rId}_{$data['aid']}_0";
 			$mode = $data['amode'];
+			if ( $mode == 0 ) {
+				$this->link = $data['link'];
+				$this->img  = $data['img'];
+			}
+			$this->width  = $data['width'];
+			$this->height = $data['height'];
 
 			if($mode == 0) {
 				if((integer)$data['swf']) {

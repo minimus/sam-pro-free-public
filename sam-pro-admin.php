@@ -3017,6 +3017,8 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 			$type        = ( isset( $args['type'] ) ) ? $args['type'] : 'text';
 			$min         = ( isset( $args['min'] ) ) ? " min='{$args['min']}'" : '';
 			$max         = ( isset( $args['max'] ) ) ? " max='{$args['max']}'" : '';
+			$minData     = ( isset( $args['min'] ) ) ? (int) $args['min'] : null;
+			$maxData     = ( isset( $args['max'] ) ) ? (int) $args['max'] : null;
 			$placeholder = ( isset( $args['placeholder'] ) ) ? $args['placeholder'] : '';
 			?>
 			<input id="<?php echo $id; ?>"
@@ -3039,6 +3041,18 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 			<textarea id="<?php echo $id; ?>"
 			          name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>"
 			          style="width: 100%; height: <?php echo $height ?>;"><?php echo $settings[ $id ]; ?></textarea>
+			<?php
+		}
+
+		public function drawColorOption( $id, $args ) {
+			$settings = parent::getSettings();
+			?>
+      <input id="<?php echo $id . '-spc'; ?>" type="text">
+      <input id="<?php echo $id; ?>"
+             name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>"
+             type="hidden"
+             value="<?php echo $settings[ $id ]; ?>"
+             class="spc-color-picker">
 			<?php
 		}
 
@@ -3289,7 +3303,12 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 			}
 
 			foreach ( (array) $wp_settings_fields[ $page ][ $section ] as $field ) {
-				if ( ! empty( $field['args']['checkbox'] ) ) {
+				if ( isset( $field['args']['start_div'] ) && ! empty( $field['args']['start_div'] ) ) {
+					$closed = ( isset( $field['args']['closed'] ) && $field['args']['closed'] ) ?
+						"style='display:none;'" : '';
+					echo "<div id='{$field['args']['start_div']}' {$closed}>";
+				}
+			  if ( ! empty( $field['args']['checkbox'] ) ) {
 					echo '<p>';
 					call_user_func( $field['callback'], $field['id'], $field['args'] );
 					echo '<label for="' . $field['args']['label_for'] . '"' . ( ( isset( $field['args']['hide'] ) && $field['args']['hide'] ) ? 'style="display: none;"' : '' ) . '>' . $field['title'] . '</label>';
@@ -3333,6 +3352,9 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 				if ( ! empty( $field['args']['warning'] ) ) {
 					echo self::getWarningString( $field['args']['warning'] );
 				}
+				if ( isset( $field['args']['end_div'] ) && $field['args']['end_div'] ) {
+					echo "</div>";
+				}
 			}
 		}
 
@@ -3365,7 +3387,7 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 				<form action="options.php" method="post">
 					<div id="poststuff" class="metabox-holder has-right-sidebar">
 						<div id="side-info-column" class="inner-sidebar">
-							<div class="postbox opened">
+							<div id="sysinfo" class="postbox opened">
 								<h3 class="hndle"><?php _e( 'System Info', SAM_PRO_DOMAIN ) ?></h3>
 								<div class="inside" style="padding: 0 !important;">
 									<div id="submitpost" class="submitbox">
@@ -3416,7 +3438,7 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 									</div>
 								</div>
 							</div>
-							<div class='postbox opened'>
+							<div id="pluginsinfo" class='postbox opened'>
 								<h3 class="hndle"><?php _e( 'SAM Pro (Lite Edition)', SAM_PRO_DOMAIN ) ?></h3>
 								<div class="inside">
 									<a href="http://codecanyon.net/item/sam-pro-lite/12721925?ref=minimus_simplelib" target="_blank">
@@ -3442,7 +3464,7 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 									</p>
 								</div>
 							</div>
-							<div class="postbox opened">
+							<div id="addonsinfo" class="postbox opened">
 								<h3 class="hndle"><?php _e( 'Available Addons', SAM_PRO_DOMAIN ); ?></h3>
 								<div class="inside">
 									<?php
@@ -3452,7 +3474,7 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 									?>
 								</div>
 							</div>
-							<div class='postbox opened'>
+							<div id="resourcesinfo" class='postbox opened'>
 								<h3 class="hndle"><?php _e( 'Resources', SAM_PRO_DOMAIN ) ?></h3>
 								<div class="inside">
 									<ul>
