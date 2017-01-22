@@ -163,7 +163,7 @@ if ( ! class_exists( "SamProCore" ) ) {
 		);
 
 		public function __construct() {
-			define( 'SAM_PRO_VERSION', '1.9.9.72' );
+			define( 'SAM_PRO_VERSION', '1.9.9.73' );
 			define( 'SAM_PRO_DB_VERSION', '1.1' );
 			define( 'SAM_PRO_PATH', dirname( __FILE__ ) );
 			define( 'SAM_PRO_URL', plugins_url( '/', __FILE__ ) );
@@ -197,7 +197,7 @@ if ( ! class_exists( "SamProCore" ) ) {
 			add_action( 'plugins_loaded', array( &$this, 'maintenance' ) );
 			add_action( 'plugins_loaded', array( &$this, 'scavenge' ) );
 			add_action( 'init', array( &$this, 'createNonce' ) );
-			add_filter( 'nonce_user_logged_out', array( &$this, 'loggedOutUserNonce' ) );
+			add_filter( 'nonce_user_logged_out', array( &$this, 'loggedOutUserNonce' ), 10, 2 );
 
 			self::registerAdminActions();
 			self::registerFrontActions();
