@@ -163,7 +163,7 @@ if ( ! class_exists( "SamProCore" ) ) {
 		);
 
 		public function __construct() {
-			define( 'SAM_PRO_VERSION', '1.9.9.73' );
+			define( 'SAM_PRO_VERSION', '2.2.0.81' );
 			define( 'SAM_PRO_DB_VERSION', '1.1' );
 			define( 'SAM_PRO_PATH', dirname( __FILE__ ) );
 			define( 'SAM_PRO_URL', plugins_url( '/', __FILE__ ) );
@@ -405,10 +405,10 @@ if ( ! class_exists( "SamProCore" ) ) {
 		}
 
 		public function doFrontActions() {
-			$nonce = $_REQUEST['sam_pro_nonce'];
+			/*$nonce = $_REQUEST['sam_pro_nonce'];
 			if ( ! wp_verify_nonce( $nonce, 'sam_pro_admin_actions' ) ) {
 				wp_die( 'Rejected. Execution Handler.' );
-			}
+			}*/
 			include_once 'sam-pro-front-actions.php';
 			$action = ( isset( $_REQUEST['action'] ) ) ? $_REQUEST['action'] : null;
 			$acts   = new SamProFrontActions( $action );

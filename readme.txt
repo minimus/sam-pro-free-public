@@ -2,9 +2,9 @@
 Contributors: minimus
 Donate link: http://uncle-sam.info
 Tags: ad, advertising, banner, rotator, simple ads manager
-Requires at least: 4.1
-Tested up to: 4.7
-Stable tag: 1.9.9.73
+Requires at least: 4.5
+Tested up to: 4.8
+Stable tag: 2.2.0.81
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -59,6 +59,7 @@ The public version of SAM Pro (Free Edition) also available at [GitHub](https://
 * Russian
 
 = Available Addons =
+* [XAds](http://uncle-sam.info/addons/xads/) - This addon provides extended visualization of ads served by SAM Pro (Lite and Free edition). It adds possibility of displaying ads as popup ads, fly-in ads, background ads and corner ads. All single Ad Objects (Ad, Place, Zone) can be used as content of XAds addon.
 * [Ad Slider](http://uncle-sam.info/addons/ad-slider/) - This addon adds to SAM Pro (Free Edition) possibility of rotating ads by the timer.
 * [Advertising Request](http://uncle-sam.info/addons/advertising-request/) - This addon adds to Sam Pro plugin possibility of creating pages of requesting of advertising on the site from potential advertisers.
 * [Geo Targeting](http://uncle-sam.info/addons/geo-targeting/) - Using this addon you can restrict showing of your ads basing on global location of the visitor.
@@ -105,6 +106,14 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Changelog ==
 
+= 2.2.0.81 =
+* Visual representation of ads has been improved
+* Some bugs in JS scripts have been resolved
+= 2.0.1.76 =
+* The bug (unlogged user) has been resolved
+= 2.0.0.75 =
+* New functions to main plugin object have been added
+* Some bugs have been fixed
 = 1.9.9.73 =
 * The bug has been fixed
 = 1.9.9.72 =
@@ -181,6 +190,12 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Upgrade Notice ==
 
+= 2.2.0.81 =
+Visual representation of ads has been improved. Some bugs in JS scripts have been resolved.
+= 2.0.1.76 =
+The bug (unlogged user) has been resolved.
+= 2.0.0.75 =
+New functions to main plugin object have been added. Some bugs have been fixed.
 = 1.9.9.73 =
 The bug has been fixed.
 = 1.9.9.72 =

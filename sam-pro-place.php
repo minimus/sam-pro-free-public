@@ -37,6 +37,7 @@ if ( ! class_exists( 'SamProPlace' ) ) {
 		public $height = 0;
 		public $ad = '';
 		public $sql = '';
+		public $adName = '';
 
 		public function __construct( $id, $args, $tags = false, $crawler = false, $clauses = null, $ajax = false, $force = false ) {
 			global $SAM_PRO_Query;
@@ -113,7 +114,7 @@ if ( ! class_exists( 'SamProPlace' ) ) {
 
 			if ( $this->ajax ) {
 				$sql  = "SELECT
-  ua.pid, ua.aid,
+  ua.pid, ua.aid, ua.title,
   ua.code_before,
   ua.code_after,
   ua.asize, ua.width, ua.height,
@@ -125,7 +126,7 @@ if ( ! class_exists( 'SamProPlace' ) ) {
   ua.swf, ua.swf_vars, ua.swf_params, ua.swf_attrs, ua.swf_fallback
   FROM
   (SELECT
-    spa.pid, spa.aid,
+    spa.pid, spa.aid, sa.title,
     sp.code_before,
     sp.code_after,
     sa.asize, sa.width, sa.height,
@@ -160,7 +161,7 @@ ORDER BY ua.adCycle{$this->limit};";
 			if ( $this->force ) {
 				$sql  = "
 SELECT
-  ua.pid, ua.aid,
+  ua.pid, ua.aid, ua.title,
   ua.code_before,
   ua.code_after,
   ua.asize, ua.width, ua.height,
@@ -172,7 +173,7 @@ SELECT
   ua.swf, ua.swf_vars, ua.swf_params, ua.swf_attrs, ua.swf_fallback
   FROM
   (SELECT
-    sp.pid, sp.aid,
+    sp.pid, sp.aid, sp.title,
     @code_before := sp.code_before AS code_before,
     @code_after := sp.code_after AS code_after,
     sp.asize, sp.width, sp.height,
@@ -187,7 +188,7 @@ SELECT
     WHERE sp.pid = {$this->pid}
   UNION
   SELECT
-    spa.pid, spa.aid,
+    spa.pid, spa.aid, sa.title,
     @code_before AS code_before,
     @code_after AS code_after,
     sa.asize, sa.width, sa.height,
@@ -216,7 +217,7 @@ ORDER BY ua.adCycle{$this->limit};";
 				}
 			} else {
 				$sql  = "SELECT
-  sp.pid, sp.aid,
+  sp.pid, sp.aid, sp.title,
   sp.code_before, sp.code_after,
   sp.asize, sp.width, sp.height,
   sp.img, sp.link, sp.alt, sp.acode, sp.rel,
@@ -281,12 +282,14 @@ ORDER BY ua.adCycle{$this->limit};";
 			$mode      = $data['amode'];
 			$swf       = ( isset( $data['swf'] ) ) ? (int) $data['swf'] : 0;
 			$cntTag    = ( 1 === (int) $data['inline'] ) ? 'span' : 'div';
+			$cntStyle  = ($cntTag === 'div') ? "style='display:flex;flex-direction:row;justify-content:center;'" : '';
 			if ( $mode == 0 ) {
 				$this->link = $data['link'];
 				$this->img  = $data['img'];
 			}
 			$this->width  = $data['width'];
 			$this->height = $data['height'];
+			$this->adName = $data['title'];
 
 			// Google DFP
 			if ( $mode == 2 ) {
@@ -297,7 +300,7 @@ ORDER BY ua.adCycle{$this->limit};";
 <script type='text/javascript'>
   GA_googleFillSlot('{$data['dfp']}');
 </script>";
-						$out = "<div id='{$this->cid}' class='{$this->cntClass} {$this->placeClass}'>{$before}{$out}{$after}</div>";
+						$out = "<div id='{$this->cid}' class='{$this->cntClass} {$this->placeClass}' {$cntStyle}>{$before}{$out}{$after}</div>";
 					}
 				} elseif ( $this->settings['dfpMode'] == 'gpt' ) {
 					if ( $this->settings['useDFP'] == 1 && ! empty( $this->settings['dfpNetworkCode'] ) ) {
@@ -314,14 +317,14 @@ ORDER BY ua.adCycle{$this->limit};";
 					}
 				}
 				$this->force = true;
-				$out         = "<div id='{$this->cid}' class='{$this->cntClass} {$this->placeClass}'>{$before}{$out}{$after}</div>";
+				$out         = "<div id='{$this->cid}' class='{$this->cntClass} {$this->placeClass}' {$cntStyle}>{$before}{$out}{$after}</div>";
 
 				return $out;
 			}
 
 			// Third party Ad Server
 			if ( $mode == 1 && $data['ad_server'] ) {
-				$out         = "<div id='{$this->cid}' class='{$this->cntClass} {$this->placeClass}'>{$before}{$data['acode']}{$after}</div>";
+				$out         = "<div id='{$this->cid}' class='{$this->cntClass} {$this->placeClass}' {$cntStyle}>{$before}{$data['acode']}{$after}</div>";
 				$this->force = true;
 
 				return $out;
@@ -383,7 +386,7 @@ ORDER BY ua.adCycle{$this->limit};";
 							$iTag    = ( ! empty( $data['img'] ) ) ? "<img src='{$data['img']}' {$iAlt}>" : '';
 							$out     = $aStart . $iTag . $aEnd;
 						}
-						$out = ( ! empty( $out ) ) ? "<div id='{$this->cid}' class='{$this->cntClass} {$this->placeClass}'>{$before}{$out}{$after}</div>" : '';
+						$out = ( ! empty( $out ) ) ? "<div id='{$this->cid}' class='{$this->cntClass} {$this->placeClass}' {$cntStyle}>{$before}{$out}{$after}</div>" : '';
 						break;
 					case 1:
 						if ( $data['php'] == 1 ) {
@@ -391,14 +394,14 @@ ORDER BY ua.adCycle{$this->limit};";
 							eval( '?>' . $data['acode'] . '<?' );
 							$out = ob_get_contents();
 							ob_end_clean();
-							$out = ( ! empty( $out ) ) ? "<{$cntTag} id='{$this->cid}' class='{$this->cntClass} {$this->placeClass}'>{$before}{$out}{$after}</{$cntTag}>" : '';
+							$out = ( ! empty( $out ) ) ? "<{$cntTag} id='{$this->cid}' class='{$this->cntClass} {$this->placeClass}' {$cntStyle}>{$before}{$out}{$after}</{$cntTag}>" : '';
 						} else {
-							$out = ( ! empty( $data['acode'] ) ) ? "<{$cntTag} id='{$this->cid}' class='{$this->cntClass} {$this->placeClass}'>{$before}{$data['acode']}{$after}</{$cntTag}>" : '';
+							$out = ( ! empty( $data['acode'] ) ) ? "<{$cntTag} id='{$this->cid}' class='{$this->cntClass} {$this->placeClass}' {$cntStyle}>{$before}{$data['acode']}{$after}</{$cntTag}>" : '';
 						}
 						break;
 				}
 			} else {
-				$out = "<{$cntTag} id='{$cid0}' class='{$this->cntClass} {$this->adClass}' data-spc='{$useTags}'></{$cntTag}>";
+				$out = "<{$cntTag} id='{$cid0}' class='{$this->cntClass} {$this->adClass}' data-spc='{$useTags}' {$cntStyle}></{$cntTag}>";
 			}
 
 			return $out;

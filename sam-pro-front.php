@@ -584,7 +584,7 @@ GA_googleFetchAds();
 			return array( 'place' => $clause, 'zone' => $zone, 'single' => $isSingle );
 		}
 
-		public function buildAd( $id, $args = null, $useCodes = false ) {
+		public function getAd( $id, $args = null, $useCodes = false ) {
 			if ( $this->disableAdServing ) {
 				return '';
 			}
@@ -593,10 +593,10 @@ GA_googleFetchAds();
 
 			$ad = new SamProAd( $id, $args, $useCodes, $this->crawler );
 
-			return $ad->ad;
+			return $ad;
 		}
 
-		public function buildPlace( $id, $args = null, $useCodes = false, $clauses = null ) {
+		public function getPlace( $id, $args = null, $useCodes = false, $clauses = null ) {
 			if ( $this->disableAdServing ) {
 				return '';
 			}
@@ -608,10 +608,10 @@ GA_googleFetchAds();
 
 			$ad = new SamProPlace( $id, $args, $useCodes, $this->crawler, $clauses );
 
-			return $ad->ad;
+			return $ad;
 		}
 
-		public function buildZone( $id, $args = null, $useCodes = false, $clauses = null ) {
+		public function getZone( $id, $args = null, $useCodes = false, $clauses = null ) {
 			if ( $this->disableAdServing ) {
 				return '';
 			}
@@ -623,10 +623,10 @@ GA_googleFetchAds();
 
 			$ad = new SamProZone( $id, $args, $useCodes, $this->crawler, $clauses );
 
-			return $ad->ad;
+			return $ad;
 		}
 
-		public function buildBlock( $id, $args = null, $clauses = null ) {
+		public function getBlock( $id, $args = null, $clauses = null ) {
 			if ( $this->disableAdServing ) {
 				return '';
 			}
@@ -637,6 +637,30 @@ GA_googleFetchAds();
 			}
 
 			$ad = new SamProBlock( $id, $args, $this->crawler, $clauses );
+
+			return $ad;
+		}
+
+		public function buildAd( $id, $args = null, $useCodes = false ) {
+			$ad = self::getAd($id, $args, $useCodes);
+
+			return $ad->ad;
+		}
+
+		public function buildPlace( $id, $args = null, $useCodes = false, $clauses = null ) {
+			$ad = self::getPlace($id, $args, $useCodes, $clauses);
+
+			return $ad->ad;
+		}
+
+		public function buildZone( $id, $args = null, $useCodes = false, $clauses = null ) {
+			$ad = self::getZone($id, $args, $useCodes, $clauses);
+
+			return $ad->ad;
+		}
+
+		public function buildBlock( $id, $args = null, $clauses = null ) {
+			$ad = self::getBlock($id, $args, $clauses);
 
 			return $ad->ad;
 		}

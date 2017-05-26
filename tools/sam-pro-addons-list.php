@@ -12,6 +12,13 @@ if ( ! class_exists( 'SamProAddonsList' ) ) {
 		public function __construct() {
 			$this->addons = array(
 				array(
+					'name' => __( 'XAds', SAM_PRO_DOMAIN ),
+					'desc' => __( 'extended visualisation of ads served by SAM Pro plugin.', SAM_PRO_DOMAIN ),
+					'img'  => SAM_PRO_URL . 'images/xads-addon-255.jpg',
+					'link' => 'http://uncle-sam.info/addons/xads/',
+					'purchase' => 'https://codecanyon.net/item/xads-for-sam-pro/19343651?ref=minimus_simplelib'
+				),
+				array(
 					'name' => __( 'Ad Slider', SAM_PRO_DOMAIN ),
 					'desc' => __( 'provides possibility of rotating ads as slider for the ads rotating by timer.', SAM_PRO_DOMAIN ),
 					'img'  => SAM_PRO_URL . 'images/ad-slider-addon-255.jpg',

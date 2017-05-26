@@ -88,50 +88,6 @@ if( ! class_exists( 'SamProToolsPage' ) ) {
 					</div>
 				</div>
 				<div class='postbox opened'>
-					<h3 class="hndle"><?php _e('SAM Pro (Lite Edition)', SAM_PRO_DOMAIN) ?></h3>
-					<div class="inside">
-						<a href="http://codecanyon.net/item/sam-pro-lite/12721925?ref=minimus_simplelib" target="_blank">
-							<img src="<?php echo SAM_PRO_URL . 'images/upgrade-sidebar.jpg'; ?>">
-						</a>
-						<p><?php _e('Get more features:', SAM_PRO_DOMAIN); ?></p>
-						<ul style="list-style: inherit !important;margin-left: 20px;">
-							<li><?php _e("ads rotation by timer", SAM_PRO_DOMAIN); ?></li>
-							<li><?php _e("online advertiser statistics", SAM_PRO_DOMAIN); ?></li>
-							<li><?php _e("an advertising request form", SAM_PRO_DOMAIN); ?></li>
-							<li><?php _e("geo targeting", SAM_PRO_DOMAIN); ?></li>
-							<li><?php _e("extended ALE (Ads Linking and Embedding)", SAM_PRO_DOMAIN); ?></li>
-						</ul>
-						<p><?php _e('and', SAM_PRO_DOMAIN); ?> <a href="http://uncle-sam.info/sam-pro-lite/sam-pro-lite-info/features/" target="_blank" title="<?php _e('Features List', SAM_PRO_DOMAIN); ?>"><?php _ex('more', 'SAM Pro Lite', SAM_PRO_DOMAIN); ?></a> ...</p>
-						<p style="text-align: center;">
-							<a href="http://codecanyon.net/item/sam-pro-lite/12721925?ref=minimus_simplelib" target="_blank" class="button-primary" style="width: 100%;">
-								<?php _e('Purchase SAM Pro (Lite Edition)', SAM_PRO_DOMAIN); ?>
-							</a>
-						</p>
-					</div>
-				</div>
-				<div class="postbox opened">
-					<h3 class="hndle"><?php _e('Available Addons', SAM_PRO_DOMAIN); ?></h3>
-					<div class="inside">
-						<ul>
-							<li>
-								<a href="http://uncle-sam.info/addons/ad-slider/" target="_blank">
-									<img src="<?php echo SAM_PRO_URL . 'images/ad-slider-addon-255.jpg'; ?>">
-								</a>
-							</li>
-							<li>
-								<a href="http://uncle-sam.info/addons/advertising-request/" target="_blank">
-									<img src="<?php echo SAM_PRO_URL . 'images/ad-request-plugin-ad.jpg'; ?>">
-								</a>
-							</li>
-							<li>
-								<a href="http://uncle-sam.info/addons/geo-targeting/" target="_blank">
-									<img src="<?php echo SAM_PRO_URL . 'images/geo-targeting-plugin-ad.jpg'; ?>">
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class='postbox opened'>
 					<h3 class="hndle"><?php _e('Resources', SAM_PRO_DOMAIN) ?></h3>
 					<div class="inside">
 						<ul>

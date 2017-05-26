@@ -58,7 +58,8 @@ if( ! class_exists( 'SamProBlock' ) ) {
 				$cols = (int)$block['b_columns'];
 				$bStyle = str_replace(array("\r", "\n"), '', $block['b_style']);
 				$iStyle = str_replace(array("\r", "\n"), '', $block['i_style']);
-				$blockStyle = (!empty($bStyle)) ? "style='{$bStyle}'" : '';
+				$blockStyle = (!empty($bStyle)) ? "style='{$bStyle}'" : "style='display:flex;flex-direction:column;justify-content:center;'";
+				$rowStyle = 'display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;margin:0;padding:0;';
 				$itemStyle = (!empty($iStyle)) ? "style='display:inline-block; {$iStyle}'" : "style='display:inline-block;'";
 
 				for( $i = 1; $i <= $rows; $i++ ) {
@@ -87,7 +88,7 @@ if( ! class_exists( 'SamProBlock' ) ) {
 						}
 						if(!empty($item)) $line .= "<div class='sam-pro-block-item' {$itemStyle}>{$item}</div>";
 					}
-					if(!empty($line)) $out .= "<div class='sam-pro-block-line' style='margin: 0; padding: 0;'>{$line}</div>";
+					if(!empty($line)) $out .= "<div class='sam-pro-block-line' style='{$rowStyle}'>{$line}</div>";
 				}
 				if(!empty($out)) $out = "<div class='sam-pro-block' {$blockStyle}>{$out}</div>";
 			}
