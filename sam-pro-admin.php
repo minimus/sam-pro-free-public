@@ -1582,6 +1582,7 @@ ORDER BY uu.owner;";
 			if ( ! is_null( $this->pointer->pointer ) ) {
 				wp_enqueue_style( 'wp-pointer' );
 
+				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
 				wp_enqueue_script( 'wp-pointer' );
 				wp_enqueue_script( 'sam-pro-admin-layout', SAM_PRO_URL . 'js/sam.pro.admin.layout.min.js', array(
 					'jquery',
@@ -1606,6 +1607,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-settings', SAM_PRO_URL . 'css/sam-pro-settings.css' );
 				do_action( 'sam_pro_admin_settings_styles' );
 
+				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_script( 'jquery-ui-core' );
 				wp_enqueue_script( 'jquery-effects-core' );
@@ -1646,6 +1648,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-places', SAM_PRO_URL . 'css/sam-pro-places.css' );
 				do_action( 'sam_pro_admin_places_styles' );
 
+				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_script( 'easing', SAM_PRO_URL . 'js/jquery.easing.1.3.js', array( 'jquery' ), '1.3' );
 				wp_enqueue_script( 'globalize', SAM_PRO_URL . 'js/jquery.globalize.min.js', array( 'jquery' ), '1.3' );
@@ -1662,7 +1665,8 @@ ORDER BY uu.owner;";
 					) );
 				}
 
-				wp_enqueue_script( 'SimpleLib-tools', SAM_PRO_URL . 'js/simplelib.tools.js', array( 'jquery' ), SAM_PRO_VERSION );
+				//wp_enqueue_script( 'SimpleLib-tools', SAM_PRO_URL . 'js/simplelib.tools.js', array( 'jquery' ), SAM_PRO_VERSION );
+				wp_enqueue_script( 'SimpleLib-tools', SAM_PRO_URL . 'js/simplelib.helpers.min.js', array( 'jquery' ) );
 				wp_enqueue_script( 'sam-pro-places-list', SAM_PRO_URL . 'js/sam.pro.places.list.min.js', array( 'jquery' ), SAM_PRO_VERSION );
 				wp_localize_script( 'sam-pro-places-list', 'options', array(
 					'samProAjax'   => SAM_PRO_URL,
@@ -1681,6 +1685,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-places', SAM_PRO_URL . 'css/sam-pro-places.css' );
 				do_action( 'sam_pro_admin_ads_styles' );
 
+				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_script( 'easing', SAM_PRO_URL . 'js/jquery.easing.1.3.js', array( 'jquery' ), '1.3' );
 				wp_enqueue_script( 'globalize', SAM_PRO_URL . 'js/jquery.globalize.min.js', array( 'jquery' ), '1.3' );
@@ -1714,6 +1719,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-places', SAM_PRO_URL . 'css/sam-pro-places.css' );
 				do_action( 'sam_pro_admin_zones_styles' );
 
+				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_script( 'easing', SAM_PRO_URL . 'js/jquery.easing.1.3.js', array( 'jquery' ), '1.3' );
 				wp_enqueue_script( 'globalize', SAM_PRO_URL . 'js/jquery.globalize.min.js', array( 'jquery' ), '1.3' );
@@ -1750,6 +1756,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-places', SAM_PRO_URL . 'css/sam-pro-places.css' );
 				do_action( 'sam_pro_admin_blocks_styles' );
 
+				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_script( 'easing', SAM_PRO_URL . 'js/jquery.easing.1.3.js', array( 'jquery' ), '1.3' );
 				wp_enqueue_script( 'globalize', SAM_PRO_URL . 'js/jquery.globalize.min.js', array( 'jquery' ), '1.3' );
@@ -1786,6 +1793,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-places', SAM_PRO_URL . 'css/sam-pro-places.css' );
 				do_action( 'sam_pro_admin_error_log_styles' );
 
+				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_script( 'easing', SAM_PRO_URL . 'js/jquery.easing.1.3.js', array( 'jquery' ), '1.3' );
 				wp_enqueue_script( 'globalize', SAM_PRO_URL . 'js/jquery.globalize.min.js', array( 'jquery' ), '1.3' );
@@ -1838,6 +1846,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-editor', SAM_PRO_URL . 'css/sam-pro-editor.css' );
 				do_action( 'sam_pro_admin_ad_editor_styles' );
 
+				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
 				if ( $settings['useSWF'] ) {
 					wp_enqueue_script( 'swfobject' );
 				}
@@ -1862,7 +1871,8 @@ ORDER BY uu.owner;";
 					) );
 				}
 
-				wp_enqueue_script( 'SimpleLib-tools', SAM_PRO_URL . 'js/simplelib.tools.js', array( 'jquery' ) );
+				//wp_enqueue_script( 'SimpleLib-tools', SAM_PRO_URL . 'js/simplelib.tools.js', array( 'jquery' ) );
+				wp_enqueue_script( 'SimpleLib-tools', SAM_PRO_URL . 'js/simplelib.helpers.min.js', array( 'jquery' ) );
 				wp_enqueue_script( 'sam-pro-ad-editor', SAM_PRO_URL . 'js/sam.pro.ad.editor.min.js', array(
 					'jquery',
 					'ej-all'
@@ -1895,6 +1905,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-icons', SAM_PRO_URL . 'css/sam-pro-icons.css' );
 				do_action( 'sam_pro_admin_place_editor_styles' );
 
+				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_media();
 				wp_enqueue_script( 'jquery-ui-core' );
@@ -1917,8 +1928,9 @@ ORDER BY uu.owner;";
 					) );
 				}
 
-				wp_enqueue_script( 'SimpleLib-tools', SAM_PRO_URL . 'js/simplelib.tools.js', array( 'jquery' ), SAM_PRO_VERSION );
-				wp_enqueue_script( 'sam-pro-place-editor', SAM_PRO_URL . 'js/sam.pro.place.editor.min.js', array(
+				//wp_enqueue_script( 'SimpleLib-tools', SAM_PRO_URL . 'js/simplelib.tools.js', array( 'jquery' ), SAM_PRO_VERSION );
+				wp_enqueue_script( 'SimpleLib-tools', SAM_PRO_URL . 'js/simplelib.helpers.min.js', array( 'jquery' ) );
+        wp_enqueue_script( 'sam-pro-place-editor', SAM_PRO_URL . 'js/sam.pro.place.editor.min.js', array(
 					'jquery',
 					'ej-all'
 				), SAM_PRO_VERSION );
@@ -1948,6 +1960,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-editor', SAM_PRO_URL . 'css/sam-pro-editor.css' );
 				do_action( 'sam_pro_admin_zone_editor_styles' );
 
+				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
 				wp_enqueue_script( 'jquery' );
 				//wp_enqueue_media();
 				wp_enqueue_script( 'jquery-ui-core' );
@@ -1970,8 +1983,9 @@ ORDER BY uu.owner;";
 					) );
 				}
 
-				wp_enqueue_script( 'SimpleLib-tools', SAM_PRO_URL . 'js/simplelib.tools.js', array( 'jquery' ), SAM_PRO_VERSION );
-				wp_enqueue_script( 'sam-pro-zone-editor', SAM_PRO_URL . 'js/sam.pro.zone.editor.min.js', array(
+				//wp_enqueue_script( 'SimpleLib-tools', SAM_PRO_URL . 'js/simplelib.tools.js', array( 'jquery' ), SAM_PRO_VERSION );
+				wp_enqueue_script( 'SimpleLib-tools', SAM_PRO_URL . 'js/simplelib.helpers.min.js', array( 'jquery' ) );
+        wp_enqueue_script( 'sam-pro-zone-editor', SAM_PRO_URL . 'js/sam.pro.zone.editor.min.js', array(
 					'jquery',
 					'ej-all'
 				), SAM_PRO_VERSION );
@@ -1992,6 +2006,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-editor', SAM_PRO_URL . 'css/sam-pro-editor.css' );
 				do_action( 'sam_pro_admin_block_editor_styles' );
 
+				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
 				wp_enqueue_script( 'jquery' );
 				//wp_enqueue_media();
 				wp_enqueue_script( 'jquery-ui-core' );
@@ -2024,6 +2039,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-advertisers', SAM_PRO_URL . 'css/sam-pro-advertisers-list.css' );
 				do_action( 'sam_pro_admin_advertisers_styles' );
 
+				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_script( 'jquery-ui-core' );
 				wp_enqueue_script( 'jquery-effects-core' );
@@ -2063,6 +2079,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-stats', SAM_PRO_URL . 'css/sam-pro-statistics.css' );
 				do_action( 'sam_pro_admin_stats_styles' );
 
+				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_script( 'jquery-ui-core' );
 				wp_enqueue_script( 'jquery-effects-core' );
@@ -2105,6 +2122,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-settings', SAM_PRO_URL . 'css/sam-pro-settings.css' );
 				do_action( 'sam_pro_admin_tools_styles' );
 
+				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_script( 'jquery-ui-core' );
 				wp_enqueue_script( 'jquery-effects-core' );
@@ -2124,7 +2142,7 @@ ORDER BY uu.owner;";
 					)
 				);
 				$json = wp_json_encode( (object) $data );
-				echo "<script type='text/javascript'>var samProOptions = {$json}</script>";
+				echo "<script type='text/javascript'>const samProOptions = {$json}</script>";
 			}
 		}
 

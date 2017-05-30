@@ -4,7 +4,7 @@ Donate link: http://uncle-sam.info
 Tags: ad, advertising, banner, rotator, simple ads manager
 Requires at least: 4.5
 Tested up to: 4.8
-Stable tag: 2.2.0.81
+Stable tag: 2.3.0.83
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -106,6 +106,8 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Changelog ==
 
+= 2.3.0.83 =
+* Deprecated methods of Mcrypt have been replaced with OpenSSL methods (PHP 7.0 warnings)
 = 2.2.0.81 =
 * Visual representation of ads has been improved
 * Some bugs in JS scripts have been resolved
@@ -190,6 +192,8 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Upgrade Notice ==
 
+= 2.3.0.83 =
+Deprecated methods of Mcrypt have been replaced with OpenSSL methods (PHP 7.0 warnings)
 = 2.2.0.81 =
 Visual representation of ads has been improved. Some bugs in JS scripts have been resolved.
 = 2.0.1.76 =

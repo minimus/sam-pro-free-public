@@ -19,11 +19,9 @@ if ( ! class_exists( 'SamProFrontActions' ) ) {
 
 		public function decrypt( $input, $spKey ) {
 			$txt       = base64_decode( $input );
-			$iv_size   = mcrypt_get_iv_size( MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC );
-			$iv        = substr( $txt, 0, $iv_size );
-			$txt       = substr( $txt, $iv_size );
 			$key       = pack( 'H*', $spKey );
-			$plaintext = mcrypt_decrypt( MCRYPT_RIJNDAEL_128, $key, $txt, MCRYPT_MODE_CBC, $iv );
+			$iv        = openssl_random_pseudo_bytes( 16 );
+			$plaintext = openssl_decrypt( $txt, 'AES-128-CBC', $key, 'OPENSSL_RAW_DATA', $iv );
 			$clauses   = unserialize( $plaintext );
 
 			return $clauses;
@@ -116,7 +114,7 @@ if ( ! class_exists( 'SamProFrontActions' ) ) {
 							foreach ( $vals as $key => $val ) {
 								$aidsSet = ( 1 == count( $val ) ) ? '= ' . $val[0] : 'IN (' . implode( ',', $val ) . ')';
 								$sql     = "UPDATE {$paTable} SET hits = hits + 1 WHERE pid = {$key} AND aid {$aidsSet};";
-								$links += $wpdb->query( $sql );
+								$links   += $wpdb->query( $sql );
 							}
 						}
 

@@ -202,17 +202,15 @@ GA_googleFetchAds();
 			$samAd     = ( isset( $options['adClass'] ) && $options['samClasses'] == 'custom' ) ? $options['adClass'] : 'sam-pro-ad';
 			$samPlace  = ( $options['samClasses'] == 'custom' && ! empty( $options['placeClass'] ) ) ? $options['placeClass'] : 'sam-pro-place';
 
-			$key     = pack( 'H*', $options['spkey'] );
-			$iv_size = mcrypt_get_iv_size( MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC );
-			$iv      = mcrypt_create_iv( $iv_size, MCRYPT_RAND );
-
+			$key       = pack( 'H*', $options['spkey'] );
 			$txt       = serialize( $this->clause );
-			$clauses   = mcrypt_encrypt( MCRYPT_RIJNDAEL_128, $key, $txt, MCRYPT_MODE_CBC, $iv );
-			$clauses   = $iv . $clauses;
+			$iv        = openssl_random_pseudo_bytes( 16 );
+			$clauses   = openssl_encrypt( $txt, 'AES-128-CBC', $key, 'OPENSSL_RAW_DATA', $iv );
 			$clauses64 = base64_encode( $clauses );
 
 			do_action( 'sam_pro_front_styles', $locale, $postId );
 
+			wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
 			if ( (int) $this->settings['useSWF'] ) {
 				wp_enqueue_script( 'swfobject' );
 			}
@@ -321,8 +319,8 @@ GA_googleFetchAds();
 			// Single Pages
 			if ( is_home() || is_front_page() ) {
 				$viewPages |= SAM_PRO_IS_HOME;
-				$zone = "page_home";
-				$home = "(IF(sa.ecats, IF(sa.xcats, TRUE, FALSE), TRUE) AND 
+				$zone      = "page_home";
+				$home      = "(IF(sa.ecats, IF(sa.xcats, TRUE, FALSE), TRUE) AND 
 				IF(sa.etags, IF(sa.xtags, TRUE, FALSE), TRUE) AND
 				IF(sa.etax, IF(sa.xtax, TRUE, FALSE), TRUE) AND
 				IF(sa.eposts, IF(sa.xposts, TRUE, FALSE), TRUE) AND
@@ -331,15 +329,15 @@ GA_googleFetchAds();
 			}
 			if ( is_singular() ) {
 				$viewPages |= SAM_PRO_IS_SINGULAR;
-				$zone     = "page_singular";
-				$isSingle = true;
+				$zone      = "page_singular";
+				$isSingle  = true;
 
 				// Custom Post Type
 				if ( self::isCustomPostType() ) {
 					$viewPages |= SAM_PRO_IS_SINGLE;
 					$viewPages |= SAM_PRO_IS_POST_TYPE;
-					$postType = get_post_type();
-					$zone .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "cpt_all-cpt,cpt_{$postType}";
+					$postType  = get_post_type();
+					$zone      .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "cpt_all-cpt,cpt_{$postType}";
 					if ( $rules['types'] ) {
 						$singular .= ( ( ( ! empty( $singular ) ) ? ' AND ' : '' ) . "IF(sa.etypes, IF(sa.xtypes, NOT FIND_IN_SET(\"{$postType}\", sa.types), FIND_IN_SET(\"{$postType}\", sa.types)), TRUE)" );
 					}
@@ -349,7 +347,7 @@ GA_googleFetchAds();
 				if ( is_single() ) {
 					global $post;
 
-					$viewPages |= SAM_PRO_IS_SINGLE;
+					$viewPages   |= SAM_PRO_IS_SINGLE;
 					$categories  = get_the_category( $post->ID );
 					$tags        = get_the_tags();
 					$postID      = ( ( ! empty( $post->ID ) ) ? (integer) $post->ID : 0 );
@@ -429,7 +427,7 @@ GA_googleFetchAds();
 
 					// Authors
 					$pAuthor = get_userdata( $post->post_author );
-					$zone .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "author_all-authors,author_{$pAuthor->user_nicename}";
+					$zone    .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "author_all-authors,author_{$pAuthor->user_nicename}";
 					if ( $rules['authors'] ) {
 						$sAuthor = "IF(sa.eauthors, IF(sa.xauthors, NOT FIND_IN_SET(\"{$pAuthor->user_nicename}\", sa.authors), FIND_IN_SET(\"{$pAuthor->user_nicename}\", sa.authors)), TRUE)";
 					}
@@ -455,15 +453,15 @@ GA_googleFetchAds();
 				if ( is_page() ) {
 					global $post;
 					$viewPages |= SAM_PRO_IS_PAGE;
-					$zone .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "page_page";
+					$zone      .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "page_page";
 					if ( $rules['posts'] ) {
-						$postID = ( ( ! empty( $post->ID ) ) ? (integer) $post->ID : 0 );
+						$postID   = ( ( ! empty( $post->ID ) ) ? (integer) $post->ID : 0 );
 						$singular .= ( ( ( ! empty( $singular ) ) ? ' AND ' : '' ) . "IF(sa.eposts, IF(sa.xposts, NOT FIND_IN_SET({$postID}, sa.posts), FIND_IN_SET({$postID}, sa.posts)), TRUE)" );
 					}
 
 					// Authors
 					$pAuthor = get_userdata( $post->post_author );
-					$zone .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "author_all-authors,author_{$pAuthor->user_nicename}";
+					$zone    .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "author_all-authors,author_{$pAuthor->user_nicename}";
 					if ( $rules['authors'] ) {
 						$sAuthor = "IF(sa.eauthors, IF(sa.xauthors, NOT FIND_IN_SET(\"{$pAuthor->user_nicename}\", sa.authors), FIND_IN_SET(\"{$pAuthor->user_nicename}\", sa.authors)), TRUE)";
 					}
@@ -500,32 +498,32 @@ GA_googleFetchAds();
 				// Attachment
 				if ( is_attachment() ) {
 					$viewPages |= SAM_PRO_IS_ATTACHMENT;
-					$zone .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "page_attachment";
+					$zone      .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "page_attachment";
 				}
 			}
 			if ( is_search() ) {
 				$viewPages |= SAM_PRO_IS_SEARCH;
-				$zone .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "page_search";
+				$zone      .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "page_search";
 			}
 			if ( is_404() ) {
 				$viewPages |= SAM_PRO_IS_404;
-				$zone .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "page_404";
+				$zone      .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "page_404";
 			}
 
 			// Archives
 			if ( is_archive() ) {
 				$viewPages |= SAM_PRO_IS_ARCHIVE;
-				$zone .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "page_archive";
+				$zone      .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "page_archive";
 				if ( is_tax() ) {
 					$viewPages |= SAM_PRO_IS_TAX;
-					$term = get_query_var( 'term' );
-					$zone .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "ctt_all-ctt,ctt_{$term}";
+					$term      = get_query_var( 'term' );
+					$zone      .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "ctt_all-ctt,ctt_{$term}";
 					if ( $rules['taxes'] ) {
 						$arc = "IF(sa.etax, IF(sa.xtax, NOT FIND_IN_SET(\"{$term}\", sa.taxes), FIND_IN_SET(\"{$term}\", sa.taxes)), TRUE)";
 					}
 				} elseif ( is_category() ) {
 					$viewPages |= SAM_PRO_IS_CATEGORY;
-					$cat = $wp_query->queried_object; //get_category( get_query_var( 'cat' ), false );
+					$cat       = $wp_query->queried_object; //get_category( get_query_var( 'cat' ), false );
 					if ( ! is_wp_error( $cat ) ) {
 						$zone .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "category_all-cats,category_{$cat->slug}";
 						if ( $rules['categories'] ) {
@@ -534,7 +532,7 @@ GA_googleFetchAds();
 					}
 				} elseif ( is_tag() ) {
 					$viewPages |= SAM_PRO_IS_TAG;
-					$tag = $wp_query->queried_object; //get_tag( get_query_var( 'post_tag_id' ) );
+					$tag       = $wp_query->queried_object; //get_tag( get_query_var( 'post_tag_id' ) );
 					if ( ! is_wp_error( $tag ) ) {
 						$zone .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "post_tag_all-tags,post_tag_{$tag->slug}";
 						if ( $rules['tags'] ) {
@@ -545,19 +543,19 @@ GA_googleFetchAds();
 					$viewPages |= SAM_PRO_IS_AUTHOR;
 					if ( $rules['authors'] ) {
 						$author = $wp_query->get_queried_object();
-						$zone .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "author_all-authors,author_{$author->user_nicename}";
-						$arc = "IF(sa.eauthors, IF(sa.xauthors, NOT FIND_IN_SET(\"{$author->user_nicename}\", sa.authors), FIND_IN_SET(\"{$author->user_nicename}\", sa.authors)), TRUE)";
+						$zone   .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "author_all-authors,author_{$author->user_nicename}";
+						$arc    = "IF(sa.eauthors, IF(sa.xauthors, NOT FIND_IN_SET(\"{$author->user_nicename}\", sa.authors), FIND_IN_SET(\"{$author->user_nicename}\", sa.authors)), TRUE)";
 					}
 				} elseif ( is_post_type_archive() ) {
 					$viewPages |= SAM_PRO_IS_POST_TYPE_ARCHIVE;
-					$postType = get_post_type();
-					$zone .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "cpt_all-cpt,cpt_{$postType}";
+					$postType  = get_post_type();
+					$zone      .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "cpt_all-cpt,cpt_{$postType}";
 					if ( $rules['types'] ) {
 						$arc = "IF(sa.etypes, IF(sa.xtypes, NOT FIND_IN_SET(\"{$postType}\", sa.types), FIND_IN_SET(\"{$postType}\", sa.types)), TRUE)";
 					}
 				} elseif ( is_date() ) {
 					$viewPages |= SAM_PRO_IS_DATE;
-					$zone .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "page_all-date";
+					$zone      .= ( ( ! empty( $zone ) ) ? ',' : '' ) . "page_all-date";
 				} else {
 					$arc = '';
 				}
@@ -642,25 +640,25 @@ GA_googleFetchAds();
 		}
 
 		public function buildAd( $id, $args = null, $useCodes = false ) {
-			$ad = self::getAd($id, $args, $useCodes);
+			$ad = self::getAd( $id, $args, $useCodes );
 
 			return $ad->ad;
 		}
 
 		public function buildPlace( $id, $args = null, $useCodes = false, $clauses = null ) {
-			$ad = self::getPlace($id, $args, $useCodes, $clauses);
+			$ad = self::getPlace( $id, $args, $useCodes, $clauses );
 
 			return $ad->ad;
 		}
 
 		public function buildZone( $id, $args = null, $useCodes = false, $clauses = null ) {
-			$ad = self::getZone($id, $args, $useCodes, $clauses);
+			$ad = self::getZone( $id, $args, $useCodes, $clauses );
 
 			return $ad->ad;
 		}
 
 		public function buildBlock( $id, $args = null, $clauses = null ) {
-			$ad = self::getBlock($id, $args, $clauses);
+			$ad = self::getBlock( $id, $args, $clauses );
 
 			return $ad->ad;
 		}
@@ -727,7 +725,7 @@ GA_googleFetchAds();
 								$i ++;
 								if ( $k == $offset && $i <= ( $count - $tail ) ) {
 									$mpAd = self::buildAdObject( $mpType, $mpId, null, $options['mpUseCodes'], $this->clause );
-									$out .= $mpAd;
+									$out  .= $mpAd;
 								}
 							}
 						}
@@ -807,7 +805,7 @@ GA_googleFetchAds();
 							$i ++;
 							if ( $k == $offset && $i <= ( $count - $tail ) ) {
 								$mpAd = self::buildAdObject( $mpType, $mpId, null, $options['mpUseCodes'], $this->clause );
-								$out .= $mpAd;
+								$out  .= $mpAd;
 							}
 						}
 					}

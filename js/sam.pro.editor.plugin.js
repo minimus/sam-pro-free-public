@@ -2,8 +2,7 @@
  * Created by minimus on 10.07.2015.
  */
 (function () {
-  var wap = samProOptions.wap,
-    data = samProOptions.data,
+  var data = samProOptions.data,
     tinyMceUrl = samProOptions.url,
     jqUrl = samProOptions.jqUrl,
     strings = samProOptions.strings;
