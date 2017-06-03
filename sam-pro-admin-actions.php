@@ -675,13 +675,16 @@ if ( ! class_exists( 'SamProAdminActions' ) ) {
 					if ( $sid != '' && $pid != 0 ) {
 						$aValues = explode( ',', $sid );
 						foreach ( $aValues as $val ) {
-							$values .= ( ( ( $values == '' ) ? '' : ',' ) . "({$pid},{$val})" );
+							if ( ! empty( $val ) ) {
+								$values .= ( ( ( $values == '' ) ? '' : ',' ) . "({$pid},{$val})" );
+							}
 						}
 						$sql      = "INSERT INTO {$paTable} (pid, aid) VALUES {$values};";
 						$affected = $wpdb->query( $sql );
 						$out      = array(
 							'sid'  => $sid,
-							'done' => $affected
+							'done' => $affected,
+							'sql'  => $sql
 						);
 						$sql      = "UPDATE {$paTable} spa SET spa.hits = 0 WHERE spa.pid = {$pid};";
 						$wpdb->query( $sql );

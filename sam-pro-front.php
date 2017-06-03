@@ -205,7 +205,7 @@ GA_googleFetchAds();
 			$key       = pack( 'H*', $options['spkey'] );
 			$txt       = serialize( $this->clause );
 			$iv        = openssl_random_pseudo_bytes( 16 );
-			$clauses   = openssl_encrypt( $txt, 'AES-128-CBC', $key, 'OPENSSL_RAW_DATA', $iv );
+			$clauses   = openssl_encrypt( $txt, 'AES-128-CBC', $key, OPENSSL_RAW_DATA, $iv );
 			$clauses64 = base64_encode( $clauses );
 
 			do_action( 'sam_pro_front_styles', $locale, $postId );

@@ -21,7 +21,7 @@ if ( ! class_exists( 'SamProFrontActions' ) ) {
 			$txt       = base64_decode( $input );
 			$key       = pack( 'H*', $spKey );
 			$iv        = openssl_random_pseudo_bytes( 16 );
-			$plaintext = openssl_decrypt( $txt, 'AES-128-CBC', $key, 'OPENSSL_RAW_DATA', $iv );
+			$plaintext = openssl_decrypt( $txt, 'AES-128-CBC', $key, OPENSSL_RAW_DATA, $iv );
 			$clauses   = unserialize( $plaintext );
 
 			return $clauses;

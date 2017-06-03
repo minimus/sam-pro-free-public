@@ -4,7 +4,7 @@ Donate link: http://uncle-sam.info
 Tags: ad, advertising, banner, rotator, simple ads manager
 Requires at least: 4.5
 Tested up to: 4.8
-Stable tag: 2.3.0.83
+Stable tag: 2.3.3.87
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,7 +40,7 @@ The public version of SAM Pro (Free Edition) also available at [GitHub](https://
 
 **Server**:
 
-* PHP 5.3+
+* PHP 5.3.3+
 * MySQL 5.1+
 * 128 MB memory limit
 * 128 MB Wordpress memory limit
@@ -106,6 +106,12 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Changelog ==
 
+= 2.3.3.87 =
+* Some minor bugs have been resolved
+= 2.3.2.85 =
+* The bug of the Link Ads action has been resolved
+= 2.3.1.84 =
+* The bug of using OpenSSL has been resolved
 = 2.3.0.83 =
 * Deprecated methods of Mcrypt have been replaced with OpenSSL methods (PHP 7.0 warnings)
 = 2.2.0.81 =
@@ -192,6 +198,12 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Upgrade Notice ==
 
+= 2.3.3.87 =
+Some minor bugs have been resolved.
+= 2.3.2.85 =
+The bug of the Link Ads action has been resolved.
+= 2.3.1.84 =
+The bug of using OpenSSL has been resolved.
 = 2.3.0.83 =
 Deprecated methods of Mcrypt have been replaced with OpenSSL methods (PHP 7.0 warnings)
 = 2.2.0.81 =
