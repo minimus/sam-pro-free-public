@@ -119,6 +119,7 @@ if ( ! class_exists( "SamProCore" ) ) {
 			// +++
 			'spkey'            => '',
 			'spkey2'           => '',
+			'spiv'             => '',
 			'ip'               => 'dbip',
 			'dbip_key'         => '',
 			'maxmind_key'      => '',
@@ -163,8 +164,8 @@ if ( ! class_exists( "SamProCore" ) ) {
 		);
 
 		public function __construct() {
-			define( 'SAM_PRO_VERSION', '2.3.3.87' );
-			define( 'SAM_PRO_DB_VERSION', '1.1' );
+			define( 'SAM_PRO_VERSION', '2.4.0.91' );
+			define( 'SAM_PRO_DB_VERSION', '1.2' );
 			define( 'SAM_PRO_PATH', dirname( __FILE__ ) );
 			define( 'SAM_PRO_URL', plugins_url( '/', __FILE__ ) );
 			define( 'SAM_PRO_IMG_URL', SAM_PRO_URL . 'images/' );
@@ -215,6 +216,10 @@ if ( ! class_exists( "SamProCore" ) ) {
 					/*foreach( $options as $key => $option ) {
 						$defOptions[$key] = $option;
 					}*/
+				}
+				if ( ! isset( $defOptions['spiv'] ) || ( isset( $defOptions['spiv'] ) && empty( $defOptions['spiv'] ) ) ) {
+					$spiv               = bin2hex( openssl_random_pseudo_bytes( 16 ) );
+					$defOptions['spiv'] = $spiv;
 				}
 				if ( ! isset( $defOptions['spkey'] ) || ( isset( $defOptions['spkey'] ) && empty( $defOptions['spkey'] ) ) ) {
 					$spKey               = bin2hex( openssl_random_pseudo_bytes( 32, $cstrong ) );

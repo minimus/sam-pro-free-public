@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Simple Ads Manager Pro\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-08 13:52+0300\n"
+"POT-Creation-Date: 2017-06-17 17:57+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: minimus <minimus@blogcoding.ru>\n"
 "Language-Team: minimus <minimus@blogcoding.ru>\n"
@@ -16,432 +16,402 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;__ngettext_noop:1,2;__ngettext;_n:1,2;_nc:4c,1,2;esc_attr__;_en:1,2;_ex:1,2c;_x:1,2c\n"
-"X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.8.8\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPath-1: ..\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 2.0.2\n"
+"X-Poedit-SearchPath-0: langs\n"
+"X-Poedit-SearchPath-1: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: js-src\n"
+"X-Poedit-SearchPathExcluded-2: js\n"
+"X-Poedit-SearchPathExcluded-3: images\n"
 
-#: ../js/sam-pro-dialog.php:32 ../sam-pro-admin.php:429 ../sam-pro-admin.php:725 ../sam-pro-admin.php:821 ../sam-pro-admin.php:1197 ../sam-pro-block-editor.php:58
-msgid "Places"
-msgstr "Места"
-
-#: ../js/sam-pro-dialog.php:36 ../sam-pro-admin.php:433 ../sam-pro-admin.php:722 ../sam-pro-block-editor.php:63
-msgid "Ads"
-msgstr "Реклама"
-
-#: ../js/sam-pro-dialog.php:40 ../sam-pro-admin.php:437 ../sam-pro-admin.php:727 ../sam-pro-block-editor.php:68
-msgid "Zones"
-msgstr "Зоны"
-
-#: ../js/sam-pro-dialog.php:44 ../sam-pro-admin.php:441 ../sam-pro-admin.php:729
-msgid "Blocks"
-msgstr "Блоки"
-
-#: ../js/sam-pro-dialog.php:57
-msgid "Insert Ad Object"
-msgstr "Вставить рекламный объект"
-
-#: ../js/sam-pro-dialog.php:72
-msgid "Ad Object"
-msgstr "Рекламный объект"
-
-#: ../js/sam-pro-dialog.php:88
-msgid "Allow predefined tags"
-msgstr "Использовать заданные теги"
-
-#: ../js/sam-pro-dialog.php:95 ../sam-pro-ad-editor.php:332 ../sam-pro-ad-editor.php:783 ../sam-pro-ad-editor.php:790 ../sam-pro-ad-editor.php:797 ../sam-pro-ad-editor.php:804
-#: ../sam-pro-ad-editor.php:811 ../sam-pro-ad-editor.php:818 ../sam-pro-ad-editor.php:825 ../sam-pro-ad-editor.php:832 ../sam-pro-block-editor.php:223
-#: ../sam-pro-place-editor.php:200 ../sam-pro-place-editor.php:205 ../sam-pro-place-editor.php:430 ../sam-pro-places-list.php:50 ../sam-pro-zone-editor.php:142
-#: ../sam-pro-zone-editor.php:147 ../sam-pro-zone-editor.php:240 ../sam-pro-zone-editor.php:247
-msgid "Cancel"
-msgstr "Отмена"
-
-#: ../js/sam-pro-dialog.php:98
-msgid "Insert"
-msgstr "Вставить"
-
-#: ../sam-pro-ad-editor.php:226
+#: sam-pro-ad-editor.php:292
 msgid "Ad Data Updated."
 msgstr "Данные рекламного объявления сохранены."
 
-#: ../sam-pro-ad-editor.php:243
+#: sam-pro-ad-editor.php:310
 msgid "{name1:value1, name2:value2, ...}"
 msgstr "{параметр1: значение1, параметр2: значение2, ...}"
 
-#: ../sam-pro-ad-editor.php:245 ../sam-pro-admin.php:756 ../sam-pro-admin.php:794
+#: sam-pro-ad-editor.php:312 sam-pro-admin.php:1548 sam-pro-admin.php:1587
 msgid "New Ad"
 msgstr "Новое объявление"
 
-#: ../sam-pro-ad-editor.php:247 ../sam-pro-block-editor.php:163 ../sam-pro-place-editor.php:132 ../sam-pro-zone-editor.php:87
+#: sam-pro-ad-editor.php:314 sam-pro-block-editor.php:186 sam-pro-place-editor.php:162 sam-pro-zone-editor.php:90
 msgid "ID:"
 msgstr "ID:"
 
-#: ../sam-pro-ad-editor.php:266 ../sam-pro-admin.php:724
+#: sam-pro-ad-editor.php:333 sam-pro-admin.php:1479
 msgid "Ad Editor"
 msgstr "Редактор объявления"
 
-#: ../sam-pro-ad-editor.php:273 ../sam-pro-place-editor.php:156
+#: sam-pro-ad-editor.php:342 sam-pro-place-editor.php:188
 msgid "Click to toggle"
 msgstr "Кликнуть для переключения"
 
-#: ../sam-pro-ad-editor.php:274 ../sam-pro-admin.php:751 ../sam-pro-admin.php:778 ../sam-pro-admin.php:1043 ../sam-pro-block-editor.php:186 ../sam-pro-place-editor.php:157
-#: ../sam-pro-zone-editor.php:111
+#: sam-pro-ad-editor.php:343 sam-pro-admin.php:1543 sam-pro-admin.php:1571 sam-pro-admin.php:1893 sam-pro-block-editor.php:211 sam-pro-place-editor.php:189
+#: sam-pro-zone-editor.php:114
 msgid "Status"
 msgstr "Статус"
 
-#: ../sam-pro-ad-editor.php:284
+#: sam-pro-ad-editor.php:353
 msgid "Back to Ads List"
 msgstr "Назад, к списку объявлений"
 
-#: ../sam-pro-ad-editor.php:292
+#: sam-pro-ad-editor.php:361
 msgid "Advertisement ID"
 msgstr "ID объявления"
 
-#: ../sam-pro-ad-editor.php:298
+#: sam-pro-ad-editor.php:367
 msgid "Activity"
 msgstr "Активность"
 
-#: ../sam-pro-ad-editor.php:300
+#: sam-pro-ad-editor.php:369
 msgid "Ad is Active"
 msgstr "Активно"
 
-#: ../sam-pro-ad-editor.php:300
+#: sam-pro-ad-editor.php:369
 msgid "Ad is Inactive"
 msgstr "Неактивно"
 
-#: ../sam-pro-ad-editor.php:301 ../sam-pro-admin.php:820
+#: sam-pro-ad-editor.php:370 sam-pro-admin.php:1614
 msgid "Hits"
 msgstr "Показы"
 
-#: ../sam-pro-ad-editor.php:303 ../sam-pro-admin.php:820 ../sam-pro-admin.php:827 ../sam-pro-statistics.php:175
+#: sam-pro-ad-editor.php:372 sam-pro-admin.php:1615 sam-pro-admin.php:1623 sam-pro-statistics.php:178
 msgid "Clicks"
 msgstr "Клики"
 
-#: ../sam-pro-ad-editor.php:305
+#: sam-pro-ad-editor.php:375
 msgid "<strong>Note</strong>: Values of impressions (hits) and clicks are the summary data for all sets containing links to this ad."
 msgstr "<strong>Примечание:</strong> Значения показов (хитов) и кликов являются суммарными данными для всех наборов, содержащих ссылки на это объявление."
 
-#: ../sam-pro-ad-editor.php:308 ../sam-pro-admin.php:750 ../sam-pro-admin.php:777 ../sam-pro-admin.php:1581 ../sam-pro-block-editor.php:207 ../sam-pro-place-editor.php:178
+#: sam-pro-ad-editor.php:378 sam-pro-admin.php:1542 sam-pro-admin.php:1570 sam-pro-admin.php:2979 sam-pro-block-editor.php:232 sam-pro-place-editor.php:210
 msgid "Size"
 msgstr "Размеры"
 
-#: ../sam-pro-ad-editor.php:311 ../sam-pro-ad-editor.php:390 ../sam-pro-place-editor.php:180 ../sam-pro-place-editor.php:264
+#: sam-pro-ad-editor.php:381 sam-pro-ad-editor.php:460 sam-pro-place-editor.php:213 sam-pro-place-editor.php:301
 msgid "Width"
 msgstr "Ширина"
 
-#: ../sam-pro-ad-editor.php:314 ../sam-pro-ad-editor.php:394 ../sam-pro-place-editor.php:182 ../sam-pro-place-editor.php:268
+#: sam-pro-ad-editor.php:384 sam-pro-ad-editor.php:464 sam-pro-place-editor.php:215 sam-pro-place-editor.php:305
 msgid "Height"
 msgstr "Высота"
 
-#: ../sam-pro-ad-editor.php:320
+#: sam-pro-ad-editor.php:390
 msgid "Moderated"
 msgstr "Одобрено"
 
-#: ../sam-pro-ad-editor.php:323 ../sam-pro-place-editor.php:192
+#: sam-pro-ad-editor.php:393 sam-pro-place-editor.php:227
 msgid "Is In Trash"
 msgstr "В корзине"
 
-#: ../sam-pro-ad-editor.php:335 ../sam-pro-block-editor.php:230 ../sam-pro-block-editor.php:232 ../sam-pro-place-editor.php:212 ../sam-pro-place-editor.php:214
-#: ../sam-pro-zone-editor.php:154
+#: sam-pro-ad-editor.php:402 sam-pro-ad-editor.php:984 sam-pro-ad-editor.php:993 sam-pro-ad-editor.php:1002 sam-pro-ad-editor.php:1011 sam-pro-ad-editor.php:1020
+#: sam-pro-ad-editor.php:1029 sam-pro-ad-editor.php:1038 sam-pro-ad-editor.php:1047 sam-pro-admin.php:2216 sam-pro-block-editor.php:250 sam-pro-place-editor.php:235
+#: sam-pro-place-editor.php:240 sam-pro-place-editor.php:532 sam-pro-places-list.php:53 sam-pro-zone-editor.php:145 sam-pro-zone-editor.php:150 sam-pro-zone-editor.php:243
+#: sam-pro-zone-editor.php:250
+msgid "Cancel"
+msgstr "Отмена"
+
+#: sam-pro-ad-editor.php:405 sam-pro-block-editor.php:258 sam-pro-block-editor.php:260 sam-pro-place-editor.php:248 sam-pro-place-editor.php:250 sam-pro-zone-editor.php:157
 msgid "Save"
 msgstr "Сохранить"
 
-#: ../sam-pro-ad-editor.php:349 ../sam-pro-block-editor.php:245 ../sam-pro-place-editor.php:227 ../sam-pro-zone-editor.php:168
+#: sam-pro-ad-editor.php:419 sam-pro-block-editor.php:273 sam-pro-place-editor.php:263 sam-pro-zone-editor.php:171
 msgid "Title"
 msgstr "Имя"
 
-#: ../sam-pro-ad-editor.php:352
+#: sam-pro-ad-editor.php:422
 msgid "Name of Ad"
 msgstr "Имя рекламного объявления"
 
-#: ../sam-pro-ad-editor.php:352 ../sam-pro-block-editor.php:248 ../sam-pro-place-editor.php:230 ../sam-pro-zone-editor.php:171
+#: sam-pro-ad-editor.php:422 sam-pro-block-editor.php:276 sam-pro-place-editor.php:266 sam-pro-zone-editor.php:174
 msgid "Required for SAM widgets."
 msgstr "Требуется для виджетов плагина."
 
-#: ../sam-pro-ad-editor.php:353
+#: sam-pro-ad-editor.php:423
 msgid "Enter Ad Name here"
 msgstr "Введите имя объявления здесь"
 
-#: ../sam-pro-ad-editor.php:358
+#: sam-pro-ad-editor.php:428
 msgid "Advertisement Description"
 msgstr "Описание рекламного объявления"
 
-#: ../sam-pro-ad-editor.php:363 ../sam-pro-admin.php:749 ../sam-pro-admin.php:776 ../sam-pro-admin.php:1579 ../sam-pro-block-editor.php:257 ../sam-pro-place-editor.php:239
-#: ../sam-pro-zone-editor.php:180
+#: sam-pro-ad-editor.php:433 sam-pro-admin.php:1541 sam-pro-admin.php:1569 sam-pro-admin.php:2977 sam-pro-block-editor.php:286 sam-pro-place-editor.php:276
+#: sam-pro-zone-editor.php:183
 msgid "Description"
 msgstr "Описание"
 
-#: ../sam-pro-ad-editor.php:369 ../sam-pro-block-editor.php:262 ../sam-pro-zone-editor.php:185
+#: sam-pro-ad-editor.php:439 sam-pro-block-editor.php:291 sam-pro-zone-editor.php:188
 msgid "This description is not used anywhere and is added solely for the convenience of managing advertisements."
 msgstr "Это описание нигде не используется и введено исключительно для удобства в уравлении рекламными объявлениями."
 
-#: ../sam-pro-ad-editor.php:376 ../sam-pro-admin.php:1313 ../sam-pro-place-editor.php:251
+#: sam-pro-ad-editor.php:446 sam-pro-admin.php:2281 sam-pro-place-editor.php:288
 msgid "General"
 msgstr "Основные"
 
-#: ../sam-pro-ad-editor.php:377
+#: sam-pro-ad-editor.php:447
 msgid "Extended Restrictions"
 msgstr "Дополнительные ограничения"
 
-#: ../sam-pro-ad-editor.php:378
+#: sam-pro-ad-editor.php:448
 msgid "Targeting"
 msgstr "Таргетинг"
 
-#: ../sam-pro-ad-editor.php:379
+#: sam-pro-ad-editor.php:449
 msgid "Earnings settings"
 msgstr "Параметры доходов"
 
-#: ../sam-pro-ad-editor.php:385
+#: sam-pro-ad-editor.php:455
 msgid "Ad Size"
 msgstr "Размер объявления"
 
-#: ../sam-pro-ad-editor.php:387
+#: sam-pro-ad-editor.php:457
 msgid "Select size of this Ad."
 msgstr "Выберите размер объявления."
 
-#: ../sam-pro-ad-editor.php:402 ../sam-pro-ad-editor.php:477
+#: sam-pro-ad-editor.php:472 sam-pro-ad-editor.php:572
 msgid "Ad Code"
 msgstr "Код рекламного объявления"
 
-#: ../sam-pro-ad-editor.php:408 ../sam-pro-place-editor.php:306 ../sam-pro-place-editor.php:311
+#: sam-pro-ad-editor.php:478 sam-pro-place-editor.php:375 sam-pro-place-editor.php:382
 msgid "Image"
 msgstr "Изображение"
 
-#: ../sam-pro-ad-editor.php:415
+#: sam-pro-ad-editor.php:486
 msgid "Ad Image"
 msgstr "Изображение объявления"
 
-#: ../sam-pro-ad-editor.php:417 ../sam-pro-ad-editor.php:547 ../sam-pro-ad-editor.php:563 ../sam-pro-ad-editor.php:579 ../sam-pro-ad-editor.php:595 ../sam-pro-ad-editor.php:611
-#: ../sam-pro-ad-editor.php:627 ../sam-pro-ad-editor.php:719 ../sam-pro-ad-editor.php:750 ../sam-pro-ad-editor.php:782 ../sam-pro-ad-editor.php:789 ../sam-pro-ad-editor.php:796
-#: ../sam-pro-ad-editor.php:803 ../sam-pro-ad-editor.php:810 ../sam-pro-ad-editor.php:817 ../sam-pro-ad-editor.php:824 ../sam-pro-ad-editor.php:831 ../sam-pro-admin.php:1080
-#: ../sam-pro-admin.php:1124 ../sam-pro-place-editor.php:313 ../sam-pro-place-editor.php:429 ../sam-pro-places-list.php:49 ../sam-pro-zone-editor.php:239
-#: ../sam-pro-zone-editor.php:246
+#: sam-pro-ad-editor.php:490 sam-pro-ad-editor.php:675 sam-pro-ad-editor.php:698 sam-pro-ad-editor.php:720 sam-pro-ad-editor.php:744 sam-pro-ad-editor.php:765
+#: sam-pro-ad-editor.php:789 sam-pro-ad-editor.php:912 sam-pro-ad-editor.php:949 sam-pro-ad-editor.php:982 sam-pro-ad-editor.php:991 sam-pro-ad-editor.php:1000
+#: sam-pro-ad-editor.php:1009 sam-pro-ad-editor.php:1018 sam-pro-ad-editor.php:1027 sam-pro-ad-editor.php:1036 sam-pro-ad-editor.php:1045 sam-pro-admin.php:1944
+#: sam-pro-admin.php:2009 sam-pro-place-editor.php:386 sam-pro-place-editor.php:530 sam-pro-places-list.php:52 sam-pro-zone-editor.php:242 sam-pro-zone-editor.php:249
 msgid "Select"
 msgstr "Выбрать"
 
-#: ../sam-pro-ad-editor.php:422
+#: sam-pro-ad-editor.php:495
 msgid "Ad Target"
 msgstr "Ссылка объявления"
 
-#: ../sam-pro-ad-editor.php:427
+#: sam-pro-ad-editor.php:501
 msgid "Ad Alternative Text"
 msgstr "Альтернативный текст"
 
-#: ../sam-pro-ad-editor.php:432
+#: sam-pro-ad-editor.php:509
 msgid "Count clicks for this advertisement"
 msgstr "Считать клики для этого рекламного объявления"
 
-#: ../sam-pro-ad-editor.php:434
+#: sam-pro-ad-editor.php:511
 msgid "Use carefully!"
 msgstr "Используйте крайне осторожно!"
 
-#: ../sam-pro-ad-editor.php:434
+#: sam-pro-ad-editor.php:511
 msgid "Do not use if the wp-admin folder is password protected. In this case the viewer will be prompted to enter a username and password during ajax request. It's not good."
 msgstr "Если папка wp-admin защищена паролем, использовать не имеет смысла, т.к., в этом случае, во время Ajax запроса посетителю будет предложено ввести имя пользователя и пароль."
 
-#: ../sam-pro-ad-editor.php:437
+#: sam-pro-ad-editor.php:514
 msgid "This is flash (SWF) banner"
 msgstr "Это флеш (SWF) баннер"
 
-#: ../sam-pro-ad-editor.php:442
+#: sam-pro-ad-editor.php:519
 msgid "Flash banner \"flashvars\""
 msgstr "Параметр \"flashvars\""
 
-#: ../sam-pro-ad-editor.php:444
+#: sam-pro-ad-editor.php:524
 msgid "Insert clickTAG"
 msgstr "Вставьте clickTAG"
 
-#: ../sam-pro-ad-editor.php:445
+#: sam-pro-ad-editor.php:525
 msgid "Insert \"flashvars\" parameters between braces..."
 msgstr "Вставьте параметры \"flashvars\" между фигурными скобками"
 
-#: ../sam-pro-ad-editor.php:446
+#: sam-pro-ad-editor.php:526
 msgid "Flash banner \"params\""
 msgstr "Параметр \"params\""
 
-#: ../sam-pro-ad-editor.php:448
+#: sam-pro-ad-editor.php:530
 msgid "Insert \"params\" parameters between braces..."
 msgstr "Вставьте параметры \"params\" между фигурными скобками"
 
-#: ../sam-pro-ad-editor.php:449
+#: sam-pro-ad-editor.php:531
 msgid "Flash banner \"attributes\""
 msgstr "Параметр \"attributes\""
 
-#: ../sam-pro-ad-editor.php:451
+#: sam-pro-ad-editor.php:535
 msgid "Insert \"attributes\" parameters between braces..."
 msgstr "Вставьте параметры \"attributes\" между фигурными скобками"
 
-#: ../sam-pro-ad-editor.php:452
+#: sam-pro-ad-editor.php:536
 msgid "Flash banner fallback code"
 msgstr "Резервный код Flash-баннера"
 
-#: ../sam-pro-ad-editor.php:454
+#: sam-pro-ad-editor.php:541
 msgid "Generate Fallback Image Code"
 msgstr "Сгенерировать резервный код Flash-баннера"
 
-#: ../sam-pro-ad-editor.php:457
+#: sam-pro-ad-editor.php:545
 msgid "Add to ad"
 msgstr "Добавить теги"
 
-#: ../sam-pro-ad-editor.php:459
+#: sam-pro-ad-editor.php:548
 msgid "Non Selected"
 msgstr "Не выбрано"
 
-#: ../sam-pro-ad-editor.php:460
+#: sam-pro-ad-editor.php:550
 msgid "nofollow"
 msgstr "nofollow"
 
-#: ../sam-pro-ad-editor.php:461
+#: sam-pro-ad-editor.php:552
 msgid "dofollow"
 msgstr "dofollow"
 
-#: ../sam-pro-ad-editor.php:462
+#: sam-pro-ad-editor.php:554
 msgid "noindex"
 msgstr "noindex"
 
-#: ../sam-pro-ad-editor.php:463
+#: sam-pro-ad-editor.php:556
 msgid "nofollow and noindex"
 msgstr "nofollow и noindex"
 
-#: ../sam-pro-ad-editor.php:471 ../sam-pro-place-editor.php:327
+#: sam-pro-ad-editor.php:565 sam-pro-place-editor.php:403
 msgid "Code"
 msgstr "Код"
 
-#: ../sam-pro-ad-editor.php:480
+#: sam-pro-ad-editor.php:578
 msgid "This is inline ad"
 msgstr "Это инлайн объявление"
 
-#: ../sam-pro-ad-editor.php:482 ../sam-pro-place-editor.php:337
+#: sam-pro-ad-editor.php:581 sam-pro-place-editor.php:419
 msgid "This code of ad contains PHP script"
 msgstr "Этот код объявления содержит PHP скрипт"
 
-#: ../sam-pro-ad-editor.php:490
+#: sam-pro-ad-editor.php:589
 msgid "General Restrictions"
 msgstr "Основные ограничения"
 
-#: ../sam-pro-ad-editor.php:494
+#: sam-pro-ad-editor.php:595
 msgid "Show ad on all pages of blog"
 msgstr "Показывать объявление на всех страницах блога"
 
-#: ../sam-pro-ad-editor.php:498
+#: sam-pro-ad-editor.php:601
 msgid "Show ad only on pages of this type"
 msgstr "Показывать объявление только на страницах данного типа"
 
-#: ../sam-pro-ad-editor.php:502
+#: sam-pro-ad-editor.php:608
 msgid "Home Page (Home or Front Page)"
 msgstr "Главная страница (главная или фронтальная страница)"
 
-#: ../sam-pro-ad-editor.php:503 ../sam-pro-admin.php:580
+#: sam-pro-ad-editor.php:610 sam-pro-admin.php:1256
 msgid "Singular Pages"
 msgstr "Сингулярные страницы"
 
-#: ../sam-pro-ad-editor.php:505
+#: sam-pro-ad-editor.php:613
 msgid "Single Post"
 msgstr "Страница статьи"
 
-#: ../sam-pro-ad-editor.php:506 ../sam-pro-admin.php:584 ../sam-pro-admin.php:813 ../tools/sam-pro-migrate.php:333
+#: sam-pro-ad-editor.php:614 sam-pro-admin.php:1272 sam-pro-admin.php:1606 tools/sam-pro-migrate.php:336
 msgid "Page"
 msgstr "Страница"
 
-#: ../sam-pro-ad-editor.php:507 ../sam-pro-admin.php:570 ../tools/sam-pro-migrate.php:391 ../tools/sam-pro-migrate.php:400
+#: sam-pro-ad-editor.php:616 sam-pro-admin.php:1243 tools/sam-pro-migrate.php:394 tools/sam-pro-migrate.php:403
 msgid "Custom Post Type"
 msgstr "Пользовательский тип статьи"
 
-#: ../sam-pro-ad-editor.php:508 ../sam-pro-admin.php:586 ../tools/sam-pro-migrate.php:339
+#: sam-pro-ad-editor.php:618 sam-pro-admin.php:1280 tools/sam-pro-migrate.php:342
 msgid "Attachment"
 msgstr "Приложение"
 
-#: ../sam-pro-ad-editor.php:511 ../sam-pro-admin.php:592 ../tools/sam-pro-migrate.php:303
+#: sam-pro-ad-editor.php:622 sam-pro-admin.php:1298 tools/sam-pro-migrate.php:306
 msgid "Search Page"
 msgstr "Страница вывода результата поиска"
 
-#: ../sam-pro-ad-editor.php:512
+#: sam-pro-ad-editor.php:624
 msgid "\"Not found\" Page (HTTP 404: Not Found)"
 msgstr "Страница \"Не найдено\" (ошибка HTTP 404)"
 
-#: ../sam-pro-ad-editor.php:513
+#: sam-pro-ad-editor.php:625
 msgid "Archive Pages"
 msgstr "Страницы архивов"
 
-#: ../sam-pro-ad-editor.php:515
+#: sam-pro-ad-editor.php:628
 msgid "Taxonomy Archive Pages"
 msgstr "Страницы архивов таксономий"
 
-#: ../sam-pro-ad-editor.php:516
+#: sam-pro-ad-editor.php:630
 msgid "Category Archive Pages"
 msgstr "Страницы архивов рубрик"
 
-#: ../sam-pro-ad-editor.php:517
+#: sam-pro-ad-editor.php:632
 msgid "Tag Archive Pages"
 msgstr "Страницы архивов меток"
 
-#: ../sam-pro-ad-editor.php:518
+#: sam-pro-ad-editor.php:634
 msgid "Author Archive Pages"
 msgstr "Страницы архивов авторов"
 
-#: ../sam-pro-ad-editor.php:519
+#: sam-pro-ad-editor.php:636
 msgid "Custom Post Type Archive Pages"
 msgstr "Страницы архивов пользовательскии типов"
 
-#: ../sam-pro-ad-editor.php:520
+#: sam-pro-ad-editor.php:638
 msgid "Date Archive Pages (any date-based archive pages, i.e. a monthly, yearly, daily or time-based archive)"
 msgstr "Страницы архивов по датам (любые основанные на датах страницы архивов, другими словами, архивы по месяцам, по годам, по дням и по времени)"
 
-#: ../sam-pro-ad-editor.php:534
+#: sam-pro-ad-editor.php:653
 msgid "Additional restrictions of the advertisement showing"
 msgstr "Дополнительные ограничения показа рекламного объявления"
 
-#: ../sam-pro-ad-editor.php:538
+#: sam-pro-ad-editor.php:661
 msgid "Enable restriction for posts/pages"
 msgstr "Включить ограничения для статей/страниц"
 
-#: ../sam-pro-ad-editor.php:542 ../sam-pro-ad-editor.php:558 ../sam-pro-ad-editor.php:574 ../sam-pro-ad-editor.php:590 ../sam-pro-ad-editor.php:606 ../sam-pro-ad-editor.php:622
+#: sam-pro-ad-editor.php:667 sam-pro-ad-editor.php:690 sam-pro-ad-editor.php:712 sam-pro-ad-editor.php:736 sam-pro-ad-editor.php:758 sam-pro-ad-editor.php:781
 msgid "Show"
 msgstr "Показывать"
 
-#: ../sam-pro-ad-editor.php:544 ../sam-pro-ad-editor.php:560 ../sam-pro-ad-editor.php:576 ../sam-pro-ad-editor.php:592 ../sam-pro-ad-editor.php:608 ../sam-pro-ad-editor.php:624
+#: sam-pro-ad-editor.php:670 sam-pro-ad-editor.php:693 sam-pro-ad-editor.php:715 sam-pro-ad-editor.php:739 sam-pro-ad-editor.php:760 sam-pro-ad-editor.php:784
 msgid "Do not show"
 msgstr "Не показывать"
 
-#: ../sam-pro-ad-editor.php:550
+#: sam-pro-ad-editor.php:678
 msgid "Show the ad only on the certain pages. / Do not show the ad on the certain pages."
 msgstr "Показать объявление только на определенных страницах. / Не показывать рекламу на определенных страницах."
 
-#: ../sam-pro-ad-editor.php:554
+#: sam-pro-ad-editor.php:684
 msgid "Enable restriction for categories"
 msgstr "Включить ограничения для рубрик"
 
-#: ../sam-pro-ad-editor.php:566
+#: sam-pro-ad-editor.php:701
 msgid "Show the ad only on the certain pages of categories (single posts and archives). / Do not show the ad on the certain pages of categories (single posts and archives)."
 msgstr ""
 "Показывать/Не показывать объявление в одиночных статьях или архивах заданных рубрик – объявление будет показываться/не показываться только на страницах статей, входящих в "
 "заданные рубрики и на страницах архивов заданных рубрик"
 
-#: ../sam-pro-ad-editor.php:570
+#: sam-pro-ad-editor.php:706
 msgid "Enable restriction for tags"
 msgstr "Включить ограничения для меток"
 
-#: ../sam-pro-ad-editor.php:582
+#: sam-pro-ad-editor.php:723
 msgid "Show the ad only on the certain pages of tags (single posts and archives). / Do not show the ad on the certain pages of tags (single posts and archives)."
 msgstr ""
 "Показывать объявление только на определенных страницах тегов (одиночных сообщений и архивов). / Не показывать рекламу на определенных страницах тегов (одиночных сообщений и "
 "архивов)."
 
-#: ../sam-pro-ad-editor.php:586
+#: sam-pro-ad-editor.php:730
 msgid "Enable restriction for authors"
 msgstr "Включить ограничения для авторов"
 
-#: ../sam-pro-ad-editor.php:598
+#: sam-pro-ad-editor.php:747
 msgid "Show the ad only on the certain pages of authors (single posts and archives). / Do not show the ad on the certain pages of authors (single posts and archives)."
 msgstr ""
 "Показывать объявление только на определенных страницах авторов (одиночных сообщений и архивов). / Не показывать рекламу на определенных страницах авторов (одиночных сообщений и "
 "архивов)."
 
-#: ../sam-pro-ad-editor.php:602
+#: sam-pro-ad-editor.php:753
 msgid "Enable restriction for Custom Taxonomies Terms"
 msgstr "Включить ограничения для терминов пользовательских таксономий"
 
-#: ../sam-pro-ad-editor.php:614
+#: sam-pro-ad-editor.php:768
 msgid ""
 "Show the ad only on the certain pages of Custom Taxonomies Terms (single posts and archives). / Do not show the ad on the certain pages of Custom Taxonomies Terms (single posts "
 "and archives)."
@@ -449,11 +419,11 @@ msgstr ""
 "Показать объявление только на определенных страницах терминов пользовательских таксономий (одиночных сообщений и архивов). / Не показывать рекламу на определенных страницах "
 "терминов пользовательских таксономий (одиночных сообщений и архивов)."
 
-#: ../sam-pro-ad-editor.php:618
+#: sam-pro-ad-editor.php:775
 msgid "Enable restriction for Custom Post Types"
 msgstr "Включить ограничения для пользовательских типов статей"
 
-#: ../sam-pro-ad-editor.php:630
+#: sam-pro-ad-editor.php:792
 msgid ""
 "Show ad only in custom type single posts or custom post type archives of certain custom post types. / Do not show ad in custom type single posts or custom post type archives of "
 "certain custom post types)."
@@ -461,730 +431,781 @@ msgstr ""
 "Показывать объявление только в статьях пользовательских типов или архивах статей пользовательских типов. / Не показывать объявление в статьях пользовательских типов или архивах "
 "статей пользовательских типов."
 
-#: ../sam-pro-ad-editor.php:636
+#: sam-pro-ad-editor.php:798
 msgid "Limitations of the ad showing"
 msgstr "Ограничения показа объявления"
 
-#: ../sam-pro-ad-editor.php:640
+#: sam-pro-ad-editor.php:805
 msgid "Use the schedule for this ad"
 msgstr "Использовать расписание для этого объявления"
 
-#: ../sam-pro-ad-editor.php:644 ../sam-pro-place-editor.php:388
+#: sam-pro-ad-editor.php:812 sam-pro-place-editor.php:483
 msgid "Campaign Start Date"
 msgstr "Дата начала кампании"
 
-#: ../sam-pro-ad-editor.php:649 ../sam-pro-place-editor.php:393
+#: sam-pro-ad-editor.php:818 sam-pro-place-editor.php:489
 msgid "Campaign End Date"
 msgstr "Дата окончания кампании"
 
-#: ../sam-pro-ad-editor.php:654
+#: sam-pro-ad-editor.php:823
 msgid "Use these parameters for displaying ad during the certain period of time."
 msgstr "Используйте эти параметры для показа объявления в течение определенного периода времени."
 
-#: ../sam-pro-ad-editor.php:658
+#: sam-pro-ad-editor.php:829
 msgid "Use limitation by hits"
 msgstr "Использовать ограничение по показам"
 
-#: ../sam-pro-ad-editor.php:662
+#: sam-pro-ad-editor.php:835
 msgid "Hits Limit"
 msgstr "Лимит показов"
 
-#: ../sam-pro-ad-editor.php:667
+#: sam-pro-ad-editor.php:841
 msgid "Use this parameter for limiting displaying of ad by hits."
 msgstr "Используйте этот параметр для ограничения показа объявлений по просмотрам."
 
-#: ../sam-pro-ad-editor.php:672
+#: sam-pro-ad-editor.php:848
 msgid "Use limitation by clicks"
 msgstr "Использовать ограничение по кликам"
 
-#: ../sam-pro-ad-editor.php:676
+#: sam-pro-ad-editor.php:854
 msgid "Clicks Limit"
 msgstr "Лимит кликов"
 
-#: ../sam-pro-ad-editor.php:681
+#: sam-pro-ad-editor.php:860
 msgid "Use this parameter for limiting displaying of ad by clicks."
 msgstr "Используйте этот параметр для ограничения показа объявлений по кликам."
 
-#: ../sam-pro-ad-editor.php:691
+#: sam-pro-ad-editor.php:870
 msgid "Users"
 msgstr "Пользователи"
 
-#: ../sam-pro-ad-editor.php:694
+#: sam-pro-ad-editor.php:873
 msgid "Show this ad for"
 msgstr "Показывать это рекламное объявление для"
 
-#: ../sam-pro-ad-editor.php:698
+#: sam-pro-ad-editor.php:878
 msgid "all users"
 msgstr "всех пользователей"
 
-#: ../sam-pro-ad-editor.php:700
+#: sam-pro-ad-editor.php:881
 msgid "some users"
 msgstr "некоторые пользователи"
 
-#: ../sam-pro-ad-editor.php:705
+#: sam-pro-ad-editor.php:889
 msgid "Unregistered Users"
 msgstr "Незарегистрированные пользователи"
 
-#: ../sam-pro-ad-editor.php:709 ../sam-pro-ad-editor.php:717
+#: sam-pro-ad-editor.php:894 sam-pro-ad-editor.php:908
 msgid "Registered Users"
 msgstr "Зарегистрированные пользователи"
 
-#: ../sam-pro-ad-editor.php:714
+#: sam-pro-ad-editor.php:902
 msgid "Exclude these users"
 msgstr "Исключая этих пользователей"
 
-#: ../sam-pro-ad-editor.php:723
+#: sam-pro-ad-editor.php:918
 msgid "Do not show this ad for advertiser"
 msgstr "Не показывать объявление рекламодателю"
 
-#: ../sam-pro-ad-editor.php:735 ../sam-pro-admin.php:829 ../sam-pro-statistics.php:148
+#: sam-pro-ad-editor.php:930 sam-pro-admin.php:1625 sam-pro-statistics.php:151
 msgid "Advertiser"
 msgstr "Рекламодатель"
 
-#: ../sam-pro-ad-editor.php:738
+#: sam-pro-ad-editor.php:933
 msgid "Advertiser Nick Name"
 msgstr "Ник рекламодателя"
 
-#: ../sam-pro-ad-editor.php:742
+#: sam-pro-ad-editor.php:938
 msgid "Advertiser Name"
 msgstr "Имя рекламодателя"
 
-#: ../sam-pro-ad-editor.php:746
+#: sam-pro-ad-editor.php:943
 msgid "Advertiser e-mail"
 msgstr "e-mail рекламодателя"
 
-#: ../sam-pro-ad-editor.php:767
+#: sam-pro-ad-editor.php:966
 msgid "Advertisement Preview"
 msgstr "Предварительный просмотр"
 
-#: ../sam-pro-ad-editor.php:779
+#: sam-pro-ad-editor.php:979
 msgid "Select Posts"
 msgstr "Выберите статьи"
 
-#: ../sam-pro-ad-editor.php:786
+#: sam-pro-ad-editor.php:988
 msgid "Select Categories"
 msgstr "Выберите рубрики"
 
-#: ../sam-pro-ad-editor.php:793
+#: sam-pro-ad-editor.php:997
 msgid "Select Tags"
 msgstr "Выберите метки"
 
-#: ../sam-pro-ad-editor.php:800
+#: sam-pro-ad-editor.php:1006
 msgid "Select Authors"
 msgstr "Выберите авторов"
 
-#: ../sam-pro-ad-editor.php:807
+#: sam-pro-ad-editor.php:1015
 msgid "Select Custom Taxonomies Terms"
 msgstr "Выберите термины пользовательских таксономий"
 
-#: ../sam-pro-ad-editor.php:814
+#: sam-pro-ad-editor.php:1024
 msgid "Select Custom Post Types"
 msgstr "Выберите пользовательские типы статей"
 
-#: ../sam-pro-ad-editor.php:821
+#: sam-pro-ad-editor.php:1033
 msgid "Select Users"
 msgstr "Выберите пользователей"
 
-#: ../sam-pro-ad-editor.php:828
+#: sam-pro-ad-editor.php:1042
 msgid "Select Advertiser"
 msgstr "Выберите рекламодателя."
 
-#: ../sam-pro-ad.php:85 ../sam-pro-place.php:314
+#: sam-pro-ad.php:98 sam-pro-place.php:351
 msgid "Flash ad"
 msgstr "Флеш объявление"
 
-#: ../sam-pro-admin.php:204
+#: sam-pro-admin.php:214
 msgid "Active W3 Total Cache plugin detected."
 msgstr "Обнаружен активный плагин W3 Total Cache."
 
-#: ../sam-pro-admin.php:205
+#: sam-pro-admin.php:216
 msgid "Active WP Super Cache plugin detected."
 msgstr "Обнаружен активный плагин WP Super Cache."
 
-#: ../sam-pro-admin.php:210
+#: sam-pro-admin.php:224
 msgid "Active bbPress Forum plugin detected."
 msgstr "Обнаружен активный плагин bbPress."
 
-#: ../sam-pro-admin.php:215
+#: sam-pro-admin.php:231
 msgid "Active WPtouch (Free Edition) plugin detected."
 msgstr "Обнаружен активный плагин WPtouch (Free Edition)."
 
-#: ../sam-pro-admin.php:456 ../sam-pro-ads-list.php:21 ../sam-pro-blocks-list.php:21 ../sam-pro-error-log.php:19 ../sam-pro-places-list.php:19 ../sam-pro-statistics.php:134
-#: ../sam-pro-statistics.php:150 ../sam-pro-zones-list.php:21 ../tools/sam-pro-migrate.php:298 ../tools/sam-pro-migrate.php:304 ../tools/sam-pro-migrate.php:310
-#: ../tools/sam-pro-migrate.php:316 ../tools/sam-pro-migrate.php:322 ../tools/sam-pro-migrate.php:328 ../tools/sam-pro-migrate.php:334 ../tools/sam-pro-migrate.php:340
-#: ../tools/sam-pro-migrate.php:346 ../tools/sam-pro-migrate.php:358 ../tools/sam-pro-migrate.php:364 ../tools/sam-pro-migrate.php:383 ../tools/sam-pro-migrate.php:409
-#: ../tools/sam-pro-migrate.php:429
+#: sam-pro-admin.php:1082 sam-pro-admin.php:1483 sam-pro-admin.php:1617 sam-pro-admin.php:2107 sam-pro-block-editor.php:67
+msgid "Places"
+msgstr "Места"
+
+#: sam-pro-admin.php:1086 sam-pro-admin.php:1471 sam-pro-block-editor.php:73
+msgid "Ads"
+msgstr "Реклама"
+
+#: sam-pro-admin.php:1090 sam-pro-admin.php:1491 sam-pro-block-editor.php:79
+msgid "Zones"
+msgstr "Зоны"
+
+#: sam-pro-admin.php:1094 sam-pro-admin.php:1499
+msgid "Blocks"
+msgstr "Блоки"
+
+#: sam-pro-admin.php:1099 sam-pro-admin.php:1583
+msgid "Place"
+msgstr "Место"
+
+#: sam-pro-admin.php:1100 sam-pro-widgets.php:188
+msgid "Ad"
+msgstr "Рекламное объявление"
+
+#: sam-pro-admin.php:1101 sam-pro-widgets.php:342
+msgid "Zone"
+msgstr "Рекламная зона"
+
+#: sam-pro-admin.php:1102 sam-pro-widgets.php:505
+msgid "Block"
+msgstr "Блок"
+
+#: sam-pro-admin.php:1128 sam-pro-ads-list.php:24 sam-pro-blocks-list.php:24 sam-pro-error-log.php:22 sam-pro-places-list.php:22 sam-pro-statistics.php:137
+#: sam-pro-statistics.php:153 sam-pro-zones-list.php:24 tools/sam-pro-migrate.php:301 tools/sam-pro-migrate.php:307 tools/sam-pro-migrate.php:313 tools/sam-pro-migrate.php:319
+#: tools/sam-pro-migrate.php:325 tools/sam-pro-migrate.php:331 tools/sam-pro-migrate.php:337 tools/sam-pro-migrate.php:343 tools/sam-pro-migrate.php:349
+#: tools/sam-pro-migrate.php:361 tools/sam-pro-migrate.php:367 tools/sam-pro-migrate.php:386 tools/sam-pro-migrate.php:412 tools/sam-pro-migrate.php:432
 msgid "All"
 msgstr "Все"
 
-#: ../sam-pro-admin.php:457 ../tools/sam-pro-migrate.php:363
+#: sam-pro-admin.php:1129 tools/sam-pro-migrate.php:366
 msgid "Custom Taxonomy Terms"
 msgstr "Термины пользовательских таксономий"
 
-#: ../sam-pro-admin.php:458 ../tools/sam-pro-migrate.php:345
+#: sam-pro-admin.php:1130 tools/sam-pro-migrate.php:348
 msgid "Categories"
 msgstr "Рубрики"
 
-#: ../sam-pro-admin.php:459 ../tools/sam-pro-migrate.php:349
+#: sam-pro-admin.php:1131 tools/sam-pro-migrate.php:352
 msgid "Category"
 msgstr "Рубрика"
 
-#: ../sam-pro-admin.php:460 ../tools/sam-pro-migrate.php:357
+#: sam-pro-admin.php:1132 tools/sam-pro-migrate.php:360
 msgid "Tags"
 msgstr "Метки"
 
-#: ../sam-pro-admin.php:461
+#: sam-pro-admin.php:1133
 msgid "Tag"
 msgstr "Метка"
 
-#: ../sam-pro-admin.php:462 ../tools/sam-pro-migrate.php:408
+#: sam-pro-admin.php:1134 tools/sam-pro-migrate.php:411
 msgid "Authors"
 msgstr "Авторы"
 
-#: ../sam-pro-admin.php:463 ../sam-pro-admin.php:816 ../sam-pro-admin.php:883 ../sam-pro-admin.php:1336 ../tools/sam-pro-migrate.php:418
+#: sam-pro-admin.php:1135 sam-pro-admin.php:1609 sam-pro-admin.php:1691 sam-pro-admin.php:2369 tools/sam-pro-migrate.php:421
 msgid "Author"
 msgstr "Автор"
 
-#: ../sam-pro-admin.php:562 ../tools/sam-pro-migrate.php:382
+#: sam-pro-admin.php:1235 tools/sam-pro-migrate.php:385
 msgid "Custom Post Types"
 msgstr "Пользовательские типы статей"
 
-#: ../sam-pro-admin.php:582 ../tools/sam-pro-migrate.php:327
+#: sam-pro-admin.php:1264 tools/sam-pro-migrate.php:330
 msgid "Single Post/Page"
 msgstr "Одиночная статья/страница"
 
-#: ../sam-pro-admin.php:590 ../tools/sam-pro-migrate.php:297
+#: sam-pro-admin.php:1290 tools/sam-pro-migrate.php:300
 msgid "Home/Front Page"
 msgstr "Главная страница (главная или фронтальная страница)"
 
-#: ../sam-pro-admin.php:594 ../tools/sam-pro-migrate.php:309
+#: sam-pro-admin.php:1306 tools/sam-pro-migrate.php:312
 msgid "404 Page"
 msgstr "Страница 404"
 
-#: ../sam-pro-admin.php:596 ../tools/sam-pro-migrate.php:315
+#: sam-pro-admin.php:1314 tools/sam-pro-migrate.php:318
 msgid "Archive Page"
 msgstr "Страница архивов"
 
-#: ../sam-pro-admin.php:598 ../tools/sam-pro-migrate.php:428
+#: sam-pro-admin.php:1322 tools/sam-pro-migrate.php:431
 msgid "Any Date Archive Page"
 msgstr "Страница архивов любых дат"
 
-#: ../sam-pro-admin.php:608 ../sam-pro-admin.php:1810 ../sam-pro-zone-editor.php:76
+#: sam-pro-admin.php:1335 sam-pro-admin.php:3235 sam-pro-zone-editor.php:79
 msgid "None"
 msgstr "Нет"
 
-#: ../sam-pro-admin.php:664 ../sam-pro-statistics.php:26
+#: sam-pro-admin.php:1397 sam-pro-statistics.php:29
 msgid "January"
 msgstr "Январь"
 
-#: ../sam-pro-admin.php:665 ../sam-pro-statistics.php:27
+#: sam-pro-admin.php:1398 sam-pro-statistics.php:30
 msgid "February"
 msgstr "Февраль"
 
-#: ../sam-pro-admin.php:666 ../sam-pro-statistics.php:28
+#: sam-pro-admin.php:1399 sam-pro-statistics.php:31
 msgid "Mart"
 msgstr "Март"
 
-#: ../sam-pro-admin.php:667 ../sam-pro-statistics.php:29
+#: sam-pro-admin.php:1400 sam-pro-statistics.php:32
 msgid "April"
 msgstr "Апрель"
 
-#: ../sam-pro-admin.php:668 ../sam-pro-statistics.php:30
+#: sam-pro-admin.php:1401 sam-pro-statistics.php:33
 msgid "May"
 msgstr "Май"
 
-#: ../sam-pro-admin.php:669 ../sam-pro-statistics.php:31
+#: sam-pro-admin.php:1402 sam-pro-statistics.php:34
 msgid "June"
 msgstr "Июнь"
 
-#: ../sam-pro-admin.php:670 ../sam-pro-statistics.php:32
+#: sam-pro-admin.php:1403 sam-pro-statistics.php:35
 msgid "July"
 msgstr "Июль"
 
-#: ../sam-pro-admin.php:671 ../sam-pro-statistics.php:33
+#: sam-pro-admin.php:1404 sam-pro-statistics.php:36
 msgid "August"
 msgstr "Август"
 
-#: ../sam-pro-admin.php:672 ../sam-pro-statistics.php:34
+#: sam-pro-admin.php:1405 sam-pro-statistics.php:37
 msgid "September"
 msgstr "Сентябрь"
 
-#: ../sam-pro-admin.php:673 ../sam-pro-statistics.php:35
+#: sam-pro-admin.php:1406 sam-pro-statistics.php:38
 msgid "October"
 msgstr "Октябрь"
 
-#: ../sam-pro-admin.php:674 ../sam-pro-statistics.php:36
+#: sam-pro-admin.php:1407 sam-pro-statistics.php:39
 msgid "November"
 msgstr "Ноябрь"
 
-#: ../sam-pro-admin.php:675 ../sam-pro-statistics.php:37
+#: sam-pro-admin.php:1408 sam-pro-statistics.php:40
 msgid "December"
 msgstr "Декабрь"
 
-#: ../sam-pro-admin.php:682 ../sam-pro-statistics.php:47
+#: sam-pro-admin.php:1418 sam-pro-statistics.php:50
 msgid "This month"
 msgstr "Этот месяц"
 
-#: ../sam-pro-admin.php:691 ../sam-pro-statistics.php:56
+#: sam-pro-admin.php:1435 sam-pro-statistics.php:59
 msgid "This year"
 msgstr "Этот год"
 
-#: ../sam-pro-admin.php:695 ../sam-pro-statistics.php:60
+#: sam-pro-admin.php:1443 sam-pro-statistics.php:63
 msgid "Previous year"
 msgstr "Предыдущий год"
 
-#: ../sam-pro-admin.php:723 ../sam-pro-ads-list.php:41
+#: sam-pro-admin.php:1475 sam-pro-ads-list.php:44
 msgid "Manage Ads"
 msgstr "Управление объявлениями"
 
-#: ../sam-pro-admin.php:723
+#: sam-pro-admin.php:1475
 msgctxt "Menu Bar"
 msgid "Ads"
 msgstr "Объявления"
 
-#: ../sam-pro-admin.php:725 ../sam-pro-places-list.php:38
+#: sam-pro-admin.php:1483 sam-pro-places-list.php:41
 msgid "Manage Ads Places"
 msgstr "Управление рекламными местами"
 
-#: ../sam-pro-admin.php:726 ../sam-pro-place-editor.php:150
+#: sam-pro-admin.php:1487 sam-pro-place-editor.php:180
 msgid "Place Editor"
 msgstr "Редактор места"
 
-#: ../sam-pro-admin.php:727
+#: sam-pro-admin.php:1491
 msgid "Manage Ads Zones"
 msgstr "Управление зонами"
 
-#: ../sam-pro-admin.php:728 ../sam-pro-zone-editor.php:105
+#: sam-pro-admin.php:1495 sam-pro-zone-editor.php:108
 msgid "Zone Editor"
 msgstr "Редактор зоны"
 
-#: ../sam-pro-admin.php:729
+#: sam-pro-admin.php:1499
 msgid "Manage Ads Blocks"
 msgstr "Управление рекламными блоками"
 
-#: ../sam-pro-admin.php:730
+#: sam-pro-admin.php:1503
 msgid "Block Editor"
 msgstr "Редактор блока"
 
-#: ../sam-pro-admin.php:731 ../sam-pro-advertisers-list.php:29
+#: sam-pro-admin.php:1507 sam-pro-advertisers-list.php:32
 msgid "Advertisers"
 msgstr "Рекламодатели"
 
-#: ../sam-pro-admin.php:732 ../sam-pro-admin.php:831
+#: sam-pro-admin.php:1511 sam-pro-admin.php:1627
 msgid "Statistics"
 msgstr "Статистика"
 
-#: ../sam-pro-admin.php:733 ../sam-pro-admin.php:1331
+#: sam-pro-admin.php:1515 sam-pro-admin.php:2349
 msgid "Tools"
 msgstr "Инструменты"
 
-#: ../sam-pro-admin.php:735 ../sam-pro-admin.php:2030
+#: sam-pro-admin.php:1520 sam-pro-admin.php:3478
 msgid "SAM Pro Settings"
 msgstr "Параметры SAM Pro"
 
-#: ../sam-pro-admin.php:735
+#: sam-pro-admin.php:1520
 msgid "Settings"
 msgstr "Параметры"
 
-#: ../sam-pro-admin.php:736 ../sam-pro-error-log.php:35
+#: sam-pro-admin.php:1524 sam-pro-error-log.php:38
 msgid "Error Log"
 msgstr "Журнал ошибок"
 
-#: ../sam-pro-admin.php:744 ../sam-pro-admin.php:771
+#: sam-pro-admin.php:1536 sam-pro-admin.php:1564
 msgid "Place ID"
 msgstr "ID места"
 
-#: ../sam-pro-admin.php:745
+#: sam-pro-admin.php:1537
 msgid "Ad ID"
 msgstr "ID"
 
-#: ../sam-pro-admin.php:746 ../sam-pro-admin.php:773 ../sam-pro-zone-editor.php:127
+#: sam-pro-admin.php:1538 sam-pro-admin.php:1566 sam-pro-zone-editor.php:130
 msgid "Zone ID"
 msgstr "ID зоны"
 
-#: ../sam-pro-admin.php:747 ../sam-pro-admin.php:774
+#: sam-pro-admin.php:1539 sam-pro-admin.php:1567
 msgid "Block ID"
 msgstr "ID блока"
 
-#: ../sam-pro-admin.php:748 ../sam-pro-admin.php:775 ../sam-pro-admin.php:1578
+#: sam-pro-admin.php:1540 sam-pro-admin.php:1568 sam-pro-admin.php:2976
 msgid "Name"
 msgstr "Наименование"
 
-#: ../sam-pro-admin.php:752 ../sam-pro-admin.php:779
+#: sam-pro-admin.php:1544 sam-pro-admin.php:1572
 msgid "Weight"
 msgstr "Вес"
 
-#: ../sam-pro-admin.php:753 ../sam-pro-admin.php:791
+#: sam-pro-admin.php:1545 sam-pro-admin.php:1584
 msgid "Move to Trash"
 msgstr "Поместить в корзину"
 
-#: ../sam-pro-admin.php:754 ../sam-pro-admin.php:792
+#: sam-pro-admin.php:1546 sam-pro-admin.php:1585
 msgid "Restore from Trash"
 msgstr "Восстановить из корзины"
 
-#: ../sam-pro-admin.php:755 ../sam-pro-admin.php:793 ../sam-pro-place-editor.php:130
+#: sam-pro-admin.php:1547 sam-pro-admin.php:1586 sam-pro-place-editor.php:160
 msgid "New Place"
 msgstr "Новое место"
 
-#: ../sam-pro-admin.php:757 ../sam-pro-admin.php:795 ../sam-pro-zone-editor.php:85
+#: sam-pro-admin.php:1549 sam-pro-admin.php:1588 sam-pro-zone-editor.php:88
 msgid "New Zone"
 msgstr "Новая зона"
 
-#: ../sam-pro-admin.php:758 ../sam-pro-admin.php:796 ../sam-pro-block-editor.php:161
+#: sam-pro-admin.php:1550 sam-pro-admin.php:1589 sam-pro-block-editor.php:184
 msgid "New Block"
 msgstr "Новый блок"
 
-#: ../sam-pro-admin.php:759 ../sam-pro-admin.php:797
+#: sam-pro-admin.php:1551 sam-pro-admin.php:1590
 msgid "Link Ads"
 msgstr "Подключить объявления"
 
-#: ../sam-pro-admin.php:760 ../sam-pro-admin.php:798
+#: sam-pro-admin.php:1552 sam-pro-admin.php:1591
 msgid "Unlink Ad"
 msgstr "Отключить объявление"
 
-#: ../sam-pro-admin.php:761 ../sam-pro-admin.php:799
+#: sam-pro-admin.php:1553 sam-pro-admin.php:1592
 msgid "Expand"
 msgstr "Развернуть"
 
-#: ../sam-pro-admin.php:762 ../sam-pro-admin.php:800
+#: sam-pro-admin.php:1554 sam-pro-admin.php:1593
 msgid "Collapse"
 msgstr "Свернуть"
 
-#: ../sam-pro-admin.php:763 ../sam-pro-admin.php:801 ../sam-pro-admin.php:1049
+#: sam-pro-admin.php:1555 sam-pro-admin.php:1594 sam-pro-admin.php:1899
 msgid "Refresh"
 msgstr "Обновить"
 
-#: ../sam-pro-admin.php:764 ../sam-pro-admin.php:802
+#: sam-pro-admin.php:1556 sam-pro-admin.php:1595
 msgid "Edit"
 msgstr "Изменить"
 
-#: ../sam-pro-admin.php:765 ../sam-pro-admin.php:803
+#: sam-pro-admin.php:1557 sam-pro-admin.php:1596
 msgid "Edit Ad"
 msgstr "Изменить объявление"
 
-#: ../sam-pro-admin.php:766 ../sam-pro-admin.php:804 ../sam-pro-admin.php:1048
+#: sam-pro-admin.php:1558 sam-pro-admin.php:1597 sam-pro-admin.php:1898
 msgid "View Mode"
 msgstr "Режим отображения"
 
-#: ../sam-pro-admin.php:767 ../sam-pro-admin.php:805
+#: sam-pro-admin.php:1559 sam-pro-admin.php:1598
 msgid "Approve"
 msgstr "Одобрить"
 
-#: ../sam-pro-admin.php:768 ../sam-pro-admin.php:806 ../sam-pro-admin.php:1047
+#: sam-pro-admin.php:1560 sam-pro-admin.php:1599 sam-pro-admin.php:1897
 msgid "Cancel Approval"
 msgstr "Отменить одобрение"
 
-#: ../sam-pro-admin.php:772 ../sam-pro-admin.php:1031
+#: sam-pro-admin.php:1565 sam-pro-admin.php:1881
 msgid "ID"
 msgstr "ID"
 
-#: ../sam-pro-admin.php:780 ../sam-pro-admin.php:1036
+#: sam-pro-admin.php:1573 sam-pro-admin.php:1886
 msgid "Type"
 msgstr "Тип"
 
-#: ../sam-pro-admin.php:781
+#: sam-pro-admin.php:1574
 msgid "Slug"
 msgstr "Ярлык"
 
-#: ../sam-pro-admin.php:782
+#: sam-pro-admin.php:1575
 msgid "Term Name"
 msgstr "Имя термина"
 
-#: ../sam-pro-admin.php:783
+#: sam-pro-admin.php:1576
 msgid "Custom Taxonomy Name"
 msgstr "Имя пользовательской таксономии"
 
-#: ../sam-pro-admin.php:784
+#: sam-pro-admin.php:1577
 msgid "Custom Type Title"
 msgstr "Заголовок пользовательского типа"
 
-#: ../sam-pro-admin.php:785
+#: sam-pro-admin.php:1578
 msgid "Custom Type Slug"
 msgstr "Ярлык пользовательского типа"
 
-#: ../sam-pro-admin.php:786
+#: sam-pro-admin.php:1579
 msgid "Display Name"
 msgstr "Показываемое имя"
 
-#: ../sam-pro-admin.php:787
+#: sam-pro-admin.php:1580
 msgid "User Name"
 msgstr "Имя пользователя"
 
-#: ../sam-pro-admin.php:788
+#: sam-pro-admin.php:1581
 msgid "Role"
 msgstr "Роль"
 
-#: ../sam-pro-admin.php:789
+#: sam-pro-admin.php:1582
 msgid "Priority"
 msgstr "Приоритет"
 
-#: ../sam-pro-admin.php:790
-msgid "Place"
-msgstr "Место"
-
-#: ../sam-pro-admin.php:807
+#: sam-pro-admin.php:1600
 msgid "Uploading"
 msgstr "Загружается"
 
-#: ../sam-pro-admin.php:808
+#: sam-pro-admin.php:1601
 msgid "Uploaded."
 msgstr "загружен."
 
-#: ../sam-pro-admin.php:809
+#: sam-pro-admin.php:1602
 msgid "File"
 msgstr "Файл"
 
-#: ../sam-pro-admin.php:812
+#: sam-pro-admin.php:1605
 msgid "Post"
 msgstr "Статья"
 
-#: ../sam-pro-admin.php:814
+#: sam-pro-admin.php:1607
 msgid "Subscriber"
 msgstr "Подписчик"
 
-#: ../sam-pro-admin.php:815 ../sam-pro-admin.php:884 ../sam-pro-admin.php:1336
+#: sam-pro-admin.php:1608 sam-pro-admin.php:1692 sam-pro-admin.php:2370
 msgid "Contributor"
 msgstr "Участник"
 
-#: ../sam-pro-admin.php:817 ../sam-pro-admin.php:882 ../sam-pro-admin.php:1336
+#: sam-pro-admin.php:1610 sam-pro-admin.php:1690 sam-pro-admin.php:2368
 msgid "Editor"
 msgstr "Редактор"
 
-#: ../sam-pro-admin.php:818 ../sam-pro-admin.php:881 ../sam-pro-admin.php:1336
+#: sam-pro-admin.php:1611 sam-pro-admin.php:1689 sam-pro-admin.php:2367
 msgid "Administrator"
 msgstr "Администратор"
 
-#: ../sam-pro-admin.php:819 ../sam-pro-admin.php:880 ../sam-pro-admin.php:1336
+#: sam-pro-admin.php:1612 sam-pro-admin.php:1688 sam-pro-admin.php:2366
 msgid "Super Admin"
 msgstr "Супер Админ"
 
-#: ../sam-pro-admin.php:822 ../sam-pro-admin.php:1197
+#: sam-pro-admin.php:1618 sam-pro-admin.php:2108
 msgid "Single Ads"
 msgstr "Объявление"
 
-#: ../sam-pro-admin.php:823
+#: sam-pro-admin.php:1619
 msgid "Add"
 msgstr "Добавить"
 
-#: ../sam-pro-admin.php:824
+#: sam-pro-admin.php:1620
 msgid "Country"
 msgstr "Страна"
 
-#: ../sam-pro-admin.php:825
+#: sam-pro-admin.php:1621
 msgid "Region"
 msgstr "Регион"
 
-#: ../sam-pro-admin.php:826 ../sam-pro-statistics.php:171
+#: sam-pro-admin.php:1622 sam-pro-statistics.php:174
 msgid "Impressions"
 msgstr "Просмотры"
 
-#: ../sam-pro-admin.php:828 ../sam-pro-statistics.php:167
+#: sam-pro-admin.php:1624 sam-pro-statistics.php:170
 msgid "Income"
 msgstr "Доход"
 
-#: ../sam-pro-admin.php:830
+#: sam-pro-admin.php:1626
 msgid "All advertisers"
 msgstr "Все рекламодатели"
 
-#: ../sam-pro-admin.php:832
+#: sam-pro-admin.php:1628
 msgid "Send Mail"
 msgstr "Отправить отчет"
 
-#: ../sam-pro-admin.php:833
+#: sam-pro-admin.php:1629
 msgid "Mail"
 msgstr "Почта"
 
-#: ../sam-pro-admin.php:834
+#: sam-pro-admin.php:1630
 msgid "Nickname"
 msgstr "Ник"
 
-#: ../sam-pro-admin.php:888 ../sam-pro-admin.php:1584
+#: sam-pro-admin.php:1696 sam-pro-admin.php:2982
 msgid "Single Ad"
 msgstr "Рекламное объявление"
 
-#: ../sam-pro-admin.php:889
+#: sam-pro-admin.php:1697
 msgid "Ads Place"
 msgstr "Рекламное место"
 
-#: ../sam-pro-admin.php:890
+#: sam-pro-admin.php:1698
 msgid "Ads Zone"
 msgstr "Рекламная зона"
 
-#: ../sam-pro-admin.php:891
+#: sam-pro-admin.php:1699
 msgid "Ads Block"
 msgstr "Рекламный блок"
 
-#: ../sam-pro-admin.php:1032
+#: sam-pro-admin.php:1882
 msgid "Date"
 msgstr "Дата"
 
-#: ../sam-pro-admin.php:1033
+#: sam-pro-admin.php:1883
 msgid "Table"
 msgstr "Таблица"
 
-#: ../sam-pro-admin.php:1034
+#: sam-pro-admin.php:1884
 msgid "Message"
 msgstr "Сообщение"
 
-#: ../sam-pro-admin.php:1035
+#: sam-pro-admin.php:1885
 msgid "SQL"
 msgstr "SQL"
 
-#: ../sam-pro-admin.php:1036
+#: sam-pro-admin.php:1886
 msgid "Message Type"
 msgstr "Тип сообщения"
 
-#: ../sam-pro-admin.php:1037 ../sam-pro-error-log.php:44 ../sam-pro-statistics.php:207
+#: sam-pro-admin.php:1887 sam-pro-error-log.php:47 sam-pro-statistics.php:210
 msgid "Close"
 msgstr "Закрыть"
 
-#: ../sam-pro-admin.php:1038 ../sam-pro-admin.php:1044 ../sam-pro-error-log.php:42
+#: sam-pro-admin.php:1888 sam-pro-admin.php:1894 sam-pro-error-log.php:45
 msgid "More Info"
 msgstr "Подробнее"
 
-#: ../sam-pro-admin.php:1039
+#: sam-pro-admin.php:1889
 msgid "Error"
 msgstr "Ошибка"
 
-#: ../sam-pro-admin.php:1039 ../sam-pro-error-log.php:21
+#: sam-pro-admin.php:1889 sam-pro-error-log.php:24
 msgid "Info"
 msgstr "Информация"
 
-#: ../sam-pro-admin.php:1040
+#: sam-pro-admin.php:1890
 msgid "Warning"
 msgstr "Внимание"
 
-#: ../sam-pro-admin.php:1041
+#: sam-pro-admin.php:1891
 msgid "Update Error"
 msgstr "Ошибка обновления"
 
-#: ../sam-pro-admin.php:1042
+#: sam-pro-admin.php:1892
 msgid "Output Error"
 msgstr "Ошибка вывода"
 
-#: ../sam-pro-admin.php:1045
+#: sam-pro-admin.php:1895
 msgid "Set Solved"
 msgstr "Исправлено"
 
-#: ../sam-pro-admin.php:1046
+#: sam-pro-admin.php:1896
 msgid "Clear Error Log"
 msgstr "Очистить журнал ошибок"
 
-#: ../sam-pro-admin.php:1080 ../sam-pro-admin.php:1124
+#: sam-pro-admin.php:1943 sam-pro-admin.php:2008
 msgid "Select Banner Image"
 msgstr "Выбор изображения баннера"
 
-#: ../sam-pro-admin.php:1088 ../sam-pro-admin.php:1131
+#: sam-pro-admin.php:1953 sam-pro-admin.php:2017
 msgid "Done"
 msgstr "Готово"
 
-#: ../sam-pro-admin.php:1089 ../sam-pro-admin.php:1132
+#: sam-pro-admin.php:1954 sam-pro-admin.php:2018
 msgid "Now"
 msgstr "Сейчас"
 
-#: ../sam-pro-admin.php:1090 ../sam-pro-admin.php:1133
+#: sam-pro-admin.php:1955 sam-pro-admin.php:2019
 msgid "Time"
 msgstr "Время"
 
-#: ../sam-pro-admin.php:1091 ../sam-pro-admin.php:1134
+#: sam-pro-admin.php:1956 sam-pro-admin.php:2020
 msgid "Today"
 msgstr "Сегодня"
 
-#: ../sam-pro-admin.php:1308
+#: sam-pro-admin.php:2024
+msgid "Row Direction"
+msgstr "По горизонтали"
+
+#: sam-pro-admin.php:2028
+msgid "Column Direction"
+msgstr "По вертикали"
+
+#: sam-pro-admin.php:2212
+msgid "Insert Ad Object"
+msgstr "Вставить рекламный объект"
+
+#: sam-pro-admin.php:2213
+msgid "Ad Object"
+msgstr "Рекламный объект"
+
+#: sam-pro-admin.php:2214
+msgid "Allow predefined tags"
+msgstr "Использовать заданные теги"
+
+#: sam-pro-admin.php:2215
+msgid "Insert"
+msgstr "Вставить"
+
+#: sam-pro-admin.php:2253
 msgid "General Settings"
 msgstr "Основные параметры"
 
-#: ../sam-pro-admin.php:1309
+#: sam-pro-admin.php:2259
 msgid "Extended Options"
 msgstr "Дополнительные параметры"
 
-#: ../sam-pro-admin.php:1310
+#: sam-pro-admin.php:2265
 msgid "Admin Layout"
 msgstr "Параметры административных страниц"
 
-#: ../sam-pro-admin.php:1311 ../sam-pro-zone-editor.php:192
+#: sam-pro-admin.php:2271 sam-pro-zone-editor.php:195
 msgid "Rules"
 msgstr "Правила"
 
-#: ../sam-pro-admin.php:1312
+#: sam-pro-admin.php:2277
 msgid "Plugin Deactivating"
 msgstr "Деактивация плагина"
 
-#: ../sam-pro-admin.php:1315
+#: sam-pro-admin.php:2285
 msgid "Content"
 msgstr "Контент"
 
-#: ../sam-pro-admin.php:1316
+#: sam-pro-admin.php:2289
 msgid "Embedding"
 msgstr "Встраивание"
 
-#: ../sam-pro-admin.php:1318
+#: sam-pro-admin.php:2293
 msgid "Google DFP Settings"
 msgstr "Параметры Google DFP"
 
-#: ../sam-pro-admin.php:1319
+#: sam-pro-admin.php:2299
 msgid "Google AdSense"
 msgstr "Google AdSense"
 
-#: ../sam-pro-admin.php:1320
+#: sam-pro-admin.php:2303
 msgid "Google"
 msgstr "Google"
 
-#: ../sam-pro-admin.php:1322
+#: sam-pro-admin.php:2307
 msgid "Mailing System"
 msgstr "Система рассылки"
 
-#: ../sam-pro-admin.php:1323
+#: sam-pro-admin.php:2313
 msgid "Mail Data"
 msgstr "Данные письма"
 
-#: ../sam-pro-admin.php:1324
+#: sam-pro-admin.php:2319
 msgid "Mail Content"
 msgstr "Контент письма"
 
-#: ../sam-pro-admin.php:1325
+#: sam-pro-admin.php:2325
 msgid "Preview"
 msgstr "Предварительный просмотр"
 
-#: ../sam-pro-admin.php:1326
+#: sam-pro-admin.php:2329
 msgid "Mailer"
 msgstr "Рассылка"
 
-#: ../sam-pro-admin.php:1328
+#: sam-pro-admin.php:2333
 msgid "Statistics Settings"
 msgstr "Параметры статистики"
 
-#: ../sam-pro-admin.php:1329
+#: sam-pro-admin.php:2339
 msgid "Scavenge"
 msgstr "Уборка"
 
-#: ../sam-pro-admin.php:1330
+#: sam-pro-admin.php:2345
 msgid "HTML Settings"
 msgstr "Параметры HTML"
 
-#: ../sam-pro-admin.php:1335
+#: sam-pro-admin.php:2356
 msgid "Views per Cycle"
 msgstr "Показов в цикле"
 
-#: ../sam-pro-admin.php:1335
+#: sam-pro-admin.php:2359
 msgid "Number of hits of one ad for a full cycle of rotation (maximal activity)."
 msgstr "Количество показов одного рекламного объявления за полный цикл ротации при максимальной активности (см. \"вес объявления\")."
 
-#: ../sam-pro-admin.php:1336
+#: sam-pro-admin.php:2360
 msgid "Minimum Level for the Menu Access"
 msgstr "Минимальный уровень для доступа к меню"
 
-#: ../sam-pro-admin.php:1336
+#: sam-pro-admin.php:2364
 msgid "Who can use menu of plugin - Minimum User Level needed for access to menu of plugin. In any case only Super Admin and Administrator can use Settings Menu of SAM Plugin."
 msgstr ""
 "Кто может пользоваться меню плагина - минимальный уровень пользователя, необходимый для доступа к меню плагина. В любом случае, доступ к меню настроек плагина имеют только "
 "Администратор и Супер Администратор."
 
-#: ../sam-pro-admin.php:1337
+#: sam-pro-admin.php:2380
 msgid "Ad Output Mode"
 msgstr "Режим вывода объявления"
 
-#: ../sam-pro-admin.php:1337
+#: sam-pro-admin.php:2384
 msgid ""
 "Standard (PHP) mode is more faster but is not compatible with caching plugins. If your blog use caching plugin (i.e WP Super Cache or W3 Total Cache) select \"Caching Compatible "
 "(Javascript)\" mode."
@@ -1192,792 +1213,808 @@ msgstr ""
 "Стандартный режим (РНР) является более быстрым, но не совместим с плагинами кэширования. Если ваш блог использует плагин кэширования (например: WP Super Cache или W3 Total Cache) "
 "выберите режим \"Совместимость с кэшированием (JavaScript)\"."
 
-#: ../sam-pro-admin.php:1337
+#: sam-pro-admin.php:2386
 msgid "Standard (PHP)"
 msgstr "Стандартный (PHP)"
 
-#: ../sam-pro-admin.php:1337
+#: sam-pro-admin.php:2387
 msgid "Caching Compatible (Javascript)"
 msgstr "Совместимость с кэшированием (Javascript)"
 
-#: ../sam-pro-admin.php:1338
+#: sam-pro-admin.php:2391
 msgid "Display Ad Source in"
 msgstr "Открывать ссылку в"
 
-#: ../sam-pro-admin.php:1338
+#: sam-pro-admin.php:2395
 msgid "Target window (tab) for advertisement source."
 msgstr "Открытие окна (вкладки) для рекламного объявления."
 
-#: ../sam-pro-admin.php:1338
+#: sam-pro-admin.php:2397
 msgid "New Window (Tab)"
 msgstr "Новое окно (вкладка)"
 
-#: ../sam-pro-admin.php:1338
+#: sam-pro-admin.php:2398
 msgid "Current Window (Tab)"
 msgstr "Текущее окно (вкладка)"
 
-#: ../sam-pro-admin.php:1340
+#: sam-pro-admin.php:2402
 msgid "Allow displaying ads on bbPress forum pages"
 msgstr "Разрешить показ объявленийна страницах форумов bbPress"
 
-#: ../sam-pro-admin.php:1341
+#: sam-pro-admin.php:2411
 msgid "Allow displaying ads in the header of WPtouch mobile theme"
 msgstr "Разрешить отображение объявлений в шапке мобильной темы WPtouch"
 
-#: ../sam-pro-admin.php:1342
+#: sam-pro-admin.php:2420 sam-pro-admin.php:2424
 msgid "Key"
 msgstr "Ключ"
 
-#: ../sam-pro-admin.php:1343
+#: sam-pro-admin.php:2428
 msgid "Admin URL"
 msgstr "Ссылка Админ"
 
-#: ../sam-pro-admin.php:1346
+#: sam-pro-admin.php:2434
 msgid "Ad Object before content"
 msgstr "Рекламный объект до контента"
 
-#: ../sam-pro-admin.php:1347
+#: sam-pro-admin.php:2441
 msgid "Allow embedding of Ad Object before post/page content"
 msgstr "Разрешить автоматическую вставку рекламного объекта перед контентом статьи/страницы"
 
-#: ../sam-pro-admin.php:1348
+#: sam-pro-admin.php:2445
 msgid "Allow embedding of Ad Object before post/page or post/page excerpt in the loop"
 msgstr "Разрешить автоматическую вставку рекламного объекта перед контентом или анонсом в цикле"
 
-#: ../sam-pro-admin.php:1349
+#: sam-pro-admin.php:2449
 msgid "Allow embedding of Ad Object before bbPress Forum topic content"
 msgstr "Разрешить автоматическую вставку рекламного объекта перед контентом топиков bbPress"
 
-#: ../sam-pro-admin.php:1350
+#: sam-pro-admin.php:2457
 msgid "Allow embedding of Ad Object into bbPress Forum forums/topics lists"
 msgstr "Разрешить автоматическую вставку рекламного объекта на страницах списков форумов/топиков bbPress"
 
-#: ../sam-pro-admin.php:1351 ../sam-pro-admin.php:1355 ../sam-pro-admin.php:1359
+#: sam-pro-admin.php:2465 sam-pro-admin.php:2488 sam-pro-admin.php:2511
 msgid "Allow using predefined Ad Object HTML tags (before and after codes)"
 msgstr "Использовать заранее заданные коды рекламного объекта (коды рекламного места \"до\" и \"после\")"
 
-#: ../sam-pro-admin.php:1352
+#: sam-pro-admin.php:2469
 msgid "Ad Object within the content"
 msgstr "Рекламный объект внутри контента"
 
-#: ../sam-pro-admin.php:1353
+#: sam-pro-admin.php:2476
 msgid "Allow embedding of Ad Object into the middle of post/page content"
 msgstr "Разрешить автоматическую вставку рекламного объекта в середину контента статьи/страницы"
 
-#: ../sam-pro-admin.php:1354
+#: sam-pro-admin.php:2480
 msgid "Allow embedding of Ad Object into the middle of bbPress Forum topic content"
 msgstr "Разрешить автоматическую вставку рекламного объекта в середину контента топика форумов bbPress"
 
-#: ../sam-pro-admin.php:1356
+#: sam-pro-admin.php:2492
 msgid "Ad Object after content"
 msgstr "Рекламный объект после контента"
 
-#: ../sam-pro-admin.php:1357
+#: sam-pro-admin.php:2499
 msgid "Allow embedding of Ad Object after post/page content"
 msgstr "Разрешить автоматическую вставку рекламного объекта после контента статьи/страницы"
 
-#: ../sam-pro-admin.php:1358
+#: sam-pro-admin.php:2503
 msgid "Allow embedding of Ad Object after bbPress Forum topic content"
 msgstr "Разрешить автоматическую вставку рекламного объекта после контента топика форумов bbPress"
 
-#: ../sam-pro-admin.php:1360
+#: sam-pro-admin.php:2515
 msgid "Ad Object in the WPtouch header"
 msgstr "Рекламный объект в шапке WPtouch"
 
-#: ../sam-pro-admin.php:1361
+#: sam-pro-admin.php:2519
 msgid "Allow embedding of Ad Object in the header of WPtouch mobile theme plugin"
 msgstr "Разрешить автоматическую вставку рекламного объекта в шапке мобильной темы плагина WPtouch"
 
-#: ../sam-pro-admin.php:1364
+#: sam-pro-admin.php:2529
 msgid "I use (plan to use) my own flash (SWF) banners. In other words, allow loading the script \"SWFObject\" on the pages of the blog."
 msgstr "Я использую (планирую использовать) мои собственные флеш (SWF) баннеры. Другими словами, разрешить загрузку скрипта \"SWFObject\" на страницах блога."
 
-#: ../sam-pro-admin.php:1365
+#: sam-pro-admin.php:2533
 msgid "Turn on/off the error log."
 msgstr "Включить/выключить журнал ошибок."
 
-#: ../sam-pro-admin.php:1366
+#: sam-pro-admin.php:2537
 msgid "Turn on/off the error log for Front Side."
 msgstr "Включить/выключить журнал ошибок для Face Side."
 
-#: ../sam-pro-admin.php:1369
+#: sam-pro-admin.php:2543
 msgid "Allow using Google DoubleClick for Publishers (DFP) rotator codes"
 msgstr "Разрешить использование кодов Google DoubleClick for Publishers (DFP)"
 
-#: ../sam-pro-admin.php:1370
+#: sam-pro-admin.php:2547
 msgid "Google DFP Mode"
 msgstr "Режим Google DFP"
 
-#: ../sam-pro-admin.php:1370
+#: sam-pro-admin.php:2552
 msgid "GAM (Google Ad Manager)"
 msgstr "GAM (Google Ad Manager)"
 
-#: ../sam-pro-admin.php:1370
+#: sam-pro-admin.php:2553
 msgid "GPT (Google Publisher Tag)"
 msgstr "GPT (Google Publisher Tag)"
 
-#: ../sam-pro-admin.php:1370
+#: sam-pro-admin.php:2555
 msgid "Select DFP Tags Mode."
 msgstr "Выберите тип тэгов DFP"
 
-#: ../sam-pro-admin.php:1371
+#: sam-pro-admin.php:2557
 msgid "Google DFP Pub Code (GAM)"
 msgstr "Pub-код Google DFP (GAM)"
 
-#: ../sam-pro-admin.php:1371
+#: sam-pro-admin.php:2561
 msgid "Your Google DFP Pub code. i.e:"
 msgstr "Ваш pub-код Google DFP. Например:"
 
-#: ../sam-pro-admin.php:1371
+#: sam-pro-admin.php:2561
 msgid "Only for GAM mode."
 msgstr "Только для режима GAM."
 
-#: ../sam-pro-admin.php:1372
+#: sam-pro-admin.php:2564
 msgid "Google DFP Network Code (GPT)"
 msgstr "Код сети Google DFP (GPT)"
 
-#: ../sam-pro-admin.php:1372
+#: sam-pro-admin.php:2568
 msgid "Network Code of Your DFP Ad Network. Only for GPT mode."
 msgstr "Код сети вашей рекламной сети DFP. Только для режима GPT."
 
-#: ../sam-pro-admin.php:1375
+#: sam-pro-admin.php:2573
 msgid "Google AdSense Pub Code"
 msgstr "Pub-код Google AdSense"
 
-#: ../sam-pro-admin.php:1375
+#: sam-pro-admin.php:2577
 msgid "Your Google AdSense Pub Code."
 msgstr "Ваш pub-код Google AdSense"
 
-#: ../sam-pro-admin.php:1376
+#: sam-pro-admin.php:2581
 msgid "Allow using Google AdSense page-level (<span id='anchor-help'>anchor/overlay</span> or/and <span id='vignette-help'>vignette</span>) ads on mobile devices"
 msgstr ""
 "Разрешить использование объявлений Google AdSense на уровне страницы (<span id='anchor-help'>anchor/overlay</span> и/или <span id='vignette-help'>vignette</span>) для мобильных "
 "устройств."
 
-#: ../sam-pro-admin.php:1376
+#: sam-pro-admin.php:2587
 msgid "Do not forget to adjust your Google AdSense settings on settings page (My Ads -> Page-level ads)."
 msgstr "Не забудьте изменить Ваши настройки на странице настроек Google AdSense (My ads-> Page-level ads)."
 
-#: ../sam-pro-admin.php:1378
+#: sam-pro-admin.php:2590
 msgid "Allow Bots and Crawlers detection"
 msgstr "Разрешить обнаружение ботов и сканеров"
 
-#: ../sam-pro-admin.php:1379
+#: sam-pro-admin.php:2594
 msgid "Accuracy of Bots and Crawlers Detection"
 msgstr "Точность обнаружения ботов и сканеров"
 
-#: ../sam-pro-admin.php:1379
+#: sam-pro-admin.php:2598
 msgid "If bot is detected hits of ads won't be counted. Use with caution! More exact detection requires more server resources."
 msgstr "Если обнаружен бот, показы объявлений не будут защитаны. Используйте с осторожностью! Чем точнее определение, тем больше ресурсов сервера требуется."
 
-#: ../sam-pro-admin.php:1379
+#: sam-pro-admin.php:2600
 msgid "Inexact detection"
 msgstr "Неточное определение"
 
-#: ../sam-pro-admin.php:1379
+#: sam-pro-admin.php:2601
 msgid "Exact detection"
 msgstr "Точное определение"
 
-#: ../sam-pro-admin.php:1379
+#: sam-pro-admin.php:2602
 msgid "More exact detection"
 msgstr "Более точное определение"
 
-#: ../sam-pro-admin.php:1380
+#: sam-pro-admin.php:2606
 msgid "Allow to collect and to store statistical data"
 msgstr "Разрешить сбор и хранение статистических данных"
 
-#: ../sam-pro-admin.php:1381
+#: sam-pro-admin.php:2610
 msgid "Keep Statistical Data"
 msgstr "Хранить статистические данные"
 
-#: ../sam-pro-admin.php:1381
+#: sam-pro-admin.php:2614
 msgid "Period of keeping statistical data (excluding current month)."
 msgstr "Период хранения статистических данных (исключая текущий месяц)."
 
-#: ../sam-pro-admin.php:1381
+#: sam-pro-admin.php:2616
 msgid "All Time"
 msgstr "Всё время"
 
-#: ../sam-pro-admin.php:1381
+#: sam-pro-admin.php:2617
 msgid "One Month"
 msgstr "Один месяц"
 
-#: ../sam-pro-admin.php:1381
+#: sam-pro-admin.php:2618
 msgid "Three Months"
 msgstr "Три месяц"
 
-#: ../sam-pro-admin.php:1381
+#: sam-pro-admin.php:2619
 msgid "Six Months"
 msgstr "Шесть месяцев"
 
-#: ../sam-pro-admin.php:1381
+#: sam-pro-admin.php:2620
 msgid "One Year"
 msgstr "Один год"
 
-#: ../sam-pro-admin.php:1382
+#: sam-pro-admin.php:2623
 msgid "Display of Currency"
 msgstr "Показ валюты"
 
-#: ../sam-pro-admin.php:1382
+#: sam-pro-admin.php:2627
 msgid "Define display of currency. Auto - auto detection of currency from blog settings. USD, EUR - Forcing the display of currency to U.S. dollars or Euro."
 msgstr ""
 "Определите отображение валюты. Автоопределение - автоматическое определение валюты из параметров настройки блога. Доллары США, Евро - принудительное отображение валюты в долларах "
 "США или евро."
 
-#: ../sam-pro-admin.php:1382
+#: sam-pro-admin.php:2629
 msgid "Auto"
 msgstr "Автоопределение"
 
-#: ../sam-pro-admin.php:1382
+#: sam-pro-admin.php:2630
 msgid "USD"
 msgstr "Доллары США"
 
-#: ../sam-pro-admin.php:1382
+#: sam-pro-admin.php:2631
 msgid "EUR"
 msgstr "Евро"
 
-#: ../sam-pro-admin.php:1385
+#: sam-pro-admin.php:2636
 msgid "Move expired ads to trash"
 msgstr "Перемещать в корзину объявления с истекшим сроком показов"
 
-#: ../sam-pro-admin.php:1386
+#: sam-pro-admin.php:2640
 msgid "Permanently delete an expired ads"
 msgstr "Удалять объявления с истекшим сроком показов"
 
-#: ../sam-pro-admin.php:1386
+#: sam-pro-admin.php:2645
 msgid "immediately"
 msgstr "немедленно"
 
-#: ../sam-pro-admin.php:1386
+#: sam-pro-admin.php:2646
 msgid "after 1 month"
 msgstr "через 1 месяц"
 
-#: ../sam-pro-admin.php:1386
+#: sam-pro-admin.php:2647
 msgid "after 2 months"
 msgstr "через 2 месяца"
 
-#: ../sam-pro-admin.php:1386
+#: sam-pro-admin.php:2648
 msgid "after 3 months"
 msgstr "через 3 месяца"
 
-#: ../sam-pro-admin.php:1386
+#: sam-pro-admin.php:2649
 msgid "never"
 msgstr "никогда"
 
-#: ../sam-pro-admin.php:1389
+#: sam-pro-admin.php:2654
 msgid "Use Classes:"
 msgstr "Использовать классы:"
 
-#: ../sam-pro-admin.php:1389
+#: sam-pro-admin.php:2658
 msgid "Select method of the classes naming."
 msgstr "Выберите способ именования классов."
 
-#: ../sam-pro-admin.php:1389
+#: sam-pro-admin.php:2660
 msgid "Default"
 msgstr "По умолчанию"
 
-#: ../sam-pro-admin.php:1389
+#: sam-pro-admin.php:2661
 msgid "Custom"
 msgstr "Пользовательский"
 
-#: ../sam-pro-admin.php:1390
+#: sam-pro-admin.php:2664
 msgid "Custom SAM Container Class"
 msgstr "Имя класса контейнера объявления"
 
-#: ../sam-pro-admin.php:1391
+#: sam-pro-admin.php:2668
 msgid "Custom Place Class"
 msgstr "Имя класса рекламного места"
 
-#: ../sam-pro-admin.php:1392
+#: sam-pro-admin.php:2672
 msgid "Custom Ad Class"
 msgstr "Имя класса рекламного объявления"
 
-#: ../sam-pro-admin.php:1392
+#: sam-pro-admin.php:2677
 msgid "Class names should consist of two parts (only letters and numbers) separated by symbol '-', ie 'bla-bla' or 'bye-bye'."
 msgstr "Имена классов должны состоять из двух частей (только буквы и цифры), разделенных символом '-', то есть 'bla-bla' или 'bye-bye'."
 
-#: ../sam-pro-admin.php:1395
+#: sam-pro-admin.php:2681
 msgid "Items per Page"
 msgstr "Элементов на страницу"
 
-#: ../sam-pro-admin.php:1395
+#: sam-pro-admin.php:2684
 msgid "How many rows of the items list will be shown on one page of the data grid."
 msgstr "Сколько строк списка элементов будет показано на одной странице таблицы данных."
 
-#: ../sam-pro-admin.php:1398
+#: sam-pro-admin.php:2687
 msgid "Allow to use rule for posts/pages IDs"
 msgstr "Разрешить использовать правило для идентификаторов статей/страниц"
 
-#: ../sam-pro-admin.php:1399
+#: sam-pro-admin.php:2691
 msgid "Allow to use rule for categories"
 msgstr "Разрешить использовать правило для рубрик"
 
-#: ../sam-pro-admin.php:1400
+#: sam-pro-admin.php:2695
 msgid "Allow to use rule for tags"
 msgstr "Разрешить использовать правило для меток"
 
-#: ../sam-pro-admin.php:1401
+#: sam-pro-admin.php:2699
 msgid "Allow to use rule for authors"
 msgstr "Разрешить использовать правило для авторов"
 
-#: ../sam-pro-admin.php:1402
+#: sam-pro-admin.php:2703
 msgid "Allow to use rule for Custom Taxonomies Terms"
 msgstr "Разрешить использовать правило для терминов пользовательских таксономий"
 
-#: ../sam-pro-admin.php:1403
+#: sam-pro-admin.php:2707
 msgid "Allow to use rule for Custom Posts Types"
 msgstr "Разрешить использовать правило для пользовательских типов статей"
 
-#: ../sam-pro-admin.php:1404
+#: sam-pro-admin.php:2711
 msgid "Allow to use rule for scheduling"
 msgstr "Разрешить использовать правило для расписания"
 
-#: ../sam-pro-admin.php:1405
+#: sam-pro-admin.php:2715
 msgid "Allow to use rule for restrictions by hits"
 msgstr "Разрешить использовать правило для ограничения показов объявлений"
 
-#: ../sam-pro-admin.php:1406
+#: sam-pro-admin.php:2719
 msgid "Allow to use rule for restrictions by clicks"
 msgstr "Разрешить использовать правило для ограничения кликов на объявлениях"
 
-#: ../sam-pro-admin.php:1409
+#: sam-pro-admin.php:2725
 msgid "Delete plugin options during deactivating plugin"
 msgstr "Удалить параметры плагина при деактивации"
 
-#: ../sam-pro-admin.php:1410
+#: sam-pro-admin.php:2729
 msgid "Delete database tables of plugin during deactivating plugin"
 msgstr "Удалить таблицы базы данных плагина во время деактивации"
 
-#: ../sam-pro-admin.php:1411
+#: sam-pro-admin.php:2733
 msgid "Delete custom images folder of plugin during deactivating plugin"
 msgstr "Удалить папку пользовательских изображений плагина во время деактивации"
 
-#: ../sam-pro-admin.php:1414
+#: sam-pro-admin.php:2739
 msgid "Allow SAM Mailing System to send statistical data to advertisers"
 msgstr "Разрешить Системе Рассылки плагина отправлять статистические данные рекламодателям."
 
-#: ../sam-pro-admin.php:1415
+#: sam-pro-admin.php:2743
 msgid "Periodicity of sending reports"
 msgstr "Периодичность рассылки"
 
-#: ../sam-pro-admin.php:1415
+#: sam-pro-admin.php:2748
 msgid "Monthly"
 msgstr "Ежемесячно"
 
-#: ../sam-pro-admin.php:1415
+#: sam-pro-admin.php:2749
 msgid "Weekly"
 msgstr "Еженедельно"
 
-#: ../sam-pro-admin.php:1418
+#: sam-pro-admin.php:2754
 msgid "Ad Hits (Number of shows of the advertisement)"
 msgstr "Показы (количество показов рекламного объявления)."
 
-#: ../sam-pro-admin.php:1419
+#: sam-pro-admin.php:2758
 msgid "Ad Clicks (Number of clicks on the advertisement)"
 msgstr "Клики (количество кликов рекламного объявления)."
 
-#: ../sam-pro-admin.php:1420
+#: sam-pro-admin.php:2762
 msgid "CPM (Cost per thousand impessions, calculated value)"
 msgstr "CPM (цена за тысячу показов, вычисляемое  значение)."
 
-#: ../sam-pro-admin.php:1421
+#: sam-pro-admin.php:2766
 msgid "CPC (Cost per click, calculated value)"
 msgstr "CPC (цена за клик, вычисляемое значение)."
 
-#: ../sam-pro-admin.php:1422
+#: sam-pro-admin.php:2770
 msgid "CTR (Click through rate, calculated value)"
 msgstr "CTR (показатель кликабельности, вычисляемое значение)."
 
-#: ../sam-pro-admin.php:1425
+#: sam-pro-admin.php:2776
 msgid "Mail Subject"
 msgstr "Тема письма"
 
-#: ../sam-pro-admin.php:1425
+#: sam-pro-admin.php:2780
 msgid "Mail subject of sending email."
 msgstr "Тема отправляемого письма."
 
-#: ../sam-pro-admin.php:1426
+#: sam-pro-admin.php:2783
 msgid "Mail Greeting String"
 msgstr "Строка приветствия"
 
-#: ../sam-pro-admin.php:1426
+#: sam-pro-admin.php:2787
 msgid "Greeting string of sending email."
 msgstr "Строка приветствия отправляемого письма."
 
-#: ../sam-pro-admin.php:1427
+#: sam-pro-admin.php:2790
 msgid "Mail Text before statistical data table"
 msgstr "Текст перед таблицей статистической отчётности."
 
-#: ../sam-pro-admin.php:1427
+#: sam-pro-admin.php:2794
 msgid "Some text before statistical data table of sending email."
 msgstr "Любой, необходимый текст перед таблицей, содержащей статистические данные за отчётный период."
 
-#: ../sam-pro-admin.php:1428
+#: sam-pro-admin.php:2797
 msgid "Mail Text after statistical data table"
 msgstr "Текст после таблицы статистической отчётности"
 
-#: ../sam-pro-admin.php:1428
+#: sam-pro-admin.php:2801
 msgid "Some text after statistical data table of sending email."
 msgstr "Любой, необходимый текст после таблицы, содержащей статистические данные за отчётный период."
 
-#: ../sam-pro-admin.php:1429
+#: sam-pro-admin.php:2804
 msgid "Mail Warning 1"
 msgstr "Предупреждение 1"
 
-#: ../sam-pro-admin.php:1429
+#: sam-pro-admin.php:2808
 msgid "This text will be placed at the end of sending email."
 msgstr "Текст будет помещён в конце посылаемого письма."
 
-#: ../sam-pro-admin.php:1430
+#: sam-pro-admin.php:2811
 msgid "Mail Warning 2"
 msgstr "Предупреждение 2"
 
-#: ../sam-pro-admin.php:1430
+#: sam-pro-admin.php:2815
 msgid "This text will be placed at the very end of sending email."
 msgstr "Текст будет помещён в самом конце посылаемого письма."
 
-#: ../sam-pro-admin.php:1433
+#: sam-pro-admin.php:2820
 msgid "Mail Preview"
 msgstr "Предварительный просмотр письма"
 
-#: ../sam-pro-admin.php:1580
+#: sam-pro-admin.php:2978
 msgid "You Buy"
 msgstr "Вы покупаете"
 
-#: ../sam-pro-admin.php:1582
+#: sam-pro-admin.php:2980
 msgid "Price"
 msgstr "Цена"
 
-#: ../sam-pro-admin.php:1583 ../sam-pro-place-editor.php:372
+#: sam-pro-admin.php:2981 sam-pro-place-editor.php:463
 msgid "Space"
 msgstr "Пространство"
 
-#: ../sam-pro-admin.php:1585
+#: sam-pro-admin.php:2983
 msgid "Estimated impressions"
 msgstr "Ожидаемое количество показов"
 
-#: ../sam-pro-admin.php:1596
+#: sam-pro-admin.php:2994
 msgid "There are general options."
 msgstr "Основные параметры плагина."
 
-#: ../sam-pro-admin.php:1600
+#: sam-pro-admin.php:2998
 msgid "Use these parameters for allowing/defining Ads Objects which will be automatically inserted into post/page content."
 msgstr "Используйте эти параметры для разрешения/определения объектов объявлений, которые будут автоматически вставляться в контент сообщений/страниц."
 
-#: ../sam-pro-admin.php:1604
+#: sam-pro-admin.php:3002
 msgid "Use these parameters for allowing/defining Ads Objects which will be automatically inserted into pages of archives."
 msgstr "Используйте эти параметры для разрешения/определения объектов объявлений, которые будут автоматически вставляться в списки сообщений/страниц архивов."
 
-#: ../sam-pro-admin.php:1612
+#: sam-pro-admin.php:3010
 msgid "Adjust parameters of your Google DFP account."
 msgstr "Настройте параметры вашей учётной записи Google DFP."
 
-#: ../sam-pro-admin.php:1620
+#: sam-pro-admin.php:3018
 msgid "Adjust parameters of plugin statistics."
 msgstr "Настройте параметры статистики плагина."
 
-#: ../sam-pro-admin.php:1624
+#: sam-pro-admin.php:3022
 msgid "This options define layout for Ads Managin Pages."
 msgstr "Эти параметры определяют внешний вид страниц управления рекламными объявлениями и рекламными местами."
 
-#: ../sam-pro-admin.php:1628
+#: sam-pro-admin.php:3026
 msgid "The rules of the extended restrictions of the Ads. You can reduce the length of the ad request by disabling unused rules."
 msgstr "Правила расширенных ограничений для рекламных объявлений. Вы можете уменьшить длину SQL запросов для объявлений, отключив неиспользуемые правила."
 
-#: ../sam-pro-admin.php:1632
+#: sam-pro-admin.php:3030
 msgid "Are you allow to perform these actions during deactivating plugin?"
 msgstr "Вы разрешаете выполнение этих деиствий в ходе деактивации плагина?"
 
-#: ../sam-pro-admin.php:1636
+#: sam-pro-admin.php:3034
 msgid "Advertising Request Form Labels"
 msgstr "Заголовки полей формы запроса на размещение рекламы"
 
-#: ../sam-pro-admin.php:1646
+#: sam-pro-admin.php:3045
 msgid "Next cleaning is scheduled for"
 msgstr "Следующая очистка запланирована на"
 
-#: ../sam-pro-admin.php:1647
+#: sam-pro-admin.php:3046
 msgid "Parameters of moving to the trash and removing of expired ads."
 msgstr "Параметры перемещения в корзину и удаления просроченных объявлений."
 
-#: ../sam-pro-admin.php:1651
+#: sam-pro-admin.php:3050
 msgid "Define HTML classes for plugin's output tags."
 msgstr "Определите классы HTML для вывода тегов плагина."
 
-#: ../sam-pro-admin.php:1664
+#: sam-pro-admin.php:3063
 msgid "Next mailing is scheduled on"
 msgstr "Следующая рассылка запланирована на"
 
-#: ../sam-pro-admin.php:1666
+#: sam-pro-admin.php:3066
 msgid "Adjust parameters of Mailing System."
 msgstr "Настройте параметры Системы рассылки."
 
-#: ../sam-pro-admin.php:1670
+#: sam-pro-admin.php:3071
 msgid "Adjust Reporting Data. Name and Description of the ad will be included to the reporting data in any case."
 msgstr "Настройка данных отчёта. В любом случае, Имя и Описание рекламного объявления будут включены в отчёт."
 
-#: ../sam-pro-admin.php:1675
+#: sam-pro-admin.php:3076
 msgid "Adjust Mail Content."
 msgstr "Настройте контент письма."
 
-#: ../sam-pro-admin.php:1676
+#: sam-pro-admin.php:3077
 msgid "You can use the following short codes in the parameter fields of this section:"
 msgstr "Вы можете использовать следующие шаблоны в полях параметров в этом разделе:"
 
-#: ../sam-pro-admin.php:1677
+#: sam-pro-admin.php:3078
 msgid "will be replaced with the advertiser's name."
 msgstr "будет заменён на имя рекламодателя."
 
-#: ../sam-pro-admin.php:1678
+#: sam-pro-admin.php:3079
 msgid "will be replaced with the name of your site."
 msgstr " будет заменён на имя Вашего сайта."
 
-#: ../sam-pro-admin.php:1679
+#: sam-pro-admin.php:3080
 msgid "will be replaced with the name of the month of the reporting period."
 msgstr "будет заменён на имя месяца отчётного периода."
 
-#: ../sam-pro-admin.php:1680
+#: sam-pro-admin.php:3081
 msgid "will be replaced with the year of the reporting period."
 msgstr "будет заменён на год отчётного периода."
 
-#: ../sam-pro-admin.php:1681
+#: sam-pro-admin.php:3082
 msgid "will be replaced with the first date of the reporting period."
 msgstr "будет заменён на начальную дату отчётного периода."
 
-#: ../sam-pro-admin.php:1682
+#: sam-pro-admin.php:3083
 msgid "will be replaced with the last date of the reporting period."
 msgstr "будет заменён на конечную дату отчётного периода."
 
-#: ../sam-pro-admin.php:2033
+#: sam-pro-admin.php:3481
 msgid "SAM Pro Settings Updated."
 msgstr "Параметры SAM Pro обновлены."
 
-#: ../sam-pro-admin.php:2040 ../sam-pro-tools-page.php:54
+#: sam-pro-admin.php:3488 sam-pro-tools-page.php:57
 msgid "System Info"
 msgstr "Системная информация"
 
-#: ../sam-pro-admin.php:2044 ../sam-pro-tools-page.php:58
+#: sam-pro-admin.php:3496 sam-pro-tools-page.php:61
 msgid "SAM Pro Edition"
 msgstr "Редакция плагина"
 
-#: ../sam-pro-admin.php:2045 ../sam-pro-tools-page.php:59
+#: sam-pro-admin.php:3497 sam-pro-tools-page.php:62
 msgid "SAM Pro Version"
 msgstr "Версия плагина"
 
-#: ../sam-pro-admin.php:2046 ../sam-pro-tools-page.php:60
+#: sam-pro-admin.php:3498 sam-pro-tools-page.php:63
 msgid "SAM Pro DB Version"
 msgstr "Версия таблиц БД плагина"
 
-#: ../sam-pro-admin.php:2047 ../sam-pro-tools-page.php:61
+#: sam-pro-admin.php:3499 sam-pro-tools-page.php:64
 msgid "Wordpress Version"
 msgstr "Версия Wordpress"
 
-#: ../sam-pro-admin.php:2048 ../sam-pro-tools-page.php:62
+#: sam-pro-admin.php:3500 sam-pro-tools-page.php:65
 msgid "PHP Version"
 msgstr "Версия PHP"
 
-#: ../sam-pro-admin.php:2049 ../sam-pro-tools-page.php:63
+#: sam-pro-admin.php:3501 sam-pro-tools-page.php:66
 msgid "MySQL Version"
 msgstr "Версия MySQL"
 
-#: ../sam-pro-admin.php:2050 ../sam-pro-tools-page.php:64
+#: sam-pro-admin.php:3502 sam-pro-tools-page.php:67
 msgid "PHP Max Execution Time"
 msgstr "Макс. время выполнения PHP"
 
-#: ../sam-pro-admin.php:2051 ../sam-pro-tools-page.php:65
+#: sam-pro-admin.php:3503 sam-pro-tools-page.php:68
 msgid "PHP Memory Limit"
 msgstr "Лимит памяти PHP"
 
-#: ../sam-pro-admin.php:2052 ../sam-pro-tools-page.php:66
+#: sam-pro-admin.php:3504 sam-pro-tools-page.php:69
 msgid "WP Memory Limit"
 msgstr "Лимит памяти WP"
 
-#: ../sam-pro-admin.php:2059 ../sam-pro-tools-page.php:73
+#: sam-pro-admin.php:3511 sam-pro-tools-page.php:76
 msgid "Addons"
 msgstr "Расширения"
 
-#: ../sam-pro-admin.php:2069 ../sam-pro-tools-page.php:83
+#: sam-pro-admin.php:3521 sam-pro-tools-page.php:86
 msgid "Note! If you have detected a bug, include this data to bug report."
 msgstr "Обратите внимание! Если вы обнаружили ошибку, не забудьте включить эти данные в отчет об ошибке."
 
-#: ../sam-pro-admin.php:2074 ../sam-pro-tools-page.php:88
+#: sam-pro-admin.php:3539
 msgid "SAM Pro (Lite Edition)"
 msgstr "SAM Pro (Lite Edition)"
 
-#: ../sam-pro-admin.php:2079 ../sam-pro-tools-page.php:93
+#: sam-pro-admin.php:3544
 msgid "Get more features:"
 msgstr "Получить больше возможностей:"
 
-#: ../sam-pro-admin.php:2081 ../sam-pro-tools-page.php:95
+#: sam-pro-admin.php:3546
 msgid "ads rotation by timer"
 msgstr "ротация объявлений по таймеру"
 
-#: ../sam-pro-admin.php:2082 ../sam-pro-tools-page.php:96
+#: sam-pro-admin.php:3547
 msgid "online advertiser statistics"
 msgstr "онлайн статистика рекламодателя"
 
-#: ../sam-pro-admin.php:2083 ../sam-pro-tools-page.php:97
+#: sam-pro-admin.php:3548
 msgid "an advertising request form"
 msgstr "форма запроса рекламы"
 
-#: ../sam-pro-admin.php:2084 ../sam-pro-tools-page.php:98
+#: sam-pro-admin.php:3549
 msgid "geo targeting"
 msgstr "геотаргетинг"
 
-#: ../sam-pro-admin.php:2085 ../sam-pro-tools-page.php:99
+#: sam-pro-admin.php:3550
 msgid "extended ALE (Ads Linking and Embedding)"
 msgstr "Расширенный ALE (Ads Linking and Embedding)"
 
-#: ../sam-pro-admin.php:2087 ../sam-pro-tools-page.php:101
+#: sam-pro-admin.php:3552
 msgid "and"
 msgstr "и"
 
-#: ../sam-pro-admin.php:2087 ../sam-pro-tools-page.php:101
+#: sam-pro-admin.php:3554
 msgid "Features List"
 msgstr "Список функций"
 
-#: ../sam-pro-admin.php:2087 ../sam-pro-tools-page.php:101
+#: sam-pro-admin.php:3554
 msgctxt "SAM Pro Lite"
 msgid "more"
 msgstr "многое другое"
 
-#: ../sam-pro-admin.php:2090 ../sam-pro-tools-page.php:104
+#: sam-pro-admin.php:3559
 msgid "Purchase SAM Pro (Lite Edition)"
 msgstr "Купить SAM Pro (Lite Edition)"
 
-#: ../sam-pro-admin.php:2096 ../sam-pro-tools-page.php:110
+#: sam-pro-admin.php:3565
 msgid "Available Addons"
 msgstr "Доступные расширения"
 
-#: ../sam-pro-admin.php:2113 ../sam-pro-tools-page.php:127
+#: sam-pro-admin.php:3575 sam-pro-tools-page.php:91
 msgid "Resources"
 msgstr "Ресурсы"
 
-#: ../sam-pro-admin.php:2116 ../sam-pro-tools-page.php:130
+#: sam-pro-admin.php:3579 sam-pro-tools-page.php:94
 msgid "SAM Pro Site"
 msgstr "Сайт SAM Pro"
 
-#: ../sam-pro-admin.php:2117 ../sam-pro-tools-page.php:131
+#: sam-pro-admin.php:3581 sam-pro-tools-page.php:95
 msgid "Getting Started"
 msgstr "Приступая к работе"
 
-#: ../sam-pro-admin.php:2118 ../sam-pro-tools-page.php:132
+#: sam-pro-admin.php:3584 sam-pro-tools-page.php:96
 msgid "Documentation"
 msgstr "Документация"
 
-#: ../sam-pro-admin.php:2119 ../sam-pro-tools-page.php:133
+#: sam-pro-admin.php:3587 sam-pro-tools-page.php:97
 msgid "Support Forum"
 msgstr "Форум поддержки"
 
-#: ../sam-pro-admin.php:2120 ../sam-pro-tools-page.php:134
+#: sam-pro-admin.php:3590 sam-pro-tools-page.php:98
 msgid "Author's Blog"
 msgstr "Блог автора"
 
-#: ../sam-pro-admin.php:2267
+#: sam-pro-admin.php:3740
 msgid "SAM Pro Ad Serving"
 msgstr "Показ объявлений SAM Pro"
 
-#: ../sam-pro-admin.php:2282
+#: sam-pro-admin.php:3756
 msgid "disable ad serving"
 msgstr "отключить показ объявлений"
 
-#: ../sam-pro-ads-list.php:22 ../sam-pro-blocks-list.php:22 ../sam-pro-places-list.php:20 ../sam-pro-zones-list.php:22
+#: sam-pro-ads-list.php:25 sam-pro-blocks-list.php:25 sam-pro-places-list.php:23 sam-pro-zones-list.php:25
 msgid "Active"
 msgstr "Активные"
 
-#: ../sam-pro-ads-list.php:23 ../sam-pro-block-editor.php:213 ../sam-pro-blocks-list.php:23 ../sam-pro-places-list.php:21 ../sam-pro-zones-list.php:23
+#: sam-pro-ads-list.php:26 sam-pro-block-editor.php:240 sam-pro-blocks-list.php:26 sam-pro-places-list.php:24 sam-pro-zones-list.php:26
 msgid "In Trash"
 msgstr "В корзине"
 
-#: ../sam-pro-ads-list.php:43 ../sam-pro-blocks-list.php:37 ../sam-pro-error-log.php:37 ../sam-pro-place-editor.php:412 ../sam-pro-places-list.php:40
+#: sam-pro-ads-list.php:46 sam-pro-blocks-list.php:40 sam-pro-error-log.php:40 sam-pro-place-editor.php:510 sam-pro-places-list.php:43
 msgid "Legend"
 msgstr "Условные обозначения"
 
-#: ../sam-pro-ads-list.php:45 ../sam-pro-place-editor.php:414 ../sam-pro-places-list.php:42
+#: sam-pro-ads-list.php:48 sam-pro-place-editor.php:513 sam-pro-places-list.php:45
 msgid "Approved / Awaiting approval."
 msgstr "Утверждено / В ожидании одобрения."
 
-#: ../sam-pro-ads-list.php:46 ../sam-pro-blocks-list.php:39 ../sam-pro-place-editor.php:415 ../sam-pro-places-list.php:43 ../sam-pro-zones-list.php:39
+#: sam-pro-ads-list.php:49 sam-pro-blocks-list.php:42 sam-pro-place-editor.php:515 sam-pro-places-list.php:46 sam-pro-zones-list.php:42
 msgid "Is active / Is in trash."
 msgstr "Является активным / Находится в корзине."
 
-#: ../sam-pro-ads-list.php:47 ../sam-pro-place-editor.php:416 ../sam-pro-places-list.php:44
+#: sam-pro-ads-list.php:50 sam-pro-place-editor.php:517 sam-pro-places-list.php:47
 msgid "Potentially visible / Always invisible."
 msgstr "Потенциально видимые / Всегда невидимые."
 
-#: ../sam-pro-advertisers-list.php:32
+#: sam-pro-advertisers-list.php:35
 msgid "Mail successfully sent."
 msgstr "E-mail успешно отправлен."
 
-#: ../sam-pro-advertisers-list.php:36
+#: sam-pro-advertisers-list.php:39
 msgid "An error has occurred. Mail not sent."
 msgstr "Непредвиденная ошибка. E-mail не был отправлен."
 
-#: ../sam-pro-block-editor.php:52
+#: sam-pro-block-editor.php:59
 msgid "Item"
 msgstr "Элемент"
 
-#: ../sam-pro-block-editor.php:55
+#: sam-pro-block-editor.php:62
 msgid "Select Ad Object"
 msgstr "Выберите рекламный объект"
 
-#: ../sam-pro-block-editor.php:154
+#: sam-pro-block-editor.php:177
 msgid "Ads Block Data Updated."
 msgstr "Данные рекламного блока сохранены."
 
-#: ../sam-pro-block-editor.php:180
+#: sam-pro-block-editor.php:203
 msgid "Ads Block Editor"
 msgstr "Редактор рекламного блока"
 
-#: ../sam-pro-block-editor.php:195
+#: sam-pro-block-editor.php:220
 msgid "Back to Blocks List"
 msgstr "Назад, к списку блоков"
 
-#: ../sam-pro-block-editor.php:202
+#: sam-pro-block-editor.php:227
 msgid "Ads Block ID"
 msgstr "ID рекламного блока"
 
-#: ../sam-pro-block-editor.php:248
+#: sam-pro-block-editor.php:276
 msgid "Name of Ads Block"
 msgstr "Имя рекламного блока"
 
-#: ../sam-pro-block-editor.php:249
+#: sam-pro-block-editor.php:277
 msgid "Enter Ads Block Name Here"
 msgstr "Введите имя блока здесь"
 
-#: ../sam-pro-block-editor.php:254
+#: sam-pro-block-editor.php:282
 msgid "Ads Block Description"
 msgstr "Описание блока"
 
-#: ../sam-pro-block-editor.php:269
+#: sam-pro-block-editor.php:298
 msgid "Block Structure"
 msgstr "Структура блока"
 
-#: ../sam-pro-block-editor.php:272
+#: sam-pro-block-editor.php:301
 msgid "Rows"
 msgstr "Строки"
 
-#: ../sam-pro-block-editor.php:276
+#: sam-pro-block-editor.php:305
 msgid "Items per Row"
 msgstr "Элементов в строке"
 
-#: ../sam-pro-block-editor.php:279
+#: sam-pro-block-editor.php:308
 msgid "After changing these properties you must save the Block settings before using Items Editor."
 msgstr "После изменения этих параметров Вы должны сохранить параметры блока рекламных объявлений перед использованием Редактора Блока."
 
-#: ../sam-pro-block-editor.php:285
+#: sam-pro-block-editor.php:314 sam-pro-place-editor.php:315
 msgid "Styles"
 msgstr "Стили"
 
-#: ../sam-pro-block-editor.php:288
+#: sam-pro-block-editor.php:317
 msgid "Block Style"
 msgstr "Стиль блока"
 
-#: ../sam-pro-block-editor.php:292
-msgid "Block's Item Style"
+#: sam-pro-block-editor.php:322
+msgid "Block Line Style"
+msgstr "Стиль линии блока"
+
+#: sam-pro-block-editor.php:328 sam-pro-place-editor.php:324
+msgid "Center"
+msgstr "По центру"
+
+#: sam-pro-block-editor.php:330 sam-pro-place-editor.php:326
+msgid "Left"
+msgstr "Слева"
+
+#: sam-pro-block-editor.php:332 sam-pro-place-editor.php:328
+msgid "Right"
+msgstr "Справа"
+
+#: sam-pro-block-editor.php:335
+msgid "Block Item Style"
 msgstr "Стиль элемента блока"
 
-#: ../sam-pro-block-editor.php:295
+#: sam-pro-block-editor.php:339
 msgid ""
 "Use <strong>Stylesheet rules</strong> for defining these properties.<br><strong>For example:</strong> <code>background: url(sheep.png) center bottom no-repeat;</code> for "
 "background or/and <code>border: 5px solid red;</code> for border property, etc. Use the semicolon to separate parameters."
@@ -1985,7 +2022,7 @@ msgstr ""
 "Используйте <strong>правила стилей</strong> для определения этих свойств. <br> <strong>Например:</strong> <code>background: url(sheep.png) center bottom no-repeat;</code> для "
 "фона и/или <code>border: 5px solid red;</code> для окантовки, и т.д. Используйте точку с запятой, чтобы разделять параметры."
 
-#: ../sam-pro-block-editor.php:296
+#: sam-pro-block-editor.php:340
 msgid ""
 "<strong>Important Note</strong>: As the Ads Block is the regular structure, predefined styles of individual items for drawing Ads Block's elements aren't used. Define styles for "
 "Ads Block Items here!"
@@ -1993,259 +2030,280 @@ msgstr ""
 "<strong>Важное примечание:</strong> Поскольку Блок является регулярной структурой, предварительно определенные стили отдельных элементов для прорисовки элементов блока не "
 "используются. Определить стили для элементов блока необходимо здесь!"
 
-#: ../sam-pro-block-editor.php:305
+#: sam-pro-block-editor.php:349
 msgid "Items Editor"
 msgstr "Редактор блока"
 
-#: ../sam-pro-block-editor.php:307
+#: sam-pro-block-editor.php:351
 msgid "Adjust items settings of this Ads Block."
 msgstr "Настройте элементы для этого рекламного блока."
 
-#: ../sam-pro-block-editor.php:309
+#: sam-pro-block-editor.php:353
 msgid "Block Editor."
 msgstr "Редактор рекламного блока."
 
-#: ../sam-pro-blocks-list.php:35
+#: sam-pro-blocks-list.php:38
 msgid "Manage Blocks"
 msgstr "Управление рекламными блоками"
 
-#: ../sam-pro-core.php:175
+#: sam-pro-core.php:176
 msgctxt "Copyright String"
 msgid "SAM Pro (Free Edition) for Wordpress."
 msgstr "SAM Pro (Free Edition) для Wordpress."
 
-#: ../sam-pro-core.php:175
+#: sam-pro-core.php:176
 msgctxt "Copyright String"
 msgid "All rights reserved."
 msgstr "Все права защищены."
 
-#: ../sam-pro-error-log.php:20
+#: sam-pro-error-log.php:23
 msgid "Errors"
 msgstr "Ошибки"
 
-#: ../sam-pro-error-log.php:39
+#: sam-pro-error-log.php:42
 msgid "Info Message"
 msgstr "Информационное сообщение"
 
-#: ../sam-pro-error-log.php:40
+#: sam-pro-error-log.php:43
 msgid "Error / Error (resolved)."
 msgstr "Ошибка / Ошибка (исправлено)"
 
-#: ../sam-pro-place-editor.php:123
+#: sam-pro-place-editor.php:153
 msgid "Ads Place Data Updated."
 msgstr "Данные рекламного места сохранены."
 
-#: ../sam-pro-place-editor.php:166
+#: sam-pro-place-editor.php:198
 msgid "Back to Places List"
 msgstr "Назад, к списку мест"
 
-#: ../sam-pro-place-editor.php:173
+#: sam-pro-place-editor.php:205
 msgid "Ads Place ID"
 msgstr "ID рекламного места"
 
-#: ../sam-pro-place-editor.php:188
+#: sam-pro-place-editor.php:222
 msgid "Is Active"
 msgstr "Активно"
 
-#: ../sam-pro-place-editor.php:230
+#: sam-pro-place-editor.php:266
 msgid "Name of Ads Place"
 msgstr "Имя рекламного места"
 
-#: ../sam-pro-place-editor.php:231
+#: sam-pro-place-editor.php:267
 msgid "Enter Ads Place Name Here"
 msgstr "Введите имя рекламного места здесь"
 
-#: ../sam-pro-place-editor.php:236
+#: sam-pro-place-editor.php:272
 msgid "Ads Place Description"
 msgstr "Описание рекламного места"
 
-#: ../sam-pro-place-editor.php:244
+#: sam-pro-place-editor.php:281
 msgid "If you want to sell this place, you have to describe it in details. Potential advertisers must know what they buy."
 msgstr "Если вы хотите продать это место, вы должны описать его в деталях. Потенциальные рекламодатели должны знать, что они покупают."
 
-#: ../sam-pro-place-editor.php:252 ../sam-pro-place-editor.php:301
+#: sam-pro-place-editor.php:289 sam-pro-place-editor.php:369
 msgid "Default Ad"
 msgstr "Объявление по умолчанию"
 
-#: ../sam-pro-place-editor.php:253
+#: sam-pro-place-editor.php:290
 msgid "Selling"
 msgstr "Продажа"
 
-#: ../sam-pro-place-editor.php:259
+#: sam-pro-place-editor.php:296
 msgid "Ads Place Size"
 msgstr "Размеры рекламного места"
 
-#: ../sam-pro-place-editor.php:261
+#: sam-pro-place-editor.php:298
 msgid "Select size of this Ads Place."
 msgstr "Выберите размеры для этого рекламного места."
 
-#: ../sam-pro-place-editor.php:276
+#: sam-pro-place-editor.php:313
 msgid "Codes"
 msgstr "Коды"
 
-#: ../sam-pro-place-editor.php:278
-msgid "Here you can to define leading and trailing parts of tag that you want to place around Ads Place tags."
-msgstr "Здесь вы можете определить начальные и конечные части тега, который вы хотите поместить вокруг тэгов рекламного места в теле документа."
+#: sam-pro-place-editor.php:316
+msgid "Here you can define style for the Place container."
+msgstr "Здесь вы можете определить стиль для контейнера Рекламного Места."
 
-#: ../sam-pro-place-editor.php:280
-msgid "Code Before"
-msgstr "Код до"
+#: sam-pro-place-editor.php:318
+msgid "Place Container Style"
+msgstr "Стили контейнера Рекламного Места"
 
-#: ../sam-pro-place-editor.php:284
-msgid "Code After"
-msgstr "Код после"
-
-#: ../sam-pro-place-editor.php:288
-msgid "Center"
-msgstr "По центру"
-
-#: ../sam-pro-place-editor.php:289
+#: sam-pro-place-editor.php:330
 msgid "Float Left"
 msgstr "Прижать влево"
 
-#: ../sam-pro-place-editor.php:290
+#: sam-pro-place-editor.php:332
 msgid "Float Right"
 msgstr "Прижать вправо"
 
-#: ../sam-pro-place-editor.php:292
+#: sam-pro-place-editor.php:334
+msgid "Sizes"
+msgstr "Размеры"
+
+#: sam-pro-place-editor.php:337
+msgid "Before/After Tags"
+msgstr "Теги до/после"
+
+#: sam-pro-place-editor.php:338
+msgid "Here you can to define leading and trailing parts of tag that you want to place around Ads Place tags."
+msgstr "Здесь вы можете определить начальные и конечные части тега, который вы хотите поместить вокруг тэгов рекламного места в теле документа."
+
+#: sam-pro-place-editor.php:339
+msgid "Placement of the Before/After tags"
+msgstr "Размещение тегов до/после"
+
+#: sam-pro-place-editor.php:343
+msgid "Row"
+msgstr "По горизонтали"
+
+#: sam-pro-place-editor.php:346
+msgid "Column"
+msgstr "По вертикали"
+
+#: sam-pro-place-editor.php:349
+msgid "Code Before"
+msgstr "Код до"
+
+#: sam-pro-place-editor.php:355
+msgid "Code After"
+msgstr "Код после"
+
+#: sam-pro-place-editor.php:360
 msgid "You can enter any HTML codes here for the further placing of their before and after the code of the Ads Place."
 msgstr "Вы можете ввести любые коды HTML здесь для дальнейшего размещения их до и после кода объявления."
 
-#: ../sam-pro-place-editor.php:303
+#: sam-pro-place-editor.php:371
 msgid "Select type of the code for the Default Ad and fill data entry fields with the appropriate data."
 msgstr "Выберите тип кода для объявления по умолчанию и заполните поля ввода данных соответствующими данными."
 
-#: ../sam-pro-place-editor.php:317
+#: sam-pro-place-editor.php:390
 msgid "Target"
 msgstr "Цель"
 
-#: ../sam-pro-place-editor.php:321
+#: sam-pro-place-editor.php:395
 msgid "Alternative Text"
 msgstr "Альтернативный текст"
 
-#: ../sam-pro-place-editor.php:332
+#: sam-pro-place-editor.php:410
 msgid "Default Ad Code"
 msgstr "Код объявления по умолчанию"
 
-#: ../sam-pro-place-editor.php:335
+#: sam-pro-place-editor.php:416
 msgid "This is the set of inline ads"
 msgstr "Это набор инлайн объявлений"
 
-#: ../sam-pro-place-editor.php:339
+#: sam-pro-place-editor.php:423
 msgid "This is one-block code of third-party AdServer rotator. Selecting this checkbox prevents displaying contained ads."
 msgstr ""
 "Это код (одним блоком) ротатора стороннего сервера рекламных объявлений. Выбор этого параметра останавливает показ содержащихся в рекламном месте объявлений для показа только "
 "этого кода."
 
-#: ../sam-pro-place-editor.php:344
+#: sam-pro-place-editor.php:429
 msgid "Google DFP"
 msgstr "Блок Google DFP"
 
-#: ../sam-pro-place-editor.php:349
+#: sam-pro-place-editor.php:436
 msgid "DFP Block Name"
 msgstr "Имя блока DFP"
 
-#: ../sam-pro-place-editor.php:352
+#: sam-pro-place-editor.php:439
 msgid "This is name of Google DFP block!"
 msgstr "Это имя блока от Google DFP!"
 
-#: ../sam-pro-place-editor.php:354
+#: sam-pro-place-editor.php:441
 msgid "The default ad will be shown only if the logic of the plugin can not allow to show any of the contained ads on the current page of the document."
 msgstr ""
 "Объявление по умолчанию будет показано только в том случае, если логика плагина не позволит показать любое из привязанных к рекламному месту объявлений на текущей странице "
 "документа."
 
-#: ../sam-pro-place-editor.php:363
+#: sam-pro-place-editor.php:450
 msgid "Selling Parameters"
 msgstr "Параметры продажи"
 
-#: ../sam-pro-place-editor.php:367 ../sam-pro-statistics.php:135
+#: sam-pro-place-editor.php:455 sam-pro-statistics.php:138
 msgid "For Sale"
 msgstr "на продажу"
 
-#: ../sam-pro-place-editor.php:376
+#: sam-pro-place-editor.php:468
 msgid "Each Ad"
 msgstr "Каждое объявление"
 
-#: ../sam-pro-place-editor.php:379
+#: sam-pro-place-editor.php:471
 msgid "<strong>Space</strong> - You sale space of Ads Place. Advertiser can place here so much ads as he wants."
 msgstr "<strong>Пространство</strong> - Вы продаете пространство рекламного места. Рекламодатель может разместить здесь столько объявления, сколько захочет."
 
-#: ../sam-pro-place-editor.php:380
+#: sam-pro-place-editor.php:472
 msgid "<strong>Each Ad</strong> - You sell each ad individually. The advertiser pays for each ad that appears in this advertising space."
 msgstr ""
 "<strong>Каждое объявление</strong> - Вы продаете каждое объявление в индивидуальном порядке. Рекламодатель платит за каждое объявление, размещенное в этом рекламном пространстве."
 
-#: ../sam-pro-place-editor.php:383
+#: sam-pro-place-editor.php:475
 msgid "Selling Price"
 msgstr "Цена продажи"
 
-#: ../sam-pro-place-editor.php:408
+#: sam-pro-place-editor.php:506
 msgid "Linked Ads"
 msgstr "Подключенные объявления"
 
-#: ../sam-pro-place-editor.php:410
+#: sam-pro-place-editor.php:508
 msgid "These are the ads linked to this Ads Place. You can link any number of ads to this Ads Place, unlink any ad and edit weight of each ad."
 msgstr ""
 "Это рекламные объявления, привязанные к этому рекламному месту. Вы можете привязать любое количество объявлений к этому рекламному месту, отключить любое рекламное объявление, а "
 "так же, редактировать вес каждого объявления."
 
-#: ../sam-pro-place-editor.php:426 ../sam-pro-places-list.php:46
+#: sam-pro-place-editor.php:527 sam-pro-places-list.php:49
 msgid "Select Ads"
 msgstr "Выбрать объявления"
 
-#: ../sam-pro-sizes.php:20 ../sam-pro-sizes.php:101
+#: sam-pro-sizes.php:20 sam-pro-sizes.php:101
 msgid "Large Leaderboard"
 msgstr "Большая доска почёта"
 
-#: ../sam-pro-sizes.php:21 ../sam-pro-sizes.php:102
+#: sam-pro-sizes.php:21 sam-pro-sizes.php:102
 msgid "Leaderboard"
 msgstr "Доска почёта"
 
-#: ../sam-pro-sizes.php:22 ../sam-pro-sizes.php:24 ../sam-pro-sizes.php:25 ../sam-pro-sizes.php:103 ../sam-pro-sizes.php:105 ../sam-pro-sizes.php:106
+#: sam-pro-sizes.php:22 sam-pro-sizes.php:24 sam-pro-sizes.php:25 sam-pro-sizes.php:103 sam-pro-sizes.php:105 sam-pro-sizes.php:106
 msgid "Small Leaderboard"
 msgstr "Малая доска почёта"
 
-#: ../sam-pro-sizes.php:23 ../sam-pro-sizes.php:104
+#: sam-pro-sizes.php:23 sam-pro-sizes.php:104
 msgid "Mega Unit"
 msgstr "Мегаблок"
 
-#: ../sam-pro-sizes.php:26 ../sam-pro-sizes.php:27 ../sam-pro-sizes.php:28 ../sam-pro-sizes.php:30 ../sam-pro-sizes.php:31 ../sam-pro-sizes.php:32 ../sam-pro-sizes.php:107
-#: ../sam-pro-sizes.php:108 ../sam-pro-sizes.php:109 ../sam-pro-sizes.php:111 ../sam-pro-sizes.php:112 ../sam-pro-sizes.php:113
+#: sam-pro-sizes.php:26 sam-pro-sizes.php:27 sam-pro-sizes.php:28 sam-pro-sizes.php:30 sam-pro-sizes.php:31 sam-pro-sizes.php:32 sam-pro-sizes.php:107 sam-pro-sizes.php:108
+#: sam-pro-sizes.php:109 sam-pro-sizes.php:111 sam-pro-sizes.php:112 sam-pro-sizes.php:113
 msgid "Tall Banner"
 msgstr "Высокий баннер"
 
-#: ../sam-pro-sizes.php:29 ../sam-pro-sizes.php:79 ../sam-pro-sizes.php:110
+#: sam-pro-sizes.php:29 sam-pro-sizes.php:79 sam-pro-sizes.php:110
 msgid "Banner"
 msgstr "Баннер"
 
-#: ../sam-pro-sizes.php:33 ../sam-pro-sizes.php:35 ../sam-pro-sizes.php:65 ../sam-pro-sizes.php:66 ../sam-pro-sizes.php:114 ../sam-pro-sizes.php:116 ../sam-pro-sizes.php:150
-#: ../sam-pro-sizes.php:151
+#: sam-pro-sizes.php:33 sam-pro-sizes.php:35 sam-pro-sizes.php:65 sam-pro-sizes.php:66 sam-pro-sizes.php:114 sam-pro-sizes.php:116 sam-pro-sizes.php:150 sam-pro-sizes.php:151
 msgid "Half Banner"
 msgstr "Полубаннер"
 
-#: ../sam-pro-sizes.php:34 ../sam-pro-sizes.php:63 ../sam-pro-sizes.php:64 ../sam-pro-sizes.php:115 ../sam-pro-sizes.php:148 ../sam-pro-sizes.php:149
+#: sam-pro-sizes.php:34 sam-pro-sizes.php:63 sam-pro-sizes.php:64 sam-pro-sizes.php:115 sam-pro-sizes.php:148 sam-pro-sizes.php:149
 msgid "Tall Half Banner"
 msgstr "Высокий полубаннер"
 
-#: ../sam-pro-sizes.php:36 ../sam-pro-sizes.php:37 ../sam-pro-sizes.php:62 ../sam-pro-sizes.php:69 ../sam-pro-sizes.php:70 ../sam-pro-sizes.php:117 ../sam-pro-sizes.php:118
-#: ../sam-pro-sizes.php:147 ../sam-pro-sizes.php:154 ../sam-pro-sizes.php:155
+#: sam-pro-sizes.php:36 sam-pro-sizes.php:37 sam-pro-sizes.php:62 sam-pro-sizes.php:69 sam-pro-sizes.php:70 sam-pro-sizes.php:117 sam-pro-sizes.php:118 sam-pro-sizes.php:147
+#: sam-pro-sizes.php:154 sam-pro-sizes.php:155
 msgid "Button"
 msgstr "Кнопка"
 
-#: ../sam-pro-sizes.php:38 ../sam-pro-sizes.php:119
+#: sam-pro-sizes.php:38 sam-pro-sizes.php:119
 msgid "Micro Bar"
 msgstr "Микро-бар"
 
-#: ../sam-pro-sizes.php:39 ../sam-pro-sizes.php:40 ../sam-pro-sizes.php:41 ../sam-pro-sizes.php:42 ../sam-pro-sizes.php:120 ../sam-pro-sizes.php:121 ../sam-pro-sizes.php:122
-#: ../sam-pro-sizes.php:123
+#: sam-pro-sizes.php:39 sam-pro-sizes.php:40 sam-pro-sizes.php:41 sam-pro-sizes.php:42 sam-pro-sizes.php:120 sam-pro-sizes.php:121 sam-pro-sizes.php:122 sam-pro-sizes.php:123
 msgid "Thin Banner"
 msgstr "Тонкий баннер"
 
-#: ../sam-pro-sizes.php:39 ../sam-pro-sizes.php:40 ../sam-pro-sizes.php:41 ../sam-pro-sizes.php:42 ../sam-pro-sizes.php:63 ../sam-pro-sizes.php:64 ../sam-pro-sizes.php:65
-#: ../sam-pro-sizes.php:66 ../sam-pro-sizes.php:67 ../sam-pro-sizes.php:68 ../sam-pro-sizes.php:69 ../sam-pro-sizes.php:70 ../sam-pro-sizes.php:120 ../sam-pro-sizes.php:121
-#: ../sam-pro-sizes.php:122 ../sam-pro-sizes.php:123 ../sam-pro-sizes.php:148 ../sam-pro-sizes.php:149 ../sam-pro-sizes.php:150 ../sam-pro-sizes.php:151 ../sam-pro-sizes.php:152
-#: ../sam-pro-sizes.php:153 ../sam-pro-sizes.php:154 ../sam-pro-sizes.php:155
+#: sam-pro-sizes.php:39 sam-pro-sizes.php:40 sam-pro-sizes.php:41 sam-pro-sizes.php:42 sam-pro-sizes.php:63 sam-pro-sizes.php:64 sam-pro-sizes.php:65 sam-pro-sizes.php:66
+#: sam-pro-sizes.php:67 sam-pro-sizes.php:68 sam-pro-sizes.php:69 sam-pro-sizes.php:70 sam-pro-sizes.php:120 sam-pro-sizes.php:121 sam-pro-sizes.php:122 sam-pro-sizes.php:123
+#: sam-pro-sizes.php:148 sam-pro-sizes.php:149 sam-pro-sizes.php:150 sam-pro-sizes.php:151 sam-pro-sizes.php:152 sam-pro-sizes.php:153 sam-pro-sizes.php:154 sam-pro-sizes.php:155
 #, php-format
 msgid "%d Link"
 msgid_plural "%d Links"
@@ -2253,245 +2311,269 @@ msgstr[0] "%d ссылка"
 msgstr[1] "%d ссылки"
 msgstr[2] "%d ссылок"
 
-#: ../sam-pro-sizes.php:43 ../sam-pro-sizes.php:126
+#: sam-pro-sizes.php:43 sam-pro-sizes.php:126
 msgid "Wide Skyscraper"
 msgstr "Широкий небоскрёб"
 
-#: ../sam-pro-sizes.php:44 ../sam-pro-sizes.php:127
+#: sam-pro-sizes.php:44 sam-pro-sizes.php:127
 msgid "Skyscraper"
 msgstr "Небоскрёб"
 
-#: ../sam-pro-sizes.php:45 ../sam-pro-sizes.php:128
+#: sam-pro-sizes.php:45 sam-pro-sizes.php:128
 msgid "Wide Half Banner"
 msgstr "Широкий полубаннер"
 
-#: ../sam-pro-sizes.php:46 ../sam-pro-sizes.php:129
+#: sam-pro-sizes.php:46 sam-pro-sizes.php:129
 msgid "Vertical Rectangle"
 msgstr "Вертикальный прямоугольник"
 
-#: ../sam-pro-sizes.php:47 ../sam-pro-sizes.php:48 ../sam-pro-sizes.php:130 ../sam-pro-sizes.php:131
+#: sam-pro-sizes.php:47 sam-pro-sizes.php:48 sam-pro-sizes.php:130 sam-pro-sizes.php:131
 msgid "Tall Rectangle"
 msgstr "Высокий прямоугольник"
 
-#: ../sam-pro-sizes.php:49 ../sam-pro-sizes.php:132
+#: sam-pro-sizes.php:49 sam-pro-sizes.php:132
 msgid "Vertical Banner"
 msgstr "Вертикальный баннер"
 
-#: ../sam-pro-sizes.php:50 ../sam-pro-sizes.php:135
+#: sam-pro-sizes.php:50 sam-pro-sizes.php:135
 msgid "Large Rectangle"
 msgstr "Большой прямоугольник"
 
-#: ../sam-pro-sizes.php:51 ../sam-pro-sizes.php:52 ../sam-pro-sizes.php:136 ../sam-pro-sizes.php:137
+#: sam-pro-sizes.php:51 sam-pro-sizes.php:52 sam-pro-sizes.php:136 sam-pro-sizes.php:137
 msgid "Wide Rectangle"
 msgstr "Широкий прямоугольник"
 
-#: ../sam-pro-sizes.php:53 ../sam-pro-sizes.php:138
+#: sam-pro-sizes.php:53 sam-pro-sizes.php:138
 msgid "Medium Rectangle"
 msgstr "Средний прямоугольник"
 
-#: ../sam-pro-sizes.php:54 ../sam-pro-sizes.php:55 ../sam-pro-sizes.php:139 ../sam-pro-sizes.php:140
+#: sam-pro-sizes.php:54 sam-pro-sizes.php:55 sam-pro-sizes.php:139 sam-pro-sizes.php:140
 msgid "Small Wide Rectangle"
 msgstr "Малый широкий прямоугольник"
 
-#: ../sam-pro-sizes.php:56 ../sam-pro-sizes.php:141
+#: sam-pro-sizes.php:56 sam-pro-sizes.php:141
 msgid "Mini Wide Rectangle"
 msgstr "Маленький широкий прямоугольник"
 
-#: ../sam-pro-sizes.php:57 ../sam-pro-sizes.php:142 ../sam-pro-sizes.php:162
+#: sam-pro-sizes.php:57 sam-pro-sizes.php:142 sam-pro-sizes.php:162
 msgid "Square"
 msgstr "Прямоугольники"
 
-#: ../sam-pro-sizes.php:58 ../sam-pro-sizes.php:61 ../sam-pro-sizes.php:143 ../sam-pro-sizes.php:146
+#: sam-pro-sizes.php:58 sam-pro-sizes.php:61 sam-pro-sizes.php:143 sam-pro-sizes.php:146
 msgid "Small Square"
 msgstr "Малый квадрат"
 
-#: ../sam-pro-sizes.php:59 ../sam-pro-sizes.php:60 ../sam-pro-sizes.php:144 ../sam-pro-sizes.php:145
+#: sam-pro-sizes.php:59 sam-pro-sizes.php:60 sam-pro-sizes.php:144 sam-pro-sizes.php:145
 msgid "Small Rectangle"
 msgstr "Малый прямоугольник"
 
-#: ../sam-pro-sizes.php:67 ../sam-pro-sizes.php:68 ../sam-pro-sizes.php:152 ../sam-pro-sizes.php:153
+#: sam-pro-sizes.php:67 sam-pro-sizes.php:68 sam-pro-sizes.php:152 sam-pro-sizes.php:153
 msgid "Tall Button"
 msgstr "Широкая кнопка"
 
-#: ../sam-pro-sizes.php:85
+#: sam-pro-sizes.php:85
 msgid "Custom size"
 msgstr "Пользовательский размер"
 
-#: ../sam-pro-sizes.php:157
+#: sam-pro-sizes.php:157
 msgid "Custom sizes"
 msgstr "Пользовательские размеры"
 
-#: ../sam-pro-sizes.php:160
+#: sam-pro-sizes.php:160
 msgid "Horizontal"
 msgstr "Горизонтальные"
 
-#: ../sam-pro-sizes.php:161
+#: sam-pro-sizes.php:161
 msgid "Vertical"
 msgstr "Вертикальные"
 
-#: ../sam-pro-sizes.php:163
+#: sam-pro-sizes.php:163
 msgid "Custom width and height"
 msgstr "Пользовательские высота и ширина"
 
-#: ../sam-pro-statistics.php:128
+#: sam-pro-statistics.php:131
 msgid "SAM Pro Statistics"
 msgstr "Статистика SAM Pro"
 
-#: ../sam-pro-statistics.php:132
+#: sam-pro-statistics.php:135
 msgid "View"
 msgstr "Режим отображения"
 
-#: ../sam-pro-statistics.php:137
+#: sam-pro-statistics.php:140
 msgid "Period"
 msgstr "Период"
 
-#: ../sam-pro-statistics.php:160
+#: sam-pro-statistics.php:163
 msgctxt "Show Statistics"
 msgid "Show"
 msgstr "Показать"
 
-#: ../sam-pro-statistics.php:179
+#: sam-pro-statistics.php:182
 msgid "CPM"
 msgstr "CPM"
 
-#: ../sam-pro-statistics.php:183
+#: sam-pro-statistics.php:186
 msgid "CPC"
 msgstr "CPC"
 
-#: ../sam-pro-statistics.php:187
+#: sam-pro-statistics.php:190
 msgid "CTR"
 msgstr "CTR"
 
-#: ../sam-pro-statistics.php:204
+#: sam-pro-statistics.php:207
 msgid "Statistical Data of Advertisement"
 msgstr "Статистические данные рекламного объявления"
 
-#: ../sam-pro-tools-page.php:49
+#: sam-pro-tools-page.php:52
 msgid "SAM Tools"
 msgstr "Инструменты SAM "
 
-#: ../sam-pro-updater.php:26 ../tools/sam-pro-migrate.php:34
+#: sam-pro-updater.php:29 tools/sam-pro-migrate.php:37
 msgid "Updated..."
 msgstr "Обновлено ..."
 
-#: ../sam-pro-updater.php:26 ../tools/sam-pro-migrate.php:34
+#: sam-pro-updater.php:29 tools/sam-pro-migrate.php:37
 msgid "An error occurred during updating process..."
 msgstr "Произошла ошибка во время процесса обновления ..."
 
-#: ../sam-pro-updater.php:363
+#: sam-pro-updater.php:371
 #, php-format
 msgid "Table %s successfully created..."
 msgstr "Таблица %s успешно созданa..."
 
-#: ../sam-pro-widgets.php:20
+#: sam-pro-widgets.php:23
 msgid "Ads Place:"
 msgstr "Рекламное место"
 
-#: ../sam-pro-widgets.php:23
+#: sam-pro-widgets.php:26
 msgid "Ads Place rotator serviced by Simple Ads Manager (Pro Edition)."
 msgstr "Ротатор \"Рекламное место\" обслуживается плагином Simple Ads Manager (Pro Edition)."
 
-#: ../sam-pro-widgets.php:25
+#: sam-pro-widgets.php:28
 msgid "SAM Pro Place"
 msgstr "Рекламное место SAM Pro"
 
-#: ../sam-pro-widgets.php:132 ../sam-pro-widgets.php:297 ../sam-pro-widgets.php:451 ../sam-pro-widgets.php:615
+#: sam-pro-widgets.php:135 sam-pro-widgets.php:300 sam-pro-widgets.php:454 sam-pro-widgets.php:618
 msgid "Title:"
 msgstr "Заголовок:"
 
-#: ../sam-pro-widgets.php:157 ../sam-pro-widgets.php:320 ../sam-pro-widgets.php:474 ../sam-pro-widgets.php:638
+#: sam-pro-widgets.php:160 sam-pro-widgets.php:323 sam-pro-widgets.php:477 sam-pro-widgets.php:641
 msgid "Hide widget style."
 msgstr "Скрывать стиль виджета."
 
-#: ../sam-pro-widgets.php:166 ../sam-pro-widgets.php:483
+#: sam-pro-widgets.php:169 sam-pro-widgets.php:486
 msgid "Allow using previously defined \"before\" and \"after\" codes of Ads Place.."
 msgstr "Разрешить использование ранее определённых кодов \"до\" и \"после\" для рекламного места."
 
-#: ../sam-pro-widgets.php:185
-msgid "Ad"
-msgstr "Рекламное объявление"
-
-#: ../sam-pro-widgets.php:188
+#: sam-pro-widgets.php:191
 msgid "Non-rotating single ad serviced by Simple Ads Manager (Pro Edition)."
 msgstr "Рекламное объявление обслуживаемое плагином Simple Ads Manager (Pro Edition)."
 
-#: ../sam-pro-widgets.php:190
+#: sam-pro-widgets.php:193
 msgid "SAM Pro Single Ad"
 msgstr "Рекламное объявление SAM Pro"
 
-#: ../sam-pro-widgets.php:339
-msgid "Zone"
-msgstr "Рекламная зона"
-
-#: ../sam-pro-widgets.php:342
+#: sam-pro-widgets.php:345
 msgid "Zone selector serviced by Simple Ads Manager (Pro Edition)."
 msgstr "Селектор \"Рекламная зона\" обслуживаемый плагином Simple Ads Manager (Pro Edition)."
 
-#: ../sam-pro-widgets.php:344
+#: sam-pro-widgets.php:347
 msgid "SAM Pro Zone"
 msgstr "Рекламная зона SAM Pro"
 
-#: ../sam-pro-widgets.php:502
-msgid "Block"
-msgstr "Блок"
-
-#: ../sam-pro-widgets.php:507
+#: sam-pro-widgets.php:510
 msgid "The grid of the Ad Objects serviced by Simple Ads Manager (Pro Edition)."
 msgstr "Блок (сетка) рекламных объектов обслуживаемый плагином Simple Ads Manager (Pro Edition)"
 
-#: ../sam-pro-widgets.php:510
+#: sam-pro-widgets.php:513
 msgid "SAM Pro Block"
 msgstr "Рекламный блок SAM Pro"
 
-#: ../sam-pro-zone-editor.php:66
+#: sam-pro-zone-editor.php:69
 msgid "Zone Data Updated."
 msgstr "Данные рекламной зоны обновлены."
 
-#: ../sam-pro-zone-editor.php:120
+#: sam-pro-zone-editor.php:123
 msgid "Back to Zones List"
 msgstr "Назад, к списку зон"
 
-#: ../sam-pro-zone-editor.php:134
+#: sam-pro-zone-editor.php:137
 msgid "Is in trash"
 msgstr "В корзине"
 
-#: ../sam-pro-zone-editor.php:171
+#: sam-pro-zone-editor.php:174
 msgid "Name of Ads Zone"
 msgstr "Имя рекламной зоны"
 
-#: ../sam-pro-zone-editor.php:172
+#: sam-pro-zone-editor.php:175
 msgid "Enter Ads Zone Name Here"
 msgstr "Введите имя рекламной зоны здесь"
 
-#: ../sam-pro-zone-editor.php:177
+#: sam-pro-zone-editor.php:180
 msgid "Ads Zone Description"
 msgstr "Описание рекламной зоны"
 
-#: ../sam-pro-zone-editor.php:195 ../sam-pro-zone-editor.php:216
+#: sam-pro-zone-editor.php:198 sam-pro-zone-editor.php:219
 msgid "Default Place"
 msgstr "Рекламное место по умолчанию"
 
-#: ../sam-pro-zone-editor.php:213
+#: sam-pro-zone-editor.php:216
 msgid "Singular Page Rules"
 msgstr "Правила для сингулярных страниц"
 
-#: ../sam-pro-zone-editor.php:236
+#: sam-pro-zone-editor.php:239
 msgid "Select Rules"
 msgstr "Выбор правил"
 
-#: ../sam-pro-zone-editor.php:243
+#: sam-pro-zone-editor.php:246
 msgid "Select Rules for Singular Pages"
 msgstr "Выберите правила для сингулярных страниц"
 
-#: ../sam-pro-zones-list.php:35
+#: sam-pro-zones-list.php:38
 msgid "Manage Zones"
 msgstr "Управление рекламными зонами"
 
-#: ../tools/sam-pro-mailer.php:44
+#: tools/sam-pro-addons-list.php:15
+msgid "XAds"
+msgstr "XAds"
+
+#: tools/sam-pro-addons-list.php:16
+msgid "extended visualisation of ads served by SAM Pro plugin."
+msgstr "Расширенная визуализация объявлений плагина SAM Pro."
+
+#: tools/sam-pro-addons-list.php:22
+msgid "Ad Slider"
+msgstr "Ad Slider"
+
+#: tools/sam-pro-addons-list.php:23
+msgid "provides possibility of rotating ads as slider for the ads rotating by timer."
+msgstr "обеспечивает возможность ротации объявлений как слайдер объявлений, ротируемых по таймеру."
+
+#: tools/sam-pro-addons-list.php:29
+msgid "Advertising Request"
+msgstr "Advertising Request"
+
+#: tools/sam-pro-addons-list.php:30
+msgid "provides the ability to online order advertising on the site."
+msgstr "обеспечивает возможность онлайн заказа рекламы на сайте."
+
+#: tools/sam-pro-addons-list.php:36
+msgid "Geo Targeting"
+msgstr "Geo Targeting"
+
+#: tools/sam-pro-addons-list.php:37
+msgid "enables targeting of advertising depending on the visitor geolocation."
+msgstr "позволяет таргетинг рекламы в зависимости от географического расположения посетителя."
+
+#: tools/sam-pro-addons-list.php:47
+msgid "Purchase"
+msgstr "Купить"
+
+#: tools/sam-pro-mailer.php:47
 msgid "Mails were sent..."
 msgstr "Письма были отправлены ..."
 
-#: ../tools/sam-pro-mailer.php:46
+#: tools/sam-pro-mailer.php:49
 #, php-format
 msgid "One mail was successfully sent. "
 msgid_plural "%s mails were successfully sent. "
@@ -2499,7 +2581,7 @@ msgstr[0] "Успешно отправлено %s сообщение."
 msgstr[1] "Успешно отправлено %s сообщения."
 msgstr[2] "Успешно отправлено %s сообщений."
 
-#: ../tools/sam-pro-mailer.php:47
+#: tools/sam-pro-mailer.php:50
 #, php-format
 msgid "There is one error during sending mails."
 msgid_plural "There are %s errors during sending mails."
@@ -2507,7 +2589,7 @@ msgstr[0] "При отправке почты произошла %s ошибка
 msgstr[1] "При отправке почты произошло %s ошибки."
 msgstr[2] "При отправке почты произошло %s ошибок."
 
-#: ../tools/sam-pro-mailer.php:48
+#: tools/sam-pro-mailer.php:51
 msgid ""
 " The success message does not automatically mean that the user received the email successfully. It just only means that the SAM plugin was able to process the request without any "
 "errors."
@@ -2515,24 +2597,24 @@ msgstr ""
 "Сообщение об успехе не означает автоматически, что пользователь успешно получил письмо по электронной почте. Это означает только то, что плагин SAM смог обработать запрос без "
 "каких-либо ошибок."
 
-#: ../tools/sam-pro-migrate.php:94
+#: tools/sam-pro-migrate.php:97
 msgid "Options"
 msgstr "Параметры"
 
-#: ../tools/sam-pro-migrate.php:96
+#: tools/sam-pro-migrate.php:99
 msgid "Migrating options: There are no options to migrate."
 msgstr "Перенос параметров: Параметры для переноса отсутствуют."
 
-#: ../tools/sam-pro-migrate.php:104
+#: tools/sam-pro-migrate.php:107
 msgid "Options: Something went wrong. More information in the error log..."
 msgstr "Параметры: Что-то пошло не так. Дополнительные сведения в журнале ошибок..."
 
-#: ../tools/sam-pro-migrate.php:106
+#: tools/sam-pro-migrate.php:109
 msgid "The options of Simple Ads Manager are successfully migrated. "
 msgstr "Параметры Simple Ads Manager успешно перенесены. "
 
-#: ../tools/sam-pro-migrate.php:194 ../tools/sam-pro-migrate.php:246 ../tools/sam-pro-migrate.php:262 ../tools/sam-pro-migrate.php:280 ../tools/sam-pro-migrate.php:441
-#: ../tools/sam-pro-migrate.php:481 ../tools/sam-pro-migrate.php:502 ../tools/sam-pro-migrate.php:520
+#: tools/sam-pro-migrate.php:197 tools/sam-pro-migrate.php:249 tools/sam-pro-migrate.php:265 tools/sam-pro-migrate.php:283 tools/sam-pro-migrate.php:444
+#: tools/sam-pro-migrate.php:484 tools/sam-pro-migrate.php:505 tools/sam-pro-migrate.php:523
 #, php-format
 msgid "Migrating: %s record added to the table "
 msgid_plural "Migrating: %s records added to the table "
@@ -2540,103 +2622,103 @@ msgstr[0] "Перенос данных: %s запись добавлена в т
 msgstr[1] "Перенос данных: %s записи добавлены в таблицу "
 msgstr[2] "Перенос данных: %s записей добавлено в таблицу "
 
-#: ../tools/sam-pro-migrate.php:321
+#: tools/sam-pro-migrate.php:324
 msgid "Singular Page"
 msgstr "Сингулярная страница"
 
-#: ../tools/sam-pro-migrate.php:528
+#: tools/sam-pro-migrate.php:531
 msgid "Data: Something went wrong. More information in the error log..."
 msgstr "Данные: Что-то пошло не так. Дополнительные сведения в журнале ошибок..."
 
-#: ../tools/sam-pro-migrate.php:530
+#: tools/sam-pro-migrate.php:533
 msgid "The data of Simple Ads Manager is successfully migrated. Now you can remove Simple Ads Manager plugin from your server."
 msgstr "Данные Simple Ads Manager успешно перенесены.  Теперь вы можете удалить плагин Simple Ads Manager с вашего сервера."
 
-#: ../tools/sam-pro-migrate.php:547 ../tools/sam-pro-migrate.php:556
+#: tools/sam-pro-migrate.php:550 tools/sam-pro-migrate.php:559
 msgid "Migrate Data"
 msgstr "Перенос данных"
 
-#: ../tools/sam-pro-migrate.php:549
+#: tools/sam-pro-migrate.php:552
 msgid "Migrate data from"
 msgstr "Перенос данных из"
 
-#: ../tools/sam-pro-migrate.php:560
+#: tools/sam-pro-migrate.php:563
 msgid "Migrate options"
 msgstr "Перенести параметры"
 
-#: ../tools/sam-pro-migrate.php:564
+#: tools/sam-pro-migrate.php:567
 msgid "Migrate data"
 msgstr "Перенести данные"
 
-#: ../tools/sam-pro-migrate.php:569
+#: tools/sam-pro-migrate.php:572
 msgid "Migrate statistical data"
 msgstr "Перенести статистические данные"
 
-#: ../tools/sam-pro-migrate.php:573
+#: tools/sam-pro-migrate.php:576
 msgid "Clear target tables before migrating data"
 msgstr "Очистить таблицы назначения перед переносом данных"
 
-#: ../tools/sam-pro-migrate.php:576
+#: tools/sam-pro-migrate.php:579
 msgid ""
 "It is highly recommended make migration of data into an empty tables of the plugin. Some part of source data can be lost during transfer process if target tables are not empty."
 msgstr ""
 "Настоятельно рекомендуется делать перенос данных в пустые таблицы плагина. Часть исходных данных может быть потеряна в процессе переноса, если таблицы назначения не являются "
 "пустыми."
 
-#: ../tools/sam-pro-pointers.php:59
+#: tools/sam-pro-pointers.php:62
 msgid "Ad Slider for SAM Pro"
 msgstr "Ad Slider для SAM Pro"
 
-#: ../tools/sam-pro-pointers.php:60
+#: tools/sam-pro-pointers.php:63
 msgid "The Ad Slider is an addon for the SAM Pro (Free and Lite editions) plugin that provides possibility of rotating ads as slider for the ads that are rotating by timer."
 msgstr ""
 "Ad Slider - аддон для плагина SAM Pro (Free и Lite выпуски), который обеспечивает возможность ротации объявлений в виде слайдера (для объявлений, которые ротируются по таймеру)."
 
-#: ../tools/sam-pro-pointers.php:61
+#: tools/sam-pro-pointers.php:64
 msgid "Purchase Ad Slider"
 msgstr "Купить Ad Slider"
 
-#: ../tools/sam-pro-pointers.php:62
+#: tools/sam-pro-pointers.php:65
 msgid "More Info..."
 msgstr "Подробнее ..."
 
-#: ../tools/sam-pro-pointers.php:63
+#: tools/sam-pro-pointers.php:66
 msgid "Features"
 msgstr "Возможности"
 
-#: ../tools/sam-pro-pointers.php:64
+#: tools/sam-pro-pointers.php:67
 msgid "Possibility of rotating ads by timer"
 msgstr "Возможность ротации объявлений по таймеру"
 
-#: ../tools/sam-pro-pointers.php:65
+#: tools/sam-pro-pointers.php:68
 msgid "Possibility of rotating ads as slider"
 msgstr "Возможность ротации объявлений в виде слайдера"
 
-#: ../tools/sam-pro-pointers.php:66
+#: tools/sam-pro-pointers.php:69
 msgid "Two sliding effects (horizontal and fade)"
 msgstr "Два эффекта слайдера (горизонтальное перемещение и затухание)"
 
-#: ../tools/sam-pro-pointers.php:67
+#: tools/sam-pro-pointers.php:70
 msgid "Possibility of adjusting parameters of slider"
 msgstr "Возможность регулировки параметров слайдера"
 
-#: ../tools/sam-pro-pointers.php:68
+#: tools/sam-pro-pointers.php:71
 msgid "Possibility of sliding any type of ads"
 msgstr "Возможность ротации в слайдере любого типа объявлений"
 
-#: ../tools/sam-pro-pointers.php:69
+#: tools/sam-pro-pointers.php:72
 msgid "Responsive"
 msgstr "Адаптивный дизайн"
 
-#: ../tools/sam-pro-pointers.php:70
+#: tools/sam-pro-pointers.php:73
 msgid "Ready for localizing"
 msgstr "Готов к локализации"
 
-#: ../tools/sam-pro-scavenger.php:28
+#: tools/sam-pro-scavenger.php:31
 msgid "Expired ads were scavenged..."
 msgstr "Просроченные объявления убраны ..."
 
-#: ../tools/sam-pro-scavenger.php:29
+#: tools/sam-pro-scavenger.php:32
 #, php-format
 msgid "One expired ad was successfully scavenged."
 msgid_plural "%s expired ads were successfully scavenged."
@@ -2644,36 +2726,36 @@ msgstr[0] "Одно просроченное объявление было уб�
 msgstr[1] "%s просроченных объявления было убрано."
 msgstr[2] "%s просроченных объявлений было убрано."
 
-#: ../tools/sam-pro-stats-tools.php:24
+#: tools/sam-pro-stats-tools.php:27
 msgid "An error occurred during clearing process..."
 msgstr "Произошла ошибка во время процесса очистки ..."
 
-#: ../tools/sam-pro-stats-tools.php:40
+#: tools/sam-pro-stats-tools.php:43
 #, php-format
 msgid "All statistical data before %s is cleared..."
 msgstr "Все статистические данные до %s были удалены ..."
 
-#: ../tools/sam-pro-stats-tools.php:86
+#: tools/sam-pro-stats-tools.php:89
 msgid "Statistical data were cleared."
 msgstr "Статистические данные очищены."
 
-#: ../tools/sam-pro-stats-tools.php:109 ../tools/sam-pro-stats-tools.php:111
+#: tools/sam-pro-stats-tools.php:112 tools/sam-pro-stats-tools.php:114
 msgid "All statistical data are completely removed."
 msgstr "Все статистические данные полностью удалены."
 
-#: ../tools/sam-pro-stats-tools.php:122
+#: tools/sam-pro-stats-tools.php:125
 msgid "Clear Statistical Data"
 msgstr "Удалить статистические данные"
 
-#: ../tools/sam-pro-stats-tools.php:129
+#: tools/sam-pro-stats-tools.php:132
 msgid "Reset Statistical Data"
 msgstr "Очистить статистические данные"
 
-#: ../tools/sam-pro-stats-tools.php:132
+#: tools/sam-pro-stats-tools.php:135
 msgid "Reset Statistics"
 msgstr "Очистить статистику"
 
-#: ../tools/sam-pro-stats-tools.php:135
+#: tools/sam-pro-stats-tools.php:138
 msgid ""
 "Clearing statistics outside the keeping period. Use this button in case of problems with the automatic cleaning of the statistics table. The data within the keeping period "
 "specified by the plugin parameters will not be affected by this action."
@@ -2681,15 +2763,15 @@ msgstr ""
 "Очистка статистики за пределами периода хранения. Используйте эту кнопку в случае возникновения проблем с автоматической очисткой таблицы статистики. Данные, входящие в заданный "
 "в параметрах плагина период хранения, не будут затронуты этим действием."
 
-#: ../tools/sam-pro-stats-tools.php:136
+#: tools/sam-pro-stats-tools.php:139
 msgid "Remove Statistical Data"
 msgstr "Удалить статистические данные"
 
-#: ../tools/sam-pro-stats-tools.php:139
+#: tools/sam-pro-stats-tools.php:142
 msgid "Remove Statistics"
 msgstr "Удалить статистику"
 
-#: ../tools/sam-pro-stats-tools.php:142
+#: tools/sam-pro-stats-tools.php:145
 msgid "Complete removal of all statistical data from the statistics table."
 msgstr "Полное удаление всех статистических данных из таблицы статистики."
 

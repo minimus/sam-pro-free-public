@@ -4,7 +4,7 @@ Donate link: http://uncle-sam.info
 Tags: ad, advertising, banner, rotator, simple ads manager
 Requires at least: 4.5
 Tested up to: 4.8
-Stable tag: 2.3.3.87
+Stable tag: 2.4.0.91
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -106,6 +106,12 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Changelog ==
 
+= 2.4.0.91 =
+* The Place Container and Block Line styles helpers have been added
+* The positioning of Ad Objects has been improved
+* tinyMCE bug has been fixed
+= 2.3.4.88 =
+* The bug of encryption/decryption has been fixed
 = 2.3.3.87 =
 * Some minor bugs have been resolved
 = 2.3.2.85 =
@@ -198,6 +204,10 @@ The data structure of plugin Simple Ads Manager is different from the data struc
 
 == Upgrade Notice ==
 
+= 2.4.0.91 =
+The Place Container and Block Line styles helpers have been added. The positioning of Ad Objects has been improved. tinyMCE bug has been fixed
+= 2.3.4.88 =
+The bug of encryption/decryption has been fixed.
 = 2.3.3.87 =
 Some minor bugs have been resolved.
 = 2.3.2.85 =

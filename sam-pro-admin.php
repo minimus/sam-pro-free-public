@@ -676,147 +676,185 @@ if ( class_exists( 'SamProCore' ) && ! class_exists( 'SamProAdmin' ) ) {
 			);
 
 			$sam_pro_tables_definition[ $pTable ] = array(
-				'pid'         => array(
+				'pid'           => array(
 					'Type'    => 'int(11) unsigned',
 					'Null'    => 'NO',
 					'Key'     => 'PRI',
 					'Default' => '',
 					'Extra'   => 'auto_increment'
 				),
-				'aid'         => array(
+				'aid'           => array(
 					'Type'    => 'int(11) unsigned',
 					'Null'    => 'NO',
 					'Key'     => '',
 					'Default' => '0',
 					'Extra'   => ''
 				),
-				'title'       => array(
+				'title'         => array(
 					'Type'    => 'varchar(255)',
 					'Null'    => 'YES',
 					'Key'     => '',
 					'Default' => '',
 					'Extra'   => ''
 				),
-				'description' => array(
+				'description'   => array(
 					'Type'    => 'varchar(255)',
 					'Null'    => 'YES',
 					'Key'     => '',
 					'Default' => '',
 					'Extra'   => ''
 				),
-				'sale'        => array( 'Type' => 'tinyint(1)', 'Null' => 'YES', 'Key' => '', 'Default' => '0', 'Extra' => '' ),
-				'sale_mode'   => array(
+				'sale'          => array(
+					'Type'    => 'tinyint(1)',
+					'Null'    => 'YES',
+					'Key'     => '',
+					'Default' => '0',
+					'Extra'   => ''
+				),
+				'sale_mode'     => array(
 					'Type'    => 'tinyint(1) unsigned',
 					'Null'    => 'YES',
 					'Key'     => '',
 					'Default' => '0',
 					'Extra'   => ''
 				),
-				'price'       => array(
+				'price'         => array(
 					'Type'    => 'decimal(15,2) unsigned',
 					'Null'    => 'YES',
 					'Key'     => '',
 					'Default' => '0.00',
 					'Extra'   => ''
 				),
-				'sdate'       => array( 'Type' => 'datetime', 'Null' => 'YES', 'Key' => '', 'Default' => '', 'Extra' => '' ),
-				'fdate'       => array( 'Type' => 'datetime', 'Null' => 'YES', 'Key' => '', 'Default' => '', 'Extra' => '' ),
-				'code_before' => array(
+				'sdate'         => array( 'Type' => 'datetime', 'Null' => 'YES', 'Key' => '', 'Default' => '', 'Extra' => '' ),
+				'fdate'         => array( 'Type' => 'datetime', 'Null' => 'YES', 'Key' => '', 'Default' => '', 'Extra' => '' ),
+				'cnt_style'     => array( 'Type' => 'text', 'Null' => 'YES', 'Key' => '', 'Default' => '', 'Extra' => '' ),
+				'cnt_direction' => array(
+					'Type'    => 'tinyint(1)',
+					'Null'    => 'YES',
+					'Key'     => '',
+					'Default' => '0',
+					'Extra'   => ''
+				),
+				'code_before'   => array(
 					'Type'    => 'varchar(255)',
 					'Null'    => 'YES',
 					'Key'     => '',
 					'Default' => '',
 					'Extra'   => ''
 				),
-				'code_after'  => array(
+				'code_after'    => array(
 					'Type'    => 'varchar(255)',
 					'Null'    => 'YES',
 					'Key'     => '',
 					'Default' => '',
 					'Extra'   => ''
 				),
-				'asize'       => array(
+				'asize'         => array(
 					'Type'    => 'varchar(255)',
 					'Null'    => 'YES',
 					'Key'     => '',
 					'Default' => '',
 					'Extra'   => ''
 				),
-				'width'       => array(
+				'width'         => array(
 					'Type'    => 'int(11) unsigned',
 					'Null'    => 'YES',
 					'Key'     => '',
 					'Default' => '',
 					'Extra'   => ''
 				),
-				'height'      => array(
+				'height'        => array(
 					'Type'    => 'int(11) unsigned',
 					'Null'    => 'YES',
 					'Key'     => '',
 					'Default' => '',
 					'Extra'   => ''
 				),
-				'img'         => array(
+				'img'           => array(
 					'Type'    => 'varchar(255)',
 					'Null'    => 'YES',
 					'Key'     => '',
 					'Default' => '',
 					'Extra'   => ''
 				),
-				'link'        => array(
+				'link'          => array(
 					'Type'    => 'varchar(255)',
 					'Null'    => 'YES',
 					'Key'     => '',
 					'Default' => '',
 					'Extra'   => ''
 				),
-				'alt'         => array(
+				'alt'           => array(
 					'Type'    => 'varchar(255)',
 					'Null'    => 'YES',
 					'Key'     => '',
 					'Default' => '',
 					'Extra'   => ''
 				),
-				'rel'         => array(
+				'rel'           => array(
 					'Type'    => 'tinyint(4) unsigned',
 					'Null'    => 'YES',
 					'Key'     => '',
 					'Default' => '0',
 					'Extra'   => ''
 				),
-				'acode'       => array( 'Type' => 'text', 'Null' => 'YES', 'Key' => '', 'Default' => '', 'Extra' => '' ),
-				'inline'      => array(
+				'acode'         => array( 'Type' => 'text', 'Null' => 'YES', 'Key' => '', 'Default' => '', 'Extra' => '' ),
+				'inline'        => array(
 					'Type'    => 'tinyint(1) unsigned',
 					'Null'    => 'YES',
 					'Key'     => '',
 					'Default' => '0',
 					'Extra'   => ''
 				),
-				'php'         => array( 'Type' => 'tinyint(1)', 'Null' => 'YES', 'Key' => '', 'Default' => '0', 'Extra' => '' ),
-				'ad_server'   => array( 'Type' => 'tinyint(1)', 'Null' => 'YES', 'Key' => '', 'Default' => '0', 'Extra' => '' ),
-				'dfp'         => array(
+				'php'           => array(
+					'Type'    => 'tinyint(1)',
+					'Null'    => 'YES',
+					'Key'     => '',
+					'Default' => '0',
+					'Extra'   => ''
+				),
+				'ad_server'     => array(
+					'Type'    => 'tinyint(1)',
+					'Null'    => 'YES',
+					'Key'     => '',
+					'Default' => '0',
+					'Extra'   => ''
+				),
+				'dfp'           => array(
 					'Type'    => 'varchar(255)',
 					'Null'    => 'YES',
 					'Key'     => '',
 					'Default' => '',
 					'Extra'   => ''
 				),
-				'amode'       => array(
+				'amode'         => array(
 					'Type'    => 'tinyint(3) unsigned',
 					'Null'    => 'YES',
 					'Key'     => '',
 					'Default' => '0',
 					'Extra'   => ''
 				),
-				'hits'        => array(
+				'hits'          => array(
 					'Type'    => 'int(11) unsigned',
 					'Null'    => 'YES',
 					'Key'     => '',
 					'Default' => '0',
 					'Extra'   => ''
 				),
-				'clicks'      => array( 'Type' => 'tinyint(1)', 'Null' => 'YES', 'Key' => '', 'Default' => '0', 'Extra' => '' ),
-				'trash'       => array( 'Type' => 'tinyint(1)', 'Null' => 'YES', 'Key' => '', 'Default' => '0', 'Extra' => '' )
+				'clicks'        => array(
+					'Type'    => 'tinyint(1)',
+					'Null'    => 'YES',
+					'Key'     => '',
+					'Default' => '0',
+					'Extra'   => ''
+				),
+				'trash'         => array(
+					'Type'    => 'tinyint(1)',
+					'Null'    => 'YES',
+					'Key'     => '',
+					'Default' => '0',
+					'Extra'   => ''
+				)
 			);
 
 			$sam_pro_tables_definition[ $paTable ] = array(
@@ -975,6 +1013,7 @@ if ( class_exists( 'SamProCore' ) && ! class_exists( 'SamProAdmin' ) ) {
 				),
 				'b_data'      => array( 'Type' => 'text', 'Null' => 'YES', 'Key' => '', 'Default' => '', 'Extra' => '' ),
 				'b_style'     => array( 'Type' => 'text', 'Null' => 'YES', 'Key' => '', 'Default' => '', 'Extra' => '' ),
+				'l_style'     => array( 'Type' => 'text', 'Null' => 'YES', 'Key' => '', 'Default' => '', 'Extra' => '' ),
 				'i_style'     => array( 'Type' => 'text', 'Null' => 'YES', 'Key' => '', 'Default' => '', 'Extra' => '' ),
 				'trash'       => array(
 					'Type'    => 'tinyint(1) unsigned',
@@ -1021,40 +1060,60 @@ if ( class_exists( 'SamProCore' ) && ! class_exists( 'SamProAdmin' ) ) {
 			$updater->check( $sam_pro_tables_definition );
 		}
 
-		public function getAdsData() {
+		public function getAdsData( $output = 'options' ) {
 			global $wpdb;
 			$pTable = $wpdb->prefix . 'sampro_places';
 			$aTable = $wpdb->prefix . 'sampro_ads';
 			$zTable = $wpdb->prefix . 'sampro_zones';
 			$bTable = $wpdb->prefix . 'sampro_blocks';
 
-			$sql    = "SELECT CONCAT(0, '_', pid) AS ival, title FROM {$pTable} WHERE trash = 0;";
-			$places = $wpdb->get_results( $sql, ARRAY_A );
-			$sql    = "SELECT CONCAT(1, '_', aid) AS ival, title FROM {$aTable} WHERE trash = 0;";
-			$ads    = $wpdb->get_results( $sql, ARRAY_A );
-			$sql    = "SELECT CONCAT(2, '_', zid) AS ival, title FROM {$zTable} WHERE trash = 0;";
-			$zones  = $wpdb->get_results( $sql, ARRAY_A );
-			$sql    = "SELECT CONCAT(3, '_', bid) AS ival, title FROM {$bTable} WHERE trash = 0;";
-			$blocks = $wpdb->get_results( $sql, ARRAY_A );
+			if ( $output === 'options' ) {
+				$sql    = "SELECT CONCAT(0, '_', pid) AS ival, title FROM {$pTable} WHERE trash = 0;";
+				$places = $wpdb->get_results( $sql, ARRAY_A );
+				$sql    = "SELECT CONCAT(1, '_', aid) AS ival, title FROM {$aTable} WHERE trash = 0;";
+				$ads    = $wpdb->get_results( $sql, ARRAY_A );
+				$sql    = "SELECT CONCAT(2, '_', zid) AS ival, title FROM {$zTable} WHERE trash = 0;";
+				$zones  = $wpdb->get_results( $sql, ARRAY_A );
+				$sql    = "SELECT CONCAT(3, '_', bid) AS ival, title FROM {$bTable} WHERE trash = 0;";
+				$blocks = $wpdb->get_results( $sql, ARRAY_A );
 
-			return array(
-				'places' => array(
-					'title' => __( 'Places', SAM_PRO_DOMAIN ),
-					'data'  => $places
-				),
-				'ads'    => array(
-					'title' => __( 'Ads', SAM_PRO_DOMAIN ),
-					'data'  => $ads
-				),
-				'zones'  => array(
-					'title' => __( 'Zones', SAM_PRO_DOMAIN ),
-					'data'  => $zones
-				),
-				'blocks' => array(
-					'title' => __( 'Blocks', SAM_PRO_DOMAIN ),
-					'data'  => $blocks
-				)
-			);
+				return array(
+					'places' => array(
+						'title' => __( 'Places', SAM_PRO_DOMAIN ),
+						'data'  => $places
+					),
+					'ads'    => array(
+						'title' => __( 'Ads', SAM_PRO_DOMAIN ),
+						'data'  => $ads
+					),
+					'zones'  => array(
+						'title' => __( 'Zones', SAM_PRO_DOMAIN ),
+						'data'  => $zones
+					),
+					'blocks' => array(
+						'title' => __( 'Blocks', SAM_PRO_DOMAIN ),
+						'data'  => $blocks
+					)
+				);
+			} elseif ( $output === 'list' ) {
+				$strPlace = __( 'Place', SAM_PRO_DOMAIN );
+				$strAd    = __( 'Ad', SAM_PRO_DOMAIN );
+				$strZone  = __( 'Zone', SAM_PRO_DOMAIN );
+				$strBlock = __( 'Block', SAM_PRO_DOMAIN );
+
+				$sql    = "SELECT CONCAT(0, '_', pid) AS value, CONCAT('{$strPlace}: ', title) AS text FROM {$pTable} WHERE trash = 0;";
+				$places = $wpdb->get_results( $sql, ARRAY_A );
+				$sql    = "SELECT CONCAT(1, '_', aid) AS value, CONCAT('{$strAd}: ', title) AS text FROM {$aTable} WHERE trash = 0;";
+				$ads    = $wpdb->get_results( $sql, ARRAY_A );
+				$sql    = "SELECT CONCAT(2, '_', zid) AS value, CONCAT('{$strZone}: ', title) AS text FROM {$zTable} WHERE trash = 0;";
+				$zones  = $wpdb->get_results( $sql, ARRAY_A );
+				$sql    = "SELECT CONCAT(3, '_', bid) AS value, CONCAT('{$strBlock}: ', title) AS text FROM {$bTable} WHERE trash = 0;";
+				$blocks = $wpdb->get_results( $sql, ARRAY_A );
+
+				return array_merge( $places, $ads, $zones, $blocks );
+			} else {
+				return array();
+			}
 		}
 
 		private function getRulesList( $single = false ) {
@@ -1582,7 +1641,7 @@ ORDER BY uu.owner;";
 			if ( ! is_null( $this->pointer->pointer ) ) {
 				wp_enqueue_style( 'wp-pointer' );
 
-				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
+				wp_enqueue_script( 'polyfills', SAM_PRO_URL . 'js/polyfill.min.js' );
 				wp_enqueue_script( 'wp-pointer' );
 				wp_enqueue_script( 'sam-pro-admin-layout', SAM_PRO_URL . 'js/sam.pro.admin.layout.min.js', array(
 					'jquery',
@@ -1607,7 +1666,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-settings', SAM_PRO_URL . 'css/sam-pro-settings.css' );
 				do_action( 'sam_pro_admin_settings_styles' );
 
-				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
+				wp_enqueue_script( 'polyfills', SAM_PRO_URL . 'js/polyfill.min.js' );
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_script( 'jquery-ui-core' );
 				wp_enqueue_script( 'jquery-effects-core' );
@@ -1648,7 +1707,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-places', SAM_PRO_URL . 'css/sam-pro-places.css' );
 				do_action( 'sam_pro_admin_places_styles' );
 
-				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
+				wp_enqueue_script( 'polyfills', SAM_PRO_URL . 'js/polyfill.min.js' );
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_script( 'easing', SAM_PRO_URL . 'js/jquery.easing.1.3.js', array( 'jquery' ), '1.3' );
 				wp_enqueue_script( 'globalize', SAM_PRO_URL . 'js/jquery.globalize.min.js', array( 'jquery' ), '1.3' );
@@ -1685,7 +1744,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-places', SAM_PRO_URL . 'css/sam-pro-places.css' );
 				do_action( 'sam_pro_admin_ads_styles' );
 
-				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
+				wp_enqueue_script( 'polyfills', SAM_PRO_URL . 'js/polyfill.min.js' );
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_script( 'easing', SAM_PRO_URL . 'js/jquery.easing.1.3.js', array( 'jquery' ), '1.3' );
 				wp_enqueue_script( 'globalize', SAM_PRO_URL . 'js/jquery.globalize.min.js', array( 'jquery' ), '1.3' );
@@ -1719,7 +1778,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-places', SAM_PRO_URL . 'css/sam-pro-places.css' );
 				do_action( 'sam_pro_admin_zones_styles' );
 
-				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
+				wp_enqueue_script( 'polyfills', SAM_PRO_URL . 'js/polyfill.min.js' );
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_script( 'easing', SAM_PRO_URL . 'js/jquery.easing.1.3.js', array( 'jquery' ), '1.3' );
 				wp_enqueue_script( 'globalize', SAM_PRO_URL . 'js/jquery.globalize.min.js', array( 'jquery' ), '1.3' );
@@ -1756,7 +1815,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-places', SAM_PRO_URL . 'css/sam-pro-places.css' );
 				do_action( 'sam_pro_admin_blocks_styles' );
 
-				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
+				wp_enqueue_script( 'polyfills', SAM_PRO_URL . 'js/polyfill.min.js' );
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_script( 'easing', SAM_PRO_URL . 'js/jquery.easing.1.3.js', array( 'jquery' ), '1.3' );
 				wp_enqueue_script( 'globalize', SAM_PRO_URL . 'js/jquery.globalize.min.js', array( 'jquery' ), '1.3' );
@@ -1793,7 +1852,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-places', SAM_PRO_URL . 'css/sam-pro-places.css' );
 				do_action( 'sam_pro_admin_error_log_styles' );
 
-				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
+				wp_enqueue_script( 'polyfills', SAM_PRO_URL . 'js/polyfill.min.js' );
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_script( 'easing', SAM_PRO_URL . 'js/jquery.easing.1.3.js', array( 'jquery' ), '1.3' );
 				wp_enqueue_script( 'globalize', SAM_PRO_URL . 'js/jquery.globalize.min.js', array( 'jquery' ), '1.3' );
@@ -1846,7 +1905,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-editor', SAM_PRO_URL . 'css/sam-pro-editor.css' );
 				do_action( 'sam_pro_admin_ad_editor_styles' );
 
-				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
+				wp_enqueue_script( 'polyfills', SAM_PRO_URL . 'js/polyfill.min.js' );
 				if ( $settings['useSWF'] ) {
 					wp_enqueue_script( 'swfobject' );
 				}
@@ -1903,9 +1962,10 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-font', SAM_PRO_URL . 'css/sam-pro-embedded.css' );
 				wp_enqueue_style( 'sam-pro-editor', SAM_PRO_URL . 'css/sam-pro-editor.css' );
 				wp_enqueue_style( 'sam-pro-icons', SAM_PRO_URL . 'css/sam-pro-icons.css' );
+				wp_enqueue_style( 'qtip', SAM_PRO_URL . 'css/jquery.qtip.min.css', null, false, false );
 				do_action( 'sam_pro_admin_place_editor_styles' );
 
-				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
+				wp_enqueue_script( 'polyfills', SAM_PRO_URL . 'js/polyfill.min.js' );
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_media();
 				wp_enqueue_script( 'jquery-ui-core' );
@@ -1917,6 +1977,11 @@ ORDER BY uu.owner;";
 				wp_enqueue_script( 'validate', SAM_PRO_URL . 'js/jquery.validate.min.js', array( 'jquery' ), '1.3.1' );
 				wp_enqueue_script( 'jsrender', SAM_PRO_URL . 'js/jsrender.js', array( 'jquery' ) );
 				wp_enqueue_script( 'ej-all', SAM_PRO_URL . 'js/ej.editors.all.min.js', array( 'jquery' ), '13.1.0.21' );
+				wp_enqueue_script( 'imagesloaded', SAM_PRO_URL . 'js/imagesloaded.pkg.min.js', null, false, true );
+				wp_enqueue_script( 'qtip', SAM_PRO_URL . 'js/jquery.qtip.min.js', array(
+					'jquery',
+					'imagesloaded'
+				), false, true );
 				if ( $locale['changeLocale'] ) {
 					wp_enqueue_script( 'ej-locale', SAM_PRO_URL . "js/locales/ej.locale.{$locale['locale']}.js", array(
 						'jquery',
@@ -1930,10 +1995,12 @@ ORDER BY uu.owner;";
 
 				//wp_enqueue_script( 'SimpleLib-tools', SAM_PRO_URL . 'js/simplelib.tools.js', array( 'jquery' ), SAM_PRO_VERSION );
 				wp_enqueue_script( 'SimpleLib-tools', SAM_PRO_URL . 'js/simplelib.helpers.min.js', array( 'jquery' ) );
-        wp_enqueue_script( 'sam-pro-place-editor', SAM_PRO_URL . 'js/sam.pro.place.editor.min.js', array(
+				wp_enqueue_script( 'sam-pro-place-editor', SAM_PRO_URL . 'js/sam.pro.place.editor.min.js', array(
 					'jquery',
 					'ej-all'
 				), SAM_PRO_VERSION );
+				$rowImgUrl    = SAM_PRO_URL . 'images/cnt-row.png';
+				$columnImgUrl = SAM_PRO_URL . 'images/cnt-column.png';
 				wp_localize_script( 'sam-pro-place-editor', 'options', array(
 					'samProAjax'   => SAM_PRO_URL,
 					'samProNonce'  => $this->nonce,
@@ -1951,6 +2018,16 @@ ORDER BY uu.owner;";
 						'now'       => __( 'Now', SAM_PRO_DOMAIN ),
 						'timeTitle' => __( 'Time', SAM_PRO_DOMAIN ),
 						'today'     => __( 'Today', SAM_PRO_DOMAIN )
+					),
+					'tooltip'      => array(
+						'row'    => array(
+							'title'   => __( 'Row Direction', SAM_PRO_DOMAIN ),
+							'content' => "<img src='{$rowImgUrl}'>"
+						),
+						'column' => array(
+							'title'   => __( 'Column Direction', SAM_PRO_DOMAIN ),
+							'content' => "<img src='{$columnImgUrl}'>"
+						)
 					)
 				) );
 				do_action( 'sam_pro_admin_place_editor_scripts' );
@@ -1960,7 +2037,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-editor', SAM_PRO_URL . 'css/sam-pro-editor.css' );
 				do_action( 'sam_pro_admin_zone_editor_styles' );
 
-				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
+				wp_enqueue_script( 'polyfills', SAM_PRO_URL . 'js/polyfill.min.js' );
 				wp_enqueue_script( 'jquery' );
 				//wp_enqueue_media();
 				wp_enqueue_script( 'jquery-ui-core' );
@@ -1985,7 +2062,7 @@ ORDER BY uu.owner;";
 
 				//wp_enqueue_script( 'SimpleLib-tools', SAM_PRO_URL . 'js/simplelib.tools.js', array( 'jquery' ), SAM_PRO_VERSION );
 				wp_enqueue_script( 'SimpleLib-tools', SAM_PRO_URL . 'js/simplelib.helpers.min.js', array( 'jquery' ) );
-        wp_enqueue_script( 'sam-pro-zone-editor', SAM_PRO_URL . 'js/sam.pro.zone.editor.min.js', array(
+				wp_enqueue_script( 'sam-pro-zone-editor', SAM_PRO_URL . 'js/sam.pro.zone.editor.min.js', array(
 					'jquery',
 					'ej-all'
 				), SAM_PRO_VERSION );
@@ -2006,7 +2083,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-editor', SAM_PRO_URL . 'css/sam-pro-editor.css' );
 				do_action( 'sam_pro_admin_block_editor_styles' );
 
-				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
+				wp_enqueue_script( 'polyfills', SAM_PRO_URL . 'js/polyfill.min.js' );
 				wp_enqueue_script( 'jquery' );
 				//wp_enqueue_media();
 				wp_enqueue_script( 'jquery-ui-core' );
@@ -2039,7 +2116,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-advertisers', SAM_PRO_URL . 'css/sam-pro-advertisers-list.css' );
 				do_action( 'sam_pro_admin_advertisers_styles' );
 
-				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
+				wp_enqueue_script( 'polyfills', SAM_PRO_URL . 'js/polyfill.min.js' );
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_script( 'jquery-ui-core' );
 				wp_enqueue_script( 'jquery-effects-core' );
@@ -2079,7 +2156,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-stats', SAM_PRO_URL . 'css/sam-pro-statistics.css' );
 				do_action( 'sam_pro_admin_stats_styles' );
 
-				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
+				wp_enqueue_script( 'polyfills', SAM_PRO_URL . 'js/polyfill.min.js' );
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_script( 'jquery-ui-core' );
 				wp_enqueue_script( 'jquery-effects-core' );
@@ -2122,7 +2199,7 @@ ORDER BY uu.owner;";
 				wp_enqueue_style( 'sam-pro-settings', SAM_PRO_URL . 'css/sam-pro-settings.css' );
 				do_action( 'sam_pro_admin_tools_styles' );
 
-				wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
+				wp_enqueue_script( 'polyfills', SAM_PRO_URL . 'js/polyfill.min.js' );
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_script( 'jquery-ui-core' );
 				wp_enqueue_script( 'jquery-effects-core' );
@@ -2130,9 +2207,7 @@ ORDER BY uu.owner;";
 				do_action( 'sam_pro_admin_tools_scripts' );
 			} elseif ( $hook == 'post.php' || $hook == 'post-new.php' ) {
 				$data = array(
-					'data'    => self::getAdsData(),
-					'url'     => get_option( 'siteurl' ) . '/wp-includes/js/tinymce/',
-					'jqUrl'   => get_option( 'siteurl' ) . '/wp-includes/js/jquery/',
+					'adList'      => self::getAdsData( 'list' ),
 					'strings' => array(
 						'title'    => __( 'Insert Ad Object', SAM_PRO_DOMAIN ),
 						'selector' => __( 'Ad Object', SAM_PRO_DOMAIN ),
@@ -2343,6 +2418,10 @@ ORDER BY uu.owner;";
 				'hide'      => ( defined( 'SAM_PRO_WPTOUCH' ) ) ? ! SAM_PRO_WPTOUCH : true
 			) );
 			add_settings_field( 'spkey', __( 'Key', SAM_PRO_DOMAIN ), array(
+				&$this,
+				'drawHiddenOption'
+			), 'sam-pro-settings', 'sam_general_section', array( 'hidden' => true ) );
+			add_settings_field( 'spiv', __( 'Key', SAM_PRO_DOMAIN ), array(
 				&$this,
 				'drawHiddenOption'
 			), 'sam-pro-settings', 'sam_general_section', array( 'hidden' => true ) );
@@ -3019,7 +3098,7 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 					$tabName  = $tab['name'];
 					$tabClass = $tab['class'];
 					$class    = ( ( ! empty( $tab['class'] ) ) ? "<i class='{$tabClass}'></i>" : '' );
-					$out .= "<li><a href='#{$tabUri}'>{$class}{$tabName}</a></li>";
+					$out      .= "<li><a href='#{$tabUri}'>{$class}{$tabName}</a></li>";
 				}
 			}
 
@@ -3039,11 +3118,11 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 			$maxData     = ( isset( $args['max'] ) ) ? (int) $args['max'] : null;
 			$placeholder = ( isset( $args['placeholder'] ) ) ? $args['placeholder'] : '';
 			?>
-			<input id="<?php echo $id; ?>"
-			       name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>"
-			       type="<?php echo $type; ?>"<?php echo $min . $max; ?>
-			       value="<?php echo $settings[ $id ]; ?>"
-			       style="<?php echo "width: {$width};" ?>" <?php if ( ! empty( $placeholder ) )
+      <input id="<?php echo $id; ?>"
+             name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>"
+             type="<?php echo $type; ?>"<?php echo $min . $max; ?>
+             value="<?php echo $settings[ $id ]; ?>"
+             style="<?php echo "width: {$width};" ?>" <?php if ( ! empty( $placeholder ) )
 				echo "placeholder='{$placeholder}'" ?> />
 			<?php
 		}
@@ -3056,9 +3135,9 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 				$height = '100px';
 			}
 			?>
-			<textarea id="<?php echo $id; ?>"
-			          name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>"
-			          style="width: 100%; height: <?php echo $height ?>;"><?php echo $settings[ $id ]; ?></textarea>
+      <textarea id="<?php echo $id; ?>"
+                name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>"
+                style="width: 100%; height: <?php echo $height ?>;"><?php echo $settings[ $id ]; ?></textarea>
 			<?php
 		}
 
@@ -3085,11 +3164,11 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 				$hide = ( ( $args['hide'] ) ? " style='display: none;'" : '' );
 			}
 			?>
-			<input id="<?php echo $id; ?>"
+      <input id="<?php echo $id; ?>"
 				<?php checked( '1', $settings[ $id ] ); ?>
-				     name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>"
-				     type="checkbox"
-				     value="1"
+             name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>"
+             type="checkbox"
+             value="1"
 				<?php echo $disabled . $hide; ?>>
 			<?php
 		}
@@ -3099,13 +3178,13 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 			$settings = parent::getSettings();
 
 			?>
-			<select id="<?php echo $id; ?>" name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>">
+      <select id="<?php echo $id; ?>" name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>">
 				<?php
 				foreach ( $options as $val => $name ) {
 					echo "<option value='$val' " . selected( $val, $settings[ $id ], false ) . ">$name</option>";
 				}
 				?>
-			</select>
+      </select>
 			<?php
 		}
 
@@ -3114,8 +3193,8 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 			$options  = $this->adsObjects;
 			$hidden   = ( isset( $args['hide'] ) && $args['hide'] ) ? "style='display:none;'" : '';
 			?>
-			<select id="<?php echo $id; ?>"
-			        name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>" <?php echo $hidden; ?>>
+      <select id="<?php echo $id; ?>"
+              name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>" <?php echo $hidden; ?>>
 				<?php
 				foreach ( $options as $group ) {
 					echo "<optgroup label='{$group['title']}'>";
@@ -3126,7 +3205,7 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 					echo "</optgroup>";
 				}
 				?>
-			</select>
+      </select>
 			<?php
 		}
 
@@ -3137,13 +3216,13 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 			$ids      = $wpdb->get_results( "SELECT $pTable.id, $pTable.name FROM $pTable WHERE $pTable.trash IS FALSE", ARRAY_A );
 			$settings = parent::getSettings();
 			?>
-			<select id="<?php echo $id; ?>" name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>">
+      <select id="<?php echo $id; ?>" name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>">
 				<?php
 				foreach ( $ids as $value ) {
 					echo "<option value='{$value['id']}' " . selected( $value['id'], $settings[ $id ], false ) . " >{$value['name']}</option>";
 				}
 				?>
-			</select>
+      </select>
 			<?php
 		}
 
@@ -3161,7 +3240,7 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 			if ( ! empty( $pages ) ) {
 				foreach ( $pages as $page ) {
 					$selected = selected( $page['ID'], $settings[ $id ], false );
-					$out .= "<option value='{$page['ID']}' {$selected}>{$page['post_title']}</option>";
+					$out      .= "<option value='{$page['ID']}' {$selected}>{$page['post_title']}</option>";
 				}
 			}
 			$out .= "</select>";
@@ -3171,11 +3250,11 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 		public function drawCascadeSelectOption( $id, $args ) {
 			$settings = parent::getSettings();
 			?>
-			<input
-				id="<?php echo $id; ?>"
-				name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>"
-				type="text"
-				value="<?php echo $settings[ $id ]; ?>">
+      <input
+        id="<?php echo $id; ?>"
+        name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>"
+        type="text"
+        value="<?php echo $settings[ $id ]; ?>">
 			<?php
 		}
 
@@ -3185,17 +3264,17 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 
 			foreach ( $options as $key => $option ) {
 				?>
-				<input type="radio"
-				       id="<?php echo $id . '_' . $key; ?>"
-				       name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>"
-				       value="<?php echo $key; ?>"
+        <input type="radio"
+               id="<?php echo $id . '_' . $key; ?>"
+               name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>"
+               value="<?php echo $key; ?>"
 					<?php checked( $key, $settings[ $id ] ); ?>
 					<?php if ( $key === 'more' ) {
 						disabled( '', ini_get( "browscap" ) );
 					} ?>>
-				<label for="<?php echo $id . '_' . $key; ?>">
+        <label for="<?php echo $id . '_' . $key; ?>">
 					<?php echo $option; ?>
-				</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;
 				<?php
 			}
 		}
@@ -3210,25 +3289,25 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 			}
 
 			?>
-			<input
-				type="hidden"
-				id="<?php echo $id; ?>"
-				name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>"
-				value="<?php echo $settings[ $id ]; ?>">
-			<div class="layout">
-				<input id="role-slider" type="hidden" name="area" value="<?php echo $key; ?>"/>
-			</div>
+      <input
+        type="hidden"
+        id="<?php echo $id; ?>"
+        name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>"
+        value="<?php echo $settings[ $id ]; ?>">
+      <div class="layout">
+        <input id="role-slider" type="hidden" name="area" value="<?php echo $key; ?>"/>
+      </div>
 			<?php
 		}
 
 		public function drawHiddenOption( $id, $args ) {
 			$settings = parent::getSettings();
 			?>
-			<input
-				type="hidden"
-				id="<?php echo $id; ?>"
-				name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>"
-				value="<?php echo $settings[ $id ]; ?>">
+      <input
+        type="hidden"
+        id="<?php echo $id; ?>"
+        name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>"
+        value="<?php echo $settings[ $id ]; ?>">
 			<?php
 		}
 
@@ -3238,27 +3317,27 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 			echo "<div id='geo-settings' style='text-align: initial;'>";
 			foreach ( $options as $key => $option ) {
 				?>
-				<p>
-					<input type="radio"
-					       id="<?php echo $id . '_' . $key; ?>"
-					       name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>"
-					       value="<?php echo $key; ?>"
+        <p>
+          <input type="radio"
+                 id="<?php echo $id . '_' . $key; ?>"
+                 name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $id . ']'; ?>"
+                 value="<?php echo $key; ?>"
 						<?php checked( $key, $settings[ $id ] ); ?>>
-					<label for="<?php echo $id . '_' . $key; ?>">
+          <label for="<?php echo $id . '_' . $key; ?>">
 						<?php echo $option['name']; ?>
-					</label>
-				</p>
-				<div class="sub-content">
+          </label>
+        </p>
+        <div class="sub-content">
 					<?php foreach ( $option['fields'] as $field => $label ) { ?>
-						<label for="<?php echo $field; ?>"><?php echo $label; ?>:</label>
-						<input
-							type="text"
-							id="<?php echo $field; ?>"
-							name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $field . ']'; ?>"
-							value="<?php echo $settings[ $field ]; ?>"
-							style="width: 100%;margin: 5px 0;">
+            <label for="<?php echo $field; ?>"><?php echo $label; ?>:</label>
+            <input
+              type="text"
+              id="<?php echo $field; ?>"
+              name="<?php echo SAM_PRO_OPTIONS_NAME . '[' . $field . ']'; ?>"
+              value="<?php echo $settings[ $field ]; ?>"
+              style="width: 100%;margin: 5px 0;">
 					<?php } ?>
-				</div>
+        </div>
 				<?php
 			}
 			echo "</div>";
@@ -3326,7 +3405,7 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 						"style='display:none;'" : '';
 					echo "<div id='{$field['args']['start_div']}' {$closed}>";
 				}
-			  if ( ! empty( $field['args']['checkbox'] ) ) {
+				if ( ! empty( $field['args']['checkbox'] ) ) {
 					echo '<p>';
 					call_user_func( $field['callback'], $field['id'], $field['args'] );
 					echo '<label for="' . $field['args']['label_for'] . '"' . ( ( isset( $field['args']['hide'] ) && $field['args']['hide'] ) ? 'style="display: none;"' : '' ) . '>' . $field['title'] . '</label>';
@@ -3395,24 +3474,24 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 				$hidden = " style='display:none;'";
 			}
 			?>
-			<div class="wrap">
-				<h2><?php _e( 'SAM Pro Settings', SAM_PRO_DOMAIN ); ?></h2>
-				<div class="updated below-h2"<?php echo $hidden; ?>>
-					<p>
-						<strong><?php _e( 'SAM Pro Settings Updated.' ) ?></strong>
-					</p>
-				</div>
-				<form action="options.php" method="post">
-					<div id="poststuff" class="metabox-holder has-right-sidebar">
-						<div id="side-info-column" class="inner-sidebar">
-							<div id="sysinfo" class="postbox opened">
-								<h3 class="hndle"><?php _e( 'System Info', SAM_PRO_DOMAIN ) ?></h3>
-								<div class="inside" style="padding: 0 !important;">
-									<div id="submitpost" class="submitbox">
-										<div id="minor-publishing">
-											<div id="misc-publishing-actions" style="padding: 0;">
-												<div class="misc-pub-section" style="padding: 0 10px 8px;">
-													<p>
+      <div class="wrap">
+        <h2><?php _e( 'SAM Pro Settings', SAM_PRO_DOMAIN ); ?></h2>
+        <div class="updated below-h2"<?php echo $hidden; ?>>
+          <p>
+            <strong><?php _e( 'SAM Pro Settings Updated.' ) ?></strong>
+          </p>
+        </div>
+        <form action="options.php" method="post">
+          <div id="poststuff" class="metabox-holder has-right-sidebar">
+            <div id="side-info-column" class="inner-sidebar">
+              <div id="sysinfo" class="postbox opened">
+                <h3 class="hndle"><?php _e( 'System Info', SAM_PRO_DOMAIN ) ?></h3>
+                <div class="inside" style="padding: 0 !important;">
+                  <div id="submitpost" class="submitbox">
+                    <div id="minor-publishing">
+                      <div id="misc-publishing-actions" style="padding: 0;">
+                        <div class="misc-pub-section" style="padding: 0 10px 8px;">
+                          <p>
 														<?php
 														echo __( 'SAM Pro Edition', SAM_PRO_DOMAIN ) . ': <strong>' . $editions[ $edition ] . '</strong><br>';
 														echo __( 'SAM Pro Version', SAM_PRO_DOMAIN ) . ': <strong>' . SAM_PRO_VERSION . '</strong><br>';
@@ -3424,7 +3503,7 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 														echo __( 'PHP Memory Limit', SAM_PRO_DOMAIN ) . ": <strong style='color:{$phpStyle};'>{$mem}</strong><br>";
 														echo __( 'WP Memory Limit', SAM_PRO_DOMAIN ) . ": <strong style='color:{$wpStyle};'>{$wpMem}</strong>";
 														?>
-													</p>
+                          </p>
 													<?php
 													global $samProAddonsList;
 
@@ -3438,98 +3517,98 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 														echo "</ul></p>";
 													}
 													?>
-													<p>
+                          <p>
 														<?php _e( 'Note! If you have detected a bug, include this data to bug report.', SAM_PRO_DOMAIN ); ?>
-													</p>
-												</div>
-											</div>
-											<div class="clear"></div>
-										</div>
-										<div id="major-publishing-actions">
-											<div id="publishing-action">
-												<button id="submit-button" class="button-primary" name="Submit" type="submit">
+                          </p>
+                        </div>
+                      </div>
+                      <div class="clear"></div>
+                    </div>
+                    <div id="major-publishing-actions">
+                      <div id="publishing-action">
+                        <button id="submit-button" class="button-primary" name="Submit" type="submit">
 													<?php esc_attr_e( 'Save Changes' ) ?>
-												</button>
-											</div>
-											<div class="clear"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div id="pluginsinfo" class='postbox opened'>
-								<h3 class="hndle"><?php _e( 'SAM Pro (Lite Edition)', SAM_PRO_DOMAIN ) ?></h3>
-								<div class="inside">
-									<a href="http://codecanyon.net/item/sam-pro-lite/12721925?ref=minimus_simplelib" target="_blank">
-										<img src="<?php echo SAM_PRO_URL . 'images/upgrade-sidebar.jpg'; ?>">
-									</a>
-									<p><?php _e( 'Get more features:', SAM_PRO_DOMAIN ); ?></p>
-									<ul style="list-style: inherit !important;margin-left: 20px;">
-										<li><?php _e( "ads rotation by timer", SAM_PRO_DOMAIN ); ?></li>
-										<li><?php _e( "online advertiser statistics", SAM_PRO_DOMAIN ); ?></li>
-										<li><?php _e( "an advertising request form", SAM_PRO_DOMAIN ); ?></li>
-										<li><?php _e( "geo targeting", SAM_PRO_DOMAIN ); ?></li>
-										<li><?php _e( "extended ALE (Ads Linking and Embedding)", SAM_PRO_DOMAIN ); ?></li>
-									</ul>
-									<p><?php _e( 'and', SAM_PRO_DOMAIN ); ?> <a
-											href="http://uncle-sam.info/sam-pro-lite/sam-pro-lite-info/features/" target="_blank"
-											title="<?php _e( 'Features List', SAM_PRO_DOMAIN ); ?>"><?php _ex( 'more', 'SAM Pro Lite', SAM_PRO_DOMAIN ); ?></a>
-										...</p>
-									<p style="text-align: center;">
-										<a href="http://codecanyon.net/item/sam-pro-lite/12721925?ref=minimus_simplelib" target="_blank"
-										   class="button-primary" style="width: 100%;">
+                        </button>
+                      </div>
+                      <div class="clear"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="pluginsinfo" class='postbox opened'>
+                <h3 class="hndle"><?php _e( 'SAM Pro (Lite Edition)', SAM_PRO_DOMAIN ) ?></h3>
+                <div class="inside">
+                  <a href="http://codecanyon.net/item/sam-pro-lite/12721925?ref=minimus_simplelib" target="_blank">
+                    <img src="<?php echo SAM_PRO_URL . 'images/upgrade-sidebar.jpg'; ?>">
+                  </a>
+                  <p><?php _e( 'Get more features:', SAM_PRO_DOMAIN ); ?></p>
+                  <ul style="list-style: inherit !important;margin-left: 20px;">
+                    <li><?php _e( "ads rotation by timer", SAM_PRO_DOMAIN ); ?></li>
+                    <li><?php _e( "online advertiser statistics", SAM_PRO_DOMAIN ); ?></li>
+                    <li><?php _e( "an advertising request form", SAM_PRO_DOMAIN ); ?></li>
+                    <li><?php _e( "geo targeting", SAM_PRO_DOMAIN ); ?></li>
+                    <li><?php _e( "extended ALE (Ads Linking and Embedding)", SAM_PRO_DOMAIN ); ?></li>
+                  </ul>
+                  <p><?php _e( 'and', SAM_PRO_DOMAIN ); ?> <a
+                      href="http://uncle-sam.info/sam-pro-lite/sam-pro-lite-info/features/" target="_blank"
+                      title="<?php _e( 'Features List', SAM_PRO_DOMAIN ); ?>"><?php _ex( 'more', 'SAM Pro Lite', SAM_PRO_DOMAIN ); ?></a>
+                    ...</p>
+                  <p style="text-align: center;">
+                    <a href="http://codecanyon.net/item/sam-pro-lite/12721925?ref=minimus_simplelib" target="_blank"
+                       class="button-primary" style="width: 100%;">
 											<?php _e( 'Purchase SAM Pro (Lite Edition)', SAM_PRO_DOMAIN ); ?>
-										</a>
-									</p>
-								</div>
-							</div>
-							<div id="addonsinfo" class="postbox opened">
-								<h3 class="hndle"><?php _e( 'Available Addons', SAM_PRO_DOMAIN ); ?></h3>
-								<div class="inside">
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div id="addonsinfo" class="postbox opened">
+                <h3 class="hndle"><?php _e( 'Available Addons', SAM_PRO_DOMAIN ); ?></h3>
+                <div class="inside">
 									<?php
 									include_once 'tools/sam-pro-addons-list.php';
 									$availableAddons = new SamProAddonsList();
 									echo $availableAddons->draw();
 									?>
-								</div>
-							</div>
-							<div id="resourcesinfo" class='postbox opened'>
-								<h3 class="hndle"><?php _e( 'Resources', SAM_PRO_DOMAIN ) ?></h3>
-								<div class="inside">
-									<ul>
-										<li><a target='_blank'
-										       href='http://uncle-sam.info'><?php _e( "SAM Pro Site", SAM_PRO_DOMAIN ); ?></a></li>
-										<li><a target="_blank"
-										       href="http://uncle-sam.info/sam-pro/getting-started/"><?php _e( 'Getting Started', SAM_PRO_DOMAIN ); ?></a>
-										</li>
-										<li><a target='_blank'
-										       href='http://uncle-sam.info/category/sam-pro-free/sam-pro-free-docs/'><?php _e( "Documentation", SAM_PRO_DOMAIN ); ?></a>
-										</li>
-										<li><a target='_blank'
-										       href='http://forum.simplelib.com/index.php?forums/sam-pro-free-edition.21/'><?php _e( "Support Forum", SAM_PRO_DOMAIN ); ?></a>
-										</li>
-										<li><a target='_blank'
-										       href='http://www.simplelib.com/'><?php _e( "Author's Blog", SAM_PRO_DOMAIN ); ?></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div id="post-body">
-							<div id="post-body-content">
+                </div>
+              </div>
+              <div id="resourcesinfo" class='postbox opened'>
+                <h3 class="hndle"><?php _e( 'Resources', SAM_PRO_DOMAIN ) ?></h3>
+                <div class="inside">
+                  <ul>
+                    <li><a target='_blank'
+                           href='http://uncle-sam.info'><?php _e( "SAM Pro Site", SAM_PRO_DOMAIN ); ?></a></li>
+                    <li><a target="_blank"
+                           href="http://uncle-sam.info/sam-pro/getting-started/"><?php _e( 'Getting Started', SAM_PRO_DOMAIN ); ?></a>
+                    </li>
+                    <li><a target='_blank'
+                           href='http://uncle-sam.info/category/sam-pro-free/sam-pro-free-docs/'><?php _e( "Documentation", SAM_PRO_DOMAIN ); ?></a>
+                    </li>
+                    <li><a target='_blank'
+                           href='http://forum.simplelib.com/index.php?forums/sam-pro-free-edition.21/'><?php _e( "Support Forum", SAM_PRO_DOMAIN ); ?></a>
+                    </li>
+                    <li><a target='_blank'
+                           href='http://www.simplelib.com/'><?php _e( "Author's Blog", SAM_PRO_DOMAIN ); ?></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div id="post-body">
+              <div id="post-body-content">
 								<?php
 								settings_fields( 'samProOptions' );
 								$this->doSettingsSections( 'sam-pro-settings', $this->settingsTabs );
 								?>
-								<!--<p class="submit">
+                <!--<p class="submit">
 									<button id="submit-button" class="button-primary" name="Submit" type="submit">
 										<?php esc_attr_e( 'Save Changes' ); ?>
 									</button>
 								</p>-->
-								<p style='color: #777777; font-size: 13px; font-style: italic;'><?php echo SAM_PRO_COPYRIGHT; ?></p>
-							</div>
-						</div>
-					</div>
-				</form>
-			</div>
+                <p style='color: #777777; font-size: 13px; font-style: italic;'><?php echo SAM_PRO_COPYRIGHT; ?></p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
 			<?php
 		}
 
@@ -3643,7 +3722,7 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 
 		public function addTinyMCEPlugin( $plugin_array ) {
 			$options                  = parent::getSettings();
-			$plugin_array['spButton'] = SAM_PRO_URL . 'js/sam.pro.editor.plugin.js';
+			$plugin_array['spButton'] = SAM_PRO_URL . 'js/sam.pro.editor.plugin.min.js';
 			$plugin_array             = apply_filters( 'sam_pro_mce_plugins', $plugin_array );
 
 			return $plugin_array;
@@ -3672,9 +3751,9 @@ FROM {$pTable} sp WHERE sp.amode = 2;";
 			$val   = get_post_meta( $post->ID, 'sam_pro_disable_ad_serving', true );
 			$value = ( empty( $val ) ) ? 0 : 1;
 			?>
-			<input type="checkbox" id="sam_pro_cancel_ads_field" name="sam_pro_cancel_ads_field"
-			       value="1" <?php checked( 1, $value ); ?>>
-			<label for="sam_pro_cancel_ads_field"><?php _e( 'disable ad serving', SAM_PRO_DOMAIN ); ?></label>
+      <input type="checkbox" id="sam_pro_cancel_ads_field" name="sam_pro_cancel_ads_field"
+             value="1" <?php checked( 1, $value ); ?>>
+      <label for="sam_pro_cancel_ads_field"><?php _e( 'disable ad serving', SAM_PRO_DOMAIN ); ?></label>
 			<?php
 		}
 

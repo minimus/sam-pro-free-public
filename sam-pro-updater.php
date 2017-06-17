@@ -175,6 +175,8 @@ COMMENT = 'SAM Pro Error Log';";
   price decimal(15, 2) UNSIGNED DEFAULT 0.00,
   sdate datetime DEFAULT NULL,
   fdate datetime DEFAULT NULL,
+  cnt_style text DEFAULT NULL,
+  cnt_direction tinyint(1) DEFAULT 0,
   code_before varchar(255) DEFAULT NULL,
   code_after varchar(255) DEFAULT NULL,
   asize varchar(255) DEFAULT NULL,
@@ -335,6 +337,7 @@ COMMENT = 'SAM Pro Rules for Zones';";
   b_columns int(5) UNSIGNED DEFAULT 1,
   b_data text DEFAULT NULL,
   b_style text DEFAULT NULL,
+  l_style text DEFAULT NULL,
   i_style text DEFAULT NULL,
   trash tinyint(1) UNSIGNED DEFAULT 0,
   PRIMARY KEY (bid)

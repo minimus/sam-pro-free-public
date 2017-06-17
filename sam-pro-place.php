@@ -115,6 +115,7 @@ if ( ! class_exists( 'SamProPlace' ) ) {
 			if ( $this->ajax ) {
 				$sql  = "SELECT
   ua.pid, ua.aid, ua.title,
+  ua.cnt_style, ua.cnt_direction,
   ua.code_before,
   ua.code_after,
   ua.asize, ua.width, ua.height,
@@ -127,6 +128,7 @@ if ( ! class_exists( 'SamProPlace' ) ) {
   FROM
   (SELECT
     spa.pid, spa.aid, sa.title,
+    sp.cnt_style, sp.cnt_direction,
     sp.code_before,
     sp.code_after,
     sa.asize, sa.width, sa.height,
@@ -162,6 +164,7 @@ ORDER BY ua.adCycle{$this->limit};";
 				$sql  = "
 SELECT
   ua.pid, ua.aid, ua.title,
+  ua.cnt_style, ua.cnt_direction,
   ua.code_before,
   ua.code_after,
   ua.asize, ua.width, ua.height,
@@ -174,6 +177,8 @@ SELECT
   FROM
   (SELECT
     sp.pid, sp.aid, sp.title,
+    @cnt_style := sp.cnt_style AS cnt_style,
+    @cnt_direction := sp.cnt_direction AS cnt_direction,
     @code_before := sp.code_before AS code_before,
     @code_after := sp.code_after AS code_after,
     sp.asize, sp.width, sp.height,
@@ -189,6 +194,8 @@ SELECT
   UNION
   SELECT
     spa.pid, spa.aid, sa.title,
+    @cnt_style AS cnt_style,
+    @cnt_direction AS cnt_direction,
     @code_before AS code_before,
     @code_after AS code_after,
     sa.asize, sa.width, sa.height,
@@ -217,7 +224,7 @@ ORDER BY ua.adCycle{$this->limit};";
 				}
 			} else {
 				$sql  = "SELECT
-  sp.pid, sp.aid, sp.title,
+  sp.pid, sp.aid, sp.title, sp.cnt_style, sp.cnt_direction,
   sp.code_before, sp.code_after,
   sp.asize, sp.width, sp.height,
   sp.img, sp.link, sp.alt, sp.acode, sp.rel,
@@ -282,7 +289,10 @@ ORDER BY ua.adCycle{$this->limit};";
 			$mode      = $data['amode'];
 			$swf       = ( isset( $data['swf'] ) ) ? (int) $data['swf'] : 0;
 			$cntTag    = ( 1 === (int) $data['inline'] ) ? 'span' : 'div';
-			$cntStyle  = ($cntTag === 'div') ? "style='display:flex;flex-direction:row;justify-content:center;'" : '';
+			$cntStyles = $data['cnt_style'];
+			$cntDir    = 'flex-direction: ' . ((1 === (int)$data['cnt_direction']) ? 'column;' : 'row;');
+			$cntInlineStyle = (!empty($cntStyles)) ? "style='{$cntStyles} {$cntDir}'" : "style='display:flex; justify-content: center; {$cntDir}'";
+			$cntStyle  = ($cntTag === 'div') ? $cntInlineStyle : '';
 			if ( $mode == 0 ) {
 				$this->link = $data['link'];
 				$this->img  = $data['img'];

@@ -17,10 +17,10 @@ if ( ! class_exists( 'SamProFrontActions' ) ) {
 			$this->action = $action;
 		}
 
-		public function decrypt( $input, $spKey ) {
+		public function decrypt( $input, $spKey, $spiv ) {
 			$txt       = base64_decode( $input );
 			$key       = pack( 'H*', $spKey );
-			$iv        = openssl_random_pseudo_bytes( 16 );
+			$iv        = pack( 'H*', $spiv );
 			$plaintext = openssl_decrypt( $txt, 'AES-128-CBC', $key, OPENSSL_RAW_DATA, $iv );
 			$clauses   = unserialize( $plaintext );
 
@@ -41,13 +41,14 @@ if ( ! class_exists( 'SamProFrontActions' ) ) {
 
 			$options = get_option( SAM_PRO_OPTIONS_NAME );
 			$spKey   = $options['spkey'];
+			$spiv    = $options['spiv'];
 
 			$action = 'sam_ajax_' . $this->action;
 
 			switch ( $action ) {
 				case 'sam_ajax_sam_load_ads':
 					if ( ( isset( $_POST['ads'] ) && is_array( $_POST['ads'] ) ) && isset( $_POST['data'] ) ) {
-						$clauses = self::decrypt( $_POST['data'], $spKey );
+						$clauses = self::decrypt( $_POST['data'], $spKey, $spiv );
 						$places  = $_POST['ads'];
 						$ads     = array();
 						$ad      = null;
@@ -96,7 +97,6 @@ if ( ! class_exists( 'SamProFrontActions' ) ) {
 					$vals   = array();
 					$stats  = 0;
 					$links  = 0;
-					$sql0   = $sql1 = '';
 					if ( ! empty( $hits ) && is_array( $hits ) ) {
 						foreach ( $hits as $hit ) {
 							$values .= ( ( ( empty( $values ) ) ? '' : ', ' ) . "(CURDATE(), {$hit['pid']}, {$hit['aid']}, 1)" );

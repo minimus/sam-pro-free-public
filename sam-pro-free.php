@@ -3,7 +3,7 @@
 Plugin Name: SAM Pro (Free Edition)
 Plugin URI: http://uncle-sam.info/
 Description: Flexible advertisements management system of the WordPress blog. Visit <a href="http://uncle-sam.info/">plugin Home Site</a> for more details.
-Version: 2.3.3.87
+Version: 2.4.0.91
 Author: minimus
 Author URI: http://blogcoding.ru
 Text Domain: sam-pro-free

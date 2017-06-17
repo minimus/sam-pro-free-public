@@ -204,13 +204,13 @@ GA_googleFetchAds();
 
 			$key       = pack( 'H*', $options['spkey'] );
 			$txt       = serialize( $this->clause );
-			$iv        = openssl_random_pseudo_bytes( 16 );
+			$iv        = pack( 'H*', $options['spiv'] );
 			$clauses   = openssl_encrypt( $txt, 'AES-128-CBC', $key, OPENSSL_RAW_DATA, $iv );
 			$clauses64 = base64_encode( $clauses );
 
 			do_action( 'sam_pro_front_styles', $locale, $postId );
 
-			wp_enqueue_script('polyfills', SAM_PRO_URL . 'js/polyfill.min.js');
+			wp_enqueue_script( 'polyfills', SAM_PRO_URL . 'js/polyfill.min.js' );
 			if ( (int) $this->settings['useSWF'] ) {
 				wp_enqueue_script( 'swfobject' );
 			}
@@ -642,25 +642,25 @@ GA_googleFetchAds();
 		public function buildAd( $id, $args = null, $useCodes = false ) {
 			$ad = self::getAd( $id, $args, $useCodes );
 
-			return $ad->ad;
+			return ( ! empty( $ad ) ) ? $ad->ad : '';
 		}
 
 		public function buildPlace( $id, $args = null, $useCodes = false, $clauses = null ) {
 			$ad = self::getPlace( $id, $args, $useCodes, $clauses );
 
-			return $ad->ad;
+			return ( ! empty( $ad ) ) ? $ad->ad : '';
 		}
 
 		public function buildZone( $id, $args = null, $useCodes = false, $clauses = null ) {
 			$ad = self::getZone( $id, $args, $useCodes, $clauses );
 
-			return $ad->ad;
+			return ( ! empty( $ad ) ) ? $ad->ad : '';
 		}
 
 		public function buildBlock( $id, $args = null, $clauses = null ) {
 			$ad = self::getBlock( $id, $args, $clauses );
 
-			return $ad->ad;
+			return ( ! empty( $ad ) ) ? $ad->ad : '';
 		}
 
 		public function buildAdObject( $adType, $id, $args = null, $useCodes = false, $clauses = null ) {
