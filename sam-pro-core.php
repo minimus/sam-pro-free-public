@@ -164,7 +164,7 @@ if ( ! class_exists( "SamProCore" ) ) {
 		);
 
 		public function __construct() {
-			define( 'SAM_PRO_VERSION', '2.4.0.91' );
+			define( 'SAM_PRO_VERSION', '2.4.1.92' );
 			define( 'SAM_PRO_DB_VERSION', '1.2' );
 			define( 'SAM_PRO_PATH', dirname( __FILE__ ) );
 			define( 'SAM_PRO_URL', plugins_url( '/', __FILE__ ) );
