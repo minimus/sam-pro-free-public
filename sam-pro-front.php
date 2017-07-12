@@ -68,7 +68,7 @@ if ( class_exists( 'SamProCore' ) && ! class_exists( 'SamProFront' ) ) {
 						$slots .= "\n  GA_googleAddSlot('{$dfpPub}', '{$value}');";
 					}
 					$out = "
-<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'></script>
+<script type='text/javascript' src='https://partner.googleadservices.com/gampad/google_service.js'></script>
 <script type='text/javascript'>
   GS_googleAddAdSenseService('$dfpPub');
   GS_googleEnableAllServices();
@@ -88,13 +88,7 @@ GA_googleFetchAds();
 						$slots .= "\n  googletag.defineSlot('/{$netCode}/{$value['name']}', {$value['size']}, '{$value['div']}').addService(googletag.pubads());";
 					}
 					$out = "
-<script type='text/javascript'>
-  (function() {
-    var useSSL = 'https:' == document.location.protocol;
-    var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
-    document.write('<scr' + 'ipt src=\"' + src + '\"></scr' + 'ipt>');
-  })();
-</script>
+<script src='https://www.googletagservices.com/tag/js/gpt.js'></script>
 
 <script type='text/javascript'>
   googletag.cmd.push(function() { {$slots}
@@ -114,7 +108,7 @@ GA_googleFetchAds();
 			$settings = parent::getSettings();
 			$out      = '';
 			if ( $settings['enablePageLevelAds'] && ! empty( $settings['adsensePub'] ) ) {
-				$out = "<script async src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+				$out = "<script async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({
     google_ad_client: '{$settings['adsensePub']}',
